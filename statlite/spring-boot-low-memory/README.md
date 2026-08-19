@@ -3,6 +3,9 @@
 This experiment tests whether useful monitoring fits beside a functioning,
 constrained Spring Boot application.
 
+See [Experiment details](EXPERIMENT.md) for the measurement method, complete
+configuration comparison, and selected sanitized observations from the runs.
+
 ## What was tested
 
 - Spring Boot 3.5.5 with Java 21
@@ -33,7 +36,9 @@ The practical comparison used:
 
 ## Configuration progression
 
-The configurations were kept separate:
+The configurations were kept separate. The
+[detailed comparison](EXPERIMENT.md#configuration-results) includes the
+observed memory, swap, restart, and failure data.
 
 | Configuration | Result |
 |---|---|
@@ -62,6 +67,9 @@ The preserved run observed:
 - Approximately 140 MiB RAM remained available at the final checkpoint.
 - The 60-minute window recorded 240 StatLite polls, 120 per target, and
   2,640 metric samples.
+
+Selected measurements from the observation checkpoints are preserved in the
+[successful-run evidence](EXPERIMENT.md#selected-successful-run-observations).
 
 StatLite remained a small part of the footprint while staying healthy and
 continuing to monitor both targets. This experiment specifically tested
