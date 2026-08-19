@@ -1,0 +1,14 @@
+target/
+data/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+*.log
+.DS_Store
+*.swp
+.env
+statlite-stars.sqlite
+statlite-stars.sqlite-*
