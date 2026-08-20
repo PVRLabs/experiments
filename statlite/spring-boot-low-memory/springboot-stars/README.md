@@ -2,8 +2,6 @@
 
 Minimal Spring Boot demo that tracks GitHub star growth for up to 4 repositories and plots the history on a single dashboard.
 
-Package: `pvrlabs` (no `com`).
-
 ![Star Pulse dashboard](assets/star-pulse-dashboard.webp)
 
 ## Requirements
