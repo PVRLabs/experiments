@@ -1,106 +1,143 @@
 # Experiment details
 
-This document supplements the concise benchmark summary with the experiment
-method, configuration-by-configuration results, and selected measurements from
-the preserved runs. It intentionally does not reproduce the complete execution
-journal or service logs.
+This document supplements the concise [README](README.md) with the method,
+configuration-by-configuration results, exact Alpine runtime identity, and
+selected sanitized observations. It intentionally does not reproduce the
+complete private execution journal or service logs.
 
-## Method
+## Scope
 
-The experiment used an Ubuntu 24.04 Multipass VM with 1 vCPU and a 5 GB virtual
-disk. A Java 21 Spring Boot 3.5.5 application and StatLite ran as separate
-systemd services. Both services listened only on the VM loopback interface.
+The workload was a small but functioning Spring Boot application rather than
+an empty JVM. It used Spring Boot 3.5.5, Spring MVC, embedded Tomcat, Spring
+Data JPA, Hibernate, file-backed H2, Actuator, scheduled GitHub polling, and
+outbound HTTP. StatLite monitored the Spring application and its own metrics.
 
-The application used Spring Data JPA, Hibernate, H2, embedded Tomcat,
-Actuator, scheduled GitHub polling, and outbound HTTP. Except for the explicitly
-labeled aggressive-JVM attempt, Spring used:
+The application source is preserved in [`springboot-stars/`](springboot-stars/).
+The public repository contains two related deployment experiments. They must
+be read as separate tracks, not as a controlled comparison of one JVM flag:
+
+- Ubuntu 24.04 / Java 21 / systemd, originally used to establish the practical
+  low-end deployment result.
+- Alpine Linux 3.24 / Java 25 / OpenRC, used as a separate 256 MiB stretch
+  follow-up for the article.
+
+The Alpine deployment and measurement files are in
+[`alpine-256mb/`](alpine-256mb/).
+
+## Measurement method
+
+Both tracks used one vCPU, loopback-only services, a fixed one-hour
+observation, and independent operating-system snapshots. The observer recorded
+system memory, swap, process RSS, CPU, filesystem use, application-data size,
+service state, and restart counts. Service and kernel evidence was checked for
+OOM kills and crashes.
+
+The standard workload issued 72 bounded HTTP requests: 12 requests to each of
+six Spring and StatLite endpoints. StatLite polled Spring Actuator and its own
+metrics endpoint every 30 seconds with seven-day SQLite retention. Spring's
+normal scheduled GitHub polling also ran during the window.
+
+A run was not considered clean if either service was OOM-killed, crashed,
+restarted, failed to become usable, or experienced severe sustained pressure
+that prevented normal operation. High memory use by itself was not a failure
+on these deliberately constrained machines.
+
+## JVM profiles
+
+The original Ubuntu comparison used this simple profile:
 
 ```text
 -Xms16m -Xmx64m -Xss256k -XX:+UseSerialGC
 ```
 
-StatLite polled Spring Actuator and its own metrics endpoint every 30 seconds
-with seven-day SQLite retention. The standard observation was a fixed 60-minute
-window. It included 72 bounded HTTP requests: 12 requests to each of six Spring
-and StatLite endpoints. Checkpoints recorded system memory, swap, process RSS,
-CPU, filesystem use, application-data size, service state, and restart counts.
-Service and kernel evidence was checked for OOM kills and crashes.
+The Alpine follow-up used this fixed Java 25 profile:
 
-A configuration was not considered clean if Spring or StatLite was OOM-killed,
-crashed, restarted, failed to become usable, or experienced severe sustained
-memory pressure or paging that prevented normal operation. High memory use by
-itself was not a failure on these deliberately constrained machines.
+```text
+-Xms16m -Xmx80m -Xss256k -XX:+UseSerialGC
+-XX:TieredStopAtLevel=1 -XX:ReservedCodeCacheSize=32m
+-XX:+UseCompactObjectHeaders
+```
 
-## Configuration results
+The 64 MiB Alpine Java 21 profile was an unsuccessful tuning step. It caused
+severe GC and paging pressure and was not used as the final result. The Java
+25 run also changed the heap ceiling, compilation policy, code-cache ceiling,
+and object-header mode, so the result must not be attributed to compact object
+headers alone.
 
-Configured memory differs from usable guest memory: the 256 MB VM exposed
-about 200 MiB, while the 512 MB VM exposed about 452 MiB.
+## Ubuntu configuration results
+
+The Ubuntu 24.04 Multipass VM had a 5 GB virtual disk. Configured memory
+differs from usable guest memory: the 256 MB VM exposed about 200 MiB, while
+the 512 MB VM exposed about 452 MiB. The services ran under systemd.
 
 | Configuration | Observation | Selected evidence | Result |
 |---|---|---|---|
 | 256 MB RAM, no swap, simple JVM | No stable observation window | Spring was OOM-killed during startup and entered a restart loop. | Not viable |
-| 256 MB RAM, 256 MB swap, simple JVM | 60 minutes; 72/72 HTTP checks returned 200 | Swap was effectively full; Spring had one OOM restart; StatLite had none. Final RSS was 50,840 KiB for Spring and 3,616 KiB for StatLite after recovery. | Completed, not stable |
-| 256 MB RAM, 256 MB swap, aggressive JVM limits | Startup attempt only | At the failure checkpoint, 187 MiB of 255 MiB swap was used. Startup failed with a Metaspace allocation error after severe delay; StatLite remained healthy. | Unusable during startup |
-| 512 MB RAM, no swap, simple JVM | 60 minutes; 72/72 HTTP checks returned 200 | Spring had one OOM restart during the first three minutes and then recovered; StatLite had none. Final RSS was 270,284 KiB for Spring and 5,300 KiB for StatLite. | Completed, not clean |
-| **512 MB RAM, 256 MB swap, simple JVM** | **60 minutes; 72/72 HTTP checks returned 200** | **Zero restarts. Final RSS was 167,420 KiB for Spring and 12,556 KiB for StatLite, with 160 MiB swap used and 140 MiB RAM available.** | **Clean practical result** |
+| 256 MB RAM, 256 MB swap, simple JVM | 60 minutes; 72/72 HTTP checks returned 200 | Swap was effectively full; Spring had one OOM restart; StatLite had none. | Completed, not stable |
+| 256 MB RAM, 256 MB swap, aggressive JVM limits | Startup attempt only | Startup failed with a Metaspace allocation error after severe delay; StatLite remained healthy. | Unusable during startup |
+| 512 MB RAM, no swap, simple JVM | 60 minutes; 72/72 HTTP checks returned 200 | Spring had one OOM restart during the first three minutes and then recovered; StatLite had none. | Completed, not clean |
+| **512 MB RAM, 256 MB swap, simple JVM** | **60 minutes; 72/72 HTTP checks returned 200** | **Zero restarts. Final Spring RSS was 167,420 KiB and StatLite RSS 12,556 KiB, with 160 MiB swap used and 140 MiB RAM available.** | **Clean practical result** |
 
-The aggressive profile added explicit limits for metaspace, code cache, direct
-memory, and tiered compilation. It was an extreme diagnostic comparison, not a
-recommended production profile.
+The successful Ubuntu window contained 240 StatLite polls—120 for each
+target—and 2,640 metric samples. Spring reached health in 14 seconds and
+normal three-repository polling continued throughout the hour.
 
-## Selected successful-run observations
+## Alpine 256 MiB follow-up
 
-These checkpoints come from the clean `512 MB RAM / 256 MB swap / simple JVM`
-run. Times are relative to the start of the observation; host-specific
-timestamps and process identifiers have been omitted.
+The Alpine VPS was a nominal 256 MiB x86_64 guest with one vCPU and 5 GiB of
+disk. The guest exposed approximately 216.9 MiB (`MemTotal: 222104 kB`). A
+512 MiB swapfile was enabled before package installation and service startup.
+The services ran as separate unprivileged OpenRC services bound to loopback.
+Both foreground daemons use OpenRC `command_background="yes"`, allowing
+OpenRC to manage their pidfiles and output logs correctly.
 
-| Checkpoint | RAM available | Swap used | Spring RSS | StatLite RSS | Combined RSS | Restarts Spring / StatLite |
-|---|---:|---:|---:|---:|---:|---:|
-| Start | 81 MiB | 37 MiB | 244,024 KiB | 13,128 KiB | 257,152 KiB | 0 / 0 |
-| +90 seconds | 109 MiB | 97 MiB | 202,532 KiB | 13,588 KiB | 216,252 KiB | 0 / 0 |
-| +3 minutes, after bounded traffic | 106 MiB | 140 MiB | 211,944 KiB | 10,044 KiB | 221,992 KiB | 0 / 0 |
-| +60 minutes | 140 MiB | 160 MiB | 167,420 KiB | 12,556 KiB | 179,976 KiB | 0 / 0 |
+The preserved runtime identities were:
 
-Spring reached health in 14 seconds. All 72 bounded requests returned HTTP 200,
-and normal three-repository polling continued throughout the hour. The window
-contained 240 StatLite polls—120 for each target—and 2,640 metric samples. H2
-data remained 44 KiB, while StatLite data grew from 548 KiB to 736 KiB. Root
-filesystem utilization increased from 65% to 70%.
+| Component | Identity |
+|---|---|
+| OS | Alpine Linux 3.24.1, x86_64 |
+| Java package | `openjdk25-jre-headless-25.0.4_p7-r0` |
+| Java runtime | OpenJDK `25.0.4` |
+| StatLite | Official Linux amd64 release `v0.3.0` |
+| StatLite SHA-256 | `553d6539659759380aaec6a9b0a3e050ecbea59f989b5101b1bd0dd30ce403a4` |
+| Services | `stars` and `statlite` under OpenRC |
 
-## Selected failure evidence
+The Java 25 configuration completed the one-hour combined observation:
 
-The preserved service records showed these failure observations:
+- Spring startup took 73.405 seconds.
+- Spring and StatLite both remained started with no restart or OOM evidence.
+- All 72 bounded HTTP requests returned HTTP 200.
+- StatLite polling continued for both targets.
+- Spring's scheduled GitHub polling continued after one early EOF/retry event.
+- Final Spring RSS was 87,616 KiB.
+- Final StatLite RSS was 10,196 KiB.
+- Final combined RSS was 97,820 KiB.
+- Final swap use was 184 MiB of 511 MiB usable.
 
-- With 256 MB RAM and no swap, Spring was OOM-killed before a settled baseline
-  could be maintained and systemd repeatedly restarted it.
-- With 256 MB RAM and 256 MB swap, systemd recorded an OOM kill 35 minutes into
-  the observation. Spring recovered automatically; StatLite stayed active and
-  continued monitoring.
-- With aggressive JVM limits, Spring emitted a thread-starvation warning and
-  failed during application-context creation with a Metaspace allocation error.
-- With 512 MB RAM and no swap, systemd recorded an OOM kill about three minutes
-  into the observation. Spring restarted and operated normally for the rest of
-  the hour; StatLite remained active.
+The run recorded a Hikari warning for a housekeeper delay of about 2 minutes
+13 seconds: “Thread starvation or clock leap detected.” This observation does
+not establish whether paging, JVM memory pressure, scheduling, or a clock
+event caused it. It is an operational limitation, not proof of a single root
+cause.
 
-These failures are why results from the five configurations are reported
-separately rather than blended into one baseline.
+## Interpretation
 
-## Interpretation and limits
+The Alpine result supports a narrow conclusion: this representative workload
+could complete a controlled one-hour observation on the tested nominal 256 MiB
+VPS with Alpine, Java 25, 512 MiB swap, and the constrained profile above. It
+does not establish a comfortable production baseline.
 
-This is evidence for one small but representative Spring Boot application, not
-a claim that every Spring Boot workload fits the same heap or machine. GitHub
-API behavior, VM overhead, kernel behavior, dependency versions, and application
-features can change the result. A larger application may reasonably require a
-larger heap and more system memory.
+The high swap use and long scheduling delay matter. For a real Spring Boot
+deployment, the clean Ubuntu result—512 MB configured RAM plus a modest
+swapfile—remains the practical starting point.
 
-The experiment supports a narrower conclusion: 256 MB RAM was an extreme and
-unstable target for this workload. A VM configured with 512 MB RAM and a modest
-swapfile completed the controlled hour cleanly, while StatLite remained a small
-part of the total footprint.
+StatLite was not the dominant memory consumer. It remained a roughly 10 MiB
+process in the Alpine result while continuing to monitor both targets. The
+application and JVM were the source of the memory and responsiveness pressure.
 
 ## Data handling
 
-The values above were transcribed from the original checkpoints and service
+The values above were transcribed from the preserved checkpoints and service
 records. Usernames, hostnames, VM names, network addresses, process IDs, exact
 wall-clock timestamps, and host-specific paths were omitted. No credentials,
 databases, complete journals, or unrelated machine logs are included. The

@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+
+name="statlite"
+command="/usr/local/bin/statlite"
+command_args="--config /etc/statlite/statlite.yaml"
+command_background="yes"
+command_user="statlite:statlite"
+directory="/var/lib/statlite"
+pidfile="/run/$RC_SVCNAME.pid"
+output_log="/var/log/statlite/statlite.log"
+error_log="/var/log/statlite/statlite.err"
+
+required_files="/usr/local/bin/statlite /etc/statlite/statlite.yaml"
+required_dirs="/var/lib/statlite /var/log/statlite"
+
+depend() {
+	need net stars
+	use dns
+}
+
+start_pre() {
+	checkpath --directory --owner statlite:statlite --mode 0750 /var/lib/statlite
+	checkpath --directory --owner statlite:statlite --mode 0750 /var/log/statlite
+}

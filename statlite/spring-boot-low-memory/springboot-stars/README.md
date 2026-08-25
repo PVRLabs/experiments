@@ -6,7 +6,8 @@ Minimal Spring Boot demo that tracks GitHub star growth for up to 4 repositories
 
 ## Requirements
 
-- **Linux box (run only):** Java 21 JRE. No Maven.
+- **Linux box (run only):** Java 21 or newer JRE. No Maven. The original
+  Ubuntu run used Java 21; the Alpine follow-up used Java 25.
 - **From source (optional):** JDK 21 and `mvn-lite` (wraps Maven 3.9+)
 
 No external database or message broker. History lives in an embedded H2 file at `./data/starsdb`.
@@ -15,7 +16,7 @@ No external database or message broker. History lives in an embedded H2 file at 
 
 The target machine does **not** need Maven. Ship the fat JAR, unzip, run with `java`.
 
-### 1. Install Java 21 on the Linux box
+### 1. Install a compatible Java runtime on the Linux box
 
 Debian / Ubuntu:
 
@@ -32,7 +33,9 @@ sudo dnf install -y java-21-openjdk-headless
 java -version
 ```
 
-`java -version` must report 21.
+Java 21 was used for the original Ubuntu experiment. The Alpine follow-up
+used the pinned `openjdk25-jre-headless` runtime documented in the parent
+experiment.
 
 ### 2. Pack the app (on a machine that already has the JAR)
 

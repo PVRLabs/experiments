@@ -1,0 +1,17 @@
+server:
+  listen: "127.0.0.1:9090"
+
+storage:
+  sqlite_path: "/var/lib/statlite/statlite.sqlite"
+  retention_days: 7
+
+polling:
+  interval: "30s"
+  timeout: "5s"
+
+targets:
+  - name: "star-pulse"
+    actuator_base_url: "http://127.0.0.1:8080/actuator"
+  - name: "statlite-self"
+    type: "statlite-metrics"
+    url: "http://127.0.0.1:9090/statlite/metrics"

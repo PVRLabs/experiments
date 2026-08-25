@@ -1,0 +1,25 @@
+#!/sbin/openrc-run
+
+name="stars"
+command="/usr/bin/java"
+command_args="-Xms16m -Xmx80m -Xss256k -XX:+UseSerialGC -XX:TieredStopAtLevel=1 -XX:ReservedCodeCacheSize=32m -XX:+UseCompactObjectHeaders -jar /opt/stars-app/stars.jar --spring.h2.console.enabled=false"
+command_background="yes"
+command_user="stars:stars"
+directory="/opt/stars-app"
+pidfile="/run/$RC_SVCNAME.pid"
+output_log="/var/log/stars/stars.log"
+error_log="/var/log/stars/stars.err"
+
+required_files="/usr/bin/java /opt/stars-app/stars.jar"
+required_dirs="/opt/stars-app/data /var/log/stars"
+
+depend() {
+	need net
+	use dns
+}
+
+start_pre() {
+	checkpath --directory --owner stars:stars --mode 0750 /opt/stars-app/data
+	checkpath --directory --owner stars:stars --mode 0750 /var/log/stars
+	export APP_GITHUB_REPOS="PVRLabs/statlite,PVRLabs/aibadger,scriptella/scriptella-etl"
+}
