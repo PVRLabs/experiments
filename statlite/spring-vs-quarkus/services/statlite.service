@@ -1,0 +1,15 @@
+[Unit]
+Description=StatLite side-by-side experiment monitor
+Wants=network-online.target
+After=network-online.target spring-stars.service quarkus-stars.service
+
+[Service]
+Type=simple
+User=statlite
+Group=statlite
+ExecStart=/usr/local/bin/statlite --config /etc/statlite/statlite.yaml
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

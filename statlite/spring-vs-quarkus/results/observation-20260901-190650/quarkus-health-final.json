@@ -1,0 +1,12 @@
+{
+    "status": "UP",
+    "checks": [
+        {
+            "name": "Database connections health check",
+            "status": "UP",
+            "data": {
+                "<default>": "UP"
+            }
+        }
+    ]
+}

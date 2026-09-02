@@ -1,0 +1,6 @@
+target/
+data/
+data-quarkus/
+.agent-logs/
+statlite-stars.sqlite
+statlite-stars.sqlite-*

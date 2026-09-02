@@ -1,0 +1,17 @@
+[Unit]
+Description=Spring Boot Star Pulse experiment
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=spring-stars
+Group=spring-stars
+WorkingDirectory=/opt/spring-stars
+ExecStart=/opt/jdk-25.0.4+9/bin/java -Xms16m -Xmx80m -Xss256k -XX:+UseSerialGC -XX:TieredStopAtLevel=1 -XX:ReservedCodeCacheSize=32m -XX:+UseCompactObjectHeaders -jar /opt/spring-stars/stars.jar --spring.h2.console.enabled=false --server.address=127.0.0.1
+Restart=on-failure
+RestartSec=5
+Environment=APP_GITHUB_REPOS=PVRLabs/statlite,PVRLabs/aibadger,scriptella/scriptella-etl
+
+[Install]
+WantedBy=multi-user.target

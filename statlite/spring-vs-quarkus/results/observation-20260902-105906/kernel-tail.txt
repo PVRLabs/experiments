@@ -1,0 +1,80 @@
+[Wed Sep  2 11:40:29 2026]  filemap_alloc_folio+0xf4/0x100
+[Wed Sep  2 11:40:29 2026]  __filemap_get_folio+0x199/0x2e0
+[Wed Sep  2 11:40:29 2026]  filemap_fault+0x15c/0x8e0
+[Wed Sep  2 11:40:29 2026]  ? __x64_sys_clock_gettime+0xb4/0x110
+[Wed Sep  2 11:40:29 2026]  __do_fault+0x3d/0x190
+[Wed Sep  2 11:40:29 2026]  do_read_fault+0x133/0x200
+[Wed Sep  2 11:40:29 2026]  do_fault+0xf0/0x260
+[Wed Sep  2 11:40:29 2026]  handle_pte_fault+0x114/0x1d0
+[Wed Sep  2 11:40:29 2026]  __handle_mm_fault+0x654/0x790
+[Wed Sep  2 11:40:29 2026]  handle_mm_fault+0x18a/0x380
+[Wed Sep  2 11:40:29 2026]  do_user_addr_fault+0x169/0x670
+[Wed Sep  2 11:40:29 2026]  exc_page_fault+0x83/0x1b0
+[Wed Sep  2 11:40:29 2026]  asm_exc_page_fault+0x27/0x30
+[Wed Sep  2 11:40:29 2026] RIP: 0033:0x737346cac000
+[Wed Sep  2 11:40:29 2026] Code: Unable to access opcode bytes at 0x737346cabfd6.
+[Wed Sep  2 11:40:29 2026] RSP: 002b:00007ffe895a0168 EFLAGS: 00010206
+[Wed Sep  2 11:40:29 2026] RAX: 0000000000000014 RBX: 00005c6a226544b0 RCX: 0000000000000009
+[Wed Sep  2 11:40:29 2026] RDX: 0000000000000029 RSI: 0000000000000014 RDI: 00005c6a2267c630
+[Wed Sep  2 11:40:29 2026] RBP: 00007ffe895a0180 R08: 00005c6a226fdf38 R09: 00005c6a22654538
+[Wed Sep  2 11:40:29 2026] R10: 0000000000000090 R11: 0000000000000246 R12: 00005c6a22489ec0
+[Wed Sep  2 11:40:29 2026] R13: 0000000000000000 R14: 00005c6a22489ec0 R15: 0000000000000000
+[Wed Sep  2 11:40:29 2026]  </TASK>
+[Wed Sep  2 11:40:29 2026] Mem-Info:
+[Wed Sep  2 11:40:29 2026] active_anon:36861 inactive_anon:48641 isolated_anon:0
+                            active_file:26 inactive_file:1 isolated_file:0
+                            unevictable:7829 dirty:0 writeback:0
+                            slab_reclaimable:2981 slab_unreclaimable:10422
+                            mapped:2194 shmem:1494 pagetables:1081
+                            sec_pagetables:0 bounce:0
+                            kernel_misc_reclaimable:0
+                            free:1845 free_pcp:0 free_cma:0
+[Wed Sep  2 11:40:29 2026] Node 0 active_anon:147444kB inactive_anon:194564kB active_file:104kB inactive_file:4kB unevictable:31316kB isolated(anon):0kB isolated(file):0kB mapped:8776kB dirty:0kB writeback:0kB shmem:5976kB shmem_thp:0kB shmem_pmdmapped:0kB anon_thp:0kB writeback_tmp:0kB kernel_stack:2992kB pagetables:4324kB sec_pagetables:0kB all_unreclaimable? no
+[Wed Sep  2 11:40:29 2026] Node 0 DMA free:1504kB boost:0kB min:44kB low:52kB high:60kB reserved_highatomic:0KB active_anon:7420kB inactive_anon:4860kB active_file:0kB inactive_file:0kB unevictable:0kB writepending:0kB present:15000kB managed:14364kB mlocked:0kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:0kB
+[Wed Sep  2 11:40:29 2026] lowmem_reserve[]: 0 365 365 365 365
+[Wed Sep  2 11:40:29 2026] Node 0 DMA32 free:5876kB boost:5440kB min:7860kB low:8464kB high:9068kB reserved_highatomic:0KB active_anon:140024kB inactive_anon:189704kB active_file:104kB inactive_file:4kB unevictable:31316kB writepending:0kB present:502916kB managed:448780kB mlocked:27316kB bounce:0kB free_pcp:0kB local_pcp:0kB free_cma:0kB
+[Wed Sep  2 11:40:29 2026] lowmem_reserve[]: 0 0 0 0 0
+[Wed Sep  2 11:40:29 2026] Node 0 DMA: 24*4kB (UM) 26*8kB (UM) 15*16kB (U) 12*32kB (U) 5*64kB (UM) 2*128kB (M) 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 1504kB
+[Wed Sep  2 11:40:29 2026] Node 0 DMA32: 80*4kB (UME) 185*8kB (UME) 135*16kB (UME) 56*32kB (UME) 2*64kB (M) 0*128kB 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 5880kB
+[Wed Sep  2 11:40:29 2026] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=1048576kB
+[Wed Sep  2 11:40:29 2026] Node 0 hugepages_total=0 hugepages_free=0 hugepages_surp=0 hugepages_size=2048kB
+[Wed Sep  2 11:40:29 2026] 4987 total pagecache pages
+[Wed Sep  2 11:40:29 2026] 1271 pages in swap cache
+[Wed Sep  2 11:40:29 2026] Free swap  = 8kB
+[Wed Sep  2 11:40:29 2026] Total swap = 262140kB
+[Wed Sep  2 11:40:29 2026] 129479 pages RAM
+[Wed Sep  2 11:40:29 2026] 0 pages HighMem/MovableOnly
+[Wed Sep  2 11:40:29 2026] 13693 pages reserved
+[Wed Sep  2 11:40:29 2026] 0 pages hwpoisoned
+[Wed Sep  2 11:40:29 2026] Tasks state (memory values in pages):
+[Wed Sep  2 11:40:29 2026] [  pid  ]   uid  tgid total_vm      rss rss_anon rss_file rss_shmem pgtables_bytes swapents oom_score_adj name
+[Wed Sep  2 11:40:29 2026] [    773]   101   773     2532     1056      192      864         0    61440      128          -900 dbus-daemon
+[Wed Sep  2 11:40:29 2026] [    785]     0   785     4560      832       64      768         0    81920      256             0 systemd-logind
+[Wed Sep  2 11:40:29 2026] [    864]     0   864     1537      448        0      448         0    49152       32             0 agetty
+[Wed Sep  2 11:40:29 2026] [    872]     0   872    27505      832        0      832         0   114688     2336             0 unattended-upgr
+[Wed Sep  2 11:40:29 2026] [    881]     0   881     1526      416        0      416         0    57344       32             0 agetty
+[Wed Sep  2 11:40:29 2026] [    949]     0   949     3684      672        0      672         0    77824      416             0 sshd
+[Wed Sep  2 11:40:29 2026] [    974]  1000   974     5073      736       32      704         0    86016      512           100 systemd
+[Wed Sep  2 11:40:29 2026] [    975]  1000   975     5291      272       16      256         0    69632      416           100 (sd-pam)
+[Wed Sep  2 11:40:29 2026] [   1112]  1000  1112     3748      456        8      448         0    77824      480             0 sshd
+[Wed Sep  2 11:40:29 2026] [  14658]     0 14658     6485      640       32      608         0    77824      640         -1000 systemd-udevd
+[Wed Sep  2 11:40:29 2026] [  17763]     0 17763     1806      544        0      544         0    53248       32             0 cron
+[Wed Sep  2 11:40:29 2026] [  17780]     0 17780     3036      608       32      576         0    65536      256         -1000 sshd
+[Wed Sep  2 11:40:29 2026] [  18797]   995 18797   319077     2221     2189       32         0   143360      165             0 statlite
+[Wed Sep  2 11:40:29 2026] [  19264]     0 19264     3716      672        0      672         0    77824      416             0 sshd
+[Wed Sep  2 11:40:29 2026] [  19331]  1000 19331     3782      489       41      448         0    77824      512             0 sshd
+[Wed Sep  2 11:40:29 2026] [  20537]     0 20537    55896     6816     4640     2176         0   118784        0         -1000 multipathd
+[Wed Sep  2 11:40:29 2026] [  20544]   996 20544    22758      800       32      768         0    81920      224             0 systemd-timesyn
+[Wed Sep  2 11:40:29 2026] [  20545]     0 20545    12651      960       96      864         0   102400      192          -250 systemd-journal
+[Wed Sep  2 11:40:29 2026] [  20555]   998 20555     4752      800       64      736         0    77824      224             0 systemd-network
+[Wed Sep  2 11:40:29 2026] [  20561]     0 20561   117272     1024      128      896         0   139264      448             0 udisksd
+[Wed Sep  2 11:40:29 2026] [  20575]   989 20575    77042      928       64      864         0   106496      160             0 polkitd
+[Wed Sep  2 11:40:29 2026] [  20577]   991 20577     5368      800       64      736         0    86016      480             0 systemd-resolve
+[Wed Sep  2 11:40:29 2026] [  20584]     0 20584   140523    38629    37675      954         0   536576      736             0 fwupd
+[Wed Sep  2 11:40:29 2026] [  20585]   102 20585    55628      960       96      864         0    86016      160             0 rsyslogd
+[Wed Sep  2 11:40:29 2026] [  20604]     0 20604    98024      928       96      832         0   126976      416             0 ModemManager
+[Wed Sep  2 11:40:29 2026] [  21155]   999 21155   496831    26055    25447      608         0   655360    27676             0 java
+[Wed Sep  2 11:40:29 2026] [  21217]   997 21217   479118    14580    13956      624         0   561152    28096             0 java
+[Wed Sep  2 11:40:29 2026] [  21968]   990 21968   129370     3551     2751      800         0   204800        0             0 fwupdmgr
+[Wed Sep  2 11:40:29 2026] oom-kill:constraint=CONSTRAINT_NONE,nodemask=(null),cpuset=/,mems_allowed=0,global_oom,task_memcg=/system.slice/spring-stars.service,task=java,pid=21155,uid=999
+[Wed Sep  2 11:40:29 2026] Out of memory: Killed process 21155 (java) total-vm:1987324kB, anon-rss:101788kB, file-rss:2432kB, shmem-rss:0kB, UID:999 pgtables:640kB oom_score_adj:0

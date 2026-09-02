@@ -1,0 +1,17 @@
+[Unit]
+Description=Quarkus Star Pulse experiment
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=quarkus-stars
+Group=quarkus-stars
+WorkingDirectory=/opt/quarkus-stars
+ExecStart=/opt/jdk-25.0.4+9/bin/java -Xms16m -Xmx80m -Xss256k -XX:+UseSerialGC -XX:TieredStopAtLevel=1 -XX:ReservedCodeCacheSize=32m -XX:+UseCompactObjectHeaders -Dquarkus.http.host=127.0.0.1 -jar /opt/quarkus-stars/quarkus-run.jar
+Restart=on-failure
+RestartSec=5
+Environment=APP_GITHUB_REPOS=PVRLabs/statlite,PVRLabs/aibadger,scriptella/scriptella-etl
+
+[Install]
+WantedBy=multi-user.target

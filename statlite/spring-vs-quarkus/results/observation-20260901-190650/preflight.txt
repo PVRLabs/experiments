@@ -1,0 +1,165 @@
+2026-09-01T19:05:52-07:00
+== identity ==
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Linux statlite-svq-512 6.8.0-138-generic #138-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul 31 22:41:49 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+x86_64
+== resources ==
+               total        used        free      shared  buff/cache   available
+Mem:           452Mi       132Mi        54Mi       3.9Mi       288Mi       319Mi
+Swap:          255Mi        39Mi       216Mi
+NAME      TYPE SIZE  USED PRIO
+/swapfile file 256M 39.4M   -2
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1       3.9G  2.9G  915M  77% /
+== java ==
+openjdk version "25.0.4" 2026-07-21 LTS
+OpenJDK Runtime Environment (build 25.0.4+9-LTS)
+OpenJDK 64-Bit Server VM (build 25.0.4+9-LTS, mixed mode, sharing)
+== statlite ==
+/usr/local/bin/statlite: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=4s2CDB1BeNcyHztoqopG/Z6ywKi80mGN0muUdTqeO/0mAih-3aFR1PBOyxHysV/ilBwCWPtmU3LpM5vYzdR, BuildID[sha1]=5f84e4aae320b2db6a958b02482f194fc45cbfa6, with debug_info, not stripped
+statlite v0.4.0-dev
+ffac569edda878f6a53fda97f7584380a0ddb154533ae5e7f77a8cde6f67d96f  /usr/local/bin/statlite
+== files ==
+-rw-r--r-- 1 statlite      statlite           493 Sep  1 19:05 /etc/statlite/statlite.yaml
+-rw-r--r-- 1 quarkus-stars quarkus-stars      696 Sep  1 19:02 /opt/quarkus-stars/quarkus-run.jar
+-rw-r--r-- 1 spring-stars  spring-stars  61016928 Sep  1 19:05 /opt/spring-stars/stars.jar
+== services before start ==
+MainPID=0
+NRestarts=0
+ActiveState=inactive
+SubState=dead
+
+MainPID=0
+NRestarts=0
+ActiveState=inactive
+SubState=dead
+
+MainPID=0
+NRestarts=0
+ActiveState=inactive
+SubState=dead
+== start spring-stars.service ==
+2026-09-01T19:05:52-07:00
+Warning: The unit file, source configuration file or drop-ins of spring-stars.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8080 after 0 ms: Couldn't connect to server
+spring-stars.service readiness=200
+MainPID=11557
+NRestarts=0
+ExecMainStartTimestamp=Tue 2026-09-01 19:05:52 PDT
+ExecMainStatus=0
+ActiveState=active
+SubState=running
+== start quarkus-stars.service ==
+2026-09-01T19:06:15-07:00
+Warning: The unit file, source configuration file or drop-ins of quarkus-stars.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+curl: (7) Failed to connect to 127.0.0.1 port 8081 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8081 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8081 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8081 after 1 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8081 after 0 ms: Couldn't connect to server
+curl: (7) Failed to connect to 127.0.0.1 port 8081 after 0 ms: Couldn't connect to server
+quarkus-stars.service readiness=200
+MainPID=11624
+NRestarts=0
+ExecMainStartTimestamp=Tue 2026-09-01 19:06:15 PDT
+ExecMainStatus=0
+ActiveState=active
+SubState=running
+== start statlite.service ==
+2026-09-01T19:06:29-07:00
+Warning: The unit file, source configuration file or drop-ins of statlite.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+curl: (7) Failed to connect to 127.0.0.1 port 9090 after 0 ms: Couldn't connect to server
+statlite.service readiness=200
+MainPID=11683
+NRestarts=0
+ExecMainStartTimestamp=Tue 2026-09-01 19:06:29 PDT
+ExecMainStatus=0
+ActiveState=active
+SubState=running
+== effective cmdlines ==
+spring-+   11557 78392 1983556      00:38 /opt/jdk-25.0.4+9/bin/java -Xms16m -Xmx80m -Xss256k -XX:+UseSerialGC -XX:TieredStopAtLevel=1 -XX:ReservedCodeCacheSize=32m -XX:+UseCompactObjectHeaders -jar /opt/spring-stars/stars.jar --spring.h2.console.enabled=false --server.address=127.0.0.1
+quarkus+   11624 172956 1916212     00:16 /opt/jdk-25.0.4+9/bin/java -Xms16m -Xmx80m -Xss256k -XX:+UseSerialGC -XX:TieredStopAtLevel=1 -XX:ReservedCodeCacheSize=32m -XX:+UseCompactObjectHeaders -Dquarkus.http.host=127.0.0.1 -jar /opt/quarkus-stars/quarkus-run.jar
+statlite   11683 12720 1271192      00:02 /usr/local/bin/statlite --config /etc/statlite/statlite.yaml
+== required endpoint status ==
+200 http://127.0.0.1:8080/
+200 http://127.0.0.1:8080/actuator/health
+200 http://127.0.0.1:8080/actuator/prometheus
+200 http://127.0.0.1:8081/
+200 http://127.0.0.1:8081/q/metrics
+200 http://127.0.0.1:8081/q/health
+200 http://127.0.0.1:9090/
+200 http://127.0.0.1:9090/healthz
+200 http://127.0.0.1:9090/api/summary
+200 http://127.0.0.1:9090/statlite/metrics
+== h2 checks ==
+HTTP/1.1 404
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 02 Sep 2026 02:06:37 GMT
+
+H2 console absent: http://127.0.0.1:8080/h2-console
+HTTP/1.1 404 Not Found
+content-type: text/html; charset=utf-8
+content-length: 53
+
+H2 console absent: http://127.0.0.1:8081/h2-console
+== statlite summary ==
+{"targets":[{"metadata":{"name":"spring-stars","type":"spring","endpoint":"http://127.0.0.1:8080/actuator","endpoint_source":"url"},"status":{"last_poll_at":"2026-09-02T02:06:36.731303807Z","last_successful_poll_at":"2026-09-02T02:06:36.731303807Z","consecutive_poll_failures":0,"last_stored_poll_id":5,"last_successful_stored_poll_id":5},"latest":{"poll_id":5,"target_id":3,"app_run_id":3,"status":"ok","result":{"target_name":"spring-stars","poll_started_at":"2026-09-02T02:06:29.881827574Z","poll_finished_at":"2026-09-02T02:06:36.731303807Z","health_status":"UP","db_health_status":"UP","process_start_time":"2026-09-02T02:05:52.934000015Z","samples":[{"key":"http_requests_total","kind":"counter","value":4,"unit":"requests"},{"key":"http_404_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_4xx_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_5xx_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_request_time_total_seconds","kind":"counter","value":11.536021980000001,"unit":"seconds"},{"key":"jvm_heap_used_bytes","kind":"gauge","value":36734696,"unit":"bytes"},{"key":"process_cpu_usage","kind":"gauge","value":0,"unit":"ratio"},{"key":"process_start_time","kind":"gauge","value":1788314752.934,"unit":"unix_seconds"}],"events":null}}},{"metadata":{"name":"quarkus-stars","type":"quarkus","endpoint":"http://127.0.0.1:8081/q/metrics","endpoint_source":"url"},"status":{"last_poll_at":"2026-09-02T02:06:35.207447777Z","last_successful_poll_at":"2026-09-02T02:06:35.207447777Z","consecutive_poll_failures":0,"last_stored_poll_id":4,"last_successful_stored_poll_id":4},"latest":{"poll_id":4,"target_id":2,"app_run_id":2,"status":"ok","result":{"target_name":"quarkus-stars","poll_started_at":"2026-09-02T02:06:35.161567318Z","poll_finished_at":"2026-09-02T02:06:35.207447777Z","health_status":"UP","db_health_status":"UP","process_start_time":"2026-09-02T02:06:15.272000074Z","samples":[{"key":"http_requests_total","kind":"counter","value":1,"unit":"requests"},{"key":"http_404_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_4xx_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_5xx_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_request_time_total_seconds","kind":"counter","value":1.393785567,"unit":"seconds"},{"key":"process_cpu_usage","kind":"gauge","value":0.6701754385964912,"unit":"ratio"},{"key":"jvm_heap_used_bytes","kind":"gauge","value":31332360,"unit":"bytes"},{"key":"process_start_time","kind":"gauge","value":1788314775.272,"unit":"unix_seconds"},{"key":"process_uptime","kind":"gauge","value":19.986,"unit":"seconds"}],"events":null}}},{"metadata":{"name":"statlite-self","type":"statlite-metrics","endpoint":"http://127.0.0.1:9090/statlite/metrics","endpoint_source":"url"},"status":{"last_poll_at":"2026-09-02T02:06:32.934179584Z","last_successful_poll_at":"2026-09-02T02:06:32.934179584Z","consecutive_poll_failures":0,"last_stored_poll_id":3,"last_successful_stored_poll_id":3},"latest":{"poll_id":3,"target_id":1,"app_run_id":1,"status":"ok","result":{"target_name":"statlite-self","poll_started_at":"2026-09-02T02:06:32.932089608Z","poll_finished_at":"2026-09-02T02:06:32.934179584Z","health_status":"UP","db_health_status":"UP","process_start_time":"2026-09-02T02:06:29.837848093Z","samples":[{"key":"process_start_time","kind":"gauge","value":1788314789.8378482,"unit":"unix_seconds"},{"key":"http_requests_total","kind":"counter","value":1,"unit":"requests"},{"key":"http_404_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_4xx_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_5xx_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_request_time_total_seconds","kind":"counter","value":0.027886672,"unit":"seconds"},{"key":"process_cpu_usage","kind":"gauge","value":0,"unit":"cores"},{"key":"runtime_heap_used_bytes","kind":"gauge","value":416288,"unit":"bytes"},{"key":"process_uptime","kind":"gauge","value":3.095979495,"unit":"seconds"},{"key":"host_memory_used_bytes","kind":"gauge","value":366157824,"unit":"bytes"},{"key":"host_memory_total_bytes","kind":"gauge","value":474259456,"unit":"bytes"},{"key":"host_disk_used_bytes","kind":"gauge","value":3125624832,"unit":"bytes"},{"key":"host_disk_total_bytes","kind":"gauge","value":4083888128,"unit":"bytes"}],"events":null}}}],"selected_target":{"name":"spring-stars","type":"spring","endpoint":"http://127.0.0.1:8080/actuator","endpoint_source":"url"},"monitor":{"last_poll_at":"2026-09-02T02:06:36.731303807Z","last_successful_poll_at":"2026-09-02T02:06:36.731303807Z","consecutive_poll_failures":0,"last_stored_poll_id":5,"last_successful_stored_poll_id":5},"latest":{"poll_id":5,"target_id":3,"app_run_id":3,"status":"ok","result":{"target_name":"spring-stars","poll_started_at":"2026-09-02T02:06:29.881827574Z","poll_finished_at":"2026-09-02T02:06:36.731303807Z","health_status":"UP","db_health_status":"UP","process_start_time":"2026-09-02T02:05:52.934000015Z","samples":[{"key":"http_requests_total","kind":"counter","value":4,"unit":"requests"},{"key":"http_404_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_4xx_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_5xx_total","kind":"counter","value":0,"unit":"requests"},{"key":"http_request_time_total_seconds","kind":"counter","value":11.536021980000001,"unit":"seconds"},{"key":"jvm_heap_used_bytes","kind":"gauge","value":36734696,"unit":"bytes"},{"key":"process_cpu_usage","kind":"gauge","value":0,"unit":"ratio"},{"key":"process_start_time","kind":"gauge","value":1788314752.934,"unit":"unix_seconds"}],"events":null}},"latest_restart_status":"none","now":"2026-09-02T02:06:37.37715319Z"}
+
+== listeners ==
+State  Recv-Q Send-Q      Local Address:Port  Peer Address:PortProcess
+LISTEN 0      4096            127.0.0.1:9090       0.0.0.0:*    users:(("statlite",pid=11683,fd=6))
+LISTEN 0      4096           127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=517,fd=17))
+LISTEN 0      4096              0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=947,fd=3),("systemd",pid=1,fd=179))
+LISTEN 0      4096        127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=517,fd=15))
+LISTEN 0      50     [::ffff:127.0.0.1]:34461            *:*    users:(("java",pid=11624,fd=24))
+LISTEN 0      4096   [::ffff:127.0.0.1]:8081             *:*    users:(("java",pid=11624,fd=149))
+LISTEN 0      10     [::ffff:127.0.0.1]:8080             *:*    users:(("java",pid=11557,fd=14))
+LISTEN 0      4096                 [::]:22            [::]:*    users:(("sshd",pid=947,fd=4),("systemd",pid=1,fd=182))
+LISTEN 0      50                      *:41205            *:*    users:(("java",pid=11624,fd=141))
+LISTEN 0      50                      *:39079            *:*    users:(("java",pid=11557,fd=9))
+== system state ==
+MainPID=11557
+NRestarts=0
+ExecMainStartTimestamp=Tue 2026-09-01 19:05:52 PDT
+ExecMainStatus=0
+ActiveState=active
+SubState=running
+
+MainPID=11624
+NRestarts=0
+ExecMainStartTimestamp=Tue 2026-09-01 19:06:15 PDT
+ExecMainStatus=0
+ActiveState=active
+SubState=running
+
+MainPID=11683
+NRestarts=0
+ExecMainStartTimestamp=Tue 2026-09-01 19:06:29 PDT
+ExecMainStatus=0
+ActiveState=active
+SubState=running

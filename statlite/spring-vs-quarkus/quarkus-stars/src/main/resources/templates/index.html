@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Star Pulse · Quarkus</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body><div class="wrap">
+  <header><div><div class="eyebrow">PVRLabs · Stars · Quarkus</div><h1>GitHub star pulse</h1><p class="sub">Tracking {repoCount} of {maxRepos} repositories. History is stored only when the count moves.</p></div><form method="post" action="/refresh"><button type="submit">Fetch now</button></form></header>
+  <section class="grid">
+    {#for card in cards}<article class="card" style="--repo-color:{card.color}"><a class="repo" href="{card.url}" target="_blank" rel="noreferrer">{card.repoName}</a><div class="stars">⭐ {#if card.stars}{card.stars}{#else}—{/if}</div><div class="stats"><span>Forks <strong>{card.forks ?: '—'}</strong></span><span>Watchers <strong>{card.watchers ?: '—'}</strong></span></div><div class="meta">Last push {card.lastPushed}</div><div class="meta">Last polled {card.lastPolled}</div></article>{/for}
+  </section>
+  <section class="panel"><div class="panel-head"><h2>Growth</h2><p>One line per repository · Chart.js</p></div><canvas id="chart"></canvas></section>
+  <footer>Poll interval 5 minutes · max 4 repos · Prometheus metrics at :8081/q/metrics</footer>
+</div><script id="chart-data" type="application/json">{chartJson.raw}</script><script src="/chart.js"></script></body></html>

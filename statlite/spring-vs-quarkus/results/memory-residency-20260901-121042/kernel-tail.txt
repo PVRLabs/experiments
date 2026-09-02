@@ -1,0 +1,80 @@
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting systemd-journald.service - Journal Service...
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[Tue Sep  1 09:39:42 2026] systemd-journald[284]: Collecting audit messages is disabled.
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[Tue Sep  1 09:39:42 2026] pstore: Using crash dump compression: deflate
+[Tue Sep  1 09:39:42 2026] pstore: Registered efi_pstore as persistent store backend
+[Tue Sep  1 09:39:42 2026] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+[Tue Sep  1 09:39:42 2026] systemd[1]: netplan-ovs-cleanup.service - OpenVSwitch configuration for cleanup was skipped because of an unmet condition check (ConditionFileIsExecutable=/usr/bin/ovs-vsctl).
+[Tue Sep  1 09:39:43 2026] systemd[1]: Starting systemd-fsck-root.service - File System Check on Root Device...
+[Tue Sep  1 09:39:43 2026] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[Tue Sep  1 09:39:43 2026] systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Tue Sep  1 09:39:43 2026] systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+[Tue Sep  1 09:39:43 2026] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[Tue Sep  1 09:39:43 2026] systemd[1]: Started systemd-journald.service - Journal Service.
+[Tue Sep  1 09:39:43 2026] EXT4-fs (sda1): re-mounted 9d238549-a2c4-41a5-97de-f89c4c45ec32 r/w.
+[Tue Sep  1 09:39:43 2026] systemd-journald[284]: Received client request to flush runtime journal.
+[Tue Sep  1 09:39:45 2026] parport_pc 00:03: reported by Plug and Play ACPI
+[Tue Sep  1 09:39:45 2026] parport0: PC-style at 0x378, irq 7 [PCSPP,TRISTATE]
+[Tue Sep  1 09:39:45 2026] EXT4-fs (sda16): mounted filesystem 0e597855-065c-43ea-a0ec-433b1f5b0be2 r/w with ordered data mode. Quota mode: none.
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.708:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=450 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.711:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=455 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.713:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=454 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.715:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=453 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.717:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=452 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.719:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=451 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.747:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="vscode" pid=467 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.751:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="cam" pid=463 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.762:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-run" pid=465 comm="apparmor_parser"
+[Tue Sep  1 09:39:45 2026] audit: type=1400 audit(1788280785.766:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="chrome" pid=466 comm="apparmor_parser"
+[Tue Sep  1 09:39:46 2026] ppdev: user-space parallel port driver
+[Tue Sep  1 09:39:51 2026] I/O error, dev fd0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[Tue Sep  1 09:39:51 2026] floppy: error 10 while reading block 0
+[Tue Sep  1 09:39:51 2026] I/O error, dev fd0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[Tue Sep  1 09:39:51 2026] floppy: error 10 while reading block 0
+[Tue Sep  1 09:39:51 2026] I/O error, dev fd0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[Tue Sep  1 09:39:51 2026] floppy: error 10 while reading block 0
+[Tue Sep  1 09:39:51 2026] I/O error, dev fd0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[Tue Sep  1 09:39:51 2026] floppy: error 10 while reading block 0
+[Tue Sep  1 09:39:51 2026] I/O error, dev fd0, sector 0 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 2
+[Tue Sep  1 09:39:51 2026] floppy: error 10 while reading block 0
+[Tue Sep  1 09:39:51 2026] ISO 9660 Extensions: Microsoft Joliet Level 3
+[Tue Sep  1 09:39:51 2026] ISOFS: changing to secondary root
+[Tue Sep  1 09:39:57 2026] EXT4-fs (sda1): resizing filesystem from 655099 to 1048315 blocks
+[Tue Sep  1 09:39:57 2026] EXT4-fs (sda1): resized filesystem to 1048315
+[Tue Sep  1 09:40:00 2026] kauditd_printk_skb: 107 callbacks suppressed
+[Tue Sep  1 09:40:00 2026] audit: type=1400 audit(1788280800.617:119): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="rsyslogd" pid=789 comm="apparmor_parser"
+[Tue Sep  1 09:40:02 2026] loop0: detected capacity change from 0 to 8
+[Tue Sep  1 09:40:03 2026] audit: type=1400 audit(1788280803.815:120): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=970 comm="apparmor_parser"
+[Tue Sep  1 09:48:47 2026] clocksource: timekeeping watchdog on CPU0: Marking clocksource 'tsc' as unstable because the skew is too large:
+[Tue Sep  1 09:48:47 2026] clocksource:                       'hpet' wd_nsec: 540604000 wd_now: d01afe3c wd_last: cce218cc mask: ffffffff
+[Tue Sep  1 09:48:47 2026] clocksource:                       'tsc' cs_nsec: 542190251 cs_now: ce9fb8799030 cs_last: ce9f6aea8b26 mask: ffffffffffffffff
+[Tue Sep  1 09:48:47 2026] clocksource:                       Clocksource 'tsc' skewed 1586251 ns (1 ms) over watchdog 'hpet' interval of 540604000 ns (540 ms)
+[Tue Sep  1 09:48:47 2026] clocksource:                       'tsc' is current clocksource.
+[Tue Sep  1 09:48:47 2026] tsc: Marking TSC unstable due to clocksource watchdog
+[Tue Sep  1 09:48:47 2026] TSC found unstable after boot, most likely due to broken BIOS. Use 'tsc=unstable'.
+[Tue Sep  1 09:48:47 2026] sched_clock: Marking unstable (550098763672, -384925177)<-(550251069506, -537194257)
+[Tue Sep  1 09:48:47 2026] clocksource: Not enough CPUs to check clocksource 'tsc'.
+[Tue Sep  1 09:48:47 2026] clocksource: Switched to clocksource hpet
+[Tue Sep  1 10:01:02 2026] hrtimer: interrupt took 3188080 ns
+[Tue Sep  1 10:01:04 2026] Adding 262140k swap on /swapfile.  Priority:-2 extents:1 across:262140k
+[Tue Sep  1 10:01:57 2026] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 10:07:19 2026] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 8 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 10:15:18 2026] workqueue: blk_mq_run_work_fn hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 10:15:40 2026] workqueue: blk_mq_run_work_fn hogged CPU for >10000us 8 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 10:15:44 2026] workqueue: blk_mq_run_work_fn hogged CPU for >10000us 16 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 10:32:21 2026] workqueue: blk_mq_run_work_fn hogged CPU for >10000us 32 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 10:36:09 2026] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 16 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 10:36:31 2026] workqueue: blk_mq_requeue_work hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 10:54:58 2026] workqueue: blk_mq_requeue_work hogged CPU for >10000us 8 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 11:56:54 2026] workqueue: ata_sff_pio_task hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 12:33:47 2026] workqueue: ata_sff_pio_task hogged CPU for >10000us 8 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 12:40:10 2026] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 32 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 12:58:26 2026] workqueue: ata_sff_pio_task hogged CPU for >10000us 16 times, consider switching to WQ_UNBOUND
+[Tue Sep  1 13:07:29 2026] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 64 times, consider switching to WQ_UNBOUND
