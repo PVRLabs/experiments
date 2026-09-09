@@ -5,6 +5,11 @@
 A small deployment experiment to verify StatLite's native Alpine/OpenRC
 TierHive recipe on a nominal 256 MB VPS.
 
+See the main [StatLite project](https://github.com/PVRLabs/statlite) for the
+monitoring application and source repository, plus the
+[TierHive deployment README](https://github.com/PVRLabs/statlite/blob/main/deploy/tierhive/README.md)
+for the recipe documentation.
+
 ## Setup
 
 The VPS ran Alpine Linux 3.24.1 on x86_64 with approximately 217 MiB of guest
@@ -30,7 +35,7 @@ The StatLite dashboard monitored two targets from the same instance:
 
 ## What I verified
 
-- The unpublished native recipe installed and verified StatLite v0.4.0,
+- The native recipe installed and verified StatLite v0.4.0,
   created the normal configuration and SQLite store, enabled OpenRC, and
   passed `/healthz`.
 - The Spring target first reported connection refused while the demo was not
