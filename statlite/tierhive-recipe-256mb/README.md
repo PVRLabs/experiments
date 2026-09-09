@@ -1,6 +1,6 @@
 # StatLite on a 256 MB TierHive VPS
 
-![StatLite monitoring the Spring Boot application and the VPS itself](tierhive-statlite.png)
+![StatLite monitoring the Spring Boot application and the VPS itself](tierhive-statlite.webp)
 
 A small deployment experiment to verify StatLite's native Alpine/OpenRC
 TierHive recipe on a nominal 256 MB VPS.
@@ -50,17 +50,17 @@ The StatLite dashboard monitored two targets from the same instance:
 The final capture shows the application target, the fixed self-monitoring
 target, and the host-resource charts from the same StatLite instance.
 
-![Spring Actuator target dashboard](spring-target-dashboard.png)
+![Spring Actuator target dashboard](spring-target-dashboard.webp)
 
 *Spring Boot Actuator target with health, request, error, latency, and process
 runtime charts.*
 
-![StatLite self-monitoring dashboard](self-monitoring-dashboard.png)
+![StatLite self-monitoring dashboard](self-monitoring-dashboard.webp)
 
 *The `statlite-self` target with successful polling and StatLite runtime
 metrics.*
 
-![Host resource dashboard](host-resources-dashboard.png)
+![Host resource dashboard](host-resources-dashboard.webp)
 
 *Host CPU, RAM, disk, restart, and latest self-monitoring poll evidence.*
 
