@@ -4,6 +4,12 @@ A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
 ## Experiments
 
+- [StatLite on a 256 MB TierHive VPS](statlite/tierhive-recipe-256mb/)
+
+  A manual deployment check of StatLite's native Alpine/OpenRC TierHive
+  recipe, monitoring a Spring Boot Actuator application plus the VPS itself
+  through StatLite self-monitoring.
+
 - [Spring Boot on a low-memory VPS](statlite/spring-boot-low-memory/)
 
   This experiment tested whether StatLite could provide useful monitoring
