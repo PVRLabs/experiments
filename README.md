@@ -25,3 +25,9 @@ A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
   smaller resident working set under pressure; a later constrained-VM run
   OOM-killed Spring, showing that the configuration could not reliably keep
   both JVM applications alive for an hour.
+
+- [Spring Boot fat JAR vs extracted layout](spring-boot/extracted-layout/)
+
+  A controlled comparison of Spring Boot's executable fat JAR and its official
+  extracted runtime layout, measuring startup, first-request latency, and
+  settled memory behavior.
