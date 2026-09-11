@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Star Pulse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b1020;
+            --bg-elev: #121a30;
+            --bg-card: #161f38;
+            --line: #2a3558;
+            --ink: #e8eefc;
+            --muted: #93a0c2;
+            --accent: #fbbf24;
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
+        body {
+            min-height: 100vh;
+            color: var(--ink);
+            font-family: "IBM Plex Sans", system-ui, sans-serif;
+            background:
+                radial-gradient(1200px 500px at 10% -10%, #1d2a55 0%, transparent 55%),
+                radial-gradient(900px 400px at 100% 0%, #3b1d4a 0%, transparent 50%),
+                var(--bg);
+        }
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 64px; }
+        header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+        .eyebrow {
+            font-family: "IBM Plex Mono", ui-monospace, monospace;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-size: 11px;
+            color: var(--accent);
+            margin: 0 0 8px;
+        }
+        h1 { font-size: 32px; margin: 0; letter-spacing: -0.03em; }
+        .sub { color: var(--muted); margin: 8px 0 0; }
+        .refresh {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--line);
+            background: linear-gradient(180deg, #243056, #1a2340);
+            color: var(--ink);
+            font: 500 14px/1 "IBM Plex Sans", sans-serif;
+            padding: 10px 16px;
+            border-radius: 999px;
+            cursor: pointer;
+        }
+        .refresh:hover { border-color: #4b5d96; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 16px 18px 14px;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 3px;
+            background: var(--repo-color, var(--accent));
+        }
+        .repo {
+            font-family: "IBM Plex Mono", ui-monospace, monospace;
+            font-size: 13px;
+            color: var(--muted);
+            text-decoration: none;
+        }
+        .repo:hover { color: var(--ink); }
+        .stars {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin: 10px 0 4px;
+        }
+        .stars .glyph { font-size: 26px; line-height: 1; }
+        .stars .count { line-height: 1; }
+        .stars .label {
+            align-self: flex-end;
+            font-size: 16px;
+            color: var(--muted);
+            font-weight: 500;
+            line-height: 1;
+        }
+        .stats {
+            display: flex;
+            gap: 14px;
+            margin: 8px 0 10px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+        .stats strong { color: var(--ink); font-weight: 600; }
+        .meta { color: var(--muted); font-size: 13px; }
+        .meta + .meta { margin-top: 2px; }
+        .panel {
+            background: var(--bg-elev);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 18px 18px 8px;
+        }
+        .panel-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+        .panel h2 { margin: 0; font-size: 16px; font-weight: 600; }
+        .panel p { margin: 0; color: var(--muted); font-size: 13px; }
+        .chart-wrap { position: relative; height: 380px; }
+        .empty {
+            color: var(--muted);
+            text-align: center;
+            padding: 48px 12px;
+        }
+        footer {
+            margin-top: 22px;
+            color: var(--muted);
+            font-size: 12px;
+            font-family: "IBM Plex Mono", ui-monospace, monospace;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div>
+            <p class="eyebrow">PVRLabs · Stars</p>
+            <h1>GitHub star pulse</h1>
+            <p class="sub">
+                Tracking <span th:text="${repoCount}">0</span> of
+                <span th:text="${maxRepos}">5</span> repositories. History is stored only when the count moves.
+            </p>
+        </div>
+        <form method="post" action="/refresh">
+            <button class="refresh" type="submit">Fetch now</button>
+        </form>
+    </header>
+
+    <section class="grid" th:if="${!cards.isEmpty()}">
+        <article class="card" th:each="card : ${cards}" th:style="'--repo-color:' + ${card.color}">
+            <a class="repo" th:href="${card.url}" th:text="${card.repoName}" target="_blank" rel="noreferrer">owner/repo</a>
+            <div class="stars">
+                <span class="glyph" aria-hidden="true">⭐</span>
+                <span class="count" th:if="${card.stars != null}" th:text="${#numbers.formatInteger(card.stars, 1, 'COMMA')}">0</span>
+                <span class="count" th:if="${card.stars == null}">—</span>
+                <span class="label">stars</span>
+            </div>
+            <div class="stats">
+                <span>Forks <strong th:if="${card.forks != null}" th:text="${#numbers.formatInteger(card.forks, 1, 'COMMA')}">0</strong><strong th:if="${card.forks == null}">—</strong></span>
+                <span>Watchers <strong th:if="${card.watchers != null}" th:text="${#numbers.formatInteger(card.watchers, 1, 'COMMA')}">0</strong><strong th:if="${card.watchers == null}">—</strong></span>
+            </div>
+            <div class="meta">Last push <span th:text="${card.lastPushed}">—</span></div>
+            <div class="meta">Last polled <span th:text="${card.lastPolled}">just now</span></div>
+        </article>
+    </section>
+
+    <section class="panel">
+        <div class="panel-head">
+            <h2>Growth</h2>
+            <p id="chart-window">One line per repository · Chart.js</p>
+        </div>
+        <div class="chart-wrap">
+            <canvas id="star-chart" aria-label="Star history chart"></canvas>
+            <p id="chart-empty" class="empty" hidden>No history yet. Poll once to seed the first points.</p>
+        </div>
+    </section>
+
+    <footer>Poll interval 5 minutes · max 4 repos · unauthenticated GitHub limit is 60 req/hour (every poll counts)</footer>
+</div>
+
+<script id="chart-data" type="application/json" th:utext="${chartJson}">{"datasets":[]}</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script>
+    const payload = JSON.parse(document.getElementById('chart-data').textContent);
+    const hasPoints = (payload.datasets || []).some(ds =>
+        (ds.points && ds.points.length) || ds.current != null);
+    const empty = document.getElementById('chart-empty');
+    if (!hasPoints) {
+        empty.hidden = false;
+    } else {
+        const HOUR = 60 * 60 * 1000;
+        const DAY = 24 * HOUR;
+        const xs = payload.datasets.flatMap(ds => (ds.points || []).map(p => p.x));
+        const maxData = Math.max(...(xs.length ? xs : [Date.now()]), Date.now());
+        const span = xs.length ? maxData - Math.min(...xs) : 0;
+        const windowMs = span <= HOUR ? HOUR : (span <= DAY ? DAY : 7 * DAY);
+        const xMin = maxData - windowMs;
+        const label = windowMs === HOUR ? 'Last 1 hour' : (windowMs === DAY ? 'Last 1 day' : 'Last 7 days');
+        document.getElementById('chart-window').textContent = label + ' · Chart.js';
+
+        function seriesInWindow(ds) {
+            const pts = (ds.points || []).slice().sort((a, b) => a.x - b.x);
+            const inView = pts.filter(p => p.x >= xMin && p.x <= maxData);
+            const prior = pts.filter(p => p.x < xMin);
+            const out = [];
+            const carry = prior.length
+                ? prior[prior.length - 1].y
+                : (inView.length ? null : ds.current);
+            if (carry != null) {
+                out.push({ x: xMin, y: carry });
+            }
+            out.push(...inView);
+            const yNow = ds.current != null
+                ? ds.current
+                : (out.length ? out[out.length - 1].y : null);
+            if (yNow != null && (out.length === 0 || out[out.length - 1].x < maxData)) {
+                out.push({ x: maxData, y: yNow });
+            }
+            return out;
+        }
+
+        const ctx = document.getElementById('star-chart');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                datasets: payload.datasets.map(ds => ({
+                    label: ds.label,
+                    data: seriesInWindow(ds),
+                    borderColor: ds.color,
+                    backgroundColor: ds.color,
+                    tension: 0.25,
+                    fill: false,
+                    pointStyle: 'circle',
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointBackgroundColor: ds.color,
+                    pointBorderColor: '#0b1020',
+                    pointBorderWidth: 2,
+                    borderWidth: 2
+                }))
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: 'nearest', intersect: false },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#cdd6f4',
+                            font: { family: 'IBM Plex Sans' },
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: items => items.map(i => new Date(i.parsed.x).toISOString().replace('T', ' ').slice(0, 16) + ' UTC')
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'linear',
+                        min: xMin,
+                        max: maxData,
+                        ticks: {
+                            color: '#93a0c2',
+                            maxRotation: 0,
+                            callback: value => {
+                                const d = new Date(value);
+                                return windowMs < 7 * DAY
+                                    ? d.toISOString().slice(11, 16)
+                                    : d.toISOString().slice(5, 10);
+                            }
+                        },
+                        grid: { color: '#243056' }
+                    },
+                    y: {
+                        beginAtZero: false,
+                        ticks: { color: '#93a0c2', precision: 0 },
+                        grid: { color: '#243056' }
+                    }
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>
