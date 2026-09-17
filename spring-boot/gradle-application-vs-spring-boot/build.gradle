@@ -1,0 +1,54 @@
+plugins {
+    id 'application'
+}
+
+group = 'pvrlabs'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+sourceSets {
+    main {
+        java.srcDirs = ['app/src/main/java']
+        resources.srcDirs = ['app/src/main/resources']
+    }
+    test {
+        java.srcDirs = ['app/src/test/java']
+        resources.srcDirs = ['app/src/test/resources']
+    }
+}
+
+dependencies {
+    implementation platform('org.springframework.boot:spring-boot-dependencies:4.1.1')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+    runtimeOnly 'com.h2database:h2'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+application {
+    applicationName = 'stars-gradle'
+    mainClass = 'pvrlabs.StarsApplication'
+}
+
+// The app plugin's installDist output is the artifact under test. The
+// generated launcher assembles a normal classpath of this JAR plus lib/*.jar.
+tasks.named('jar') {
+    archiveFileName = 'stars-gradle.jar'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

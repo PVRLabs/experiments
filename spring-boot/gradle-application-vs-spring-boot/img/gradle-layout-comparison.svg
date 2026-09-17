@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">Individual Spring Boot launch-layout runs</title>
+  <desc id="chart-desc">Two compact dot plots show all three startup and first-request observations for the fat JAR, extracted layout, and Gradle application distribution. The slower third Gradle run is called out.</desc>
+  <style>
+    text { font-family: Inter, Arial, sans-serif; }
+    .title { fill: #f5f5f5; font-size: 23px; font-weight: 600; }
+    .subtitle, .axis-label { fill: #a0a0a0; font-size: 13px; }
+    .panel { fill: #202020; stroke: #3a3a3a; stroke-width: 1; }
+    .panel-title { fill: #f5f5f5; font-size: 17px; font-weight: 600; }
+    .row-label { fill: #f5f5f5; font-size: 13px; font-weight: 600; }
+    .grid { stroke: #3a3a3a; stroke-width: 1; stroke-dasharray: 3 5; }
+    .axis { stroke: #666; stroke-width: 1; }
+    .fat { fill: #8fb4c9; }
+    .extracted { fill: #2ecc71; }
+    .gradle { fill: #f2b84b; }
+    .dot { stroke: #111; stroke-width: 1.5; }
+    .callout { fill: #f2b84b; font-size: 12px; font-weight: 600; }
+    .callout-line { stroke: #f2b84b; stroke-width: 1.5; }
+  </style>
+
+  <rect width="960" height="540" rx="12" fill="#151515"/>
+  <text class="title" x="32" y="40">Individual runs</text>
+  <text class="subtitle" x="220" y="40">Three fresh starts per layout; medians are in the table above.</text>
+
+  <g transform="translate(24 66)">
+    <rect class="panel" width="912" height="210" rx="8"/>
+    <text class="panel-title" x="26" y="32">Spring startup</text>
+    <text class="subtitle" x="160" y="32">seconds, lower is better</text>
+
+    <line class="grid" x1="180" y1="52" x2="180" y2="174"/>
+    <line class="grid" x1="352.5" y1="52" x2="352.5" y2="174"/>
+    <line class="grid" x1="525" y1="52" x2="525" y2="174"/>
+    <line class="grid" x1="697.5" y1="52" x2="697.5" y2="174"/>
+    <line class="grid" x1="870" y1="52" x2="870" y2="174"/>
+    <line class="axis" x1="180" y1="174" x2="870" y2="174"/>
+
+    <text class="row-label" x="26" y="76">Fat JAR</text>
+    <text class="row-label" x="26" y="120">Extracted</text>
+    <text class="row-label" x="26" y="164">Gradle</text>
+
+    <circle class="fat dot" cx="780.8" cy="72" r="7"><title>Fat JAR run 1: 10.449 s</title></circle>
+    <circle class="fat dot" cx="749.5" cy="72" r="7"><title>Fat JAR run 2: 9.905 s</title></circle>
+    <circle class="fat dot" cx="760.9" cy="72" r="7"><title>Fat JAR run 3: 10.103 s</title></circle>
+
+    <circle class="extracted dot" cx="647.5" cy="116" r="7"><title>Extracted run 1: 8.130 s</title></circle>
+    <circle class="extracted dot" cx="660.5" cy="116" r="7"><title>Extracted run 2: 8.357 s</title></circle>
+    <circle class="extracted dot" cx="668.8" cy="116" r="7"><title>Extracted run 3: 8.500 s</title></circle>
+
+    <circle class="gradle dot" cx="635.5" cy="160" r="7"><title>Gradle run 1: 7.921 s</title></circle>
+    <circle class="gradle dot" cx="615.4" cy="160" r="7"><title>Gradle run 2: 7.572 s</title></circle>
+    <circle class="gradle dot" cx="761.1" cy="160" r="7"><title>Gradle run 3: 10.106 s</title></circle>
+    <line class="callout-line" x1="768" y1="153" x2="789" y2="137"/>
+    <text class="callout" x="795" y="139">slower third run</text>
+
+    <text class="axis-label" x="180" y="198" text-anchor="middle">0</text>
+    <text class="axis-label" x="352.5" y="198" text-anchor="middle">3</text>
+    <text class="axis-label" x="525" y="198" text-anchor="middle">6</text>
+    <text class="axis-label" x="697.5" y="198" text-anchor="middle">9</text>
+    <text class="axis-label" x="870" y="198" text-anchor="middle">12 s</text>
+  </g>
+
+  <g transform="translate(24 300)">
+    <rect class="panel" width="912" height="210" rx="8"/>
+    <text class="panel-title" x="26" y="32">First request</text>
+    <text class="subtitle" x="143" y="32">seconds, lower is better</text>
+
+    <line class="grid" x1="180" y1="52" x2="180" y2="174"/>
+    <line class="grid" x1="336.8" y1="52" x2="336.8" y2="174"/>
+    <line class="grid" x1="493.6" y1="52" x2="493.6" y2="174"/>
+    <line class="grid" x1="650.5" y1="52" x2="650.5" y2="174"/>
+    <line class="grid" x1="807.3" y1="52" x2="807.3" y2="174"/>
+    <line class="axis" x1="180" y1="174" x2="870" y2="174"/>
+
+    <text class="row-label" x="26" y="76">Fat JAR</text>
+    <text class="row-label" x="26" y="120">Extracted</text>
+    <text class="row-label" x="26" y="164">Gradle</text>
+
+    <circle class="fat dot" cx="791.6" cy="72" r="7"><title>Fat JAR run 1: 1.950138 s</title></circle>
+    <circle class="fat dot" cx="804.5" cy="72" r="7"><title>Fat JAR run 2: 1.990808 s</title></circle>
+    <circle class="fat dot" cx="769.2" cy="72" r="7"><title>Fat JAR run 3: 1.878592 s</title></circle>
+
+    <circle class="extracted dot" cx="634.4" cy="116" r="7"><title>Extracted run 1: 1.449283 s</title></circle>
+    <circle class="extracted dot" cx="623.5" cy="116" r="7"><title>Extracted run 2: 1.414253 s</title></circle>
+    <circle class="extracted dot" cx="627.6" cy="116" r="7"><title>Extracted run 3: 1.427215 s</title></circle>
+
+    <circle class="gradle dot" cx="601.2" cy="160" r="7"><title>Gradle run 1: 1.343323 s</title></circle>
+    <circle class="gradle dot" cx="580.4" cy="160" r="7"><title>Gradle run 2: 1.276889 s</title></circle>
+    <circle class="gradle dot" cx="721.8" cy="160" r="7"><title>Gradle run 3: 1.727440 s</title></circle>
+    <line class="callout-line" x1="729" y1="153" x2="750" y2="137"/>
+    <text class="callout" x="756" y="139">slower third run</text>
+
+    <text class="axis-label" x="180" y="198" text-anchor="middle">0</text>
+    <text class="axis-label" x="336.8" y="198" text-anchor="middle">0.5</text>
+    <text class="axis-label" x="493.6" y="198" text-anchor="middle">1.0</text>
+    <text class="axis-label" x="650.5" y="198" text-anchor="middle">1.5</text>
+    <text class="axis-label" x="807.3" y="198" text-anchor="middle">2.0</text>
+    <text class="axis-label" x="870" y="198" text-anchor="middle">2.2 s</text>
+  </g>
+</svg>

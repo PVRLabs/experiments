@@ -10,6 +10,11 @@ A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
   extracted runtime layout, measuring startup, first-request latency, and
   settled memory behavior.
 
+- [Spring Boot fat JAR vs extracted layout vs Gradle application distribution](spring-boot/gradle-application-vs-spring-boot/)
+
+  A short three-way follow-up using the same application and constrained VM,
+  focused on startup and first-request latency.
+
 - [StatLite on a 256 MB TierHive VPS](statlite/tierhive-recipe-256mb/)
 
   A manual deployment check of StatLite's native Alpine/OpenRC TierHive
