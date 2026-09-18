@@ -6,3 +6,4 @@
 **/*.log
 **/*.sqlite
 **/*.sqlite-*
+spring-boot/gradle-application-vs-spring-boot/.gradle/
