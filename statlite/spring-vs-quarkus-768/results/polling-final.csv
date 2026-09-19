@@ -1,0 +1,4 @@
+target,status,consecutive_poll_failures,last_successful_poll_id,restart_status
+spring-stars,ok,0,81,none
+quarkus-stars,ok,0,80,none
+statlite-self,ok,0,79,none
