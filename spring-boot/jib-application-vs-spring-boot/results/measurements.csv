@@ -1,0 +1,7 @@
+run,layout,spring_startup_seconds,external_startup_ms,first_request_seconds,peak_rss_kib,settled_rss_kib,observation_end_rss_kib,observation_end_process_swap_kib,validated_requests,http_200_requests,result
+01,extracted,12.934,13880,1.829480,160992,143368,136876,80948,3,3,success
+02,jib,12.841,13740,2.018467,165468,132164,138556,81164,3,3,success
+03,extracted,12.472,13350,1.798460,158504,126672,141128,76968,3,3,success
+04,jib,13.100,14030,2.186600,156832,144920,145152,74488,3,3,success
+05,extracted,13.275,14200,2.022414,156416,130580,132064,85780,3,3,success
+06,jib,12.767,13610,1.846652,158720,125780,126916,94024,3,3,success
