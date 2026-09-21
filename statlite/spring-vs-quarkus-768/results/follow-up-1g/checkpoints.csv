@@ -1,0 +1,7 @@
+checkpoint,spring_rss_kib,spring_swap_kib,spring_heap_bytes,quarkus_rss_kib,quarkus_swap_kib,quarkus_heap_bytes,host_memory_used_bytes
+ready-pre-request,238644,0,11348992,173636,0,6630400,
+after-one-request,240404,0,3650560,174580,0,10209280,
+post-workload,241036,0,8738816,176040,0,3504128,
+intermediate,245484,0,10952704,182700,0,5429248,
+mid-5m,245780,0,20445184,183904,0,2141184,
+after-10m,246172,0,6499328,185536,0,7260160,681357312

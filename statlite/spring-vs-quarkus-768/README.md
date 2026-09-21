@@ -16,6 +16,14 @@ This claim is limited to the measured applications, JVM profile, workload, VM,
 and observation described here. It is not a framework-wide performance
 ranking.
 
+## 1 GiB no-swap follow-up
+
+The same experiment was repeated after changing the existing VM to 1 GiB and
+disabling swap with `swapoff -a`. The guest reported 955 MiB RAM and `Swap:
+0B`. The same fixture, workload, JVM flags, startup order, and ten-minute
+checkpoints were used. The [follow-up comparison](results/follow-up-1g/comparison-768-vs-1g.md)
+keeps this result separate from the original 768 MiB observation.
+
 ## Environment
 
 - Ubuntu 24.04 x86_64
@@ -45,6 +53,7 @@ See [METHOD.md](METHOD.md), [RESULTS.md](RESULTS.md), and the normalized
 - [Spring target screenshot](screenshots/spring-target.png)
 - [Workload record](results/workload.txt)
 - [Final polling summary](results/polling-final.csv)
+- [1 GiB follow-up data](results/follow-up-1g/)
 
 The private run archive contains additional raw snapshots and closeout data.
 Credentials, VM access material, the private SQLite database, and disposable
