@@ -1,20 +1,31 @@
 # Star Pulse JDBC app
 
-Build with JDK 25 and Maven: `mvn -DskipTests package`. On the Linux host,
-copy the packaged JAR as `stars-jdbc.jar` beside `run.sh` and `statlite.yaml`,
-then run `./run.sh`. The script enables compact object headers and creates a
-file-backed H2 database under `./data/`.
+## Quick start on Linux
 
-For deployment, extract the packaged JAR before starting:
+Install JDK 25, Maven, and Git. Then build and run directly from this public
+repository:
 
 ```sh
+git clone https://github.com/PVRLabs/experiments.git
+cd experiments/spring-boot/jpa-vs-jdbc-stars/jdbc
+java -version
+mvn -DskipTests package
+cp target/stars-jdbc-0.0.1-SNAPSHOT.jar stars-jdbc.jar
 java -Djarmode=tools -jar stars-jdbc.jar extract --destination extracted
 ./run.sh
 ```
 
-The run script prefers `extracted/stars-jdbc.jar` and falls back to the fat JAR.
-The memory comparison measured fat JARs for both variants; extracted layout is
-a separate deployment choice based on the earlier Stars layout experiment.
+If you use [`mvn-lite`](https://github.com/ejboy/agent-scripts), run
+`mvn-lite -DskipTests package` in place of the Maven command above.
+
+Open <http://127.0.0.1:8080/> for the dashboard or
+<http://127.0.0.1:8080/actuator/health> for health. The app first polls after
+three seconds, then every ten minutes. It keeps its H2 database in `./data/`.
+The run script enables compact object headers, prefers the extracted layout,
+and falls back to the fat JAR. The memory comparison measured fat JARs for both
+variants; extraction is a separate deployment choice.
+
+## Repositories and monitoring
 
 The default repositories are `PVRLabs/statlite`, `PVRLabs/aibadger`, and
 `scriptella/scriptella-etl`. Set `APP_GITHUB_REPOS` to change the list (one to
@@ -23,7 +34,14 @@ every ten minutes, records every successful observation, and continues after
 individual GitHub failures. `POST /refresh` polls on demand.
 
 The dashboard is at `/`. Actuator exposes `/actuator/health`,
-`/actuator/metrics`, and `/actuator/prometheus`. With StatLite v0.5.0 installed,
-start the app and run `statlite --config ./statlite.yaml`. Adjust ports and the
-SQLite path in the YAML for the host. Preserve both H2 and SQLite files across
-restarts.
+`/actuator/metrics`, and `/actuator/prometheus`. Install StatLite v0.5.0 on the
+same host, then run this in a second terminal from the `jdbc/` directory:
+
+```sh
+statlite --version
+statlite --config ./statlite.yaml
+```
+
+Open <http://127.0.0.1:9091/> to see the Spring target. The sample YAML also
+monitors StatLite itself. Adjust ports and the SQLite path in the YAML if
+needed. Preserve `data/` and `statlite-stars.sqlite` across restarts or updates.
