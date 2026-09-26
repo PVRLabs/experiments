@@ -1,0 +1,68 @@
+{
+  "captured_at": "2026-09-26T18:53:35.919943+00:00",
+  "host": "macOS-15.6.1-x86_64-i386-64bit-Mach-O",
+  "java": "openjdk version \"25.0.4.1\" 2026-08-18 LTS",
+  "jvm_flags": [
+    "-Xms16m",
+    "-Xmx80m",
+    "-Xss256k",
+    "-XX:+UseSerialGC",
+    "-XX:TieredStopAtLevel=1",
+    "-XX:ReservedCodeCacheSize=32m",
+    "-XX:+UseCompactObjectHeaders"
+  ],
+  "sample_seconds": 60,
+  "warmup_seconds": 30,
+  "order": [
+    "jdbc",
+    "jpa"
+  ],
+  "fixture": "fixture/server.py",
+  "variants": [
+    {
+      "name": "jdbc",
+      "startup_seconds": 3.939,
+      "rss_kib": [
+        149240,
+        149492,
+        149548,
+        149920,
+        149996,
+        150016,
+        150156,
+        150172,
+        150232,
+        150424,
+        150740,
+        150768
+      ],
+      "rss_median_kib": 150086.0,
+      "dashboard_requests": 18,
+      "jar_sha256": "437784548699a5cd8bd4d603b91826b60985b9c917f57a7d3b689f10aff14aa3",
+      "pid": 74486
+    },
+    {
+      "name": "jpa",
+      "startup_seconds": 8.804,
+      "rss_kib": [
+        241976,
+        242092,
+        242272,
+        242332,
+        242468,
+        242636,
+        242584,
+        243628,
+        243712,
+        244060,
+        244144,
+        244240
+      ],
+      "rss_median_kib": 242610.0,
+      "dashboard_requests": 18,
+      "jar_sha256": "63b4ad5b3a73bf573a109aa4a8950a0df83639e763319200f269a095c23192a6",
+      "pid": 75544
+    }
+  ],
+  "source_revision": "20573688f189b8bbd27fe59bdf9a0ff2385f7477"
+}

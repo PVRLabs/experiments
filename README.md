@@ -4,6 +4,12 @@ A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
 ## Experiments
 
+- [Spring Boot Stars: JPA versus JDBC](spring-boot/jpa-vs-jdbc-stars/)
+
+  A paired JDK 25 comparison of the conventional Hibernate Stars app and a
+  smaller Spring MVC + JDBC version. Both expose Actuator for StatLite 0.5.0;
+  raw RSS samples and reproduction scripts are included.
+
 - [Spring Boot fat JAR vs extracted layout](spring-boot/extracted-layout/)
 
   A controlled comparison of Spring Boot's executable fat JAR and its official

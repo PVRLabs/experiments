@@ -1,0 +1,8 @@
+2026-09-26 11:45:34,377 fixture_ready address=127.0.0.1:18080 repositories=3
+2026-09-26 11:45:34,487 GET /healthz 200
+2026-09-26 11:45:42,741 GET /repos/PVRLabs/statlite 200
+2026-09-26 11:45:42,808 GET /repos/PVRLabs/aibadger 200
+2026-09-26 11:45:42,814 GET /repos/scriptella/scriptella-etl 200
+2026-09-26 11:47:18,388 GET /repos/PVRLabs/statlite 200
+2026-09-26 11:47:18,414 GET /repos/PVRLabs/aibadger 200
+2026-09-26 11:47:18,416 GET /repos/scriptella/scriptella-etl 200
