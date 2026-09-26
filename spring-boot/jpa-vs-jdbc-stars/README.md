@@ -9,16 +9,18 @@ and the same monitoring endpoints.
 
 On one macOS host, after a 30 second warmup, the JDBC variant used **about
 90–91 MiB less RSS** than the JPA baseline in two reversed-order runs. That was
-about **38%** of the baseline RSS. StatLite v0.5.0 separately collected the JDBC
+about **38%** of the baseline RSS. Time from process launch to the first
+successful dashboard response was **3.9–4.2 seconds for JDBC**, versus
+**8.1–8.8 seconds for JPA**. StatLite v0.5.0 separately collected the JDBC
 app's health and JVM memory. These observations support choosing Spring JDBC
-for small apps where memory matters. The variants also differ in data model and
-other application code, so the result is not an isolated measurement of the
-Hibernate library alone.
+for small apps where memory and startup matter. The variants also differ in data
+model and other application code, so the result is not an isolated measurement
+of the Hibernate library alone.
 
-| Run order | JPA median RSS | JDBC median RSS | Difference |
-| --- | ---: | ---: | ---: |
-| [JPA, then JDBC](results/jpa-first.json) | 237.0 MiB | 145.8 MiB | 91.2 MiB |
-| [JDBC, then JPA](results/jdbc-first.json) | 236.9 MiB | 146.6 MiB | 90.4 MiB |
+| Run order | JPA median RSS | JDBC median RSS | RSS difference | JPA startup | JDBC startup |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| [JPA, then JDBC](results/jpa-first.json) | 237.0 MiB | 145.8 MiB | 91.2 MiB | 8.134 s | 4.162 s |
+| [JDBC, then JPA](results/jdbc-first.json) | 236.9 MiB | 146.6 MiB | 90.4 MiB | 8.804 s | 3.939 s |
 
 The JSON reports contain every RSS sample, startup timing, JVM flags, host
 description, and JAR hashes. [Method and limits](METHOD.md) documents the
