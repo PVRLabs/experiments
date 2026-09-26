@@ -25,7 +25,7 @@ The run script enables compact object headers, prefers the extracted layout,
 and falls back to the fat JAR. The memory comparison measured fat JARs for both
 variants; extraction is a separate deployment choice.
 
-## Repositories and monitoring
+## Repositories and metrics
 
 The default repositories are `PVRLabs/statlite`, `PVRLabs/aibadger`, and
 `scriptella/scriptella-etl`. Set `APP_GITHUB_REPOS` to change the list (one to
@@ -34,14 +34,5 @@ every ten minutes, records every successful observation, and continues after
 individual GitHub failures. `POST /refresh` polls on demand.
 
 The dashboard is at `/`. Actuator exposes `/actuator/health`,
-`/actuator/metrics`, and `/actuator/prometheus`. Install StatLite v0.5.0 on the
-same host, then run this in a second terminal from the `jdbc/` directory:
-
-```sh
-statlite --version
-statlite --config ./statlite.yaml
-```
-
-Open <http://127.0.0.1:9091/> to see the Spring target. The sample YAML also
-monitors StatLite itself. Adjust ports and the SQLite path in the YAML if
-needed. Preserve `data/` and `statlite-stars.sqlite` across restarts or updates.
+`/actuator/metrics`, and `/actuator/prometheus` for health and application
+metrics.

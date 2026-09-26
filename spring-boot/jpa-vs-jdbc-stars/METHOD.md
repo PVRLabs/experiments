@@ -59,11 +59,6 @@ do not establish a general Spring Boot memory guarantee.
 
 The difference is the complete application change. The JPA baseline stores
 more fields and has more repository and service code. Actuator and Prometheus
-were equalized because monitoring with StatLite is part of the intended use.
+were equalized to keep the application surface and request workload consistent.
 An isolated Hibernate cost would require variants with identical data model,
 UI, and all other dependencies.
-
-An exact StatLite `v0.5.0` binary built from tag
-`48827b2d5d5694786605c6d820e507c5afdf229b` collected the JDBC app with
-`collection_status: ok`, application health `UP`, and a JVM runtime memory
-point. The response is in `results/statlite-0.5.0-check.json`.
