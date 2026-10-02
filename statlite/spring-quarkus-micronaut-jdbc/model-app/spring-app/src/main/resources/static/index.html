@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2b">
+  <title>Market Replay</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/chart.umd.min.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">M</span><span>Market Replay <small>MODEL APPLICATION</small></span></div>
+      <div class="status"><span class="status-dot"></span> Local replay <span id="updated">Loading quotes…</span></div>
+    </header>
+    <section class="intro">
+      <div><p class="eyebrow">HISTORICAL SESSION · SEP 30, 2026</p><h1>A clear view of the market.</h1><p class="lede">A deterministic minute-by-minute replay, synchronized and stored locally.</p></div>
+      <div class="session"><span>REPLAY SESSION</span><strong id="session-label">Waiting for first poll</strong></div>
+    </section>
+    <section class="price-grid" id="prices" aria-label="Latest prices">
+      <article class="price-card" data-symbol="AAPL"><div><span class="symbol">AAPL</span><span class="company">Apple</span></div><strong>—</strong><small>USD</small></article>
+      <article class="price-card" data-symbol="GOOG"><div><span class="symbol">GOOG</span><span class="company">Alphabet</span></div><strong>—</strong><small>USD</small></article>
+      <article class="price-card" data-symbol="NVDA"><div><span class="symbol">NVDA</span><span class="company">NVIDIA</span></div><strong>—</strong><small>USD</small></article>
+    </section>
+    <section class="chart-panel">
+      <div class="panel-heading"><div><p class="eyebrow">SAVED OBSERVATIONS</p><h2>Price history</h2></div><span class="range-pill">LATEST SESSION · UP TO 390 POLLS</span></div>
+      <div class="chart-wrap"><canvas id="history-chart" aria-label="Quote price history line chart"></canvas></div>
+      <div class="legend"><span><i class="apple"></i>AAPL</span><span><i class="google"></i>GOOG</span><span><i class="nvidia"></i>NVDA</span></div>
+    </section>
+    <footer><span>Data fixture: 2026-09-30 · America/New_York</span><span>Automatic refresh every minute</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Pinned Ubuntu image for preparation and measured execution.
+# Intentionally targets the current Intel x86_64 experiment host.
+# Revisit arch/vmType if experiments move to Apple Silicon or another platform.
+minimumLimaVersion: 2.2.0
+images:
+  - location: https://cloud-images.ubuntu.com/releases/noble/release-20260705/ubuntu-24.04-server-cloudimg-amd64.img
+    arch: x86_64
+    digest: sha256:ffe6203da54deeb6db5d2a98a83f9ec8e55f149d3f7ba622e1abe5fa966ee3d6
+vmType: vz
+arch: x86_64
+plain: true
+cpus: 2
+memory: 1GiB
+disk: 6GiB

@@ -1,0 +1,13 @@
+{
+  "tradingDate": "2026-09-30",
+  "timezone": "America/New_York",
+  "session": "09:30-15:59",
+  "interval": "1 minute",
+  "sampleCountPerSymbol": 390,
+  "symbols": ["AAPL", "GOOG", "NVDA"],
+  "field": "minute-bar close price",
+  "source": "Yahoo Finance chart data endpoint",
+  "sourceUrlPattern": "https://query2.finance.yahoo.com/v8/finance/chart/{symbol}?period1=1790775000&period2=1790798460&interval=1m",
+  "retrievedDate": "2026-10-01",
+  "runtimeNetworkAccess": false
+}

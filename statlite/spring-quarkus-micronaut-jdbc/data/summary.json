@@ -1,0 +1,1187 @@
+{
+  "spring": {
+    "window": {
+      "start_monotonic": 211.534649578,
+      "end_monotonic": 1111.685108958,
+      "duration": 900,
+      "traffic": true,
+      "requests": 638,
+      "errors": 0
+    },
+    "processes": {
+      "spring": {
+        "rss_mib": {
+          "n": 180,
+          "min": 204.99609375,
+          "median": 214.318359375,
+          "mean": 216.58934461805555,
+          "max": 224.9453125,
+          "last": 224.9453125
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 204.99609375,
+            "median": 206.552734375,
+            "mean": 206.57855902777777,
+            "max": 207.62109375,
+            "last": 207.62109375
+          },
+          "baseline": {
+            "n": 48,
+            "min": 207.8671875,
+            "median": 212.61328125,
+            "mean": 212.57666015625,
+            "max": 213.75,
+            "last": 213.75
+          },
+          "busier": {
+            "n": 36,
+            "min": 213.796875,
+            "median": 220.62109375,
+            "mean": 219.21918402777777,
+            "max": 222.13671875,
+            "last": 222.13671875
+          },
+          "return": {
+            "n": 60,
+            "min": 222.36328125,
+            "median": 224.416015625,
+            "mean": 224.22805989583333,
+            "max": 224.9453125,
+            "last": 224.9453125
+          }
+        }
+      },
+      "statlite": {
+        "rss_mib": {
+          "n": 180,
+          "min": 13.265625,
+          "median": 18.51171875,
+          "mean": 17.959223090277778,
+          "max": 19.00390625,
+          "last": 19.00390625
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 13.265625,
+            "median": 15.5546875,
+            "mean": 15.629991319444445,
+            "max": 17.40625,
+            "last": 17.40625
+          },
+          "baseline": {
+            "n": 48,
+            "min": 17.4609375,
+            "median": 18.1328125,
+            "mean": 18.112386067708332,
+            "max": 18.4921875,
+            "last": 18.4921875
+          },
+          "busier": {
+            "n": 36,
+            "min": 18.4921875,
+            "median": 18.59375,
+            "mean": 18.590711805555557,
+            "max": 18.7421875,
+            "last": 18.7421875
+          },
+          "return": {
+            "n": 60,
+            "min": 18.7421875,
+            "median": 18.8515625,
+            "mean": 18.855338541666665,
+            "max": 19.00390625,
+            "last": 19.00390625
+          }
+        }
+      },
+      "fixture": {
+        "rss_mib": {
+          "n": 180,
+          "min": 22.37890625,
+          "median": 22.37890625,
+          "mean": 22.379427083333333,
+          "max": 22.3828125,
+          "last": 22.37890625
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 22.37890625,
+            "median": 22.37890625,
+            "mean": 22.37934027777778,
+            "max": 22.3828125,
+            "last": 22.37890625
+          },
+          "baseline": {
+            "n": 48,
+            "min": 22.37890625,
+            "median": 22.37890625,
+            "mean": 22.379313151041668,
+            "max": 22.3828125,
+            "last": 22.37890625
+          },
+          "busier": {
+            "n": 36,
+            "min": 22.37890625,
+            "median": 22.37890625,
+            "mean": 22.379774305555557,
+            "max": 22.3828125,
+            "last": 22.3828125
+          },
+          "return": {
+            "n": 60,
+            "min": 22.37890625,
+            "median": 22.37890625,
+            "mean": 22.379361979166667,
+            "max": 22.3828125,
+            "last": 22.37890625
+          }
+        }
+      }
+    },
+    "apps": {
+      "spring": {
+        "readiness_seconds": 4.899039942999991,
+        "first_batch": [
+          {
+            "id": 1,
+            "fetchedAt": "2026-10-02T18:47:39.346697Z",
+            "cycle": 0,
+            "sampleIndex": 0,
+            "marketTime": "09:30",
+            "symbol": "AAPL",
+            "price": 331.61
+          },
+          {
+            "id": 2,
+            "fetchedAt": "2026-10-02T18:47:39.346697Z",
+            "cycle": 0,
+            "sampleIndex": 0,
+            "marketTime": "09:30",
+            "symbol": "GOOG",
+            "price": 341.91
+          },
+          {
+            "id": 3,
+            "fetchedAt": "2026-10-02T18:47:39.346697Z",
+            "cycle": 0,
+            "sampleIndex": 0,
+            "marketTime": "09:30",
+            "symbol": "NVDA",
+            "price": 229.32
+          }
+        ],
+        "final_latest": [
+          {
+            "id": 46,
+            "fetchedAt": "2026-10-02T19:02:39.509729Z",
+            "cycle": 0,
+            "sampleIndex": 15,
+            "marketTime": "09:45",
+            "symbol": "AAPL",
+            "price": 332.33
+          },
+          {
+            "id": 47,
+            "fetchedAt": "2026-10-02T19:02:39.509729Z",
+            "cycle": 0,
+            "sampleIndex": 15,
+            "marketTime": "09:45",
+            "symbol": "GOOG",
+            "price": 344.06
+          },
+          {
+            "id": 48,
+            "fetchedAt": "2026-10-02T19:02:39.509729Z",
+            "cycle": 0,
+            "sampleIndex": 15,
+            "marketTime": "09:45",
+            "symbol": "NVDA",
+            "price": 230.64
+          }
+        ],
+        "final_database_bytes": 36864,
+        "process_cpu_percent_one_core": {
+          "n": 13,
+          "min": 0.3181866991194404,
+          "median": 0.49354486938761954,
+          "mean": 0.5391603111072453,
+          "max": 1.1481411745664805,
+          "last": 0.41852924484360204
+        }
+      }
+    },
+    "host_cpu_percent": {
+      "n": 13,
+      "min": 0.3558717139242221,
+      "median": 0.5312656104188427,
+      "mean": 0.7269804965429509,
+      "max": 2.362318461426592,
+      "last": 0.40190516696791023
+    },
+    "collector_status_counts": {
+      "spring": {
+        "error": 1,
+        "ok": 89
+      },
+      "quarkus": {
+        "error": 90
+      },
+      "micronaut": {
+        "error": 90
+      },
+      "statlite-self": {
+        "ok": 90
+      }
+    }
+  },
+  "quarkus": {
+    "window": {
+      "start_monotonic": 1114.461261374,
+      "end_monotonic": 2014.551958073,
+      "duration": 900,
+      "traffic": true,
+      "requests": 638,
+      "errors": 0
+    },
+    "processes": {
+      "quarkus": {
+        "rss_mib": {
+          "n": 180,
+          "min": 167.19921875,
+          "median": 178.359375,
+          "mean": 180.0825954861111,
+          "max": 190.3359375,
+          "last": 190.3359375
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 167.19921875,
+            "median": 169.56640625,
+            "mean": 169.46180555555554,
+            "max": 171.16796875,
+            "last": 171.16796875
+          },
+          "baseline": {
+            "n": 48,
+            "min": 171.25,
+            "median": 176.958984375,
+            "mean": 175.82218424479166,
+            "max": 178.1875,
+            "last": 178.1875
+          },
+          "busier": {
+            "n": 36,
+            "min": 178.19921875,
+            "median": 179.517578125,
+            "mean": 180.17317708333334,
+            "max": 189.39453125,
+            "last": 189.39453125
+          },
+          "return": {
+            "n": 60,
+            "min": 189.4921875,
+            "median": 189.744140625,
+            "mean": 189.80904947916667,
+            "max": 190.3359375,
+            "last": 190.3359375
+          }
+        }
+      },
+      "statlite": {
+        "rss_mib": {
+          "n": 180,
+          "min": 19.3125,
+          "median": 19.4375,
+          "mean": 19.492664930555556,
+          "max": 19.734375,
+          "last": 19.734375
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 19.33203125,
+            "median": 19.4140625,
+            "mean": 19.462782118055557,
+            "max": 19.67578125,
+            "last": 19.4140625
+          },
+          "baseline": {
+            "n": 48,
+            "min": 19.3125,
+            "median": 19.390625,
+            "mean": 19.387532552083332,
+            "max": 19.4375,
+            "last": 19.3828125
+          },
+          "busier": {
+            "n": 36,
+            "min": 19.390625,
+            "median": 19.4296875,
+            "mean": 19.432508680555557,
+            "max": 19.4765625,
+            "last": 19.4765625
+          },
+          "return": {
+            "n": 60,
+            "min": 19.4765625,
+            "median": 19.65625,
+            "mean": 19.630794270833334,
+            "max": 19.734375,
+            "last": 19.734375
+          }
+        }
+      },
+      "fixture": {
+        "rss_mib": {
+          "n": 180,
+          "min": 22.37890625,
+          "median": 22.37890625,
+          "mean": 22.385828993055554,
+          "max": 22.40625,
+          "last": 22.40234375
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 22.37890625,
+            "median": 22.37890625,
+            "mean": 22.37966579861111,
+            "max": 22.3828125,
+            "last": 22.37890625
+          },
+          "baseline": {
+            "n": 48,
+            "min": 22.37890625,
+            "median": 22.37890625,
+            "mean": 22.379638671875,
+            "max": 22.3828125,
+            "last": 22.37890625
+          },
+          "busier": {
+            "n": 36,
+            "min": 22.37890625,
+            "median": 22.37890625,
+            "mean": 22.37966579861111,
+            "max": 22.3828125,
+            "last": 22.37890625
+          },
+          "return": {
+            "n": 60,
+            "min": 22.37890625,
+            "median": 22.40234375,
+            "mean": 22.398177083333334,
+            "max": 22.40625,
+            "last": 22.40234375
+          }
+        }
+      }
+    },
+    "apps": {
+      "quarkus": {
+        "readiness_seconds": 2.250911302000077,
+        "first_batch": [
+          {
+            "id": 1,
+            "fetchedAt": "2026-10-02T19:02:42.310580Z",
+            "cycle": 0,
+            "sampleIndex": 15,
+            "marketTime": "09:45",
+            "symbol": "AAPL",
+            "price": 332.33
+          },
+          {
+            "id": 2,
+            "fetchedAt": "2026-10-02T19:02:42.310580Z",
+            "cycle": 0,
+            "sampleIndex": 15,
+            "marketTime": "09:45",
+            "symbol": "GOOG",
+            "price": 344.06
+          },
+          {
+            "id": 3,
+            "fetchedAt": "2026-10-02T19:02:42.310580Z",
+            "cycle": 0,
+            "sampleIndex": 15,
+            "marketTime": "09:45",
+            "symbol": "NVDA",
+            "price": 230.64
+          }
+        ],
+        "final_latest": [
+          {
+            "id": 46,
+            "fetchedAt": "2026-10-02T19:17:42.416993Z",
+            "cycle": 0,
+            "sampleIndex": 30,
+            "marketTime": "10:00",
+            "symbol": "AAPL",
+            "price": 336.15
+          },
+          {
+            "id": 47,
+            "fetchedAt": "2026-10-02T19:17:42.416993Z",
+            "cycle": 0,
+            "sampleIndex": 30,
+            "marketTime": "10:00",
+            "symbol": "GOOG",
+            "price": 347.01
+          },
+          {
+            "id": 48,
+            "fetchedAt": "2026-10-02T19:17:42.416993Z",
+            "cycle": 0,
+            "sampleIndex": 30,
+            "marketTime": "10:00",
+            "symbol": "NVDA",
+            "price": 231.82
+          }
+        ],
+        "final_database_bytes": 36864,
+        "process_cpu_percent_one_core": {
+          "n": 13,
+          "min": 0.24257013031556313,
+          "median": 0.3847641087230758,
+          "mean": 0.43904752809265507,
+          "max": 0.8202411044851862,
+          "last": 0.24257013031556313
+        }
+      }
+    },
+    "host_cpu_percent": {
+      "n": 13,
+      "min": 0.32196655010768294,
+      "median": 0.43938138378762787,
+      "mean": 0.49793549086078787,
+      "max": 0.8704329948786456,
+      "last": 0.32196655010768294
+    },
+    "collector_status_counts": {
+      "spring": {
+        "ok": 1,
+        "error": 89
+      },
+      "quarkus": {
+        "error": 1,
+        "ok": 89
+      },
+      "micronaut": {
+        "error": 90
+      },
+      "statlite-self": {
+        "ok": 90
+      }
+    }
+  },
+  "micronaut": {
+    "window": {
+      "start_monotonic": 2017.520132619,
+      "end_monotonic": 2917.674312006,
+      "duration": 900,
+      "traffic": true,
+      "requests": 638,
+      "errors": 0
+    },
+    "processes": {
+      "micronaut": {
+        "rss_mib": {
+          "n": 180,
+          "min": 174.6640625,
+          "median": 186.65234375,
+          "mean": 185.5577907986111,
+          "max": 189.8515625,
+          "last": 189.8515625
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 174.6640625,
+            "median": 178.681640625,
+            "mean": 178.60633680555554,
+            "max": 180.50390625,
+            "last": 180.50390625
+          },
+          "baseline": {
+            "n": 48,
+            "min": 180.70703125,
+            "median": 184.638671875,
+            "mean": 184.61165364583334,
+            "max": 186.00390625,
+            "last": 186.00390625
+          },
+          "busier": {
+            "n": 36,
+            "min": 186.03515625,
+            "median": 187.634765625,
+            "mean": 187.49978298611111,
+            "max": 188.515625,
+            "last": 188.515625
+          },
+          "return": {
+            "n": 60,
+            "min": 188.58203125,
+            "median": 189.3515625,
+            "mean": 189.32037760416668,
+            "max": 189.8515625,
+            "last": 189.8515625
+          }
+        }
+      },
+      "statlite": {
+        "rss_mib": {
+          "n": 180,
+          "min": 19.80859375,
+          "median": 20.10546875,
+          "mean": 20.072157118055557,
+          "max": 20.2890625,
+          "last": 20.2890625
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 19.80859375,
+            "median": 19.912109375,
+            "mean": 19.89898003472222,
+            "max": 19.9609375,
+            "last": 19.8828125
+          },
+          "baseline": {
+            "n": 48,
+            "min": 19.8828125,
+            "median": 20.03125,
+            "mean": 20.013102213541668,
+            "max": 20.13671875,
+            "last": 20.13671875
+          },
+          "busier": {
+            "n": 36,
+            "min": 20.05859375,
+            "median": 20.115234375,
+            "mean": 20.109483506944443,
+            "max": 20.18359375,
+            "last": 20.1171875
+          },
+          "return": {
+            "n": 60,
+            "min": 20.1171875,
+            "median": 20.18359375,
+            "mean": 20.200911458333334,
+            "max": 20.2890625,
+            "last": 20.2890625
+          }
+        }
+      },
+      "fixture": {
+        "rss_mib": {
+          "n": 180,
+          "min": 22.40234375,
+          "median": 22.40234375,
+          "mean": 22.402994791666668,
+          "max": 22.40625,
+          "last": 22.40625
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 22.40234375,
+            "median": 22.40234375,
+            "mean": 22.40288628472222,
+            "max": 22.40625,
+            "last": 22.40234375
+          },
+          "baseline": {
+            "n": 48,
+            "min": 22.40234375,
+            "median": 22.40234375,
+            "mean": 22.402913411458332,
+            "max": 22.40625,
+            "last": 22.40625
+          },
+          "busier": {
+            "n": 36,
+            "min": 22.40234375,
+            "median": 22.40234375,
+            "mean": 22.403211805555557,
+            "max": 22.40625,
+            "last": 22.40234375
+          },
+          "return": {
+            "n": 60,
+            "min": 22.40234375,
+            "median": 22.40234375,
+            "mean": 22.402994791666668,
+            "max": 22.40625,
+            "last": 22.40625
+          }
+        }
+      }
+    },
+    "apps": {
+      "micronaut": {
+        "readiness_seconds": 2.5434353069999815,
+        "first_batch": [
+          {
+            "id": 1,
+            "fetchedAt": "2026-10-02T19:17:45.344785Z",
+            "cycle": 0,
+            "sampleIndex": 30,
+            "marketTime": "10:00",
+            "symbol": "AAPL",
+            "price": 336.15
+          },
+          {
+            "id": 2,
+            "fetchedAt": "2026-10-02T19:17:45.344785Z",
+            "cycle": 0,
+            "sampleIndex": 30,
+            "marketTime": "10:00",
+            "symbol": "GOOG",
+            "price": 347.01
+          },
+          {
+            "id": 3,
+            "fetchedAt": "2026-10-02T19:17:45.344785Z",
+            "cycle": 0,
+            "sampleIndex": 30,
+            "marketTime": "10:00",
+            "symbol": "NVDA",
+            "price": 231.82
+          }
+        ],
+        "final_latest": [
+          {
+            "id": 46,
+            "fetchedAt": "2026-10-02T19:32:45.529110Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "AAPL",
+            "price": 336.98
+          },
+          {
+            "id": 47,
+            "fetchedAt": "2026-10-02T19:32:45.529110Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "GOOG",
+            "price": 347.0
+          },
+          {
+            "id": 48,
+            "fetchedAt": "2026-10-02T19:32:45.529110Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "NVDA",
+            "price": 230.68
+          }
+        ],
+        "final_database_bytes": 36864,
+        "process_cpu_percent_one_core": {
+          "n": 13,
+          "min": 0.6614294011926407,
+          "median": 0.7279372776170395,
+          "mean": 0.7898908333715456,
+          "max": 1.2383044665643008,
+          "last": 0.6864435996923005
+        }
+      }
+    },
+    "host_cpu_percent": {
+      "n": 13,
+      "min": 0.6359405083305345,
+      "median": 0.7699097547937257,
+      "mean": 0.8171956088171873,
+      "max": 1.1965127272455471,
+      "last": 0.7240393639662678
+    },
+    "collector_status_counts": {
+      "spring": {
+        "error": 90
+      },
+      "quarkus": {
+        "error": 90
+      },
+      "micronaut": {
+        "error": 1,
+        "ok": 89
+      },
+      "statlite-self": {
+        "ok": 90
+      }
+    }
+  },
+  "shared": {
+    "window": {
+      "start_monotonic": 2927.585403109,
+      "end_monotonic": 3827.797802834,
+      "duration": 900,
+      "traffic": false,
+      "requests": 0,
+      "errors": 0
+    },
+    "processes": {
+      "spring": {
+        "rss_mib": {
+          "n": 180,
+          "min": 207.76171875,
+          "median": 212.73828125,
+          "mean": 212.22630208333334,
+          "max": 215.26953125,
+          "last": 215.26953125
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 207.76171875,
+            "median": 208.455078125,
+            "mean": 208.32085503472223,
+            "max": 208.5390625,
+            "last": 208.52734375
+          },
+          "baseline": {
+            "n": 48,
+            "min": 211.33984375,
+            "median": 212.01953125,
+            "mean": 211.95052083333334,
+            "max": 212.55078125,
+            "last": 212.55078125
+          },
+          "busier": {
+            "n": 36,
+            "min": 212.6171875,
+            "median": 213.0234375,
+            "mean": 213.03309461805554,
+            "max": 213.4375,
+            "last": 213.4375
+          },
+          "return": {
+            "n": 60,
+            "min": 213.61328125,
+            "median": 214.193359375,
+            "mean": 214.30611979166667,
+            "max": 215.26953125,
+            "last": 215.26953125
+          }
+        }
+      },
+      "quarkus": {
+        "rss_mib": {
+          "n": 180,
+          "min": 165.8046875,
+          "median": 171.380859375,
+          "mean": 170.53012152777777,
+          "max": 172.6015625,
+          "last": 172.5859375
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 165.8046875,
+            "median": 166.5859375,
+            "mean": 166.458984375,
+            "max": 166.859375,
+            "last": 166.859375
+          },
+          "baseline": {
+            "n": 48,
+            "min": 170.0546875,
+            "median": 170.771484375,
+            "mean": 170.75618489583334,
+            "max": 171.26953125,
+            "last": 171.26953125
+          },
+          "busier": {
+            "n": 36,
+            "min": 171.32421875,
+            "median": 171.640625,
+            "mean": 171.60362413194446,
+            "max": 171.79296875,
+            "last": 171.79296875
+          },
+          "return": {
+            "n": 60,
+            "min": 171.8515625,
+            "median": 172.0546875,
+            "mean": 172.1478515625,
+            "max": 172.6015625,
+            "last": 172.5859375
+          }
+        }
+      },
+      "micronaut": {
+        "rss_mib": {
+          "n": 180,
+          "min": 174.41796875,
+          "median": 180.3203125,
+          "mean": 180.108203125,
+          "max": 182.46875,
+          "last": 182.46875
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 174.41796875,
+            "median": 177.46484375,
+            "mean": 177.24229600694446,
+            "max": 178.31640625,
+            "last": 178.31640625
+          },
+          "baseline": {
+            "n": 48,
+            "min": 178.640625,
+            "median": 179.599609375,
+            "mean": 179.54573567708334,
+            "max": 180.1953125,
+            "last": 180.1953125
+          },
+          "busier": {
+            "n": 36,
+            "min": 180.19140625,
+            "median": 180.7890625,
+            "mean": 180.73795572916666,
+            "max": 181.17578125,
+            "last": 181.17578125
+          },
+          "return": {
+            "n": 60,
+            "min": 181.3125,
+            "median": 181.92578125,
+            "mean": 181.89986979166667,
+            "max": 182.46875,
+            "last": 182.46875
+          }
+        }
+      },
+      "statlite": {
+        "rss_mib": {
+          "n": 180,
+          "min": 20.44140625,
+          "median": 21.546875,
+          "mean": 21.364908854166668,
+          "max": 21.9140625,
+          "last": 21.9140625
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 20.44140625,
+            "median": 20.583984375,
+            "mean": 20.577799479166668,
+            "max": 20.671875,
+            "last": 20.671875
+          },
+          "baseline": {
+            "n": 48,
+            "min": 20.67578125,
+            "median": 21.50390625,
+            "mean": 21.395751953125,
+            "max": 21.66796875,
+            "last": 21.64453125
+          },
+          "busier": {
+            "n": 36,
+            "min": 21.4296875,
+            "median": 21.658203125,
+            "mean": 21.63747829861111,
+            "max": 21.85546875,
+            "last": 21.85546875
+          },
+          "return": {
+            "n": 60,
+            "min": 21.30078125,
+            "median": 21.708984375,
+            "mean": 21.648958333333333,
+            "max": 21.9140625,
+            "last": 21.9140625
+          }
+        }
+      },
+      "fixture": {
+        "rss_mib": {
+          "n": 180,
+          "min": 22.40234375,
+          "median": 22.40234375,
+          "mean": 22.4029296875,
+          "max": 22.40625,
+          "last": 22.40234375
+        },
+        "rss_intervals": {
+          "warmup": {
+            "n": 36,
+            "min": 22.40234375,
+            "median": 22.40234375,
+            "mean": 22.402994791666668,
+            "max": 22.40625,
+            "last": 22.40234375
+          },
+          "baseline": {
+            "n": 48,
+            "min": 22.40234375,
+            "median": 22.40234375,
+            "mean": 22.402750651041668,
+            "max": 22.40625,
+            "last": 22.40234375
+          },
+          "busier": {
+            "n": 36,
+            "min": 22.40234375,
+            "median": 22.40234375,
+            "mean": 22.40277777777778,
+            "max": 22.40625,
+            "last": 22.40234375
+          },
+          "return": {
+            "n": 60,
+            "min": 22.40234375,
+            "median": 22.40234375,
+            "mean": 22.403125,
+            "max": 22.40625,
+            "last": 22.40234375
+          }
+        }
+      }
+    },
+    "apps": {
+      "spring": {
+        "readiness_seconds": 5.1142968540002585,
+        "first_batch": [
+          {
+            "id": 1,
+            "fetchedAt": "2026-10-02T19:32:51.006427Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "AAPL",
+            "price": 336.98
+          },
+          {
+            "id": 2,
+            "fetchedAt": "2026-10-02T19:32:51.006427Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "GOOG",
+            "price": 347.0
+          },
+          {
+            "id": 3,
+            "fetchedAt": "2026-10-02T19:32:51.006427Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "NVDA",
+            "price": 230.68
+          }
+        ],
+        "final_latest": [
+          {
+            "id": 46,
+            "fetchedAt": "2026-10-02T19:47:51.162588Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "AAPL",
+            "price": 338.19
+          },
+          {
+            "id": 47,
+            "fetchedAt": "2026-10-02T19:47:51.162588Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "GOOG",
+            "price": 345.52
+          },
+          {
+            "id": 48,
+            "fetchedAt": "2026-10-02T19:47:51.162588Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "NVDA",
+            "price": 231.09
+          }
+        ],
+        "final_database_bytes": 77824,
+        "process_cpu_percent_one_core": {
+          "n": 13,
+          "min": 0.21786548754534918,
+          "median": 0.30239847191110886,
+          "mean": 0.3035661327758174,
+          "max": 0.5124484005283704,
+          "last": 0.26040512751646644
+        }
+      },
+      "quarkus": {
+        "readiness_seconds": 1.9528597769999578,
+        "first_batch": [
+          {
+            "id": 1,
+            "fetchedAt": "2026-10-02T19:32:53.056786Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "AAPL",
+            "price": 336.98
+          },
+          {
+            "id": 2,
+            "fetchedAt": "2026-10-02T19:32:53.056786Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "GOOG",
+            "price": 347.0
+          },
+          {
+            "id": 3,
+            "fetchedAt": "2026-10-02T19:32:53.056786Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "NVDA",
+            "price": 230.68
+          }
+        ],
+        "final_latest": [
+          {
+            "id": 46,
+            "fetchedAt": "2026-10-02T19:47:53.166513Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "AAPL",
+            "price": 338.19
+          },
+          {
+            "id": 47,
+            "fetchedAt": "2026-10-02T19:47:53.166513Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "GOOG",
+            "price": 345.52
+          },
+          {
+            "id": 48,
+            "fetchedAt": "2026-10-02T19:47:53.166513Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "NVDA",
+            "price": 231.09
+          }
+        ],
+        "final_database_bytes": 184320,
+        "process_cpu_percent_one_core": {
+          "n": 13,
+          "min": 0.15083402747209818,
+          "median": 0.22689094429253942,
+          "mean": 0.23125210114929975,
+          "max": 0.31934421365724297,
+          "last": 0.21001798453867707
+        }
+      },
+      "micronaut": {
+        "readiness_seconds": 2.415761217999716,
+        "first_batch": [
+          {
+            "id": 1,
+            "fetchedAt": "2026-10-02T19:32:55.412933Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "AAPL",
+            "price": 336.98
+          },
+          {
+            "id": 2,
+            "fetchedAt": "2026-10-02T19:32:55.412933Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "GOOG",
+            "price": 347.0
+          },
+          {
+            "id": 3,
+            "fetchedAt": "2026-10-02T19:32:55.412933Z",
+            "cycle": 0,
+            "sampleIndex": 45,
+            "marketTime": "10:15",
+            "symbol": "NVDA",
+            "price": 230.68
+          }
+        ],
+        "final_latest": [
+          {
+            "id": 46,
+            "fetchedAt": "2026-10-02T19:47:55.585702Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "AAPL",
+            "price": 338.19
+          },
+          {
+            "id": 47,
+            "fetchedAt": "2026-10-02T19:47:55.585702Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "GOOG",
+            "price": 345.52
+          },
+          {
+            "id": 48,
+            "fetchedAt": "2026-10-02T19:47:55.585702Z",
+            "cycle": 0,
+            "sampleIndex": 60,
+            "marketTime": "10:30",
+            "symbol": "NVDA",
+            "price": 231.09
+          }
+        ],
+        "final_database_bytes": 61440,
+        "process_cpu_percent_one_core": {
+          "n": 13,
+          "min": 0.47745139348227955,
+          "median": 0.579277887176548,
+          "mean": 0.5877139767040257,
+          "max": 0.7223865321057003,
+          "last": 0.6046250492395895
+        }
+      }
+    },
+    "host_cpu_percent": {
+      "n": 13,
+      "min": 0.8381366386744957,
+      "median": 0.994888554567433,
+      "mean": 1.0387983311215157,
+      "max": 1.2766100717263018,
+      "last": 0.9281504277249547
+    },
+    "collector_status_counts": {
+      "spring": {
+        "ok": 90
+      },
+      "quarkus": {
+        "ok": 90
+      },
+      "micronaut": {
+        "error": 1,
+        "ok": 89
+      },
+      "statlite-self": {
+        "ok": 90
+      }
+    }
+  }
+}

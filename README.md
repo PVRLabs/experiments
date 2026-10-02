@@ -4,6 +4,12 @@ A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
 ## Experiments
 
+- [Spring Boot, Quarkus, and Micronaut with JDBC](statlite/spring-quarkus-micronaut-jdbc/)
+
+  Equivalent JDBC applications on Java 25 in a 1 GiB no-swap VM, with
+  sequential 15-minute scripted-load windows and a separate shared-host
+  observation. Includes curated RSS/CPU data, screenshots, source, and analysis.
+
 - [Spring Boot Stars: JPA versus JDBC](spring-boot/jpa-vs-jdbc-stars/)
 
   A paired JDK 25 comparison of the conventional Hibernate Stars app and a
