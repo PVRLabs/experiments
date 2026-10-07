@@ -4,6 +4,11 @@ A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
 ## Experiments
 
+- [Monitoring Javalin with its existing Micrometer instrumentation](statlite/javalin-micrometer/)
+
+  A small application-side adapter connects Javalin metrics to StatLite for
+  requests, errors, latency, JVM resources, health, and restart history.
+
 - [Monitoring a Pyronaut app with StatLite](statlite/pyronaut-statlite/)
 
   A Pyronaut Python HTTP app exposed Micronaut/Micrometer Prometheus metrics

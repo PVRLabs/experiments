@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-07",
+  "statlite_revision": "633daa6bfc9f9cf4a0f4f4dbf74d3da6e62afa03",
+  "runs": [
+    {
+      "registry": "PrometheusMeterRegistry",
+      "run_id": 1,
+      "requests": 48,
+      "http_404": 12,
+      "http_4xx": 12,
+      "http_5xx": 12,
+      "first_sample_delta": null,
+      "first_sample_latency": null,
+      "duration_seconds": 1.493
+    },
+    {
+      "registry": "SimpleMeterRegistry (no Prometheus jars)",
+      "run_id": 2,
+      "requests": 48,
+      "http_404": 12,
+      "http_4xx": 12,
+      "http_5xx": 12,
+      "first_sample_delta": null,
+      "first_sample_latency": null,
+      "duration_seconds": 1.493
+    }
+  ],
+  "health_transitions": [
+    "UP",
+    "DOWN",
+    "UP"
+  ],
+  "restart_event_verified": true,
+  "negative_or_cross_run_deltas": false
+}
