@@ -4,6 +4,12 @@ A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
 ## Experiments
 
+- [Monitoring a Pyronaut app with StatLite](statlite/pyronaut-statlite/)
+
+  A Pyronaut Python HTTP app exposed Micronaut/Micrometer Prometheus metrics
+  accepted by released StatLite's existing Micronaut target, with no StatLite
+  changes.
+
 - [Spring Boot, Quarkus, and Micronaut with JDBC](statlite/spring-quarkus-micronaut-jdbc/)
 
   Equivalent JDBC applications on Java 25 in a 1 GiB no-swap VM, with

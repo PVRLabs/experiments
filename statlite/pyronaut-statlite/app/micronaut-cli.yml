@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: hello.pyronaut
+testFramework: pytest
+sourceLanguage: python
+buildTool: pyronaut
+features: [app-name, gitignore, http-client-test, logback, management, micrometer, micrometer-prometheus, micronaut-http-validation, netty-server, pyronaut, pyronaut-agent-skills, pyronaut-requests, pytest, python, python-application, readme, serialization-jackson, static-resources, toml]

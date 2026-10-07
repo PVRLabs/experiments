@@ -1,0 +1,16 @@
+[micronaut.application]
+name = 'hello-pyronaut'
+
+[micronaut.metrics.export.prometheus]
+enabled = true
+descriptions = true
+step = 'PT1M'
+
+[micronaut.metrics]
+enabled = true
+
+[endpoints.prometheus]
+sensitive = false
+
+[endpoints.health]
+sensitive = false

@@ -1,0 +1,86 @@
+[project]
+name = "hello-pyronaut"
+version = "1.0.0"
+dynamic = [
+    "scripts",
+]
+
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    "tomli",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = [
+    "src",
+]
+
+[tool.pyronaut]
+repositories = [
+    "mavenCentral",
+]
+
+[tool.pyronaut.core]
+version = "5.2.14"
+
+[tool.pyronaut.platform]
+version = "5.2.1"
+
+[tool.pyronaut.toolchain]
+type = "jvm"
+
+[tool.pyronaut.sources]
+python = "src"
+python-test = "tests"
+resources = "config"
+test-resources = "tests-config"
+
+[tool.pyronaut.processor]
+incremental = true
+daemon = true
+python-incremental-mode = "optimistic"
+
+[tool.pyronaut.ide-stubs]
+packages = [
+    "io.micronaut",
+    "jakarta",
+]
+
+[tool.pyronaut.validation]
+enabled = true
+suppressions = [
+    "endpoints.*.enabled",
+    "endpoints.*.sensitive",
+    "micronaut.metrics.enabled",
+    "micronaut.metrics.binders.*",
+]
+
+[tool.pyronaut.test-resources]
+enabled = false
+infer-classpath = false
+
+[tool.pyronaut.dependencies]
+runtime = [
+    "io.micrometer:micrometer-core",
+    "io.micronaut.micrometer:micronaut-micrometer-core",
+    "io.micronaut.micrometer:micronaut-micrometer-registry-prometheus",
+    "io.micronaut.pyronaut:micronaut-pyronaut-logback",
+    "io.micronaut.serde:micronaut-serde-jackson",
+    "io.micronaut:micronaut-http-server-netty",
+    "io.micronaut:micronaut-management",
+]
+build = [
+    "io.micronaut.serde:micronaut-serde-processor",
+    "io.micronaut:micronaut-http-validation",
+]
+test = [
+    "io.micronaut.pyronaut:micronaut-pyronaut-pytest",
+    "io.micronaut.pyronaut:micronaut-pyronaut-requests",
+    "io.micronaut:micronaut-http-client",
+]
