@@ -13,6 +13,11 @@ a supported helper library. No Prometheus server or Grafana is required.
 Javalin already exposes the useful metrics through Micrometer; the example
 adds a small fixed translation, rather than new request instrumentation.
 
+To adapt the example to an existing application, follow the
+[integration guide](INTEGRATION.md): copy the adapter, register the endpoint,
+configure StatLite, and verify collection. It is structured for later reuse in
+StatLite's integration documentation.
+
 ## Run it
 
 Requirements: Java 17+, Maven, Python 3, and a StatLite binary supporting
@@ -86,6 +91,12 @@ To demonstrate restart history, stop only the Java app, wait a few seconds,
 restart `python3 launch.py`, and rerun `python3 probe.py`. Keep StatLite running
 with its existing database. Its restart event and new process start should
 appear; counter deltas must not cross application runs.
+
+The default app exposes **both** `/prometheus` and `/statlite/metrics` from the
+same registry. The JSON adapter works with StatLite today. The normal
+Prometheus endpoint demonstrates the metric source a future native Javalin
+target could consume with relatively little additional StatLite work. It is
+not currently accepted as a Javalin target; see the [two integration paths](INTEGRATION.md#two-endpoints-two-integration-paths).
 
 ### Without Prometheus jars
 
