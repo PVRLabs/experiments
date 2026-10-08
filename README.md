@@ -2,6 +2,23 @@
 
 A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
+## Who these experiments are for
+
+Many of our experiments focus on developers building small, self-hosted applications on affordable servers. Think independent developers, solopreneurs, and small teams who want practical software without maintaining complex infrastructure.
+
+For Java applications, we're particularly interested in:
+
+- **256–512 MiB VPS deployments**, sometimes extending to 1 GiB.
+- Conventional JVM applications using familiar development and diagnostic tools.
+- Useful applications with persistence, monitoring, and enough memory headroom for the operating system.
+- Maintainable architectures that can grow, including moving a database or other components to separate infrastructure later.
+
+We're not trying to achieve the smallest possible Java process. GraalVM Native Image can offer substantial startup and memory benefits, but it introduces different build, compatibility, and operational tradeoffs. For now, we're more interested in what ordinary HotSpot deployments can accomplish on modest hardware.
+
+Similarly, Kubernetes optimization, container density, and extreme memory minimization aren't our primary focus.
+
+**This describes our interests, not strict requirements.** The repository also contains experiments outside this area, and we'll continue exploring other technologies when the questions are interesting.
+
 ## Experiments
 
 - [Javalin with JDBC and monitoring on 256 MiB](javalin/vps-256mb/)
