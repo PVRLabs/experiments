@@ -1,0 +1,8 @@
+{
+  "status": 200,
+  "body": {
+    "maxSequence": 689,
+    "rows": 2070,
+    "priceSum": 630374.22
+  }
+}

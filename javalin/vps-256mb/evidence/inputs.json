@@ -1,0 +1,61 @@
+{
+  "versions": {
+    "alpine": "3.24.2",
+    "java": "25.0.4+7-alpine-r0",
+    "javalin": "7.2.3",
+    "jetty": "12.1.12",
+    "spring_boot": "4.1.1",
+    "h2": "2.4.240",
+    "hikari": "7.0.2",
+    "statlite": "v0.6.0",
+    "tomcat": "11.0.24",
+    "spring_jackson": "3.1.5",
+    "javalin_jackson": "2.22.1",
+    "spring_micrometer": "1.17.1",
+    "javalin_micrometer": "1.17.0"
+  },
+  "jvm": "-Xms16m -Xmx80m -XX:+UseSerialGC -Xss512k",
+  "sampler": {
+    "clock_ticks_per_second": 100,
+    "page_size": 4096
+  },
+  "measured_artifact_sha256": {
+    "guest.sh": "288ca5b0d546dfbc49d8caa0241eea50739bbd60e58bd0a45a86774948c46e82",
+    "sampler.sh": "fd2e077d0fae5a2651280825af3a3750ebddb01203c72ea59192a07e48166237",
+    "spring.jar": "dedaa6a35d807eae747a6cb21cdc5ab4e1c6dc36e8b6cd0cf7c523bfaf45b5e6",
+    "javalin.jar": "60c68fd574976c7c93d915f07314eb13b01d02e5d24c0d509676a606156e287d",
+    "statlite": "d95290cb37270d303460ad02489befa7efe8e9f091a650eca9a821eac2555f91"
+  },
+  "measured_source_sha256": {
+    "pom.xml": "58c92cda110642e77597c66ce75a7f980fff93cf81547f0e9dc2f1f28398f3a8",
+    "checks/AtomicCheck.java": "842725d6ba0d868bde271113716e6f716ddf0f584503ff1ea01272a8b170284a",
+    "common/pom.xml": "2f8717caf9b8f7fb4864ca0a50b8ee9460cd364eb811d58125fecc2723d7c8dc",
+    "spring-app/pom.xml": "4f6269c45d9537e143b1dce7ba3900bbdd3ea58bfa9130b682533e830df96ad0",
+    "javalin-app/pom.xml": "e38cf6968c263bb38ca937768ee5e25945c89da5a033becf6ae65d357b9c9949",
+    "javalin-app/src/main/java/lab/StatLiteMetrics.java": "d7a62931c5caa4b79695e362b9ac3d8dfa958750cb697659c70448c9af5598ca",
+    "javalin-app/src/main/java/lab/JavalinApp.java": "1217f5bf3685fe7b0a845ad999c84a4162136a5f7f8d2105c7523b53d704287e",
+    "spring-app/src/main/resources/application.properties": "9be3ced07940b5eb981d526c9a72fa9ada9346e43768322f92ec52ea845172dd",
+    "spring-app/src/main/java/lab/SpringApp.java": "f451893e7f47251e4a394ea86fb110081ca3b52d234a56f6f7767bea6baa4fcb",
+    "common/src/main/resources/quotes.csv": "7321a40c334a9ed8e32b4cbfa1b7c72fb0ca0479bdabbf676c6b5a009ae88f1a",
+    "common/src/main/java/lab/Quotes.java": "4f4cb4b63e85bcec7a6213bc34a1ffa4b22ef4f846161eff75503a629ab8cec7"
+  },
+  "extraction_verification": {
+    "spring_original_sha256": "dedaa6a35d807eae747a6cb21cdc5ab4e1c6dc36e8b6cd0cf7c523bfaf45b5e6",
+    "javalin_sha256": "60c68fd574976c7c93d915f07314eb13b01d02e5d24c0d509676a606156e287d",
+    "command": [
+      "java",
+      "-Djarmode=tools",
+      "-jar",
+      "bundle/spring.jar",
+      "extract",
+      "--destination",
+      "prepared-bundle/spring-extracted"
+    ],
+    "launch_jar": "spring-extracted/spring.jar",
+    "library_count": 51,
+    "application_resource_count": 2,
+    "all_library_and_resource_bytes_unchanged": true,
+    "extraction_location": "host; outside measured guest"
+  },
+  "note": "Source and fixture hashes identify measured inputs. Public run/bundle helpers are adapted for portable reproduction. Rebuilt archives need not be byte-identical."
+}

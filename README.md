@@ -4,6 +4,12 @@ A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
 ## Experiments
 
+- [Javalin with JDBC and monitoring on 256 MiB](javalin/vps-256mb/)
+
+  Equivalent Javalin and extracted Spring Boot applications on a constrained
+  Alpine VM, with file-backed H2 and StatLite. Includes original OS/HTTP samples,
+  corrected analyses, screenshots and reproduction code, with paging caveats.
+
 - [Monitoring Javalin with its existing Micrometer instrumentation](statlite/javalin-micrometer/)
 
   A small application-side adapter connects Javalin metrics to StatLite for

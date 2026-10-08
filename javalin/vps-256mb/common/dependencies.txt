@@ -1,0 +1,4 @@
+pvrlabs:quote-common:jar:1.0
++- com.zaxxer:HikariCP:jar:7.0.2:compile
+|  \- org.slf4j:slf4j-api:jar:2.0.17:compile
+\- com.h2database:h2:jar:2.4.240:compile

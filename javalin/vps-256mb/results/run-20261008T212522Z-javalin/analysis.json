@@ -1,0 +1,267 @@
+{
+  "variant": "javalin",
+  "smoke": false,
+  "actual_mem_mib": 214.890625,
+  "startup_to_ready_seconds": 2.4583771228790283,
+  "readiness_uncertainty": "100 ms probe cadence plus request/tunnel duration; sample timestamp is before successful request",
+  "phases": {
+    "baseline": {
+      "sample_count": 12,
+      "min_available_mib": 161.95703125,
+      "headroom_dips": [],
+      "java_rss_median_mib": 0.0,
+      "java_rss_peak_mib": 0.0,
+      "monitor_rss_median_mib": 0.0,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": null,
+      "late_cpu_pct": null,
+      "late_java_rss_median_mib": 0.0,
+      "java_cpu_pct": 0.0,
+      "max_threads": 0.0,
+      "host_iowait_pct": 0.01815541031227306,
+      "host_steal_pct": null,
+      "host_busy_plus_steal_pct": 0.29048656499636893,
+      "late_busy_plus_steal_pct": 0.29048656499636893,
+      "late_iowait_pct": 0.01815541031227306,
+      "late_steal_pct": null,
+      "java_rss_first_last_mib": [
+        0.0,
+        0.0
+      ]
+    },
+    "monitor-only": {
+      "sample_count": 17,
+      "min_available_mib": 152.40234375,
+      "headroom_dips": [],
+      "java_rss_median_mib": 0.0,
+      "java_rss_peak_mib": 0.0,
+      "monitor_rss_median_mib": 14.05859375,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": null,
+      "late_cpu_pct": null,
+      "late_java_rss_median_mib": 0.0,
+      "java_cpu_pct": 0.0,
+      "max_threads": 0.0,
+      "host_iowait_pct": 0.024959440908523648,
+      "host_steal_pct": null,
+      "host_busy_plus_steal_pct": 0.33695245226506926,
+      "late_busy_plus_steal_pct": 0.3448901797059357,
+      "late_iowait_pct": 0.036304229442730075,
+      "late_steal_pct": null,
+      "java_rss_first_last_mib": [
+        0.0,
+        0.0
+      ]
+    },
+    "startup": {
+      "sample_count": 4,
+      "min_available_mib": 107.296875,
+      "headroom_dips": [],
+      "java_rss_median_mib": 40.2421875,
+      "java_rss_peak_mib": 79.79296875,
+      "monitor_rss_median_mib": 14.10546875,
+      "max_swap_used_mib": 24.44140625,
+      "swap_in_mib": 6.171875,
+      "swap_out_mib": 23.375,
+      "longest_paging_above_1_mib_s_seconds": 1.0300000000000011,
+      "host_busy_cpu_pct": null,
+      "late_cpu_pct": null,
+      "late_java_rss_median_mib": 40.2421875,
+      "java_cpu_pct": null,
+      "max_threads": 19.0,
+      "host_iowait_pct": 1.3824884792626728,
+      "host_steal_pct": null,
+      "host_busy_plus_steal_pct": 93.54838709677419,
+      "late_busy_plus_steal_pct": 93.54838709677419,
+      "late_iowait_pct": 1.3824884792626728,
+      "late_steal_pct": null,
+      "java_rss_first_last_mib": [
+        0.0,
+        79.79296875
+      ]
+    },
+    "idle": {
+      "sample_count": 36,
+      "min_available_mib": 86.06640625,
+      "headroom_dips": [],
+      "java_rss_median_mib": 90.03125,
+      "java_rss_peak_mib": 95.5625,
+      "monitor_rss_median_mib": 13.7578125,
+      "max_swap_used_mib": 23.8203125,
+      "swap_in_mib": 0.51953125,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": null,
+      "late_cpu_pct": null,
+      "late_java_rss_median_mib": 90.734375,
+      "java_cpu_pct": 0.14245014245014243,
+      "max_threads": 28.0,
+      "host_iowait_pct": 0.03422508698876276,
+      "host_steal_pct": null,
+      "host_busy_plus_steal_pct": 0.6331641092921111,
+      "late_busy_plus_steal_pct": 0.5808676710836812,
+      "late_iowait_pct": 0.054456344164095116,
+      "late_steal_pct": null,
+      "java_rss_first_last_mib": [
+        95.5625,
+        90.76171875
+      ]
+    },
+    "workload": {
+      "sample_count": 60,
+      "min_available_mib": 69.76171875,
+      "headroom_dips": [],
+      "java_rss_median_mib": 106.42578125,
+      "java_rss_peak_mib": 110.4296875,
+      "monitor_rss_median_mib": 13.57421875,
+      "max_swap_used_mib": 23.53125,
+      "swap_in_mib": 0.3203125,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": null,
+      "late_cpu_pct": null,
+      "late_java_rss_median_mib": 109.953125,
+      "java_cpu_pct": 2.3560828854409626,
+      "max_threads": 26.0,
+      "host_iowait_pct": 0.04740780874335444,
+      "host_steal_pct": null,
+      "host_busy_plus_steal_pct": 3.037486031627781,
+      "late_busy_plus_steal_pct": 1.9272727272727272,
+      "late_iowait_pct": 0.03636363636363636,
+      "late_steal_pct": null,
+      "java_rss_first_last_mib": [
+        92.984375,
+        110.4296875
+      ],
+      "minute_rss_medians_mib": [
+        101.08984375,
+        104.259765625,
+        106.30859375,
+        108.294921875,
+        109.953125
+      ],
+      "minute_headroom_medians_mib": [
+        81.669921875,
+        78.509765625,
+        76.34375,
+        74.150390625,
+        72.412109375
+      ]
+    },
+    "recovery": {
+      "sample_count": 24,
+      "min_available_mib": 70.84765625,
+      "headroom_dips": [],
+      "java_rss_median_mib": 110.490234375,
+      "java_rss_peak_mib": 110.49609375,
+      "monitor_rss_median_mib": 14.2265625,
+      "max_swap_used_mib": 23.48828125,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": null,
+      "late_cpu_pct": null,
+      "late_java_rss_median_mib": 110.4921875,
+      "java_cpu_pct": 0.06936015259233576,
+      "max_threads": 26.0,
+      "host_iowait_pct": 0.026030368763557483,
+      "host_steal_pct": null,
+      "host_busy_plus_steal_pct": 0.5726681127982647,
+      "late_busy_plus_steal_pct": 0.5624092888243831,
+      "late_iowait_pct": 0.018142235123367198,
+      "late_steal_pct": null,
+      "java_rss_first_last_mib": [
+        110.48046875,
+        110.49609375
+      ]
+    }
+  },
+  "http": {
+    "overall": {
+      "count": 1500,
+      "errors": 0,
+      "p50_ms": 3.065383993089199,
+      "p95_ms": 6.094308802857995,
+      "max_ms": 84.05102603137493
+    },
+    "routes": {
+      "latest": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.1836689449846745,
+        "p95_ms": 6.420555058866739,
+        "max_ms": 84.05102603137493
+      },
+      "history": {
+        "count": 900,
+        "errors": 0,
+        "p50_ms": 2.9673899989575148,
+        "p95_ms": 5.795283010229468,
+        "max_ms": 20.56840807199478
+      },
+      "batch": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.3899759873747826,
+        "p95_ms": 6.139528937637806,
+        "max_ms": 61.03065889328718
+      }
+    },
+    "minutes": {
+      "1": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 4.5207038056105375,
+        "p95_ms": 9.13559296168387,
+        "max_ms": 84.05102603137493
+      },
+      "2": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.1440500169992447,
+        "p95_ms": 5.040554096922278,
+        "max_ms": 6.961354054510593
+      },
+      "3": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 2.8365328907966614,
+        "p95_ms": 4.580287961289287,
+        "max_ms": 6.225954974070191
+      },
+      "4": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 2.8693999629467726,
+        "p95_ms": 4.178378032520413,
+        "max_ms": 5.687305936589837
+      },
+      "5": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 2.8939361218363047,
+        "p95_ms": 4.1476169135421515,
+        "max_ms": 8.570482954382896
+      }
+    },
+    "max_dispatch_lag_ms": 29.04714085161686
+  },
+  "cpu_note": "Busy excludes idle, I/O wait and steal. Legacy samples lack steal: exact busy is null; busy_plus_steal is the corrected upper bound, not an assumed zero steal value.",
+  "startup_note": null,
+  "persistence_state": {
+    "actual": {
+      "priceSum": "630374.22",
+      "rows": 2070,
+      "maxSequence": 689
+    },
+    "expected_rows": 2070,
+    "expected_price_sum": "630374.22",
+    "matches": true
+  }
+}

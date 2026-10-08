@@ -1,0 +1,51 @@
+pvrlabs:javalin-app:jar:1.0
++- pvrlabs:quote-common:jar:1.0:compile
+|  +- com.zaxxer:HikariCP:jar:7.0.2:compile
+|  \- com.h2database:h2:jar:2.4.240:compile
++- io.javalin:javalin:jar:7.2.3:compile
+|  +- org.slf4j:slf4j-api:jar:2.0.18:compile
+|  +- org.eclipse.jetty:jetty-server:jar:12.1.12:compile
+|  |  +- org.eclipse.jetty:jetty-http:jar:12.1.12:compile
+|  |  |  \- org.eclipse.jetty:jetty-util:jar:12.1.12:compile
+|  |  \- org.eclipse.jetty:jetty-io:jar:12.1.12:compile
+|  +- org.eclipse.jetty.ee10:jetty-ee10-servlet:jar:12.1.12:compile
+|  |  +- jakarta.servlet:jakarta.servlet-api:jar:6.0.0:compile
+|  |  +- org.eclipse.jetty:jetty-security:jar:12.1.12:compile
+|  |  \- org.eclipse.jetty:jetty-session:jar:12.1.12:compile
+|  +- org.eclipse.jetty.ee10.websocket:jetty-ee10-websocket-jetty-server:jar:12.1.12:compile
+|  |  +- org.eclipse.jetty.ee10:jetty-ee10-annotations:jar:12.1.12:compile
+|  |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+|  |  |  +- org.eclipse.jetty:jetty-annotations:jar:12.1.12:compile
+|  |  |  +- org.eclipse.jetty.ee10:jetty-ee10-plus:jar:12.1.12:compile
+|  |  |  |  +- jakarta.enterprise:jakarta.enterprise.cdi-api:jar:4.0.1:compile
+|  |  |  |  +- jakarta.enterprise:jakarta.enterprise.lang-model:jar:4.0.1:compile
+|  |  |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:compile
+|  |  |  |  +- jakarta.interceptor:jakarta.interceptor-api:jar:2.1.0:compile
+|  |  |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+|  |  |  |  +- org.eclipse.jetty:jetty-jndi:jar:12.1.12:compile
+|  |  |  |  \- org.eclipse.jetty:jetty-plus:jar:12.1.12:compile
+|  |  |  +- org.eclipse.jetty.ee10:jetty-ee10-webapp:jar:12.1.12:compile
+|  |  |  |  +- org.eclipse.jetty:jetty-xml:jar:12.1.12:compile
+|  |  |  |  \- org.eclipse.jetty.ee:jetty-ee-webapp:jar:12.1.12:compile
+|  |  |  +- org.ow2.asm:asm:jar:9.10.1:compile
+|  |  |  \- org.ow2.asm:asm-commons:jar:9.10.1:compile
+|  |  |     \- org.ow2.asm:asm-tree:jar:9.10.1:compile
+|  |  +- org.eclipse.jetty.ee10.websocket:jetty-ee10-websocket-servlet:jar:12.1.12:compile
+|  |  |  \- org.eclipse.jetty.websocket:jetty-websocket-core-server:jar:12.1.12:compile
+|  |  +- org.eclipse.jetty.websocket:jetty-websocket-jetty-api:jar:12.1.12:compile
+|  |  +- org.eclipse.jetty.websocket:jetty-websocket-jetty-common:jar:12.1.12:compile
+|  |  |  \- org.eclipse.jetty.websocket:jetty-websocket-core-common:jar:12.1.12:compile
+|  |  \- org.eclipse.jetty.websocket:jetty-websocket-jetty-server:jar:12.1.12:compile
+|  \- org.jetbrains.kotlin:kotlin-stdlib:jar:2.2.20:compile
+|     \- org.jetbrains:annotations:jar:13.0:compile
++- io.javalin:javalin-micrometer:jar:7.2.3:compile
+|  +- io.micrometer:micrometer-core:jar:1.17.0:compile
+|  |  +- org.jspecify:jspecify:jar:1.0.0:compile
+|  |  +- io.micrometer:micrometer-commons:jar:1.17.0:compile
+|  |  +- io.micrometer:micrometer-observation:jar:1.17.0:compile
+|  |  \- org.hdrhistogram:HdrHistogram:jar:2.2.2:runtime
+|  \- io.micrometer:micrometer-jetty12:jar:1.17.0:compile
++- com.fasterxml.jackson.core:jackson-databind:jar:2.22.1:compile
+|  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.22:compile
+|  \- com.fasterxml.jackson.core:jackson-core:jar:2.22.1:compile
+\- org.slf4j:slf4j-simple:jar:2.0.18:compile

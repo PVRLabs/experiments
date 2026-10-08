@@ -1,0 +1,47 @@
+--- a/common/src/main/java/lab/Quotes.java
++++ b/common/src/main/java/lab/Quotes.java
+@@ -54,7 +54,7 @@
+         } return rows;
+     }
+     public List<Quote> history(String symbol, int limit) throws SQLException {
+-        if (!SYMBOLS.contains(symbol) || limit<1 || limit>390) throw new IllegalArgumentException("Invalid symbol/limit");
++        if (symbol == null || !SYMBOLS.contains(symbol) || limit<1 || limit>390) throw new IllegalArgumentException("Invalid symbol/limit");
+         var rows=new ArrayList<Quote>();
+         try(var c=ds.getConnection();var p=c.prepareStatement("SELECT batch_seq,cycle,sample_index,market_time,symbol,price FROM quotes WHERE symbol=? ORDER BY id DESC LIMIT ?")) {
+             p.setString(1,symbol);p.setInt(2,limit);try(var r=p.executeQuery()){while(r.next()) rows.add(row(r));}
+--- /dev/null
++++ b/common/src/main/java/lab/SqlErrors.java
+@@ -0,0 +1,13 @@
++package lab;
++
++/** Error-path responses; apply after the paired measurements. */
++public final class SqlErrors {
++    private SqlErrors() {}
++    public static int status(java.sql.SQLException error) {
++        String state = error.getSQLState();
++        return state != null && state.startsWith("23") ? 409 : 500;
++    }
++    public static String code(java.sql.SQLException error) {
++        return error.getSQLState() == null ? "unknown" : error.getSQLState();
++    }
++}
+--- a/javalin-app/src/main/java/lab/JavalinApp.java
++++ b/javalin-app/src/main/java/lab/JavalinApp.java
+@@ -19,7 +19,7 @@
+             c.routes.get("/inspection/state",ctx->ctx.json(quotes.state()));
+             c.routes.get(StatLiteMetrics.PATH,ctx->ctx.json(StatLiteMetrics.snapshot(registry,"UP")));
+             c.routes.exception(IllegalArgumentException.class,(e,ctx)->ctx.status(400).json(Map.of("error",e.getMessage())));
+-            c.routes.exception(java.sql.SQLException.class,(e,ctx)->ctx.status(e.getSQLState().startsWith("23")?409:500).json(Map.of("error",e.getSQLState())));
++            c.routes.exception(java.sql.SQLException.class,(e,ctx)->ctx.status(SqlErrors.status(e)).json(Map.of("error",SqlErrors.code(e))));
+         }).start(8080);
+         System.out.println("Jetty thread pool: " + app.jettyServer().server().getThreadPool());
+         Runtime.getRuntime().addShutdownHook(new Thread(()->{app.stop();ds.close();registry.close();}));
+--- a/spring-app/src/main/java/lab/SpringApp.java
++++ b/spring-app/src/main/java/lab/SpringApp.java
+@@ -23,5 +23,5 @@
+     @PostMapping("/api/quotes/batches") ResponseEntity<?> batch(@RequestBody Quotes.Batch b) throws Exception{return ResponseEntity.status(201).body(quotes.insert(b));}
+     @GetMapping("/inspection/state") Object state() throws Exception{return quotes.state();}
+     @ExceptionHandler(IllegalArgumentException.class) ResponseEntity<?> bad(IllegalArgumentException e){return ResponseEntity.badRequest().body(Map.of("error",e.getMessage()));}
+-    @ExceptionHandler(java.sql.SQLException.class) ResponseEntity<?> sql(java.sql.SQLException e){return ResponseEntity.status(e.getSQLState().startsWith("23")?409:500).body(Map.of("error",e.getSQLState()));}
++    @ExceptionHandler(java.sql.SQLException.class) ResponseEntity<?> sql(java.sql.SQLException e){return ResponseEntity.status(SqlErrors.status(e)).body(Map.of("error",SqlErrors.code(e)));}
+ }

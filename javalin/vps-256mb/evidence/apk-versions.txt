@@ -1,0 +1,260 @@
+acl-libs-2.3.2-r1 - Access control list utilities (libraries)
+agetty-2.42.3-r1 - agetty program from util-linux
+agetty-openrc-0.63.2-r0 - agetty program from util-linux (OpenRC init scripts)
+alpine-base-3.24.2-r0 - Meta package for minimal alpine base
+alpine-baselayout-3.7.2-r1 - Alpine base dir structure and init scripts
+alpine-baselayout-data-3.7.2-r1 - Alpine base dir structure and init scripts
+alpine-conf-3.22.0-r0 - Alpine configuration management scripts
+alpine-keys-2.6-r0 - Public keys for Alpine Linux packages
+alpine-release-3.24.2-r0 - Alpine release data
+apk-tools-3.0.8-r0 - Alpine Package Keeper - package manager for alpine
+bash-5.3.9-r1 - The GNU Bourne Again shell
+blkid-2.42.3-r1 - Block device identification tool from util-linux
+bridge-1.5-r5 - Scripts for configuring network bridge interfaces
+brotli-libs-1.2.0-r1 - Generic lossless compressor (libraries)
+busybox-1.37.0-r31 - Size optimized toolbox of many common UNIX utilities
+busybox-binsh-1.37.0-r31 - busybox ash /bin/sh
+busybox-mdev-openrc-1.37.0-r31 - Size optimized toolbox of many common UNIX utilities
+busybox-openrc-1.37.0-r31 - Size optimized toolbox of many common UNIX utilities
+busybox-suid-1.37.0-r31 - suid binaries of Busybox
+c-ares-1.34.8-r0 - Asynchronous DNS/names resolver library
+ca-certificates-20260909-r0 - Common CA certificates PEM files from Mozilla
+ca-certificates-bundle-20260909-r0 - Pre generated bundle of Mozilla certificates
+cfdisk-2.42.3-r1 - Curses based partition table manipulator from util-linux
+chrony-4.8-r7 - NTP client and server programs (without NTS and SHA/AES)
+chrony-common-4.8-r7 - NTP client and server programs (common files)
+chrony-openrc-4.8-r7 - NTP client and server programs (OpenRC init scripts)
+cloud-init-26.1-r3 - Cloud instance init scripts
+cloud-init-datasource-akamai-26.1-r3 - Cloud-init Akamai datasource
+cloud-init-datasource-akamai-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-akamai
+cloud-init-datasource-aliyun-26.1-r3 - Cloud-init AliBaba Cloud_(AliYun) datasource
+cloud-init-datasource-aliyun-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-aliyun
+cloud-init-datasource-altcloud-26.1-r3 - Cloud-init AltCloud datasource
+cloud-init-datasource-altcloud-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-altcloud
+cloud-init-datasource-azure-26.1-r3 - Cloud-init Azure datasource
+cloud-init-datasource-azure-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-azure
+cloud-init-datasource-bigstep-26.1-r3 - Cloud-init Bigstep datasource
+cloud-init-datasource-bigstep-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-bigstep
+cloud-init-datasource-cloudcix-26.1-r3 - Cloud-init CloudCIX datasource
+cloud-init-datasource-cloudcix-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-cloudcix
+cloud-init-datasource-cloudsigma-26.1-r3 - Cloud-init CloudSigma datasource
+cloud-init-datasource-cloudsigma-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-cloudsigma
+cloud-init-datasource-cloudstack-26.1-r3 - Cloud-init CloudStack datasource
+cloud-init-datasource-cloudstack-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-cloudstack
+cloud-init-datasource-configdrive-26.1-r3 - Cloud-init ConfigDrive datasource
+cloud-init-datasource-configdrive-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-configdrive
+cloud-init-datasource-digitalocean-26.1-r3 - Cloud-init DigitalOcean datasource
+cloud-init-datasource-digitalocean-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-digitalocean
+cloud-init-datasource-ec2-26.1-r3 - Cloud-init Amazon EC2 datasource
+cloud-init-datasource-ec2-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-ec2
+cloud-init-datasource-exoscale-26.1-r3 - Cloud-init Exoscale datasource
+cloud-init-datasource-exoscale-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-exoscale
+cloud-init-datasource-gce-26.1-r3 - Cloud-init Google Compute_Engine datasource
+cloud-init-datasource-gce-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-gce
+cloud-init-datasource-hetzner-26.1-r3 - Cloud-init Hetzner datasource
+cloud-init-datasource-hetzner-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-hetzner
+cloud-init-datasource-ibmcloud-26.1-r3 - Cloud-init IBM Cloud datasource
+cloud-init-datasource-ibmcloud-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-ibmcloud
+cloud-init-datasource-lxd-26.1-r3 - Cloud-init LXD datasource
+cloud-init-datasource-lxd-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-lxd
+cloud-init-datasource-maas-26.1-r3 - Cloud-init MAAS datasource
+cloud-init-datasource-maas-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-maas
+cloud-init-datasource-nocloud-26.1-r3 - Cloud-init NoCloud datasource
+cloud-init-datasource-nocloud-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-nocloud
+cloud-init-datasource-nwcs-26.1-r3 - Cloud-init NWCS datasource
+cloud-init-datasource-nwcs-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-nwcs
+cloud-init-datasource-opennebula-26.1-r3 - Cloud-init OpenNebula datasource
+cloud-init-datasource-opennebula-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-opennebula
+cloud-init-datasource-openstack-26.1-r3 - Cloud-init OpenStack datasource
+cloud-init-datasource-openstack-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-openstack
+cloud-init-datasource-oracle-26.1-r3 - Cloud-init Oracle Cloud datasource
+cloud-init-datasource-oracle-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-oracle
+cloud-init-datasource-ovf-26.1-r3 - Cloud-init OVF datasource
+cloud-init-datasource-ovf-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-ovf
+cloud-init-datasource-rbx-26.1-r3 - Cloud-init RbxCloud datasource
+cloud-init-datasource-rbx-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-rbx
+cloud-init-datasource-scaleway-26.1-r3 - Cloud-init Scaleway datasource
+cloud-init-datasource-scaleway-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-scaleway
+cloud-init-datasource-smartos-26.1-r3 - Cloud-init SmartOS datasource
+cloud-init-datasource-smartos-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-smartos
+cloud-init-datasource-upcloud-26.1-r3 - Cloud-init UpCloud datasource
+cloud-init-datasource-upcloud-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-upcloud
+cloud-init-datasource-vmware-26.1-r3 - Cloud-init VMware datasource
+cloud-init-datasource-vmware-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-vmware
+cloud-init-datasource-vultr-26.1-r3 - Cloud-init Vultr datasource
+cloud-init-datasource-vultr-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-vultr
+cloud-init-datasource-wsl-26.1-r3 - Cloud-init Windows Subsystem_For_Linux datasource
+cloud-init-datasource-wsl-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init-datasource-wsl
+cloud-init-datasources-26.1-r3 - Cloud-init all datasources (meta-package)
+cloud-init-openrc-26.1-r3 - Cloud instance init scripts (OpenRC init scripts)
+cloud-init-pyc-26.1-r3 - Precompiled Python bytecode for cloud-init
+cloud-utils-growpart-0.33-r1 - Grow the size of disk partitions
+coreutils-9.11-r0 - The basic file, shell and text manipulation utilities
+coreutils-env-9.11-r0 - The basic file, shell and text manipulation utilities
+coreutils-fmt-9.11-r0 - The basic file, shell and text manipulation utilities
+coreutils-sha512sum-9.11-r0 - The basic file, shell and text manipulation utilities
+cryptsetup-libs-2.8.6-r0 - Cryptsetup shared library
+curl-8.22.0-r0 - URL retrieval utility and library
+device-mapper-libs-2.03.35-r3 - Device-mapper shared library
+dhcpcd-10.5.2-r1 - RFC2131 compliant DHCP client
+dhcpcd-openrc-10.5.2-r1 - RFC2131 compliant DHCP client (OpenRC init scripts)
+dmesg-2.42.3-r1 - dmesg tool from util-linux
+doas-6.8.2-r8 - OpenBSD's temporary privilege escalation tool
+dosfstools-4.2-r2 - DOS filesystem utilities
+e2fsprogs-1.47.4-r0 - Standard Ext2/3/4 filesystem utilities
+e2fsprogs-extra-1.47.4-r0 - Ext2/3/4 filesystem extra utilities
+e2fsprogs-libs-1.47.4-r0 - Standard Ext2/3/4 filesystem utilities (libraries)
+findmnt-2.42.3-r1 - Find mount from util-linux
+flock-2.42.3-r1 - File locker from util-linux
+fstrim-2.42.3-r1 - File system trim from util-linux
+gdbm-1.26-r0 - GNU dbm is a set of database routines that use extensible hashing
+hexdump-2.42.3-r1 - Hexdump from util-linux
+ifupdown-ng-0.13.0-r0 - tools for managing network configuration
+ifupdown-ng-iproute2-0.13.0-r0 - ifupdown-ng integration for iproute2
+iproute2-7.0.0-r0 - IP Routing Utilities
+iproute2-minimal-7.0.0-r0 - IP Routing Utilities (/sbin/ip only)
+iproute2-ss-7.0.0-r0 - IP Routing Utilities (socket statistics tool)
+iproute2-tc-7.0.0-r0 - IP Routing Utilities (traffic control and XDP support)
+java-cacerts-1.1-r0 - Script to update java cacerts store
+java-common-1.0-r2 - Java common (updates java links)
+json-c-0.18-r1 - A JSON implementation in C
+kmod-34.2-r1 - Linux kernel module management utilities
+kmod-libs-34.2-r1 - Linux kernel module management utilities (libraries)
+lddtree-1.27-r0 - List dynamic dependencies as a tree
+libapk-3.0.8-r0 - Alpine Package Keeper - package manager for alpine
+libattr-2.5.2-r2 - utilities for managing filesystem extended attributes (libraries)
+libblkid-2.42.3-r1 - Block device identification library from util-linux
+libbsd-0.12.2-r0 - commonly-used BSD functions not implemented by all libcs
+libbz2-1.0.8-r6 - Shared library for bz2
+libcap-ng-0.8.5-r2 - POSIX capabilities library
+libcap2-2.78-r0 - POSIX 1003.1e capabilities (libraries)
+libcom_err-1.47.4-r0 - Common error description library
+libcrypto3-3.5.8-r0 - Crypto library from openssl
+libcurl-8.22.0-r0 - The multiprotocol file transfer library
+libeconf-0.8.3-r0 - Enhanced Config File Parser
+libedit-20260508.3.1-r1 - BSD line editing library
+libelf-0.195-r0 - Library to read, modify and create ELF files
+libexpat-2.8.5-r0 - XML Parser library written in C (libraries)
+libfdisk-2.42.3-r1 - Partitioning library for fdisk-like programs
+libffi-3.5.2-r1 - portable, high level programming interface to various calling conventions.
+libgcc-15.2.0-r5 - GNU C compiler runtime libraries
+libidn2-2.3.8-r0 - Encode/Decode library for internationalized domain names
+libintl-1.0-r0 - GNU gettext runtime library
+libmd-1.2.0-r0 - Message Digest functions from BSD systems
+libmnl-1.0.5-r2 - Library for minimalistic netlink
+libmount-2.42.3-r1 - Block device identification library from util-linux
+libncursesw-6.6_p20260516-r0 - Console display library (libncursesw)
+libnvme-1.16.2-r0 - C Library for NVM Express on Linux
+libnvmemi-1.16.2-r0 - C Library for NVM Express on Linux
+libpanelw-6.6_p20260516-r0 - Console display library (libpanelw)
+libproc2-4.0.6-r0 - Library for monitoring system and processes
+libpsl-0.21.5-r3 - C library for the Publix Suffix List
+libseccomp-2.6.0-r2 - interface to the Linux Kernel's syscall filtering mechanism
+libsmartcols-2.42.3-r1 - Formatting library for ls-like programs
+libssl3-3.5.8-r0 - SSL shared libraries
+libstdc++-15.2.0-r5 - GNU C++ standard runtime library
+libtasn1-4.21.0-r0 - The ASN.1 library used in GNUTLS
+libunistring-1.4.2-r0 - Library for manipulating Unicode strings and C strings
+libuuid-2.42.3-r1 - DCE compatible Universally Unique Identifier library
+libxtables-1.8.13-r0 - Linux kernel firewall, NAT and packet mangling tools (xtables library)
+limine-bios-12.9.1-r0 - Modern, secure, portable, multiprotocol bootloader and boot manager (BIOS sys file)
+limine-bios-updater-12.9.1-r0 - Limine auto-updater for BIOS
+limine-efi-updater-12.9.1-r0 - Limine auto-updater for EFI payload
+limine-efi-x86_64-12.9.1-r0 - Modern, secure, portable, multiprotocol bootloader and boot manager (x86-64 EFI image)
+limine-tool-12.9.1-r0 - Limine host tool
+linux-pam-1.7.1-r2 - Linux PAM (Pluggable Authentication Modules for Linux)
+linux-virt-6.18.54-r0 - Linux lts kernel
+logger-2.42.3-r1 - Logger from util-linux
+losetup-2.42.3-r1 - Loop disk setup from util-linux
+lsblk-2.42.3-r1 - Block device list tool from util-linux
+lscpu-2.42.3-r1 - CPU architecture information helper
+mcookie-2.42.3-r1 - Generate random numbers for xauth from util-linux
+mdev-conf-4.10-r0 - Configuration files for mdev and mdevd
+mkinitfs-3.14.1-r0 - Tool to generate initramfs images for Alpine
+mount-2.42.3-r1 - mount tool from util-linux
+mpdecimal-4.0.1-r0 - complete implementation of the General Decimal Arithmetic Specification
+musl-1.2.6-r2 - the musl c library (libc) implementation
+musl-utils-1.2.6-r2 - the musl c library (libc) implementation
+ncurses-terminfo-base-6.6_p20260516-r0 - Descriptions of common terminals
+nghttp2-libs-1.70.0-r0 - HTTP/2 C client, server and proxy (libraries)
+nvme-cli-2.16-r1 - NVM-Express user space tooling for Linux
+openjdk25-jre-headless-25.0.4_p7-r0 - Oracle OpenJDK 25 (JRE headless)
+openrc-0.63.2-r0 - OpenRC manages the services, startup and shutdown of a host
+openrc-user-0.63.2-r0 - OpenRC user services without PAM support
+openssh-10.3_p1-r1 - Port of OpenBSD's free SSH release
+openssh-client-common-10.3_p1-r1 - OpenBSD's SSH client common files
+openssh-client-default-10.3_p1-r1 - OpenBSD's SSH client
+openssh-keygen-10.3_p1-r1 - ssh helper program for generating keys
+openssh-server-10.3_p1-r1 - OpenSSH server
+openssh-server-common-10.3_p1-r1 - OpenSSH server configuration files
+openssh-server-common-openrc-10.3_p1-r1 - Port of OpenBSD's free SSH release (OpenRC init scripts)
+openssh-server-pam-10.3_p1-r1 - OpenSSH server with pam support
+openssh-sftp-server-10.3_p1-r1 - ssh sftp server module
+p11-kit-0.26.2-r0 - Library for loading and sharing PKCS#11 modules
+p11-kit-trust-0.26.2-r0 - System trust module from p11-kit
+partx-2.42.3-r1 - Tell the kernel about disk partition changes from util-linux
+popt-1.19-r4 - commandline option parser
+procps-ng-4.0.6-r0 - Utilities for monitoring your system and processes on your system
+py3-attrs-26.1.0-r0 - Python classes without boilerplate
+py3-attrs-pyc-26.1.0-r0 - Precompiled Python bytecode for py3-attrs
+py3-certifi-2026.2.25-r1 - Python3 package for providing Mozilla's CA Bundle
+py3-certifi-pyc-2026.2.25-r1 - Precompiled Python bytecode for py3-certifi
+py3-charset-normalizer-3.4.9-r0 - offers you an alternative to Universal Charset Encoding Detector, also known as Chardet
+py3-charset-normalizer-pyc-3.4.9-r0 - Precompiled Python bytecode for py3-charset-normalizer
+py3-configobj-5.0.9-r2 - Python3 library for reading and writing of configuration files (ini)
+py3-configobj-pyc-5.0.9-r2 - Precompiled Python bytecode for py3-configobj
+py3-idna-3.16-r0 - IDNA 2008 and UTS #46 for Python3
+py3-idna-pyc-3.16-r0 - Precompiled Python bytecode for py3-idna
+py3-jinja2-3.1.6-r1 - A small but fast and easy to use stand-alone python template engine
+py3-jinja2-pyc-3.1.6-r1 - Precompiled Python bytecode for py3-jinja2
+py3-jsonpatch-1.33-r5 - Apply JSON-Patches (RFC 6902)
+py3-jsonpatch-pyc-1.33-r5 - Precompiled Python bytecode for py3-jsonpatch
+py3-jsonpointer-3.1.1-r0 - Identify specific nodes in a JSON document (RFC 6901)
+py3-jsonpointer-pyc-3.1.1-r0 - Precompiled Python bytecode for py3-jsonpointer
+py3-jsonschema-4.26.0-r0 - JSON Schema validation for Python
+py3-jsonschema-pyc-4.26.0-r0 - Precompiled Python bytecode for py3-jsonschema
+py3-jsonschema-specifications-2025.9.1-r2 - Support files exposing JSON from the JSON Schema specifications to Python
+py3-jsonschema-specifications-pyc-2025.9.1-r2 - Precompiled Python bytecode for py3-jsonschema-specifications
+py3-markupsafe-3.0.3-r1 - Implements a XML/HTML/XHTML Markup safe string
+py3-markupsafe-pyc-3.0.3-r1 - Precompiled Python bytecode for py3-markupsafe
+py3-referencing-0.37.0-r1 - Cross-specification JSON referencing
+py3-referencing-pyc-0.37.0-r1 - Precompiled Python bytecode for py3-referencing
+py3-requests-2.33.1-r0 - HTTP request library for Python3
+py3-requests-pyc-2.33.1-r0 - Precompiled Python bytecode for py3-requests
+py3-rpds-py-0.30.0-r2 - Python bindings to the Rust Persistent Data Structures (rpds) crate
+py3-rpds-py-pyc-0.30.0-r2 - Precompiled Python bytecode for py3-rpds-py
+py3-typing-extensions-4.15.0-r1 - Backported and Experimental Type Hints for Python 3.5+
+py3-typing-extensions-pyc-4.15.0-r1 - Precompiled Python bytecode for py3-typing-extensions
+py3-urllib3-2.7.0-r0 - HTTP library with thread-safe connection pooling, file post, and more
+py3-urllib3-pyc-2.7.0-r0 - Precompiled Python bytecode for py3-urllib3
+py3-yaml-6.0.3-r2 - Python3 bindings for YAML
+py3-yaml-pyc-6.0.3-r2 - Precompiled Python bytecode for py3-yaml
+pyc-3.14.7-r1 - Meta package for pulling in all -pyc packages
+python3-3.14.7-r1 - High-level scripting language
+python3-pyc-3.14.7-r1 - High-level scripting language (install .pyc cache files)
+python3-pycache-pyc0-3.14.7-r1 - High-level scripting language (.pyc pycache files)
+readline-8.3.3-r1 - GNU readline library
+runuser-2.42.3-r1 - Run a program with substitute user and group ID
+scanelf-1.3.9-r1 - Scan ELF binaries for stuff
+setarch-2.42.3-r1 - setarch tool from util-linux
+setpriv-2.42.3-r1 - Run a program with different Linux privilege settings
+sfdisk-2.42.3-r1 - Partition table manipulator from util-linux
+sgdisk-1.0.10-r1 - Command-line GUID partition table (GPT) manipulator
+shadow-4.18.0-r1 - PAM-using login and passwd utilities (usermod, useradd, ...)
+skalibs-libs-2.15.0.0-r0 - Set of general-purpose C programming libraries for skarnet.org software. (libraries)
+sqlite-libs-3.53.4-r0 - C library that implements an SQL database engine (libraries)
+ssl_client-1.37.0-r31 - External ssl_client for busybox wget
+sudo-1.9.17_p2-r1 - Give certain users the ability to run some commands as root
+tar-1.35-r5 - Utility used to store, backup, and transport files
+tzdata-2026d-r0 - Timezone data
+umount-2.42.3-r1 - umount tool from util-linux
+util-linux-2.42.3-r1 - Random collection of Linux utilities
+util-linux-misc-2.42.3-r1 - Misc binaries for util-linux
+util-linux-openrc-2.42.3-r1 - Random collection of Linux utilities (OpenRC init scripts)
+utmps-libs-0.1.3.3-r0 - A secure utmp/wtmp implementation (libraries)
+uuidgen-2.42.3-r1 - UUID generator from util-linux
+wipefs-2.42.3-r1 - Utility to wipe filesystems from device from util-linux
+xz-libs-5.8.4-r0 - Library and CLI tools for XZ and LZMA compressed files (libraries)
+yaml-0.2.5-r2 - YAML 1.1 parser and emitter written in C
+zlib-1.3.2-r0 - A compression/decompression Library
+zstd-libs-1.5.7-r2 - Zstandard - Fast real-time compression algorithm (libraries)
