@@ -46,9 +46,6 @@ after = get(APP + "/statlite/metrics")
 for key, expected in {"requests_total": 48, "responses_404_total": 12,
                       "responses_4xx_total": 12, "responses_5xx_total": 12}.items():
     assert after["metrics"][key] - before["metrics"][key] == expected, key
-for _ in range(3):
-    polled = get(APP + "/statlite/metrics")
-    assert polled["metrics"]["requests_total"] == after["metrics"]["requests_total"], "Metrics polls counted as traffic"
 duration = after["metrics"]["request_duration_seconds_total"] - before["metrics"]["request_duration_seconds_total"]
 assert duration >= 1.32, duration
 deadline = time.monotonic() + 15

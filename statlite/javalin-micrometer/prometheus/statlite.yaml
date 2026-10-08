@@ -1,0 +1,12 @@
+server:
+  listen: "127.0.0.1:19087"
+storage:
+  sqlite_path: "runtime/statlite.sqlite"
+polling:
+  # Fast polling only for this local demo.
+  interval: "2s"
+  timeout: "1s"
+targets:
+  - name: javalin-demo
+    type: statlite-metrics
+    url: http://127.0.0.1:18087/statlite/metrics
