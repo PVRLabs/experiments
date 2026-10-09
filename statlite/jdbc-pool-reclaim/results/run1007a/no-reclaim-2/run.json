@@ -1,0 +1,36 @@
+{
+  "configuration": "no-reclaim",
+  "mode": "record",
+  "status": "valid",
+  "start_utc": "2026-10-07T17:55:08.570516+00:00",
+  "timeline": {
+    "A_start": 0,
+    "A_end": 16,
+    "B_start": 12,
+    "B_end": 68,
+    "quiet_end": 128,
+    "A_revisit": 128,
+    "B_revisit": 130,
+    "revisit_end": 134,
+    "final_end": 144,
+    "wave_interval": 2
+  },
+  "tags": {
+    "A": "pr-run1007a-no-reclaim-2-A",
+    "B": "pr-run1007a-no-reclaim-2-B"
+  },
+  "jvm_flags": [
+    "-Xms32m",
+    "-Xmx192m",
+    "-XX:+UseSerialGC",
+    "-XX:ActiveProcessorCount=2"
+  ],
+  "origin_monotonic": 3348.392603605,
+  "origin_utc": "2026-10-07T17:55:36.237544+00:00",
+  "pids": {
+    "A": 38364,
+    "B": 38400
+  },
+  "end_utc": "2026-10-07T17:58:00.582422+00:00",
+  "cleanup_errors": []
+}

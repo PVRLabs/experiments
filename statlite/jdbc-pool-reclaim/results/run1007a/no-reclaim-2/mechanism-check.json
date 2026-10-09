@@ -1,0 +1,222 @@
+{
+  "status": "passed",
+  "configuration": "no-reclaim",
+  "window": [
+    58,
+    68
+  ],
+  "expected_A_total": [
+    10,
+    10
+  ],
+  "expected_B_total": 10,
+  "expected_pg_aggregate": [
+    20,
+    20
+  ],
+  "complete_samples": 10,
+  "B_active_samples": 8,
+  "observations": [
+    {
+      "elapsed": 58.000615127999936,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 10,
+          "idle": 0
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 59.000476091999644,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 10,
+          "idle": 0
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 60.000532184999884,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 61.00051618899988,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 10,
+          "idle": 0
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 62.00046483899996,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 10,
+          "idle": 0
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 63.00047379899979,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 10,
+          "idle": 0
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 64.0008155999999,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 65.000690717,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 10,
+          "idle": 0
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 66.00189852599988,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 10,
+          "idle": 0
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    },
+    {
+      "elapsed": 67.00073650199965,
+      "pools": {
+        "A": {
+          "total": 10,
+          "active": 0,
+          "idle": 10
+        },
+        "B": {
+          "total": 10,
+          "active": 10,
+          "idle": 0
+        }
+      },
+      "pg": {
+        "A": 10,
+        "B": 10,
+        "aggregate": 20
+      }
+    }
+  ],
+  "violations": []
+}

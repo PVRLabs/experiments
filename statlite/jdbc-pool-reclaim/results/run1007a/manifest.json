@@ -1,0 +1,57 @@
+{
+  "fingerprint": {
+    "files": {
+      "app.jar": "b4c6f1add789154f26d152ca1613625c9ffe2b34e6c6a0949c0c467d50ed6c64",
+      "inputs/pom.xml": "3538157b749d9a5651e66e2fcf9b4798b0bb4e209f29bc5093439cea0a497c08",
+      "inputs/repository-revision.txt": "0f958aa3001d0457cbfb80bb3886d1c578f38f2dc021d56fb5fa355f09c237a8",
+      "inputs/src/main/java/pvrlabs/poolreclaim/PoolApplication.java": "18566f9381a8a3ff4c309d0862a35709c9c922ed50c6e68e9174edfb2f5eeb19",
+      "inputs/src/main/java/pvrlabs/poolreclaim/WorkController.java": "f9e4a67d781641fe08617413a7114dd636fa8ba5382cad0aa729b4d4b029e1a0",
+      "inputs/src/main/resources/application-default.properties": "8842fa729cd71d6f7ebb4f17dad0c23d6baefe128b8f1c365d47fa1979b6f1cd",
+      "inputs/src/main/resources/application-no-reclaim.properties": "e28a1bcce6fbffea12382fc4b3d22152c5af85fac8bf82d13738809f50c4e827",
+      "inputs/src/main/resources/application-reclaim.properties": "1102c8b8b1260c8cb48027621912134174848db51398efe737a9f6d9414f80b3",
+      "inputs/src/main/resources/application.properties": "96cca42b744c0b14f9d89d0370b18547ade0dc164251ed76d20c6f9df0a50fda",
+      "inputs/src/test/java/pvrlabs/poolreclaim/PoolSizingTest.java": "7355c65663e21d7bc4607cee97f2f5631987a76b61f185a1555e75dec3895207",
+      "inputs/src/test/java/pvrlabs/poolreclaim/WorkControllerTest.java": "8a9ebb6f2bc8cd0346ed16c51b63c6c748c9fdb5060e5249680bd72de370f520",
+      "scripts/ack-preflight.py": "c5e271053e3e6bcafa744dd25d28579f0e6d3df56e4d7a3cbd13d4f44d086ddb",
+      "scripts/common.py": "17486fcc4d3258204b27a02e7b6bb9a644bd831df23cb1caf8851715e360a6f5",
+      "scripts/runner.py": "cd0cc7fb0b3005719cd0bd015ebb4fb61e4fc7ae6b157e5d973525a5d7d5d782",
+      "scripts/setup-postgres.py": "a1f1129cf23253c1d9473c34709fb42d0baf42100b2e9e6fce0de91270d32727",
+      "scripts/summarize.py": "33a2745fb06d5d6dbffd567b7c5ba280f788a1c9db50969a06a25d7b144f1b13",
+      "statlite": "cf537068441797cc16c2cce918ee4f5429a2b5bdec087df5ed249fd9493b5d58"
+    },
+    "config_sha256": "18d46db1fc7e8ed9593978425da051c22396f859675119fd506a6e882fa8e007",
+    "jvm_flags": [
+      "-Xms32m",
+      "-Xmx192m",
+      "-XX:+UseSerialGC",
+      "-XX:ActiveProcessorCount=2"
+    ],
+    "timeline": {
+      "A_start": 0,
+      "A_end": 16,
+      "B_start": 12,
+      "B_end": 68,
+      "quiet_end": 128,
+      "A_revisit": 128,
+      "B_revisit": 130,
+      "revisit_end": 134,
+      "final_end": 144,
+      "wave_interval": 2
+    },
+    "postgres_settings": {
+      "data_directory": "/var/lib/postgresql/16/main",
+      "idle_in_transaction_session_timeout": "0",
+      "idle_session_timeout": "0",
+      "max_connections": "100",
+      "port": "5432",
+      "server_version": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+      "shared_buffers": "16384",
+      "ssl": "on",
+      "work_mem": "4096"
+    },
+    "java_sha256": "7380ce48ed5013735d2c8414db54adb8f981e7933ff594bd36f3baccddaafba3",
+    "java_version": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.4.1+1 (build 25.0.4.1+1-LTS, mixed mode, sharing)\n"
+  },
+  "mode": "record",
+  "time": "2026-10-07T17:43:41.237378+00:00"
+}

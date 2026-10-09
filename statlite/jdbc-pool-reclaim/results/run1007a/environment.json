@@ -1,0 +1,39 @@
+{
+  "run": "run1007a",
+  "recorded_utc": "2026-10-07T17:43:41Z",
+  "completed_utc": "2026-10-07T18:00:53Z",
+  "host": {
+    "system": "Linux",
+    "kernel": "6.8.0-134-generic",
+    "machine": "x86_64",
+    "vm": "2 vCPU, 1 GiB, swap off",
+    "mem_total_kib": 982272,
+    "swap_total_kib": 0
+  },
+  "jvm": {
+    "distribution": "Temurin 25.0.4.1+1 LTS",
+    "flags": ["-Xms32m", "-Xmx192m", "-XX:+UseSerialGC", "-XX:ActiveProcessorCount=2"],
+    "java_sha256": "7380ce48ed5013735d2c8414db54adb8f981e7933ff594bd36f3baccddaafba3"
+  },
+  "postgresql": {
+    "version": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+    "max_connections": "100",
+    "shared_buffers_8kib_pages": "16384",
+    "work_mem_kib": "4096",
+    "idle_session_timeout": "0",
+    "idle_in_transaction_session_timeout": "0",
+    "port": "5432"
+  },
+  "applications": {
+    "spring_boot": "4.1.1",
+    "artifact_sha256": "b4c6f1add789154f26d152ca1613625c9ffe2b34e6c6a0949c0c467d50ed6c64",
+    "instances": ["A", "B"],
+    "database": "pool_reclaim",
+    "role": "pool_reclaim"
+  },
+  "statlite": {
+    "included_in_package": false,
+    "binary_sha256": "cf537068441797cc16c2cce918ee4f5429a2b5bdec087df5ed249fd9493b5d58",
+    "note": "Optional dashboard. Same pre-release candidate hash recorded by statlite/spring-quarkus-micronaut-jdbc. The binary is not published here."
+  }
+}
