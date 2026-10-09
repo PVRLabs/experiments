@@ -36,30 +36,33 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
   A Pyronaut Python HTTP app exposed Micronaut/Micrometer Prometheus metrics
   accepted by released StatLite's existing Micronaut target, with no StatLite
-  changes.
+  changes. [PVRLabs experiment page](https://pvrlabs.xyz/java-performance/experiments/pyronaut-statlite.html).
 
 - [Spring Boot, Quarkus, and Micronaut with JDBC](statlite/spring-quarkus-micronaut-jdbc/)
 
   Equivalent JDBC applications on Java 25 in a 1 GiB no-swap VM, with
   sequential 15-minute scripted-load windows and a separate shared-host
   observation. Includes curated RSS/CPU data, screenshots, source, and analysis.
+  [Related PVRLabs article](https://pvrlabs.xyz/articles/spring-boot-quarkus-micronaut-jdbc.html).
 
 - [Spring Boot Stars: JPA versus JDBC](spring-boot/jpa-vs-jdbc-stars/)
 
   A paired JDK 25 comparison of the conventional Hibernate Stars app and a
   smaller Spring MVC + JDBC version. Both expose Actuator for StatLite 0.5.0;
   raw RSS and startup measurements and reproduction scripts are included.
+  [PVRLabs experiment page](https://pvrlabs.xyz/java-performance/experiments/spring-boot-jpa-vs-jdbc.html).
 
 - [Spring Boot fat JAR vs extracted layout](spring-boot/extracted-layout/)
 
   A controlled comparison of Spring Boot's executable fat JAR and its official
   extracted runtime layout, measuring startup, first-request latency, and
-  settled memory behavior.
+  settled memory behavior. [Related PVRLabs article](https://pvrlabs.xyz/articles/spring-boot-extracted-layout.html).
 
 - [Spring Boot fat JAR vs extracted layout vs Gradle application distribution](spring-boot/gradle-application-vs-spring-boot/)
 
   A short three-way follow-up using the same application and constrained VM,
   focused on startup and first-request latency.
+  [PVRLabs experiment page](https://pvrlabs.xyz/java-performance/experiments/gradle-application-vs-spring-boot.html).
 
 - [StatLite on a 256 MB TierHive VPS](statlite/tierhive-recipe-256mb/)
 
@@ -74,6 +77,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
   smaller resident working set under pressure; a later constrained-VM run
   OOM-killed Spring, showing that the configuration could not reliably keep
   both JVM applications alive for an hour.
+  [Related PVRLabs article](https://pvrlabs.xyz/articles/spring-boot-vs-quarkus-512mb.html).
 
 - [Spring Boot on a low-memory VPS](statlite/spring-boot-low-memory/)
 
@@ -82,3 +86,4 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
   VPS. It found that 256 MB RAM was unstable for the application, while at
   512 MB RAM with a modest swapfile StatLite remained small and healthy and
   the controlled observation completed cleanly.
+  [Related PVRLabs article](https://pvrlabs.xyz/articles/spring-boot-256mb-jdk25.html).

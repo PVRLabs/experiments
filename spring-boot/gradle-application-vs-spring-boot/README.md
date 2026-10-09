@@ -1,5 +1,7 @@
 # Spring Boot fat JAR vs extracted layout vs Gradle application distribution
 
+See the [PVRLabs experiment page](https://pvrlabs.xyz/java-performance/experiments/gradle-application-vs-spring-boot.html).
+
 A small exploratory comparison of three ways to launch the same Spring Boot
 application:
 
