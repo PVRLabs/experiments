@@ -38,7 +38,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
   accepted by released StatLite's existing Micronaut target, with no StatLite
   changes. [PVRLabs experiment page](https://pvrlabs.xyz/java-performance/experiments/pyronaut-statlite.html).
 
-- [Idle PostgreSQL connections and Spring Boot's fixed pool](statlite/jdbc-pool-reclaim/)
+- [Idle PostgreSQL connections and Spring Boot's fixed pool](java/jdbc-pool-reclaim/)
 
   Two Spring Boot instances either kept 20 PostgreSQL connections after a
   burst or returned to 2. With 2 connections, PostgreSQL cgroup memory was
