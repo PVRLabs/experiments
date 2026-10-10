@@ -43,7 +43,7 @@ Instance A burst for 16 seconds. Instance B overlapped it and stayed busy until 
 
 The guest was a 2-vCPU, 1 GiB, swap-off x86_64 VM, Ubuntu 24.04, Temurin 25.0.4.1+1, Serial GC, `-Xms32m -Xmx192m -XX:ActiveProcessorCount=2`. PostgreSQL 16.15 stayed up across all six scenarios. Details and hashes are in [results/run1007a/environment.json](results/run1007a/environment.json).
 
-StatLite ran as an optional dashboard. The screenshots in [screenshots/](screenshots/README.md) were reconstructed after the run. They show request rate and host history. They do not show the connection counts or the PostgreSQL memory. HTTP 5xx marks on those dashboards were not reflected in the independent workload request logs and remain unattributed.
+StatLite ran as an optional dashboard. The screenshots in [screenshots/](screenshots/README.md) were reconstructed after the run. They show request rate and host history. They do not show the connection counts or the PostgreSQL memory. The visible HTTP 5xx spikes came from startup health checks returning 503 while the new application was not yet ready. All 2,280 measured workload requests returned HTTP 200. See the [screenshot notes](screenshots/README.md) for the spike times and counter behavior.
 
 ## Limits
 

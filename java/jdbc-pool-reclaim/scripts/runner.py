@@ -42,7 +42,7 @@ def available_port(port):
 def bundle_files(bundle):
     """Freeze durable release inputs, excluding generated Python caches."""
     return {str(p.relative_to(bundle)): digest(p) for p in sorted(bundle.rglob('*'))
-            if p.is_file() and p.name not in ['SHA256SUMS', '.deploy-complete']
+            if p.is_file() and p.name != '.deploy-complete'
             and '__pycache__' not in p.relative_to(bundle).parts
             and p.suffix not in ['.pyc', '.pyo']}
 
