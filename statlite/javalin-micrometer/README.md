@@ -42,9 +42,14 @@ counter increases and StatLite collection. Repeat it to add history; avoid
 other application traffic during its exact-count checks.
 
 Both services bind to loopback. The app uses port 18087 and exposes
-`/statlite/metrics`; StatLite uses port 19087. The two-second polling interval
-is for this local demo. History is stored in `runtime/statlite.sqlite`.
-Stop each service with Ctrl-C.
+`/statlite/metrics`; StatLite uses port 19087. History is stored in
+`runtime/statlite.sqlite`. Stop each service with Ctrl-C.
+
+> [!NOTE]
+> The ten-second polling interval is strictly for this short local demo and its
+> probe. Use **30 seconds or longer for production monitoring**; shorter intervals
+> increase polling work and stored samples. The request timeout uses StatLite's
+> default of ten seconds.
 
 ## Health and restarts
 

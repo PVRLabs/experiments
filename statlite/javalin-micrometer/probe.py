@@ -40,7 +40,7 @@ for _ in range(12):
     for path, expected in [("/hello", 200), ("/slow", 200), ("/missing", 404), ("/error", 500)]:
         code, _ = fetch(APP + path)
         assert code == expected, (path, code)
-    time.sleep(0.25)  # Spread traffic across the demo's two-second polls.
+    time.sleep(0.25)  # Pause briefly between request batches.
 time.sleep(0.1)  # Let Javalin's request logger finish.
 after = get(APP + "/statlite/metrics")
 for key, expected in {"requests_total": 48, "responses_404_total": 12,
