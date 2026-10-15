@@ -12,7 +12,11 @@ requests succeeded in each run and the final database states matched.
 | Workload median Java RSS | 112.83 MiB | 110.55 MiB | 112.19 MiB |
 | HTTP p95 | 7.39 ms | 8.23 ms | 9.34 ms |
 | Workload swap-in / swap-out | 0.20 / 0.05 MiB | 0.12 / 0.00 MiB | 19.11 / 31.19 MiB |
-| Handwritten Java lines, excluding shared adapter | 207 | 358 | 280 |
+| Handwritten Java lines, excluding shared adapter | 207 | 358 | 293* |
+
+*The jOOQ code count includes the fixture-loading correction. The original measured
+version had 280 lines and required that correction; runtime results remain from
+the original build.
 
 These are observations from complete applications, not isolated library overhead
 or a stable ranking. The jOOQ run had more paging; this does not establish its cause.
