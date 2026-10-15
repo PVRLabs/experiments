@@ -1,0 +1,50 @@
+{
+  "variant": "javalin-jdbi3",
+  "jvm": "-Xms16m -Xmx80m -XX:+UseSerialGC -Xss512k",
+  "versions": {
+    "alpine": "3.24.2",
+    "java": "25.0.4+7-alpine-r0",
+    "javalin": "7.2.3",
+    "jetty": "12.1.12",
+    "spring_boot": "4.1.1",
+    "h2": "2.4.240",
+    "hikari": "7.0.2",
+    "statlite": "v0.6.0",
+    "tomcat": "11.0.24",
+    "spring_jackson": "3.1.5",
+    "javalin_jackson": "2.22.1",
+    "spring_micrometer": "1.17.1",
+    "javalin_micrometer": "1.17.0",
+    "jdbi": "3.55.0"
+  },
+  "added_dependencies": {
+    "org.jdbi:jdbi3-core": "3.55.0",
+    "io.leangen.geantyref:geantyref": "2.0.1"
+  },
+  "files": {
+    "javalin-jdbi3/src/main/resources/quotes.csv": "7321a40c334a9ed8e32b4cbfa1b7c72fb0ca0479bdabbf676c6b5a009ae88f1a",
+    "javalin-jdbi3/src/main/java/lab/QuoteBatch.java": "6e02a2994663ccf028897bf486fe6d34604b2bf04a911dd25dce687dee63668b",
+    "javalin-jdbi3/src/main/java/lab/JdbiQuoteRepository.java": "76a92f2c52fd445c4f73f7004055b763b0bb9ab7d61cb48008b1eedf92e27ca6",
+    "javalin-jdbi3/src/main/java/lab/Quote.java": "c94cca1833769053a170ce8114c161dccfafa84d2b74c1516cdc6ec40b1adac3",
+    "javalin-jdbi3/src/main/java/lab/RepositoryFailure.java": "c124789ebf35e86d0d79ea8a96fffab27f0d8e722c4875b0e8055df5041f896a",
+    "javalin-jdbi3/src/main/java/lab/JavalinJdbiApp.java": "3bd12e75cc7c5d2b86f12c7417a1f2a76c9d6955c0c911cad531391ee7c1eb95",
+    "javalin-jdbi3/src/main/java/lab/QuoteState.java": "4fc203a59d76ad2128f1a74591fd03968475a3158fa356ca9260cc16451094d5",
+    "javalin-jdbi3/src/main/java/lab/StatLiteMetrics.java": "d7a62931c5caa4b79695e362b9ac3d8dfa958750cb697659c70448c9af5598ca",
+    "javalin-jdbi3/src/main/java/lab/QuoteRepository.java": "c384d0e06d632d5e3152ee9a09e860bdcd2640308840e2aeabaa452125e33f98",
+    "javalin-jdbi3/src/main/java/lab/QuoteController.java": "bd3935c4110e75ac9ea8b1c2cef644930653f8359c645fb5fd028608ea7225e8",
+    "javalin-jdbi3/pom.xml": "addd5bdfaeddd4c12b79b6572611c13429a258750a0ea3a4c049405ab382e9b8",
+    "run.py": "bf6cd3d5747f675a6e11991853ecb22f0b79421c603dee14dec69b765feac1ae",
+    "guest.sh": "784bd7ca9d4eb1b067a0dcf09151cfea7052cd17a88193b6a3e0090d0705fba5",
+    "smoke.py": "4fde1a702fa2d6a30374000564813405320ed2c6f32a585c72d755f64c183da5",
+    "sampler.sh": "a9db25846610c9fdc3652967f2763929c70c802957872687ad3fdd09cb1c764e",
+    "workload.py": "8793f24a22fd2edba8f3f1f9e461b2bf66ab85d8e3862776c26e73f3e065ecf5",
+    "analyze.py": "5b2660d6a10d672d7a860576d2cac2db48c281a196537386b2271489a6f9a9a2"
+  },
+  "artifacts": {
+    "guest.sh": "784bd7ca9d4eb1b067a0dcf09151cfea7052cd17a88193b6a3e0090d0705fba5",
+    "sampler.sh": "a9db25846610c9fdc3652967f2763929c70c802957872687ad3fdd09cb1c764e",
+    "javalin-jdbi3.jar": "3b4817655838907509812ee09032153da82afefecc3870cdf10a0e81f83431b3",
+    "repository-check.jar": "88e3186f91d17335069a80d559ab668aefc36e51f43134a7f3c1f2119011b168",
+    "statlite": "d95290cb37270d303460ad02489befa7efe8e9f091a650eca9a821eac2555f91"
+  }
+}

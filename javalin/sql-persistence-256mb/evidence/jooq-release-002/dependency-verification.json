@@ -1,0 +1,10 @@
+{
+  "baseline_runtime_versions_unchanged": true,
+  "added_runtime_dependencies": {
+    "org.jooq:jooq": "3.21.9",
+    "io.r2dbc:r2dbc-spi": "1.0.0.RELEASE",
+    "org.reactivestreams:reactive-streams": "1.0.3"
+  },
+  "jooq_core_only": true,
+  "generator_runtime_dependencies_separate": true
+}

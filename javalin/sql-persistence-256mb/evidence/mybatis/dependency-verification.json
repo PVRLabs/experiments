@@ -1,0 +1,7 @@
+{
+  "baseline_runtime_versions_unchanged": true,
+  "added_runtime_dependencies": {
+    "org.mybatis:mybatis": "3.5.19"
+  },
+  "mybatis_core_only": true
+}

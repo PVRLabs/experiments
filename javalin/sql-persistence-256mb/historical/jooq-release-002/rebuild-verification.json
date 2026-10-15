@@ -1,0 +1,37 @@
+{
+  "source_inputs_match": {
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/JavalinJooqApp.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/JooqQuoteRepository.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/Quote.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/QuoteBatch.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/QuoteController.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/QuoteRepository.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/QuoteState.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/RepositoryFailure.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/java/lab/StatLiteMetrics.java": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/resources/quotes.csv": true,
+    "sql-persistence-256mb/javalin-jooq/src/main/resources/schema.sql": true,
+    "sql-persistence-256mb/javalin-jooq/pom.xml": true,
+    "sql-persistence-256mb/javalin-jooq/dependencies.txt": true
+  },
+  "resolved_dependencies_match": true,
+  "generated_sources_match": {
+    "target/generated-sources/jooq/lab/jooq/generated/DefaultCatalog.java": true,
+    "target/generated-sources/jooq/lab/jooq/generated/Indexes.java": true,
+    "target/generated-sources/jooq/lab/jooq/generated/Keys.java": true,
+    "target/generated-sources/jooq/lab/jooq/generated/Public.java": true,
+    "target/generated-sources/jooq/lab/jooq/generated/Tables.java": true,
+    "target/generated-sources/jooq/lab/jooq/generated/tables/Quotes.java": true
+  },
+  "archived_jar_sha256": "4ef0e678f3ad256abf6e51a27f212f20d60cafa432206c95dbebb5031d217fb8",
+  "rebuilt_jar_sha256": "2c142899a5ba8b4a910af67b714eb3e760db0b21631025936561e148a5cd8549",
+  "byte_identical_jar": false,
+  "zip_entry_content_differences": [],
+  "rebuilt_jar_bytes": 19188345,
+  "scope": "Isolated host build only; no VM or benchmark; corrected source untouched",
+  "zip_metadata_difference_fields": [
+    "date_time"
+  ],
+  "zip_metadata_differing_entries": 25,
+  "original_checker_classes_match": true
+}

@@ -1,0 +1,9 @@
+{
+  "guest": "/opt/vps256/run-20261009T015612Z-javalin-jooq",
+  "variant": "javalin-jooq",
+  "smoke": false,
+  "release": "/opt/vps256/release-jooq-002",
+  "vm": "javalin-256",
+  "app_port": 18080,
+  "monitor_port": 19090
+}

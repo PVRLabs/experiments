@@ -1,0 +1,106 @@
+{
+  "method": "Physical nonblank/noncomment source lines; baseline is densely formatted, new implementation expanded. No line-count savings inference. Original Quotes mixes persistence, DTOs, validation and pool setup; new costs include moved responsibilities. Unchanged StatLiteMetrics excluded equally.",
+  "baseline_source_lines": {
+    "common/src/main/java/lab/Quotes.java": 75,
+    "javalin-app/src/main/java/lab/JavalinApp.java": 27
+  },
+  "new_source_lines": {
+    "javalin-jdbi3/src/main/java/lab/JavalinJdbiApp.java": 30,
+    "javalin-jdbi3/src/main/java/lab/JdbiQuoteRepository.java": 105,
+    "javalin-jdbi3/src/main/java/lab/Quote.java": 3,
+    "javalin-jdbi3/src/main/java/lab/QuoteBatch.java": 19,
+    "javalin-jdbi3/src/main/java/lab/QuoteController.java": 32,
+    "javalin-jdbi3/src/main/java/lab/QuoteRepository.java": 8,
+    "javalin-jdbi3/src/main/java/lab/QuoteState.java": 3,
+    "javalin-jdbi3/src/main/java/lab/RepositoryFailure.java": 7
+  },
+  "baseline_total_application_lines_excluding_unchanged_adapter": 102,
+  "new_total_application_lines_excluding_unchanged_adapter": 207,
+  "unchanged_adapter_lines": 83,
+  "baseline_total_including_adapter": 185,
+  "new_total_including_adapter": 290,
+  "baseline_Quotes_lines": 75,
+  "new_repository_lines": 105,
+  "manual_jdbc_call_sites": {
+    "getConnection": {
+      "baseline": 5,
+      "new_repository": 0
+    },
+    "prepareStatement": {
+      "baseline": 4,
+      "new_repository": 0
+    },
+    "createStatement": {
+      "baseline": 2,
+      "new_repository": 0
+    },
+    "setAutoCommit": {
+      "baseline": 4,
+      "new_repository": 0
+    },
+    "commit": {
+      "baseline": 2,
+      "new_repository": 0
+    },
+    "rollback": {
+      "baseline": 2,
+      "new_repository": 0
+    },
+    "setInt": {
+      "baseline": 7,
+      "new_repository": 0
+    },
+    "setString": {
+      "baseline": 6,
+      "new_repository": 0
+    },
+    "setBigDecimal": {
+      "baseline": 2,
+      "new_repository": 0
+    },
+    "getInt": {
+      "baseline": 6,
+      "new_repository": 5
+    },
+    "getString": {
+      "baseline": 4,
+      "new_repository": 4
+    },
+    "getBigDecimal": {
+      "baseline": 2,
+      "new_repository": 2
+    },
+    "executeBatch": {
+      "baseline": 2,
+      "new_repository": 0
+    }
+  },
+  "added_runtime_artifacts": [
+    {
+      "artifact": "org.jdbi:jdbi3-core:3.55.0",
+      "jar_bytes": 1084083,
+      "uncompressed_bytes": 2433479,
+      "sha256": "6101be0886145b60be2d773b935017ecc2b0ce8d657c981a43d5cf2c19ddddf3"
+    },
+    {
+      "artifact": "io.leangen.geantyref:geantyref:2.0.1",
+      "jar_bytes": 74474,
+      "uncompressed_bytes": 171719,
+      "sha256": "386b535c079be7d65ddbe0ad9c00955155b7862225aa92b4c6553ab2b1ea95f9"
+    }
+  ],
+  "added_uncompressed_dependency_bytes": 2605198,
+  "shaded_jars": {
+    "jdbc": {
+      "jar_bytes": 13656948,
+      "uncompressed_bytes": 31075454,
+      "sha256": "60c68fd574976c7c93d915f07314eb13b01d02e5d24c0d509676a606156e287d"
+    },
+    "jdbi3": {
+      "jar_bytes": 14818339,
+      "uncompressed_bytes": 33689276,
+      "sha256": "3b4817655838907509812ee09032153da82afefecc3870cdf10a0e81f83431b3"
+    }
+  },
+  "packaging_note": "JAR deltas include application restructuring, ZIP compression, timestamps and metadata; dependency uncompressed bytes include resources and metadata, not only bytecode."
+}

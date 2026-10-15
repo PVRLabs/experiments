@@ -1,0 +1,9 @@
+{
+  "guest": "/opt/vps256/smoke-20261009T010230Z-javalin-mybatis",
+  "variant": "javalin-mybatis",
+  "smoke": true,
+  "release": "/opt/vps256/release-006-mybatis",
+  "vm": "javalin-256",
+  "app_port": 18080,
+  "monitor_port": 19090
+}

@@ -1,0 +1,9 @@
+{
+  "guest": "/opt/vps256/run-20261008T235523Z-javalin-jdbi3",
+  "variant": "javalin-jdbi3",
+  "smoke": false,
+  "release": "/opt/vps256/release-005-jdbi3",
+  "vm": "javalin-256",
+  "app_port": 18080,
+  "monitor_port": 19090
+}

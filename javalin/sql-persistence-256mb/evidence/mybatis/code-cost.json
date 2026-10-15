@@ -1,0 +1,54 @@
+{
+  "method": "Physical nonblank/noncomment Java lines; total application classes include the unchanged copied adapter separately.",
+  "source_lines_excluding_unchanged_adapter": {
+    "jdbi": {
+      "JavalinJdbiApp.java": 30,
+      "JdbiQuoteRepository.java": 105,
+      "Quote.java": 3,
+      "QuoteBatch.java": 19,
+      "QuoteController.java": 32,
+      "QuoteRepository.java": 8,
+      "QuoteState.java": 3,
+      "RepositoryFailure.java": 7
+    },
+    "mybatis": {
+      "JavalinMybatisApp.java": 52,
+      "MyBatisQuoteRepository.java": 151,
+      "Quote.java": 3,
+      "QuoteBatch.java": 19,
+      "QuoteController.java": 32,
+      "QuoteMapper.java": 83,
+      "QuoteRepository.java": 8,
+      "QuoteState.java": 3,
+      "RepositoryFailure.java": 7
+    }
+  },
+  "total_application_lines_excluding_adapter": {
+    "jdbi": 207,
+    "mybatis": 358
+  },
+  "unchanged_adapter_lines": 83,
+  "added_runtime_dependency": {
+    "coordinate": "org.mybatis:mybatis:3.5.19",
+    "jar_bytes": 1819063,
+    "uncompressed_bytes": 3827757,
+    "sha256": "93eea616ae355751bd5fbabb57f0732713fbe79f3196f33c51a0aeeb4255862a"
+  },
+  "shaded_jars": {
+    "jdbi": {
+      "jar_bytes": 14818339,
+      "uncompressed_bytes": 33689276,
+      "sha256": "3b4817655838907509812ee09032153da82afefecc3870cdf10a0e81f83431b3"
+    },
+    "mybatis": {
+      "jar_bytes": 15479070,
+      "uncompressed_bytes": 34908916,
+      "sha256": "f8eb6632b004cf1942fbd901a1097c87f1995d4c869ad175d3c5714611bd06b3"
+    },
+    "jdbc": {
+      "jar_bytes": 13656948,
+      "sha256": "60c68fd574976c7c93d915f07314eb13b01d02e5d24c0d509676a606156e287d"
+    }
+  },
+  "interpretation": "Line counts include complete application code, including mapper, DTOs, validation, controller, initialization, wiring, and error translation. They do not rank maintainability. JAR deltas include application classes and packaging metadata."
+}

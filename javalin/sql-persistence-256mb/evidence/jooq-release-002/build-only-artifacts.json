@@ -1,0 +1,25 @@
+{
+  "note": "Maven plugin realm only; plugin API/core are supplied by Maven, not packaged in the application. H2 is already a pinned application runtime dependency and is also used by schema generation.",
+  "artifacts": {
+    "org.jooq:jooq-codegen-maven:3.21.9": {
+      "jar_bytes": 19071,
+      "sha256": "5471758669258509ef74a226beca6e59570a98d51f2b2b82636d648468b8068a"
+    },
+    "org.jooq:jooq-codegen:3.21.9": {
+      "jar_bytes": 299814,
+      "sha256": "363273aa2cb7fcc320170330dad8e84627c8b4edbffb26e17e6a1628b8f9abd3"
+    },
+    "org.jooq:jooq-meta:3.21.9": {
+      "jar_bytes": 1061001,
+      "sha256": "dc29003b1fade93315294546d589373b9c5a90110e2ba3f8440c59cd3643adf0"
+    },
+    "org.jooq:jooq:3.21.9": {
+      "jar_bytes": 5445966,
+      "sha256": "e6cde9651d6795c8a6d3b10043c1edb1f3c2211fa28b15e6d537f078b1584583"
+    },
+    "com.h2database:h2:2.4.240": {
+      "jar_bytes": 2685418,
+      "sha256": "29b70e427cc1c40cdc376283adbb0cc62853073797bb5fe5761f81fe73d57ce0"
+    }
+  }
+}

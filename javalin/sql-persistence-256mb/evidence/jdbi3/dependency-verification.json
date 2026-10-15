@@ -1,0 +1,7 @@
+{
+  "baseline_runtime_versions_unchanged": true,
+  "added": {
+    "org.jdbi:jdbi3-core": "3.55.0",
+    "io.leangen.geantyref:geantyref": "2.0.1"
+  }
+}

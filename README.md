@@ -21,6 +21,13 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
 ## Experiments
 
+- [MyBatis, jOOQ, and Jdbi on 256 MiB](javalin/sql-persistence-256mb/)
+
+  Three Javalin persistence implementations with file-backed H2 and monitoring.
+  Includes measured source, the separate jOOQ fixture correction, original OS/HTTP
+  evidence, dependency and code inventories, and reproduction instructions.
+  [PVRLabs experiment page](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-256mb.html).
+
 - [Javalin with JDBC and monitoring on 256 MiB](javalin/vps-256mb/)
 
   Equivalent Javalin and extracted Spring Boot applications on a constrained

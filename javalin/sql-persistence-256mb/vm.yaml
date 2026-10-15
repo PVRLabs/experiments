@@ -1,0 +1,11 @@
+minimumLimaVersion: 2.2.0
+vmType: vz
+arch: x86_64
+plain: true
+cpus: 1
+memory: 256MiB
+disk: 4GiB
+images:
+  - location: https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/cloud/alpine-3.24.2-x86_64-cloudinit-r2.qcow2
+    arch: x86_64
+    digest: sha512:6b9928cea1c6243affb8a9b09eba6046cd090e8bdb7141fbf0c8f2649c4a99d62e12cda289da41f99de82ce2b3e3780772dd594eaee3693cb49691d81cbe5d4b

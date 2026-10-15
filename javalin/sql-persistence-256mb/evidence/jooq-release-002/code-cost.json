@@ -1,0 +1,65 @@
+{
+  "method": "Physical nonblank/noncomment Java lines. The unchanged 83-line StatLite adapter is excluded from the primary application count and listed separately.",
+  "handwritten_application_java": {
+    "jooq_files": {
+      "src/main/java/lab/JavalinJooqApp.java": 45,
+      "src/main/java/lab/JooqQuoteRepository.java": 163,
+      "src/main/java/lab/Quote.java": 3,
+      "src/main/java/lab/QuoteBatch.java": 19,
+      "src/main/java/lab/QuoteController.java": 32,
+      "src/main/java/lab/QuoteRepository.java": 8,
+      "src/main/java/lab/QuoteState.java": 3,
+      "src/main/java/lab/RepositoryFailure.java": 7
+    },
+    "jooq_total_excluding_adapter": 280,
+    "jdbi_total_excluding_adapter": 207,
+    "mybatis_total_excluding_adapter": 358,
+    "monitoring_adapter_lines": 83
+  },
+  "generated_java": {
+    "files": 6,
+    "lines": 224,
+    "compiled_class_files": 6,
+    "compiled_class_bytes": 14695,
+    "sources": {
+      "target/generated-sources/jooq/lab/jooq/generated/DefaultCatalog.java": "8dc74908c69a22ac6002e34054c0371cb9709338309644e0b75febc9364cce08",
+      "target/generated-sources/jooq/lab/jooq/generated/Indexes.java": "5358f987d6b4f692e3bff836e8562eb145066715659f5153c0e37133d02aa649",
+      "target/generated-sources/jooq/lab/jooq/generated/Keys.java": "4645d588a12036d1a230b15a27f299b3c5f85619ad1679951cba48c7e7b6d505",
+      "target/generated-sources/jooq/lab/jooq/generated/Public.java": "55e6632c1d02d653755aa144796ee8f0d9b4ead53ca29354666340c656e9021f",
+      "target/generated-sources/jooq/lab/jooq/generated/Tables.java": "8c34872b6e1648492158c57e4755c6e667ef9e96ce618c94c7e7dcca6aac69b4",
+      "target/generated-sources/jooq/lab/jooq/generated/tables/Quotes.java": "1919b7d6a062acbfd64f99cd5b7d52dcc5cd2baf1936587e5d50a9245f95f481"
+    }
+  },
+  "runtime_dependencies": {
+    "org.jooq:jooq": {
+      "version": "3.21.9",
+      "jar_bytes": 5445966,
+      "uncompressed_bytes": 15950938,
+      "sha256": "e6cde9651d6795c8a6d3b10043c1edb1f3c2211fa28b15e6d537f078b1584583"
+    },
+    "io.r2dbc:r2dbc-spi": {
+      "version": "1.0.0.RELEASE",
+      "jar_bytes": 67645,
+      "uncompressed_bytes": 126211,
+      "sha256": "a5846c59fea336431a4ae72ca14edbf5299b78486fa308eafb383f4ae0ea74e5"
+    },
+    "org.reactivestreams:reactive-streams": {
+      "version": "1.0.3",
+      "jar_bytes": 11369,
+      "uncompressed_bytes": 21983,
+      "sha256": "1dee0481072d19c929b623e155e14d2f6085dc011529a0a0dbefc84cf571d865"
+    }
+  },
+  "build_only": {
+    "jooq-codegen-maven": "3.21.9",
+    "generator_h2": "2.4.240",
+    "schema_input": "src/main/resources/schema.sql"
+  },
+  "shaded_jars": {
+    "jdbi_bytes": 14818339,
+    "mybatis_bytes": 15479070,
+    "jooq_bytes": 19188345,
+    "jooq_uncompressed_bytes": 47182871,
+    "jooq_sha256": "4ef0e678f3ad256abf6e51a27f212f20d60cafa432206c95dbebb5031d217fb8"
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "variant": "javalin-mybatis",
+  "smoke": false,
+  "actual_mem_mib": 214.890625,
+  "startup_to_ready_seconds": 3.586686134338379,
+  "readiness_uncertainty": "100 ms probe cadence plus request/tunnel duration; sample timestamp is before successful request",
+  "phases": {
+    "baseline": {
+      "sample_count": 12,
+      "min_available_mib": 162.5078125,
+      "headroom_dips": [],
+      "java_rss_median_mib": 0.0,
+      "java_rss_peak_mib": 0.0,
+      "monitor_rss_median_mib": 0.0,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 0.39905677489570107,
+      "late_cpu_pct": 0.39905677489570107,
+      "late_java_rss_median_mib": 0.0,
+      "java_cpu_pct": 0.0,
+      "max_threads": 0.0,
+      "host_iowait_pct": 0.0,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 0.39905677489570107,
+      "late_busy_plus_steal_pct": 0.39905677489570107,
+      "late_iowait_pct": 0.0,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        0.0,
+        0.0
+      ]
+    },
+    "monitor-only": {
+      "sample_count": 17,
+      "min_available_mib": 159.51953125,
+      "headroom_dips": [],
+      "java_rss_median_mib": 0.0,
+      "java_rss_peak_mib": 0.0,
+      "monitor_rss_median_mib": 13.44140625,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 0.4365722838967195,
+      "late_cpu_pct": 0.4172714078374456,
+      "late_java_rss_median_mib": 0.0,
+      "java_cpu_pct": 0.0,
+      "max_threads": 0.0,
+      "host_iowait_pct": 0.012473493825620557,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 0.4365722838967195,
+      "late_busy_plus_steal_pct": 0.4172714078374456,
+      "late_iowait_pct": 0.018142235123367198,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        0.0,
+        0.0
+      ]
+    },
+    "startup": {
+      "sample_count": 5,
+      "min_available_mib": 90.1171875,
+      "headroom_dips": [],
+      "java_rss_median_mib": 65.87890625,
+      "java_rss_peak_mib": 91.1796875,
+      "monitor_rss_median_mib": 10.84375,
+      "max_swap_used_mib": 15.61328125,
+      "swap_in_mib": 4.90625,
+      "swap_out_mib": 15.4375,
+      "longest_paging_above_1_mib_s_seconds": 1.0500000000000114,
+      "host_busy_cpu_pct": 97.5,
+      "late_cpu_pct": 97.5,
+      "late_java_rss_median_mib": 65.87890625,
+      "java_cpu_pct": null,
+      "max_threads": 28.0,
+      "host_iowait_pct": 0.625,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 97.5,
+      "late_busy_plus_steal_pct": 97.5,
+      "late_iowait_pct": 0.625,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        0.0,
+        91.1796875
+      ]
+    },
+    "idle": {
+      "sample_count": 36,
+      "min_available_mib": 79.5546875,
+      "headroom_dips": [],
+      "java_rss_median_mib": 94.84765625,
+      "java_rss_peak_mib": 99.81640625,
+      "monitor_rss_median_mib": 10.28125,
+      "max_swap_used_mib": 14.90234375,
+      "swap_in_mib": 0.3203125,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 0.6838775859121218,
+      "late_cpu_pct": 0.6165004533091568,
+      "late_java_rss_median_mib": 94.966796875,
+      "java_cpu_pct": 0.12524907486478795,
+      "max_threads": 28.0,
+      "host_iowait_pct": 0.02849489941300507,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 0.6838775859121218,
+      "late_busy_plus_steal_pct": 0.6165004533091568,
+      "late_iowait_pct": 0.01813236627379873,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        99.81640625,
+        95.02734375
+      ]
+    },
+    "workload": {
+      "sample_count": 60,
+      "min_available_mib": 59.51953125,
+      "headroom_dips": [],
+      "java_rss_median_mib": 110.552734375,
+      "java_rss_peak_mib": 115.390625,
+      "monitor_rss_median_mib": 11.12109375,
+      "max_swap_used_mib": 14.7890625,
+      "swap_in_mib": 0.12109375,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 3.807622013132065,
+      "late_cpu_pct": 2.268602540834846,
+      "late_java_rss_median_mib": 113.546875,
+      "java_cpu_pct": 3.0486158001350447,
+      "max_threads": 26.0,
+      "host_iowait_pct": 0.04399918770730386,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 3.807622013132065,
+      "late_busy_plus_steal_pct": 2.268602540834846,
+      "late_iowait_pct": 0.036297640653357534,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        105.3046875,
+        114.046875
+      ],
+      "minute_rss_medians_mib": [
+        105.462890625,
+        107.556640625,
+        110.099609375,
+        111.9453125,
+        113.546875
+      ],
+      "minute_headroom_medians_mib": [
+        72.478515625,
+        70.43359375,
+        67.775390625,
+        65.546875,
+        63.75390625
+      ]
+    },
+    "recovery": {
+      "sample_count": 24,
+      "min_available_mib": 63.09765625,
+      "headroom_dips": [],
+      "java_rss_median_mib": 114.091796875,
+      "java_rss_peak_mib": 114.1953125,
+      "monitor_rss_median_mib": 11.8359375,
+      "max_swap_used_mib": 14.7421875,
+      "swap_in_mib": 0.01171875,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 0.563893467511061,
+      "late_cpu_pct": 0.5442670537010159,
+      "late_java_rss_median_mib": 114.09375,
+      "java_cpu_pct": 0.06934211666811135,
+      "max_threads": 27.0,
+      "host_iowait_pct": 0.026025852346664352,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 0.563893467511061,
+      "late_busy_plus_steal_pct": 0.5442670537010159,
+      "late_iowait_pct": 0.018142235123367198,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        114.05859375,
+        114.1953125
+      ]
+    }
+  },
+  "http": {
+    "overall": {
+      "count": 1500,
+      "errors": 0,
+      "p50_ms": 3.4426019992679358,
+      "p95_ms": 8.233188185840845,
+      "max_ms": 104.53563882037997
+    },
+    "routes": {
+      "latest": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.745070891454816,
+        "p95_ms": 9.266852866858244,
+        "max_ms": 104.53563882037997
+      },
+      "history": {
+        "count": 900,
+        "errors": 0,
+        "p50_ms": 3.281912999227643,
+        "p95_ms": 7.914335932582617,
+        "max_ms": 40.99636501632631
+      },
+      "batch": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.628562204539776,
+        "p95_ms": 7.726820185780525,
+        "max_ms": 94.28324201144278
+      }
+    },
+    "minutes": {
+      "1": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 5.89237711392343,
+        "p95_ms": 17.220818903297186,
+        "max_ms": 104.53563882037997
+      },
+      "2": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.729964839294553,
+        "p95_ms": 7.035796996206045,
+        "max_ms": 20.769990049302578
+      },
+      "3": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.2200489658862352,
+        "p95_ms": 5.160690052434802,
+        "max_ms": 14.799935976043344
+      },
+      "4": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 2.9954269994050264,
+        "p95_ms": 4.970163106918335,
+        "max_ms": 25.916174054145813
+      },
+      "5": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 2.804832998663187,
+        "p95_ms": 4.44498797878623,
+        "max_ms": 10.010053869336843
+      }
+    },
+    "max_dispatch_lag_ms": 53.13658691011369
+  },
+  "cpu_note": "Busy excludes idle, I/O wait and steal. Legacy samples lack steal: exact busy is null; busy_plus_steal is the corrected upper bound, not an assumed zero steal value.",
+  "startup_note": null,
+  "persistence_state": {
+    "actual": {
+      "rows": 2070,
+      "maxSequence": 689,
+      "priceSum": "630374.22"
+    },
+    "expected_rows": 2070,
+    "expected_price_sum": "630374.22",
+    "matches": true
+  }
+}

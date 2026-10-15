@@ -1,0 +1,21 @@
+{
+  "purpose": "Post-measurement correction check for transactional jOOQ fixture loading",
+  "scope": "Fresh host-side H2 storage only; no VM launch, smoke run, workload, screenshot, or measurement",
+  "application_build": {
+    "command": "mvn-lite -q -f javalin/sql-persistence-256mb/javalin-jooq/pom.xml clean package dependency:tree -DoutputFile=<temporary-file>",
+    "result": "passed",
+    "shaded_jar_bytes": 19188465,
+    "shaded_jar_sha256": "0ad668ef55a4f170e2e2f2d4b06b48b6a34bc6f306906091cba99f715f452c4b"
+  },
+  "check": {
+    "source": "javalin/sql-persistence-256mb/checks/JooqRepositoryCheck.java",
+    "source_sha256": "f1959bc0fe51873288b3e981a085c6ef9fde6433463c4471a8bb115bb693ce2a",
+    "result": "passed",
+    "injected_failure": "Changed the last of 1,170 fixture rows to a duplicate key; H2 reported SQLState 23505 after earlier batch rows were accepted",
+    "rollback_assertion": "Table contained zero rows after the failed transactional fixture batch",
+    "recovery_assertion": "Normal initialization after the failure loaded exactly 1,170 rows",
+    "additional_checks": "The full repository checker also passed fixture mapping, history ordering, decimal scale, transactional request batch rollback and commit, SQLState translation, generated SQL capture, and restart persistence"
+  },
+  "corrected_repository_sha256": "20c257274039f2e3e4d94769679297becd97024ae64934b5000c44010548b299",
+  "measurement_status": "The archived jOOQ measurement is unchanged and describes the pre-correction artifact. The corrected fixture loader has not been measured in the Alpine VM."
+}

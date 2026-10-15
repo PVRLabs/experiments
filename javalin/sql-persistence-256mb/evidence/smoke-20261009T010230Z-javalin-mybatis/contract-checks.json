@@ -1,0 +1,117 @@
+{
+  "initial": {
+    "rows": 1179,
+    "maxSequence": 392,
+    "priceSum": 358910.12
+  },
+  "latest": [
+    {
+      "sequence": 392,
+      "cycle": 1,
+      "sampleIndex": 2,
+      "marketTime": "09:32",
+      "symbol": "AAPL",
+      "price": 332.42
+    },
+    {
+      "sequence": 392,
+      "cycle": 1,
+      "sampleIndex": 2,
+      "marketTime": "09:32",
+      "symbol": "GOOG",
+      "price": 343.33
+    },
+    {
+      "sequence": 392,
+      "cycle": 1,
+      "sampleIndex": 2,
+      "marketTime": "09:32",
+      "symbol": "NVDA",
+      "price": 230.13
+    }
+  ],
+  "jdbi_negative_contract": [
+    [
+      400,
+      {
+        "error": "Invalid symbol/limit"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid symbol/limit"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid symbol/limit"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid batch"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid batch"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid batch"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid batch"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid price"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid price"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid price"
+      }
+    ],
+    [
+      400,
+      {
+        "error": "Invalid price"
+      }
+    ]
+  ],
+  "adapter": {
+    "schema": "statlite-metrics/v1",
+    "integration": "javalin",
+    "status": "UP",
+    "started_at": "2026-10-09T01:03:42.562Z",
+    "metrics": {
+      "requests_total": 44.0,
+      "responses_404_total": 0.0,
+      "responses_4xx_total": 22.0,
+      "responses_5xx_total": 0.0,
+      "request_duration_seconds_total": 0.5640000000000001,
+      "runtime_heap_used_bytes": 13668256.0,
+      "process_cpu_usage": 1.0,
+      "uptime_seconds": 50.172
+    }
+  }
+}
