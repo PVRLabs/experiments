@@ -27,7 +27,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
   Includes measured source, the separate jOOQ fixture correction, original OS/HTTP
   evidence, dependency and code inventories, and reproduction instructions.
 
-  **[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-256mb.html)**
+  **Short write-up coming soon.**
 
 - [Javalin with JDBC and monitoring on 256 MiB](javalin/vps-256mb/)
 
