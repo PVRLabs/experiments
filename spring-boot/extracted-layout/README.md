@@ -1,10 +1,10 @@
 # Spring Boot extracted layout on 256 MB
 
+**[Read the full article: results, charts, and explanation →](https://pvrlabs.xyz/articles/spring-boot-extracted-layout.html)**
+
 Curated public package for an engineering experiment comparing a Spring Boot
 executable fat JAR with the official extracted layout on one constrained
 Alpine VM.
-
-See the [related PVRLabs article](https://pvrlabs.xyz/articles/spring-boot-extracted-layout.html).
 
 The extracted layout reduced median Spring startup by 23.3% and median
 first-request latency by 34.1% in this setup. Later-request latency, RSS, and

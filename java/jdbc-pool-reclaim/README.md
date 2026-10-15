@@ -1,5 +1,7 @@
 # Idle PostgreSQL connections and Spring Boot's fixed pool
 
+**[Read the full article: results, charts, and explanation →](https://pvrlabs.xyz/articles/spring-boot-jdbc-pool-reclaim.html)**
+
 Two Spring Boot instances on one PostgreSQL 16 server either kept every connection they had opened, or released the idle ones. Releasing them reduced PostgreSQL's accounted memory. The pool that leaves HikariCP sizing unset does not release them, because its idle target resolves equal to its maximum.
 
 Run date: 2026-10-07, session `run1007a`. Six valid scenarios, 2,280 of 2,280 measured requests succeeded. Reanalyze the curated series with `python3 analyze.py`. Reproduction notes are in [REPRODUCE.md](REPRODUCE.md).

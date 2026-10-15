@@ -1,13 +1,13 @@
 # Spring Boot, Quarkus, and Micronaut with JDBC — results
 
+**[Read the full article: results, charts, and explanation →](https://pvrlabs.xyz/articles/spring-boot-quarkus-micronaut-jdbc.html)**
+
 All three applications completed their 15-minute scripted-load windows with
 638 requests and zero request errors. Quarkus had the lowest median process
 RSS and fastest launch-to-readiness in this run. Micronaut used slightly more
 RSS and CPU than Quarkus; Spring used more RSS than both. Absolute CPU usage
 was low throughout the measured workload. These are observations from one
 fixed-order engineering experiment, not a general framework ranking.
-
-See the [related PVRLabs article](https://pvrlabs.xyz/articles/spring-boot-quarkus-micronaut-jdbc.html).
 
 ## Method and inputs
 

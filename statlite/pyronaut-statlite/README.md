@@ -1,6 +1,6 @@
 # Can StatLite monitor a Pyronaut Python app?
 
-See the [PVRLabs experiment page](https://pvrlabs.xyz/java-performance/experiments/pyronaut-statlite.html).
+**[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/pyronaut-statlite.html)**
 
 ## Question
 

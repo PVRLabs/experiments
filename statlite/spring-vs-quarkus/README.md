@@ -1,6 +1,6 @@
 # Spring Boot vs Quarkus
 
-See the [related PVRLabs article](https://pvrlabs.xyz/articles/spring-boot-vs-quarkus-512mb.html).
+**[Read the full article: results, charts, and explanation →](https://pvrlabs.xyz/articles/spring-boot-vs-quarkus-512mb.html)**
 
 Completed side-by-side resource and monitoring experiment for the
 `springboot-stars` and `quarkus-stars` applications. Both applications and

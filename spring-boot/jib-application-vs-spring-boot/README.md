@@ -1,5 +1,7 @@
 # Spring Boot extracted layout vs Jib exploded layout
 
+**[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/spring-boot-jib-layout.html)**
+
 This small follow-up compares two filesystem layouts for the same Spring Boot
 application:
 
@@ -34,5 +36,3 @@ The Jib artifact was built with Jib Gradle plugin 3.4.5 and launched from its
 loose `classes/`, `resources/`, and `libs/` directories. This public package
 contains curated measurements; the full harness and raw run archive remain in
 the private experiment record.
-
-Related page: [Spring Boot extracted layout vs Jib exploded layout](https://pvrlabs.xyz/java-performance/experiments/spring-boot-jib-layout.html).

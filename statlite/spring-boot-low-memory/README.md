@@ -1,6 +1,6 @@
 # Spring Boot low-memory experiment
 
-See the [related PVRLabs article about the 256 MiB follow-up](https://pvrlabs.xyz/articles/spring-boot-256mb-jdk25.html).
+**[Read the full article about the 256 MiB follow-up →](https://pvrlabs.xyz/articles/spring-boot-256mb-jdk25.html)**
 
 This experiment tests whether useful monitoring fits beside a functioning,
 constrained Spring Boot application. It contains two related runs:

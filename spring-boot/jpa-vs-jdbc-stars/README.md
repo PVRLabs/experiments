@@ -1,6 +1,6 @@
 # Spring Boot Stars: JPA versus JDBC
 
-See the [PVRLabs experiment page](https://pvrlabs.xyz/java-performance/experiments/spring-boot-jpa-vs-jdbc.html).
+**[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/spring-boot-jpa-vs-jdbc.html)**
 
 This experiment asks how much memory a small Spring Boot application can save
 by using Spring MVC and `JdbcTemplate` in place of the conventional Spring Data
