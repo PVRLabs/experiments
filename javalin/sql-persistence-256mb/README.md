@@ -17,7 +17,7 @@ requests succeeded in each run and the final database states matched.
 These are observations from complete applications, not isolated library overhead
 or a stable ranking. The jOOQ run had more paging; this does not establish its cause.
 
-- [Experiment write-up](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-256mb.html) and [Markdown text](ARTICLE.md).
+- [Experiment write-up](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-256mb.html).
 - [Reanalysis, builds and VM reproduction](reproduction-guide.md).
 - [Curated execution record and limitations](experiment-design.md).
 - [Original JDBC/Spring experiment](../vps-256mb/), retained separately.
