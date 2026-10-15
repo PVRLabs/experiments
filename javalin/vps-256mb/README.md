@@ -1,5 +1,7 @@
 # Javalin with JDBC and monitoring on 256 MiB
 
+**[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/javalin-vs-spring-boot-256mb.html)**
+
 Curated evidence and reproduction code for a small engineering experiment,
 recorded on 2026-10-08. A Javalin JSON API and a functionally equivalent Spring
 Boot application each ran on the same constrained Alpine VM with file-backed

@@ -2,6 +2,8 @@
 
 A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
+Have an experiment idea or a question? [Join the discussions →](https://github.com/PVRLabs/experiments/discussions)
+
 ## Who these experiments are for
 
 Many of our experiments focus on developers building small, self-hosted applications on affordable servers. Think independent developers, solopreneurs, and small teams who want practical software without maintaining complex infrastructure.
@@ -21,7 +23,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
 ## Experiments
 
-- [MyBatis, jOOQ, and Jdbi on 256 MiB](javalin/sql-persistence-256mb/)
+- [MyBatis, jOOQ, and Jdbi on 256 MiB](javalin/sql-persistence-256mb/) · October 2026
 
   Three Javalin persistence implementations with file-backed H2 and monitoring.
   Includes measured source, the separate jOOQ fixture correction, original OS/HTTP
@@ -29,18 +31,20 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
   **Short write-up coming soon.**
 
-- [Javalin with JDBC and monitoring on 256 MiB](javalin/vps-256mb/)
+- [Javalin with JDBC and monitoring on 256 MiB](javalin/vps-256mb/) · October 2026
 
   Equivalent Javalin and extracted Spring Boot applications on a constrained
   Alpine VM, with file-backed H2 and StatLite. Includes original OS/HTTP samples,
   corrected analyses, screenshots and reproduction code, with paging caveats.
 
-- [Monitoring Javalin with its existing Micrometer instrumentation](statlite/javalin-micrometer/)
+  **[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/javalin-vs-spring-boot-256mb.html)**
+
+- [Monitoring Javalin with its existing Micrometer instrumentation](statlite/javalin-micrometer/) · October 2026
 
   A small application-side adapter connects Javalin metrics to StatLite for
   requests, errors, latency, JVM resources, health, and restart history.
 
-- [Monitoring a Pyronaut app with StatLite](statlite/pyronaut-statlite/)
+- [Monitoring a Pyronaut app with StatLite](statlite/pyronaut-statlite/) · October 2026
 
   A Pyronaut Python HTTP app exposed Micronaut/Micrometer Prometheus metrics
   accepted by released StatLite's existing Micronaut target, with no StatLite
@@ -48,7 +52,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
   **[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/pyronaut-statlite.html)**
 
-- [Idle PostgreSQL connections and Spring Boot's fixed pool](java/jdbc-pool-reclaim/)
+- [Idle PostgreSQL connections and Spring Boot's fixed pool](java/jdbc-pool-reclaim/) · October 2026
 
   Two Spring Boot instances either kept 20 PostgreSQL connections after a
   burst or returned to 2. With 2 connections, PostgreSQL cgroup memory was
@@ -59,7 +63,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
   **[Read the full article →](https://pvrlabs.xyz/articles/spring-boot-jdbc-pool-reclaim.html)**
 
-- [Spring Boot, Quarkus, and Micronaut with JDBC](statlite/spring-quarkus-micronaut-jdbc/)
+- [Spring Boot, Quarkus, and Micronaut with JDBC](statlite/spring-quarkus-micronaut-jdbc/) · October 2026
 
   Equivalent JDBC applications on Java 25 in a 1 GiB no-swap VM, with
   sequential 15-minute scripted-load windows and a separate shared-host
@@ -67,7 +71,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
   **[Read the full article →](https://pvrlabs.xyz/articles/spring-boot-quarkus-micronaut-jdbc.html)**
 
-- [Spring Boot Stars: JPA versus JDBC](spring-boot/jpa-vs-jdbc-stars/)
+- [Spring Boot Stars: JPA versus JDBC](spring-boot/jpa-vs-jdbc-stars/) · September 2026
 
   A paired JDK 25 comparison of the conventional Hibernate Stars app and a
   smaller Spring MVC + JDBC version. Both expose Actuator for StatLite 0.5.0;
@@ -75,7 +79,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
   **[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/spring-boot-jpa-vs-jdbc.html)**
 
-- [Spring Boot fat JAR vs extracted layout](spring-boot/extracted-layout/)
+- [Spring Boot fat JAR vs extracted layout](spring-boot/extracted-layout/) · September 2026
 
   A controlled comparison of Spring Boot's executable fat JAR and its official
   extracted runtime layout, measuring startup, first-request latency, and
@@ -83,20 +87,20 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
   **[Read the full article →](https://pvrlabs.xyz/articles/spring-boot-extracted-layout.html)**
 
-- [Spring Boot fat JAR vs extracted layout vs Gradle application distribution](spring-boot/gradle-application-vs-spring-boot/)
+- [Spring Boot fat JAR vs extracted layout vs Gradle application distribution](spring-boot/gradle-application-vs-spring-boot/) · September 2026
 
   A short three-way follow-up using the same application and constrained VM,
   focused on startup and first-request latency.
 
   **[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/gradle-application-vs-spring-boot.html)**
 
-- [StatLite on a 256 MB TierHive VPS](statlite/tierhive-recipe-256mb/)
+- [StatLite on a 256 MB TierHive VPS](statlite/tierhive-recipe-256mb/) · September 2026
 
   A manual deployment check of StatLite's native Alpine/OpenRC TierHive
   recipe, monitoring a Spring Boot Actuator application plus the VPS itself
   through StatLite self-monitoring.
 
-- [Spring Boot vs Quarkus under extreme memory pressure](statlite/spring-vs-quarkus/)
+- [Spring Boot vs Quarkus under extreme memory pressure](statlite/spring-vs-quarkus/) · September 2026
 
   A curated Spring Boot and Quarkus comparison using the same JDK 25,
   `Xmx80m` profile, and 512 MiB VM. Quarkus started larger but developed the
@@ -106,7 +110,7 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
   **[Read the full article →](https://pvrlabs.xyz/articles/spring-boot-vs-quarkus-512mb.html)**
 
-- [Spring Boot on a low-memory VPS](statlite/spring-boot-low-memory/)
+- [Spring Boot on a low-memory VPS](statlite/spring-boot-low-memory/) · August 2026
 
   This experiment tested whether StatLite could provide useful monitoring
   beside a representative Spring Boot application on a severely constrained
