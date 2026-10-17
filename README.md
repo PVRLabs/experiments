@@ -21,6 +21,8 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
 **This describes our interests, not strict requirements.** The repository also contains experiments outside this area, and we'll continue exploring other technologies when the questions are interesting.
 
+Technical criticism and questions are welcome. See my [discussion policy](discussion-policy.md) for how I participate in conversations about this work.
+
 ## Experiments
 
 - [MyBatis, jOOQ, and Jdbi on 256 MiB](javalin/sql-persistence-256mb/) · October 2026
