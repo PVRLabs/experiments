@@ -1,0 +1,29 @@
+{
+  "scope": "Host preparation only; no VM or measured runs; no StatLite process started.",
+  "variants": {
+    "jdbi3": {
+      "smoke_requests": 15,
+      "request_errors": 0,
+      "restart_persistence": true,
+      "startup_failure_cleanup": true,
+      "repository_checks": true,
+      "fixture_failure_recovery": true
+    },
+    "mybatis": {
+      "smoke_requests": 15,
+      "request_errors": 0,
+      "restart_persistence": true,
+      "startup_failure_cleanup": true,
+      "repository_checks": true,
+      "fixture_failure_recovery": true
+    },
+    "jooq": {
+      "smoke_requests": 15,
+      "request_errors": 0,
+      "restart_persistence": true,
+      "startup_failure_cleanup": true,
+      "repository_checks": true,
+      "fixture_failure_recovery": true
+    }
+  }
+}

@@ -30,6 +30,14 @@ Technical criticism and questions are welcome. See my [discussion policy](discus
 
 ## Experiments
 
+- [Jdbi, MyBatis and jOOQ in 512 MiB](javalin/sql-persistence-512mb/) · October 2026
+
+  Two unmonitored runs per library with swap disabled, plus a separately selected
+  MyBatis/StatLite follow-up. Includes measured sources, raw OS/HTTP evidence,
+  repeatability checks, dependency inventory, screenshots and reproduction tools.
+
+  **Write-up in preparation.**
+
 - [MyBatis, jOOQ, and Jdbi on 256 MiB](javalin/sql-persistence-256mb/) · October 2026
 
   Three Javalin persistence implementations with file-backed H2 and monitoring.

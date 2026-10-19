@@ -1,0 +1,6 @@
+__pycache__/
+**/target/
+prepared-bundles/
+reproduction-inventory.json
+results/preparation/*
+!results/preparation/preparation-compact-002.json

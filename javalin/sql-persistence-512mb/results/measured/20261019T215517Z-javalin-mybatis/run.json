@@ -1,0 +1,33 @@
+{
+  "guest": "/opt/sql512/run-20261019T215517Z-javalin-mybatis",
+  "variant": "javalin-mybatis",
+  "smoke": false,
+  "monitored": true,
+  "selection": "Operator selected MyBatis Core 3.5.19: lowest median workload RSS in both repeated 512 MiB rounds; competitive HTTP p95 with overlapping Jdbi ranges and no demonstrated significant advantage; preference for the annotation-driven mapper model based on prior experience. Frozen implementation; StatLite operation demonstration, not a universal winner or another three-library ranking.",
+  "vm": "javalin-512",
+  "release": "/opt/sql512/compact-002",
+  "durations": {
+    "baseline": 30,
+    "idle": 30,
+    "recovery": 30
+  },
+  "app_port": 18080,
+  "monitor_port": 19090,
+  "preparation": "../../preparation/preparation-compact-002.json",
+  "runtime": {
+    "cpus": 1,
+    "mem_total_kib": 477712,
+    "swap_total_kib": 0,
+    "os": "Alpine 3.24.2",
+    "kernel": "6.18.54-0-virt",
+    "boot_id": "f91b4108-e0f9-4c46-a20b-c9c991569bb3",
+    "uptime_seconds": 33.83,
+    "jdk": "openjdk version \"25.0.4\" 2026-07-21\nOpenJDK Runtime Environment (build 25.0.4+7-alpine-r0)\nOpenJDK 64-Bit Server VM (build 25.0.4+7-alpine-r0, mixed mode, sharing)",
+    "jvm_flags": [
+      "-Xms16m",
+      "-Xmx80m",
+      "-XX:+UseSerialGC",
+      "-Xss512k"
+    ]
+  }
+}

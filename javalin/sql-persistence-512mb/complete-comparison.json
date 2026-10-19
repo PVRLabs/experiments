@@ -1,0 +1,186 @@
+{
+  "complete": true,
+  "issues": [],
+  "runs": [
+    {
+      "run": "results/measured/20261019T203115Z-javalin-jdbi3",
+      "variant": "javalin-jdbi3",
+      "monitored": false,
+      "valid": true,
+      "actual_mem_mib": 466.515625,
+      "ready_seconds": 3.4538559913635254,
+      "p50_ms": 4.098808858543634,
+      "p95_ms": 8.476214949041605,
+      "errors": 0,
+      "rss_median_mib": 122.392578125,
+      "rss_peak_mib": 128.1796875,
+      "min_available_mib": 296.8671875,
+      "cpu_pct": 3.836646236158613,
+      "correct": true
+    },
+    {
+      "run": "results/measured/20261019T204216Z-javalin-mybatis",
+      "variant": "javalin-mybatis",
+      "monitored": false,
+      "valid": true,
+      "actual_mem_mib": 466.515625,
+      "ready_seconds": 2.772716999053955,
+      "p50_ms": 3.2387562096118927,
+      "p95_ms": 7.515341974794865,
+      "errors": 0,
+      "rss_median_mib": 116.591796875,
+      "rss_peak_mib": 123.31640625,
+      "min_available_mib": 303.39453125,
+      "cpu_pct": 3.547851992281391,
+      "correct": true
+    },
+    {
+      "run": "results/measured/20261019T205545Z-javalin-jooq",
+      "variant": "javalin-jooq",
+      "monitored": false,
+      "valid": true,
+      "actual_mem_mib": 466.51171875,
+      "ready_seconds": 4.095635890960693,
+      "p50_ms": 3.6217868328094482,
+      "p95_ms": 9.348759893327951,
+      "errors": 0,
+      "rss_median_mib": 152.076171875,
+      "rss_peak_mib": 156.40234375,
+      "min_available_mib": 273.4609375,
+      "cpu_pct": 3.7971682135356684,
+      "correct": true
+    },
+    {
+      "run": "results/measured/20261019T211837Z-javalin-jooq",
+      "variant": "javalin-jooq",
+      "monitored": false,
+      "valid": true,
+      "actual_mem_mib": 466.515625,
+      "ready_seconds": 4.365598201751709,
+      "p50_ms": 4.013390745967627,
+      "p95_ms": 9.189011994749308,
+      "errors": 0,
+      "rss_median_mib": 154.291015625,
+      "rss_peak_mib": 158.390625,
+      "min_available_mib": 272.5546875,
+      "cpu_pct": 3.7380646035078215,
+      "correct": true
+    },
+    {
+      "run": "results/measured/20261019T212821Z-javalin-mybatis",
+      "variant": "javalin-mybatis",
+      "monitored": false,
+      "valid": true,
+      "actual_mem_mib": 466.515625,
+      "ready_seconds": 2.6766130924224854,
+      "p50_ms": 3.596964757889509,
+      "p95_ms": 7.467343937605619,
+      "errors": 0,
+      "rss_median_mib": 117.95703125,
+      "rss_peak_mib": 123.4296875,
+      "min_available_mib": 303.42578125,
+      "cpu_pct": 3.759907865320778,
+      "correct": true
+    },
+    {
+      "run": "results/measured/20261019T213850Z-javalin-jdbi3",
+      "variant": "javalin-jdbi3",
+      "monitored": false,
+      "valid": true,
+      "actual_mem_mib": 466.51171875,
+      "ready_seconds": 3.1056439876556396,
+      "p50_ms": 3.7326570600271225,
+      "p95_ms": 7.382361218333244,
+      "errors": 0,
+      "rss_median_mib": 119.9921875,
+      "rss_peak_mib": 123.640625,
+      "min_available_mib": 304.15234375,
+      "cpu_pct": 3.494751100575686,
+      "correct": true
+    },
+    {
+      "run": "results/measured/20261019T215517Z-javalin-mybatis",
+      "variant": "javalin-mybatis",
+      "monitored": true,
+      "valid": true,
+      "actual_mem_mib": 466.515625,
+      "ready_seconds": 3.192469835281372,
+      "p50_ms": 3.9412970654666424,
+      "p95_ms": 8.293317165225744,
+      "errors": 0,
+      "rss_median_mib": 121.3515625,
+      "rss_peak_mib": 124.578125,
+      "min_available_mib": 292.41796875,
+      "cpu_pct": 4.26381509931982,
+      "correct": true
+    }
+  ],
+  "unmonitored_ranges": {
+    "javalin-jdbi3": {
+      "ready_seconds": [
+        3.1056439876556396,
+        3.4538559913635254
+      ],
+      "p50_ms": [
+        3.7326570600271225,
+        4.098808858543634
+      ],
+      "p95_ms": [
+        7.382361218333244,
+        8.476214949041605
+      ],
+      "rss_median_mib": [
+        119.9921875,
+        122.392578125
+      ],
+      "rss_peak_mib": [
+        123.640625,
+        128.1796875
+      ]
+    },
+    "javalin-mybatis": {
+      "ready_seconds": [
+        2.6766130924224854,
+        2.772716999053955
+      ],
+      "p50_ms": [
+        3.2387562096118927,
+        3.596964757889509
+      ],
+      "p95_ms": [
+        7.467343937605619,
+        7.515341974794865
+      ],
+      "rss_median_mib": [
+        116.591796875,
+        117.95703125
+      ],
+      "rss_peak_mib": [
+        123.31640625,
+        123.4296875
+      ]
+    },
+    "javalin-jooq": {
+      "ready_seconds": [
+        4.095635890960693,
+        4.365598201751709
+      ],
+      "p50_ms": [
+        3.6217868328094482,
+        4.013390745967627
+      ],
+      "p95_ms": [
+        9.189011994749308,
+        9.348759893327951
+      ],
+      "rss_median_mib": [
+        152.076171875,
+        154.291015625
+      ],
+      "rss_peak_mib": [
+        156.40234375,
+        158.390625
+      ]
+    }
+  }
+}

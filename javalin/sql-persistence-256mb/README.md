@@ -1,5 +1,10 @@
 # MyBatis vs. jOOQ vs. Jdbi on 256 MiB
 
+A separate [512 MiB repeated comparison](../sql-persistence-512mb/) now includes
+two runs per library without swap or StatLite in the main comparison, plus a
+selected MyBatis monitored repeat. The results below remain the original
+256 MiB configuration and must not be pooled with the new measurements.
+
 Three Javalin JSON services using SQL-first persistence libraries, file-backed H2,
 HikariCP and collocated StatLite on an Alpine Linux VM. One recorded run per
 implementation, five minutes of traffic at five requests/second. All 1,500
@@ -32,7 +37,9 @@ or a stable ranking. The jOOQ run had more paging; this does not establish its c
 
 `javalin-jdbi3/` and `javalin-mybatis/` contain measured application sources.
 `javalin-jooq/` contains the corrected fixture loader, which was checked on the
-host but has not been measured in the VM. Reconstruct the measured jOOQ source
+host but was not measured in this original 256 MiB configuration. The reviewed
+corrected implementation was subsequently measured twice in the separate
+[512 MiB experiment](../sql-persistence-512mb/). Reconstruct the original measured jOOQ source
 by replacing its repository with the separately preserved historical file.
 The recorded 4.44-second startup and 280-line count belong to that original source.
 

@@ -1,0 +1,319 @@
+{
+  "targets": [
+    {
+      "metadata": {
+        "name": "statlite-self",
+        "type": "statlite-metrics",
+        "endpoint": "http://127.0.0.1:9090/statlite/metrics",
+        "endpoint_source": "url"
+      },
+      "status": {
+        "last_poll_at": "2026-10-19T22:03:21.428206822Z",
+        "last_successful_poll_at": "2026-10-19T22:03:21.428206822Z",
+        "consecutive_poll_failures": 0,
+        "last_stored_poll_id": 33,
+        "last_successful_stored_poll_id": 33
+      },
+      "latest": {
+        "poll_id": 33,
+        "app_run_id": 1,
+        "status": "ok",
+        "result": {
+          "target_name": "statlite-self",
+          "poll_started_at": "2026-10-19T22:03:21.427667885Z",
+          "poll_finished_at": "2026-10-19T22:03:21.428206822Z",
+          "health_status": "UP",
+          "db_health_status": "UP",
+          "process_start_time": "2026-10-19T21:55:48.405814053Z",
+          "samples": [
+            {
+              "key": "process_start_time",
+              "kind": "gauge",
+              "value": 1792446948.4058142,
+              "unit": "unix_seconds"
+            },
+            {
+              "key": "http_requests_total",
+              "kind": "counter",
+              "value": 12,
+              "unit": "requests"
+            },
+            {
+              "key": "http_404_total",
+              "kind": "counter",
+              "value": 0,
+              "unit": "requests"
+            },
+            {
+              "key": "http_4xx_total",
+              "kind": "counter",
+              "value": 0,
+              "unit": "requests"
+            },
+            {
+              "key": "http_5xx_total",
+              "kind": "counter",
+              "value": 0,
+              "unit": "requests"
+            },
+            {
+              "key": "http_request_time_total_seconds",
+              "kind": "counter",
+              "value": 0.016084462,
+              "unit": "seconds"
+            },
+            {
+              "key": "process_cpu_usage",
+              "kind": "gauge",
+              "value": 0.0005104011672194157,
+              "unit": "cores"
+            },
+            {
+              "key": "runtime_heap_used_bytes",
+              "kind": "gauge",
+              "value": 2313472,
+              "unit": "bytes"
+            },
+            {
+              "key": "process_uptime",
+              "kind": "gauge",
+              "value": 453.022014241,
+              "unit": "seconds"
+            },
+            {
+              "key": "host_cpu_usage",
+              "kind": "gauge",
+              "value": 0.008338892595063376,
+              "unit": "ratio"
+            },
+            {
+              "key": "host_memory_used_bytes",
+              "kind": "gauge",
+              "value": 174473216,
+              "unit": "bytes"
+            },
+            {
+              "key": "host_memory_total_bytes",
+              "kind": "gauge",
+              "value": 489177088,
+              "unit": "bytes"
+            },
+            {
+              "key": "host_disk_used_bytes",
+              "kind": "gauge",
+              "value": 1929142272,
+              "unit": "bytes"
+            },
+            {
+              "key": "host_disk_total_bytes",
+              "kind": "gauge",
+              "value": 3900350464,
+              "unit": "bytes"
+            }
+          ],
+          "events": null
+        }
+      }
+    },
+    {
+      "metadata": {
+        "name": "javalin-mybatis",
+        "type": "statlite-metrics",
+        "endpoint": "http://127.0.0.1:8080/statlite/metrics",
+        "endpoint_source": "url"
+      },
+      "status": {
+        "last_poll_at": "2026-10-19T22:03:18.421380619Z",
+        "last_successful_poll_at": "2026-10-19T22:03:18.421380619Z",
+        "last_failed_poll_at": "2026-10-19T21:57:18.420301916Z",
+        "consecutive_poll_failures": 0,
+        "last_stored_poll_id": 32,
+        "last_successful_stored_poll_id": 32
+      },
+      "latest": {
+        "poll_id": 32,
+        "app_run_id": 2,
+        "status": "ok",
+        "result": {
+          "target_name": "javalin-mybatis",
+          "poll_started_at": "2026-10-19T22:03:18.420037334Z",
+          "poll_finished_at": "2026-10-19T22:03:18.421380619Z",
+          "health_status": "UP",
+          "process_start_time": "2026-10-19T21:57:18.542Z",
+          "samples": [
+            {
+              "key": "process_start_time",
+              "kind": "gauge",
+              "value": 1792447038.542,
+              "unit": "unix_seconds"
+            },
+            {
+              "key": "http_requests_total",
+              "kind": "counter",
+              "value": 1500,
+              "unit": "requests"
+            },
+            {
+              "key": "http_404_total",
+              "kind": "counter",
+              "value": 0,
+              "unit": "requests"
+            },
+            {
+              "key": "http_4xx_total",
+              "kind": "counter",
+              "value": 0,
+              "unit": "requests"
+            },
+            {
+              "key": "http_5xx_total",
+              "kind": "counter",
+              "value": 0,
+              "unit": "requests"
+            },
+            {
+              "key": "http_request_time_total_seconds",
+              "kind": "counter",
+              "value": 2.6029999999999998,
+              "unit": "seconds"
+            },
+            {
+              "key": "process_cpu_usage",
+              "kind": "gauge",
+              "value": 0.0026702269692923898,
+              "unit": "cores"
+            },
+            {
+              "key": "runtime_heap_used_bytes",
+              "kind": "gauge",
+              "value": 15100720,
+              "unit": "bytes"
+            },
+            {
+              "key": "process_uptime",
+              "kind": "gauge",
+              "value": 359.907,
+              "unit": "seconds"
+            }
+          ],
+          "events": null
+        }
+      }
+    }
+  ],
+  "selected_target": {
+    "name": "statlite-self",
+    "type": "statlite-metrics",
+    "endpoint": "http://127.0.0.1:9090/statlite/metrics",
+    "endpoint_source": "url"
+  },
+  "monitor": {
+    "last_poll_at": "2026-10-19T22:03:21.428206822Z",
+    "last_successful_poll_at": "2026-10-19T22:03:21.428206822Z",
+    "consecutive_poll_failures": 0,
+    "last_stored_poll_id": 33,
+    "last_successful_stored_poll_id": 33
+  },
+  "latest": {
+    "poll_id": 33,
+    "app_run_id": 1,
+    "status": "ok",
+    "result": {
+      "target_name": "statlite-self",
+      "poll_started_at": "2026-10-19T22:03:21.427667885Z",
+      "poll_finished_at": "2026-10-19T22:03:21.428206822Z",
+      "health_status": "UP",
+      "db_health_status": "UP",
+      "process_start_time": "2026-10-19T21:55:48.405814053Z",
+      "samples": [
+        {
+          "key": "process_start_time",
+          "kind": "gauge",
+          "value": 1792446948.4058142,
+          "unit": "unix_seconds"
+        },
+        {
+          "key": "http_requests_total",
+          "kind": "counter",
+          "value": 12,
+          "unit": "requests"
+        },
+        {
+          "key": "http_404_total",
+          "kind": "counter",
+          "value": 0,
+          "unit": "requests"
+        },
+        {
+          "key": "http_4xx_total",
+          "kind": "counter",
+          "value": 0,
+          "unit": "requests"
+        },
+        {
+          "key": "http_5xx_total",
+          "kind": "counter",
+          "value": 0,
+          "unit": "requests"
+        },
+        {
+          "key": "http_request_time_total_seconds",
+          "kind": "counter",
+          "value": 0.016084462,
+          "unit": "seconds"
+        },
+        {
+          "key": "process_cpu_usage",
+          "kind": "gauge",
+          "value": 0.0005104011672194157,
+          "unit": "cores"
+        },
+        {
+          "key": "runtime_heap_used_bytes",
+          "kind": "gauge",
+          "value": 2313472,
+          "unit": "bytes"
+        },
+        {
+          "key": "process_uptime",
+          "kind": "gauge",
+          "value": 453.022014241,
+          "unit": "seconds"
+        },
+        {
+          "key": "host_cpu_usage",
+          "kind": "gauge",
+          "value": 0.008338892595063376,
+          "unit": "ratio"
+        },
+        {
+          "key": "host_memory_used_bytes",
+          "kind": "gauge",
+          "value": 174473216,
+          "unit": "bytes"
+        },
+        {
+          "key": "host_memory_total_bytes",
+          "kind": "gauge",
+          "value": 489177088,
+          "unit": "bytes"
+        },
+        {
+          "key": "host_disk_used_bytes",
+          "kind": "gauge",
+          "value": 1929142272,
+          "unit": "bytes"
+        },
+        {
+          "key": "host_disk_total_bytes",
+          "kind": "gauge",
+          "value": 3900350464,
+          "unit": "bytes"
+        }
+      ],
+      "events": null
+    }
+  },
+  "latest_restart_status": "none",
+  "now": "2026-10-19T22:03:22.12572374Z"
+}

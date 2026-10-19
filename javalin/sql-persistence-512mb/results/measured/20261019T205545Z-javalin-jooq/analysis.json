@@ -1,0 +1,326 @@
+{
+  "variant": "javalin-jooq",
+  "smoke": false,
+  "actual_mem_mib": 466.51171875,
+  "startup_to_ready_seconds": 4.095635890960693,
+  "readiness_uncertainty": "100 ms probe cadence plus request/tunnel duration; sample timestamp is before successful request",
+  "phases": {
+    "baseline": {
+      "sample_count": 6,
+      "host_major_faults": 0.0,
+      "java_major_faults": 0.0,
+      "min_available_mib": 394.453125,
+      "headroom_dips": [],
+      "java_rss_median_mib": 0.0,
+      "java_rss_peak_mib": 0.0,
+      "monitor_rss_median_mib": 0.0,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 0.3194888178913738,
+      "late_cpu_pct": 0.3194888178913738,
+      "late_java_rss_median_mib": 0.0,
+      "java_cpu_pct": 0.0,
+      "max_threads": 0.0,
+      "host_iowait_pct": 0.0,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 0.3194888178913738,
+      "late_busy_plus_steal_pct": 0.3194888178913738,
+      "late_iowait_pct": 0.0,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        0.0,
+        0.0
+      ]
+    },
+    "startup": {
+      "sample_count": 6,
+      "host_major_faults": 8.0,
+      "java_major_faults": 8.0,
+      "min_available_mib": 284.7578125,
+      "headroom_dips": [],
+      "java_rss_median_mib": 90.041015625,
+      "java_rss_peak_mib": 142.90234375,
+      "monitor_rss_median_mib": 0.0,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 99.5049504950495,
+      "late_cpu_pct": 99.5049504950495,
+      "late_java_rss_median_mib": 90.041015625,
+      "java_cpu_pct": null,
+      "max_threads": 28.0,
+      "host_iowait_pct": 0.49504950495049505,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 99.5049504950495,
+      "late_busy_plus_steal_pct": 99.5049504950495,
+      "late_iowait_pct": 0.49504950495049505,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        0.0,
+        142.90234375
+      ]
+    },
+    "idle": {
+      "sample_count": 6,
+      "host_major_faults": 0.0,
+      "java_major_faults": 0.0,
+      "min_available_mib": 269.5703125,
+      "headroom_dips": [],
+      "java_rss_median_mib": 133.25390625,
+      "java_rss_peak_mib": 133.375,
+      "monitor_rss_median_mib": 0.0,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 0.519376747902517,
+      "late_cpu_pct": 0.519376747902517,
+      "late_java_rss_median_mib": 133.25390625,
+      "java_cpu_pct": 0.11966493817311503,
+      "max_threads": 28.0,
+      "host_iowait_pct": 0.0,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 0.519376747902517,
+      "late_busy_plus_steal_pct": 0.519376747902517,
+      "late_iowait_pct": 0.0,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        133.375,
+        133.265625
+      ]
+    },
+    "workload": {
+      "sample_count": 60,
+      "host_major_faults": 0.0,
+      "java_major_faults": 0.0,
+      "min_available_mib": 273.4609375,
+      "headroom_dips": [],
+      "java_rss_median_mib": 152.076171875,
+      "java_rss_peak_mib": 156.40234375,
+      "monitor_rss_median_mib": 0.0,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 3.7971682135356684,
+      "late_cpu_pct": 2.379654859218892,
+      "late_java_rss_median_mib": 155.84375,
+      "java_cpu_pct": 3.1558318691715095,
+      "max_threads": 26.0,
+      "host_iowait_pct": 0.01693652191585936,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 3.7971682135356684,
+      "late_busy_plus_steal_pct": 2.379654859218892,
+      "late_iowait_pct": 0.018165304268846504,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        135.5234375,
+        156.40234375
+      ],
+      "minute_rss_medians_mib": [
+        145.318359375,
+        149.3671875,
+        152.076171875,
+        154.373046875,
+        155.84375
+      ],
+      "minute_headroom_medians_mib": [
+        281.78125,
+        282.162109375,
+        279.5078125,
+        277.173828125,
+        275.494140625
+      ]
+    },
+    "recovery": {
+      "sample_count": 6,
+      "host_major_faults": 0.0,
+      "java_major_faults": 0.0,
+      "min_available_mib": 275.1328125,
+      "headroom_dips": [],
+      "java_rss_median_mib": 156.45703125,
+      "java_rss_peak_mib": 156.45703125,
+      "monitor_rss_median_mib": 0.0,
+      "max_swap_used_mib": 0.0,
+      "swap_in_mib": 0.0,
+      "swap_out_mib": 0.0,
+      "longest_paging_above_1_mib_s_seconds": 0,
+      "host_busy_cpu_pct": 0.5185480654168328,
+      "late_cpu_pct": 0.5185480654168328,
+      "late_java_rss_median_mib": 156.45703125,
+      "java_cpu_pct": 0.03987240829346104,
+      "max_threads": 26.0,
+      "host_iowait_pct": 0.03988831272437176,
+      "host_steal_pct": 0.0,
+      "host_busy_plus_steal_pct": 0.5185480654168328,
+      "late_busy_plus_steal_pct": 0.5185480654168328,
+      "late_iowait_pct": 0.03988831272437176,
+      "late_steal_pct": 0.0,
+      "java_rss_first_last_mib": [
+        156.44921875,
+        156.45703125
+      ]
+    }
+  },
+  "http": {
+    "overall": {
+      "count": 1500,
+      "errors": 0,
+      "p50_ms": 3.6217868328094482,
+      "p95_ms": 9.348759893327951,
+      "max_ms": 120.8549290895462
+    },
+    "routes": {
+      "latest": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 4.192647989839315,
+        "p95_ms": 12.86278897896409,
+        "max_ms": 120.8549290895462
+      },
+      "history": {
+        "count": 900,
+        "errors": 0,
+        "p50_ms": 3.362240269780159,
+        "p95_ms": 8.41168686747551,
+        "max_ms": 25.845183990895748
+      },
+      "batch": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.905818797647953,
+        "p95_ms": 9.359728079289198,
+        "max_ms": 83.15432211384177
+      }
+    },
+    "minutes": {
+      "1": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 6.467300932854414,
+        "p95_ms": 13.931629247963428,
+        "max_ms": 120.8549290895462
+      },
+      "2": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 4.187223967164755,
+        "p95_ms": 8.340186439454556,
+        "max_ms": 97.62506512925029
+      },
+      "3": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 3.4380159340798855,
+        "p95_ms": 6.271827034652233,
+        "max_ms": 12.881590984761715
+      },
+      "4": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 2.8477851301431656,
+        "p95_ms": 5.137333180755377,
+        "max_ms": 23.308161180466413
+      },
+      "5": {
+        "count": 300,
+        "errors": 0,
+        "p50_ms": 2.9041171073913574,
+        "p95_ms": 5.190148018300533,
+        "max_ms": 10.30539721250534
+      }
+    },
+    "max_dispatch_lag_ms": 75.26151742786169
+  },
+  "cpu_note": "Busy excludes idle, I/O wait and steal. Legacy samples lack steal: exact busy is null; busy_plus_steal is the corrected upper bound, not an assumed zero steal value.",
+  "startup_note": null,
+  "sampling_coverage": {
+    "valid": true,
+    "issues": [],
+    "phases": {
+      "baseline": {
+        "valid": true,
+        "issues": [],
+        "sample_count": 6,
+        "expected_cadence_seconds": 5,
+        "maximum_allowed_gap_seconds": 8.0,
+        "maximum_observed_gap_seconds": 5.014281272888184,
+        "start_gap_seconds": 0.13489770889282227,
+        "end_gap_seconds": 4.807689189910889
+      },
+      "startup": {
+        "valid": true,
+        "issues": [],
+        "sample_count": 6,
+        "expected_cadence_seconds": 1,
+        "maximum_allowed_gap_seconds": 2.0,
+        "maximum_observed_gap_seconds": 1.0297720432281494,
+        "start_gap_seconds": 0.20477819442749023,
+        "end_gap_seconds": 0.15630388259887695
+      },
+      "idle": {
+        "valid": true,
+        "issues": [],
+        "sample_count": 6,
+        "expected_cadence_seconds": 5,
+        "maximum_allowed_gap_seconds": 8.0,
+        "maximum_observed_gap_seconds": 5.015694618225098,
+        "start_gap_seconds": 0.8675379753112793,
+        "end_gap_seconds": 4.066817998886108
+      },
+      "workload": {
+        "valid": true,
+        "issues": [],
+        "sample_count": 60,
+        "expected_cadence_seconds": 5,
+        "maximum_allowed_gap_seconds": 8.0,
+        "maximum_observed_gap_seconds": 5.029701471328735,
+        "start_gap_seconds": 0.9524397850036621,
+        "end_gap_seconds": 2.9266183376312256
+      },
+      "recovery": {
+        "valid": true,
+        "issues": [],
+        "sample_count": 6,
+        "expected_cadence_seconds": 5,
+        "maximum_allowed_gap_seconds": 8.0,
+        "maximum_observed_gap_seconds": 5.017310619354248,
+        "start_gap_seconds": 2.091057062149048,
+        "end_gap_seconds": 2.835106611251831
+      }
+    }
+  },
+  "workload_validity": {
+    "valid": true,
+    "expected_requests": 1500,
+    "recorded_requests": 1500,
+    "completed_requests": 1500,
+    "errors": 0
+  },
+  "persistence_state": {
+    "actual": {
+      "rows": 2070,
+      "maxSequence": 689,
+      "priceSum": "630374.22"
+    },
+    "expected_rows": 2070,
+    "expected_max_sequence": 689,
+    "expected_price_sum": "630374.22",
+    "matches": true,
+    "acknowledged_writes_expected": {
+      "rows": 2070,
+      "maxSequence": 689,
+      "priceSum": "630374.22"
+    },
+    "matches_acknowledged_writes": true,
+    "diagnostic_note": "Acknowledged writes use actual batch indexes; a failed HTTP response may still have committed. Partial consistency does not establish experiment success."
+  },
+  "validity": {
+    "valid": true,
+    "valid_for_comparison": true,
+    "issues": []
+  }
+}

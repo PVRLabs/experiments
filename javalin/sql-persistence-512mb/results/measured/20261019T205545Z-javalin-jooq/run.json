@@ -1,0 +1,33 @@
+{
+  "guest": "/opt/sql512/run-20261019T205545Z-javalin-jooq",
+  "variant": "javalin-jooq",
+  "smoke": false,
+  "monitored": false,
+  "selection": null,
+  "vm": "javalin-512",
+  "release": "/opt/sql512/compact-002",
+  "durations": {
+    "baseline": 30,
+    "idle": 30,
+    "recovery": 30
+  },
+  "app_port": 18080,
+  "monitor_port": 19090,
+  "preparation": "../../preparation/preparation-compact-002.json",
+  "runtime": {
+    "cpus": 1,
+    "mem_total_kib": 477708,
+    "swap_total_kib": 0,
+    "os": "Alpine 3.24.2",
+    "kernel": "6.18.54-0-virt",
+    "boot_id": "d6eccec4-722b-4c00-bee6-390ffff163af",
+    "uptime_seconds": 386.15,
+    "jdk": "openjdk version \"25.0.4\" 2026-07-21\nOpenJDK Runtime Environment (build 25.0.4+7-alpine-r0)\nOpenJDK 64-Bit Server VM (build 25.0.4+7-alpine-r0, mixed mode, sharing)",
+    "jvm_flags": [
+      "-Xms16m",
+      "-Xmx80m",
+      "-XX:+UseSerialGC",
+      "-Xss512k"
+    ]
+  }
+}

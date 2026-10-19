@@ -1,0 +1,64 @@
+{
+  "purpose": "Frozen MyBatis StatLite demonstration; one repeat does not isolate causal overhead.",
+  "runs": [
+    {
+      "run": "results/measured/20261019T204216Z-javalin-mybatis",
+      "variant": "javalin-mybatis",
+      "monitored": false,
+      "valid": true,
+      "actual_mem_mib": 466.515625,
+      "ready_seconds": 2.772716999053955,
+      "p50_ms": 3.2387562096118927,
+      "p95_ms": 7.515341974794865,
+      "errors": 0,
+      "rss_median_mib": 116.591796875,
+      "rss_peak_mib": 123.31640625,
+      "min_available_mib": 303.39453125,
+      "cpu_pct": 3.547851992281391,
+      "correct": true
+    },
+    {
+      "run": "results/measured/20261019T212821Z-javalin-mybatis",
+      "variant": "javalin-mybatis",
+      "monitored": false,
+      "valid": true,
+      "actual_mem_mib": 466.515625,
+      "ready_seconds": 2.6766130924224854,
+      "p50_ms": 3.596964757889509,
+      "p95_ms": 7.467343937605619,
+      "errors": 0,
+      "rss_median_mib": 117.95703125,
+      "rss_peak_mib": 123.4296875,
+      "min_available_mib": 303.42578125,
+      "cpu_pct": 3.759907865320778,
+      "correct": true
+    },
+    {
+      "run": "results/measured/20261019T215517Z-javalin-mybatis",
+      "variant": "javalin-mybatis",
+      "monitored": true,
+      "valid": true,
+      "actual_mem_mib": 466.515625,
+      "ready_seconds": 3.192469835281372,
+      "p50_ms": 3.9412970654666424,
+      "p95_ms": 8.293317165225744,
+      "errors": 0,
+      "rss_median_mib": 121.3515625,
+      "rss_peak_mib": 124.578125,
+      "min_available_mib": 292.41796875,
+      "cpu_pct": 4.26381509931982,
+      "correct": true
+    }
+  ],
+  "monitor_cpu_pct_single_vcpu": {
+    "monitor-only": 0.012457954403886883,
+    "workload": 0.01688162603822
+  },
+  "monitor_cpu_method": "100 Hz process tick deltas between samples with a live unchanged monitor PID, divided by elapsed uptime.",
+  "recorded_sqlite_integrity_check": {
+    "sqlite_integrity_check": [
+      "ok"
+    ]
+  },
+  "inspection": "Operator completed dashboard inspection; both screenshots included. Services stopped before archive collection."
+}

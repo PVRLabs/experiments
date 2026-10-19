@@ -1,0 +1,14 @@
+server:
+  listen: "127.0.0.1:9090"
+storage:
+  sqlite_path: "/opt/sql512/run-20261019T215517Z-javalin-mybatis/statlite.sqlite"
+polling:
+  interval: "30s"
+  timeout: "5s"
+targets:
+  - name: statlite-self
+    type: statlite-metrics
+    url: http://127.0.0.1:9090/statlite/metrics
+  - name: javalin-mybatis
+    type: statlite-metrics
+    url: http://127.0.0.1:8080/statlite/metrics

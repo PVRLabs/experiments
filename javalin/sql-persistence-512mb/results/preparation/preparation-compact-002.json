@@ -1,0 +1,32 @@
+{
+  "source_commit": "b177c2e1070cd5493887b9667fb833ade2a6f98c",
+  "source_uncommitted_changes": true,
+  "source_note": "When source changes are committed, record that revision; a dirty checkout is explicitly identified.",
+  "application_jars": {
+    "javalin-jdbi3.jar": "17e7db9e23ef58de4d86cc6df1e39e465c4200f35848bf22a5403c2917c429e6",
+    "javalin-mybatis.jar": "185a8ef0c81374c491f5d5ec2e685bf6f9a990bfee167d9526b95c82a60c7160",
+    "javalin-jooq.jar": "522604a21c57e1f02493de892d7469bc0bfbfbc9fd98cf3a5580d20e5089ec5c"
+  },
+  "versions": {
+    "io.javalin:javalin": "7.2.3",
+    "org.eclipse.jetty:jetty-server": "12.1.12",
+    "com.zaxxer:HikariCP": "7.0.2",
+    "com.h2database:h2": "2.4.240",
+    "io.micrometer:micrometer-core": "1.17.0",
+    "jdbi": "3.55.0",
+    "mybatis": "3.5.19",
+    "jooq": "3.21.9",
+    "statlite": "v0.6.0"
+  },
+  "jvm_flags": [
+    "-Xms16m",
+    "-Xmx80m",
+    "-XX:+UseSerialGC",
+    "-Xss512k"
+  ],
+  "vm": {
+    "cpus": 1,
+    "configured_memory_mib": 512,
+    "swap": "disabled"
+  }
+}
