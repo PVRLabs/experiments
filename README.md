@@ -2,6 +2,11 @@
 
 A collection of experiments from [PVRLabs](https://github.com/PVRLabs).
 
+Original code, scripts, documentation, and experiment artifacts in this repository
+are licensed under the [MIT License](LICENSE), unless otherwise noted. Third-party
+material retains its original license. Articles and other content linked outside
+this repository are not covered by this license.
+
 Have an experiment idea or a question? [Join the discussions →](https://github.com/PVRLabs/experiments/discussions)
 
 ## Who these experiments are for
