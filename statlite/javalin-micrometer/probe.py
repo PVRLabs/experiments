@@ -7,6 +7,7 @@ import urllib.request
 
 APP = "http://127.0.0.1:18087"
 STATLITE = "http://127.0.0.1:19087"
+COLLECTION_TIMEOUT = 90
 
 
 def fetch(url):
@@ -29,13 +30,13 @@ def parse_time(value):
 
 before = get(APP + "/statlite/metrics")
 # Establish a collector baseline before traffic, including after a restart.
-deadline = time.monotonic() + 15
+deadline = time.monotonic() + COLLECTION_TIMEOUT
 while True:
     latest = get(STATLITE + "/api/latest")
     if latest["status"] == "ok" and parse_time(latest["result"]["process_start_time"]) == parse_time(before["started_at"]):
         break
-    assert time.monotonic() < deadline, "No StatLite baseline collected"
-    time.sleep(0.25)
+    assert time.monotonic() < deadline, f"No StatLite baseline for {before['started_at']} within {COLLECTION_TIMEOUT}s; latest: {latest}"
+    time.sleep(3)
 for _ in range(12):
     for path, expected in [("/hello", 200), ("/slow", 200), ("/missing", 404), ("/error", 500)]:
         code, _ = fetch(APP + path)
@@ -51,20 +52,22 @@ for _ in range(3):
     assert polled["metrics"]["requests_total"] == after["metrics"]["requests_total"], "Metrics polls counted as traffic"
 duration = after["metrics"]["request_duration_seconds_total"] - before["metrics"]["request_duration_seconds_total"]
 assert duration >= 1.32, duration
-deadline = time.monotonic() + 15
+deadline = time.monotonic() + COLLECTION_TIMEOUT
 while True:
     latest = get(STATLITE + "/api/latest")
-    if latest["status"] == "ok":
+    if latest["status"] == "ok" and parse_time(latest["result"]["process_start_time"]) == parse_time(after["started_at"]):
         samples = {sample["key"]: sample["value"] for sample in latest["result"]["samples"]}
         if samples.get("http_requests_total") == after["metrics"]["requests_total"]:
-            for key in ["http_404_total", "http_4xx_total", "http_5xx_total"]:
-                assert samples[key] >= 12, key
+            for collected, source in [("http_404_total", "responses_404_total"),
+                                      ("http_4xx_total", "responses_4xx_total"),
+                                      ("http_5xx_total", "responses_5xx_total")]:
+                assert samples[collected] == after["metrics"][source], collected
             assert samples["runtime_heap_used_bytes"] > 0
             assert "process_cpu_usage" in samples
             assert latest["result"]["health_status"] == "UP"
             break
-    assert time.monotonic() < deadline, "Workload did not appear in StatLite"
-    time.sleep(0.25)
+    assert time.monotonic() < deadline, f"Expected {after['metrics']} within {COLLECTION_TIMEOUT}s; latest: {latest}"
+    time.sleep(3)
 print(json.dumps({"requests": 48, "404_and_4xx": 12, "5xx": 12,
                   "duration_seconds": duration, "average_latency_ms": duration / 48 * 1000,
                   "statlite_run_id": latest["app_run_id"]}, indent=2))

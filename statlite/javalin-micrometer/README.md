@@ -38,18 +38,16 @@ python3 probe.py
 
 Open <http://127.0.0.1:19087>. The probe sends 48 requests: 12 each to `/hello`,
 `/slow` (120 ms), an unmatched `/missing` (404), and `/error` (500). It checks
-counter increases and StatLite collection. Repeat it to add history; avoid
-other application traffic during its exact-count checks.
+counter increases and waits for the expected metrics in StatLite, allowing up
+to 90 seconds each for initial collection and collection after traffic. Repeat
+it to add history; avoid other application traffic during its exact-count checks.
 
 Both services bind to loopback. The app uses port 18087 and exposes
 `/statlite/metrics`; StatLite uses port 19087. History is stored in
 `runtime/statlite.sqlite`. Stop each service with Ctrl-C.
 
-> [!NOTE]
-> The ten-second polling interval is strictly for this short local demo and its
-> probe. Use **30 seconds or longer for production monitoring**; shorter intervals
-> increase polling work and stored samples. The request timeout uses StatLite's
-> default of ten seconds.
+The supplied configuration polls every **30 seconds**, the recommended minimum
+interval for monitoring. The request timeout uses StatLite's default of ten seconds.
 
 ## Health and restarts
 

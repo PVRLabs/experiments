@@ -3,9 +3,7 @@ server:
 storage:
   sqlite_path: "runtime/statlite.sqlite"
 polling:
-  # Demo only: 10s polling fits the probe's 15s collection wait.
-  # For production, use an interval of 30s or longer.
-  interval: "10s"
+  interval: "30s"
 targets:
   - name: javalin-demo
     type: statlite-metrics
