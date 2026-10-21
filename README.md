@@ -30,6 +30,15 @@ Technical criticism and questions are welcome. See my [discussion policy](discus
 
 ## Experiments
 
+- [PostgreSQL JDBC batch rewriting for million-row CSV imports](scriptella/postgresql-batch-rewrite/) · October 2026
+
+  Enabling pgJDBC's `reWriteBatchedInserts` option reduced Scriptella's median
+  import time from 15.995 to 9.409 seconds in a three-round local experiment.
+  Includes the 18 verified measurements, curated environment metadata, analysis,
+  and the article chart.
+
+  **Write-up in preparation.**
+
 - [Jdbi, MyBatis and jOOQ in 512 MiB](javalin/sql-persistence-512mb/) · October 2026
 
   Two unmonitored runs per library with swap disabled, plus a separately selected
