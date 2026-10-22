@@ -1,5 +1,7 @@
 # Jdbi, MyBatis and jOOQ in 512 MiB
 
+**[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-512mb.html)**
+
 Two unmonitored runs per SQL persistence implementation in a small Javalin
 market-quote API, followed by one separately selected MyBatis run with StatLite.
 Measured on 19 October 2026. This is a practical case study, not a universal

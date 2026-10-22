@@ -1,5 +1,7 @@
 # MyBatis vs. jOOQ vs. Jdbi on 256 MiB
 
+**[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-256mb.html)**
+
 A separate [512 MiB repeated comparison](../sql-persistence-512mb/) now includes
 two runs per library without swap or StatLite in the main comparison, plus a
 selected MyBatis monitored repeat. The results below remain the original
@@ -26,7 +28,6 @@ the original build.
 These are observations from complete applications, not isolated library overhead
 or a stable ranking. The jOOQ run had more paging; this does not establish its cause.
 
-- [Experiment write-up](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-256mb.html).
 - [Reanalysis, builds and VM reproduction](reproduction-guide.md).
 - [Curated execution record and limitations](experiment-design.md).
 - [Original JDBC/Spring experiment](../vps-256mb/), retained separately.

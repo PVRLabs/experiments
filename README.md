@@ -36,7 +36,7 @@ Technical criticism and questions are welcome. See my [discussion policy](discus
   MyBatis/StatLite follow-up. Includes measured sources, raw OS/HTTP evidence,
   repeatability checks, dependency inventory, screenshots and reproduction tools.
 
-  **Write-up in preparation.**
+  **[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-512mb.html)**
 
 - [MyBatis, jOOQ, and Jdbi on 256 MiB](javalin/sql-persistence-256mb/) · October 2026
 
@@ -44,7 +44,7 @@ Technical criticism and questions are welcome. See my [discussion policy](discus
   Includes measured source, the separate jOOQ fixture correction, original OS/HTTP
   evidence, dependency and code inventories, and reproduction instructions.
 
-  **Short write-up coming soon.**
+  **[Read the short write-up →](https://pvrlabs.xyz/java-performance/experiments/mybatis-jooq-jdbi-256mb.html)**
 
 - [Javalin with JDBC and monitoring on 256 MiB](javalin/vps-256mb/) · October 2026
 
