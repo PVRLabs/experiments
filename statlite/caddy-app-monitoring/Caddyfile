@@ -1,0 +1,16 @@
+{
+	admin 127.0.0.1:2019
+	metrics {
+		per_host
+	}
+}
+
+spring.test {
+	tls internal
+	reverse_proxy 127.0.0.1:8080
+}
+
+express.test {
+	tls internal
+	reverse_proxy 127.0.0.1:3000
+}

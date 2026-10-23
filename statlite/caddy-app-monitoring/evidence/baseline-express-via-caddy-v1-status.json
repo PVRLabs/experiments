@@ -1,0 +1,13 @@
+{
+  "target": "express-via-caddy",
+  "type": "caddy",
+  "collection_status": "ok",
+  "last_poll_at": "2026-10-23T17:01:02.965285279Z",
+  "last_successful_poll_at": "2026-10-23T17:01:02.965285279Z",
+  "last_failed_poll_at": null,
+  "consecutive_collection_failures": 0,
+  "last_collection_error": null,
+  "application_health": null,
+  "dependency_health": null,
+  "health_observed_at": null
+}

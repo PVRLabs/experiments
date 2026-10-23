@@ -1,0 +1,13 @@
+{
+  "target": "spring-direct",
+  "type": "spring",
+  "collection_status": "ok",
+  "last_poll_at": "2026-10-23T16:59:03.661232893Z",
+  "last_successful_poll_at": "2026-10-23T16:59:03.661232893Z",
+  "last_failed_poll_at": null,
+  "consecutive_collection_failures": 0,
+  "last_collection_error": null,
+  "application_health": "UP",
+  "dependency_health": null,
+  "health_observed_at": "2026-10-23T16:59:03.661232893Z"
+}

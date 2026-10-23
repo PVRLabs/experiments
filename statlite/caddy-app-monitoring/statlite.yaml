@@ -1,0 +1,18 @@
+server:
+  listen: "127.0.0.1:9090"
+storage:
+  sqlite_path: "./run/statlite.sqlite"
+polling:
+  interval: "30s"
+targets:
+  - name: express-via-caddy
+    type: caddy
+    url: http://127.0.0.1:2019/metrics
+    host: express.test
+  - name: spring-via-caddy
+    type: caddy
+    url: http://127.0.0.1:2019/metrics
+    host: spring.test
+  - name: spring-direct
+    type: spring
+    url: http://127.0.0.1:8081/actuator

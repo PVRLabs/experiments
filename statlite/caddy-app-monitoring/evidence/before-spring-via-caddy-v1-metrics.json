@@ -1,0 +1,65 @@
+{
+  "target": "spring-via-caddy",
+  "range": "1h",
+  "bucket_seconds": 60,
+  "evaluated_at": "2026-10-23T16:59:04.591362414Z",
+  "latest_http_observation_at": "2026-10-23T16:59:03.6130203Z",
+  "points": [
+    {
+      "timestamp": "2026-10-23T16:56:00Z",
+      "requests": 0,
+      "http_4xx": 0,
+      "http_5xx": 0,
+      "http_5xx_rate": null,
+      "avg_latency_ms": null,
+      "latency_requests": null,
+      "process_cpu_cores": null,
+      "runtime_memory_bytes": null,
+      "host_cpu_usage": null,
+      "host_memory_usage": null,
+      "host_disk_usage": null
+    },
+    {
+      "timestamp": "2026-10-23T16:57:00Z",
+      "requests": 0,
+      "http_4xx": 0,
+      "http_5xx": 0,
+      "http_5xx_rate": null,
+      "avg_latency_ms": null,
+      "latency_requests": null,
+      "process_cpu_cores": null,
+      "runtime_memory_bytes": null,
+      "host_cpu_usage": null,
+      "host_memory_usage": null,
+      "host_disk_usage": null
+    },
+    {
+      "timestamp": "2026-10-23T16:58:00Z",
+      "requests": 0,
+      "http_4xx": 0,
+      "http_5xx": 0,
+      "http_5xx_rate": null,
+      "avg_latency_ms": null,
+      "latency_requests": null,
+      "process_cpu_cores": null,
+      "runtime_memory_bytes": null,
+      "host_cpu_usage": null,
+      "host_memory_usage": null,
+      "host_disk_usage": null
+    },
+    {
+      "timestamp": "2026-10-23T16:59:00Z",
+      "requests": 0,
+      "http_4xx": 0,
+      "http_5xx": 0,
+      "http_5xx_rate": null,
+      "avg_latency_ms": null,
+      "latency_requests": null,
+      "process_cpu_cores": null,
+      "runtime_memory_bytes": null,
+      "host_cpu_usage": null,
+      "host_memory_usage": null,
+      "host_disk_usage": null
+    }
+  ]
+}

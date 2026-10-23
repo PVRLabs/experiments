@@ -1,0 +1,49 @@
+{
+  "started_at": "2026-10-23T16:59:04.552285+00:00",
+  "directory": "run/article-20261023T165904Z",
+  "phase_seconds": 120,
+  "tick_seconds": 1,
+  "phases": [
+    {
+      "name": "baseline",
+      "started_at": "2026-10-23T16:59:04.604528+00:00",
+      "express_route": "ok",
+      "expected_status": 200,
+      "ticks": 120,
+      "ended_at": "2026-10-23T17:01:03.896827+00:00"
+    },
+    {
+      "name": "not-found",
+      "started_at": "2026-10-23T17:01:03.930724+00:00",
+      "express_route": "missing",
+      "expected_status": 404,
+      "ticks": 120,
+      "ended_at": "2026-10-23T17:03:03.230231+00:00"
+    },
+    {
+      "name": "server-errors",
+      "started_at": "2026-10-23T17:03:03.255184+00:00",
+      "express_route": "fail",
+      "expected_status": 500,
+      "ticks": 120,
+      "ended_at": "2026-10-23T17:05:02.800954+00:00"
+    },
+    {
+      "name": "slow",
+      "started_at": "2026-10-23T17:05:02.826288+00:00",
+      "express_route": "slow",
+      "expected_status": 200,
+      "ticks": 120,
+      "ended_at": "2026-10-23T17:07:02.251098+00:00"
+    },
+    {
+      "name": "recovery",
+      "started_at": "2026-10-23T17:07:02.273796+00:00",
+      "express_route": "ok",
+      "expected_status": 200,
+      "ticks": 120,
+      "ended_at": "2026-10-23T17:09:01.587653+00:00"
+    }
+  ],
+  "finished_at": "2026-10-23T17:09:41.414174+00:00"
+}

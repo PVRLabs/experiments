@@ -30,6 +30,13 @@ Technical criticism and questions are welcome. See my [discussion policy](discus
 
 ## Experiments
 
+- [Monitoring applications behind Caddy without instrumenting them](statlite/caddy-app-monitoring/report.md) · October 2026
+
+  Express and Spring Boot behind one Caddy reverse proxy, with HTTP monitoring
+  that requires no application changes.
+  A controlled workload shows per-host HTTP errors, latency and recovery, with
+  selected dashboards, inspectable evidence and reproduction scripts.
+
 - [Jdbi, MyBatis and jOOQ in 512 MiB](javalin/sql-persistence-512mb/) · October 2026
 
   Two unmonitored runs per library with swap disabled, plus a separately selected

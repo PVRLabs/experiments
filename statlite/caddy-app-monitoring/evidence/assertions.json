@@ -1,0 +1,56 @@
+{
+  "express-via-caddy": {
+    "deltas": {
+      "requests": 600,
+      "http_4xx": 120,
+      "http_5xx": 120
+    },
+    "slow_interior_latency_ms": [
+      251.50238173333338,
+      252.31561189999996,
+      251.72565273333342
+    ],
+    "recovery_interior_latency_ms": [
+      1.1736183333332189,
+      0.993865733333384,
+      0.8724001000000925
+    ],
+    "runtime_reported": false
+  },
+  "spring-via-caddy": {
+    "deltas": {
+      "requests": 600,
+      "http_4xx": 0,
+      "http_5xx": 0
+    },
+    "slow_interior_latency_ms": [
+      1.8340330333333377,
+      1.5088244666666621,
+      1.834741399999995
+    ],
+    "recovery_interior_latency_ms": [
+      1.7250815666666495,
+      1.9741413333333417,
+      1.5750328000000127
+    ],
+    "runtime_reported": false
+  },
+  "spring-direct": {
+    "deltas": {
+      "requests": 600,
+      "http_4xx": 0,
+      "http_5xx": 0
+    },
+    "slow_interior_latency_ms": [
+      1.0293083999999988,
+      0.8878255999999992,
+      0.892691100000002
+    ],
+    "recovery_interior_latency_ms": [
+      1.0643689333333335,
+      1.0157119666666659,
+      0.9961416333333325
+    ],
+    "runtime_reported": true
+  }
+}
