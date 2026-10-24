@@ -38,6 +38,8 @@ Engineering decisions depend on workloads, existing architecture, operational re
 
 The constraints are open to challenge too. Explain why a different set of requirements or a different approach would be more useful.
 
+Specialized configurations can be useful follow-up ideas. Demonstrating a higher performance ceiling is outside the scope of experiments focused on readily adoptable configurations; see our [optimization approach](README.md#optimization-approach).
+
 ### Personal accusations
 
 Questions about commercial relationships or potential conflicts of interest are reasonable. Unsupported accusations about personal motives don't help evaluate the evidence, methodology, or conclusions.

@@ -28,6 +28,12 @@ Similarly, Kubernetes optimization, container density, and extreme memory minimi
 
 Technical criticism and questions are welcome. See my [discussion policy](discussion-policy.md) for how I participate in conversations about this work.
 
+### Optimization approach
+
+We favor simple, reproducible configurations that developers can readily adopt: mainstream frameworks and libraries, recommended defaults, and straightforward, documented optimizations. Ordinary configuration needed to fit the deployment environment is part of that approach.
+
+We keep tuning effort comparable across implementations and avoid fine-grained, workload-specific tuning solely to improve benchmark results. The goal is to inform practical technology and configuration choices, rather than establish each technology's performance ceiling. When specialized tuning could materially change a conclusion, we acknowledge that limitation.
+
 ## Experiments
 
 - [Monitoring applications behind Caddy without instrumenting them](statlite/caddy-app-monitoring/report.md) · October 2026
