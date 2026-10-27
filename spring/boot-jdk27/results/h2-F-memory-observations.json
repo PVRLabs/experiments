@@ -1,0 +1,392 @@
+{
+  "source": "existing 10-second Prometheus scrapes and 1-second /proc status; measured workload phases only",
+  "limitation": "JVM gauges are not RSS or complete native allocation accounting; max=-1 means undefined, not negative capacity",
+  "prometheus": {
+    "jvm_buffer_count_buffers{id=\"direct\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_buffer_count_buffers{id=\"mapped - 'non-volatile memory'\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_buffer_count_buffers{id=\"mapped\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_buffer_memory_used_bytes{id=\"direct\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_buffer_memory_used_bytes{id=\"mapped - 'non-volatile memory'\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_buffer_memory_used_bytes{id=\"mapped\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_buffer_total_capacity_bytes{id=\"direct\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_buffer_total_capacity_bytes{id=\"mapped - 'non-volatile memory'\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_buffer_total_capacity_bytes{id=\"mapped\"}": {
+      "samples": 29,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "first": 0.0,
+      "last": 0.0
+    },
+    "jvm_classes_loaded_classes": {
+      "samples": 29,
+      "median": 12143.0,
+      "minimum": 12141.0,
+      "maximum": 12146.0,
+      "first": 12146.0,
+      "last": 12144.0
+    },
+    "jvm_memory_committed_bytes{area=\"heap\",id=\"G1 Eden Space\"}": {
+      "samples": 29,
+      "median": 13631488.0,
+      "minimum": 12582912.0,
+      "maximum": 13631488.0,
+      "first": 12582912.0,
+      "last": 13631488.0
+    },
+    "jvm_memory_committed_bytes{area=\"heap\",id=\"G1 Old Gen\"}": {
+      "samples": 29,
+      "median": 26214400.0,
+      "minimum": 26214400.0,
+      "maximum": 29360128.0,
+      "first": 29360128.0,
+      "last": 26214400.0
+    },
+    "jvm_memory_committed_bytes{area=\"heap\",id=\"G1 Survivor Space\"}": {
+      "samples": 29,
+      "median": 1048576.0,
+      "minimum": 1048576.0,
+      "maximum": 1048576.0,
+      "first": 1048576.0,
+      "last": 1048576.0
+    },
+    "jvm_memory_committed_bytes{area=\"nonheap\",id=\"CodeHeap 'non-nmethods'\"}": {
+      "samples": 29,
+      "median": 2555904.0,
+      "minimum": 2555904.0,
+      "maximum": 2555904.0,
+      "first": 2555904.0,
+      "last": 2555904.0
+    },
+    "jvm_memory_committed_bytes{area=\"nonheap\",id=\"CodeHeap 'non-profiled nmethods'\"}": {
+      "samples": 29,
+      "median": 2686976.0,
+      "minimum": 2555904.0,
+      "maximum": 2883584.0,
+      "first": 2555904.0,
+      "last": 2883584.0
+    },
+    "jvm_memory_committed_bytes{area=\"nonheap\",id=\"CodeHeap 'profiled nmethods'\"}": {
+      "samples": 29,
+      "median": 9699328.0,
+      "minimum": 8912896.0,
+      "maximum": 10027008.0,
+      "first": 8912896.0,
+      "last": 10027008.0
+    },
+    "jvm_memory_committed_bytes{area=\"nonheap\",id=\"Compressed Class Space\"}": {
+      "samples": 29,
+      "median": 1966080.0,
+      "minimum": 1966080.0,
+      "maximum": 1966080.0,
+      "first": 1966080.0,
+      "last": 1966080.0
+    },
+    "jvm_memory_committed_bytes{area=\"nonheap\",id=\"Metaspace\"}": {
+      "samples": 29,
+      "median": 13303808.0,
+      "minimum": 13041664.0,
+      "maximum": 13434880.0,
+      "first": 13041664.0,
+      "last": 13434880.0
+    },
+    "jvm_memory_max_bytes{area=\"heap\",id=\"G1 Eden Space\"}": {
+      "samples": 29,
+      "median": -1.0,
+      "minimum": -1.0,
+      "maximum": -1.0,
+      "first": -1.0,
+      "last": -1.0
+    },
+    "jvm_memory_max_bytes{area=\"heap\",id=\"G1 Old Gen\"}": {
+      "samples": 29,
+      "median": 83886080.0,
+      "minimum": 83886080.0,
+      "maximum": 83886080.0,
+      "first": 83886080.0,
+      "last": 83886080.0
+    },
+    "jvm_memory_max_bytes{area=\"heap\",id=\"G1 Survivor Space\"}": {
+      "samples": 29,
+      "median": -1.0,
+      "minimum": -1.0,
+      "maximum": -1.0,
+      "first": -1.0,
+      "last": -1.0
+    },
+    "jvm_memory_max_bytes{area=\"nonheap\",id=\"CodeHeap 'non-nmethods'\"}": {
+      "samples": 29,
+      "median": 5828608.0,
+      "minimum": 5828608.0,
+      "maximum": 5828608.0,
+      "first": 5828608.0,
+      "last": 5828608.0
+    },
+    "jvm_memory_max_bytes{area=\"nonheap\",id=\"CodeHeap 'non-profiled nmethods'\"}": {
+      "samples": 29,
+      "median": 122916864.0,
+      "minimum": 122916864.0,
+      "maximum": 122916864.0,
+      "first": 122916864.0,
+      "last": 122916864.0
+    },
+    "jvm_memory_max_bytes{area=\"nonheap\",id=\"CodeHeap 'profiled nmethods'\"}": {
+      "samples": 29,
+      "median": 122916864.0,
+      "minimum": 122916864.0,
+      "maximum": 122916864.0,
+      "first": 122916864.0,
+      "last": 122916864.0
+    },
+    "jvm_memory_max_bytes{area=\"nonheap\",id=\"Compressed Class Space\"}": {
+      "samples": 29,
+      "median": 1073741824.0,
+      "minimum": 1073741824.0,
+      "maximum": 1073741824.0,
+      "first": 1073741824.0,
+      "last": 1073741824.0
+    },
+    "jvm_memory_max_bytes{area=\"nonheap\",id=\"Metaspace\"}": {
+      "samples": 29,
+      "median": -1.0,
+      "minimum": -1.0,
+      "maximum": -1.0,
+      "first": -1.0,
+      "last": -1.0
+    },
+    "jvm_memory_used_bytes{area=\"heap\",id=\"G1 Eden Space\"}": {
+      "samples": 29,
+      "median": 6291456.0,
+      "minimum": 0.0,
+      "maximum": 11534336.0,
+      "first": 6291456.0,
+      "last": 10485760.0
+    },
+    "jvm_memory_used_bytes{area=\"heap\",id=\"G1 Old Gen\"}": {
+      "samples": 29,
+      "median": 22467360.0,
+      "minimum": 22221440.0,
+      "maximum": 24251816.0,
+      "first": 24251816.0,
+      "last": 22221440.0
+    },
+    "jvm_memory_used_bytes{area=\"heap\",id=\"G1 Survivor Space\"}": {
+      "samples": 29,
+      "median": 332520.0,
+      "minimum": 290160.0,
+      "maximum": 368064.0,
+      "first": 290160.0,
+      "last": 368064.0
+    },
+    "jvm_memory_used_bytes{area=\"nonheap\",id=\"CodeHeap 'non-nmethods'\"}": {
+      "samples": 29,
+      "median": 2039808.0,
+      "minimum": 2039808.0,
+      "maximum": 2040960.0,
+      "first": 2039808.0,
+      "last": 2040960.0
+    },
+    "jvm_memory_used_bytes{area=\"nonheap\",id=\"CodeHeap 'non-profiled nmethods'\"}": {
+      "samples": 29,
+      "median": 2588416.0,
+      "minimum": 2174336.0,
+      "maximum": 2805760.0,
+      "first": 2174336.0,
+      "last": 2666752.0
+    },
+    "jvm_memory_used_bytes{area=\"nonheap\",id=\"CodeHeap 'profiled nmethods'\"}": {
+      "samples": 29,
+      "median": 9123328.0,
+      "minimum": 8003712.0,
+      "maximum": 9818112.0,
+      "first": 8889984.0,
+      "last": 8232832.0
+    },
+    "jvm_memory_used_bytes{area=\"nonheap\",id=\"Compressed Class Space\"}": {
+      "samples": 29,
+      "median": 1798776.0,
+      "minimum": 1796136.0,
+      "maximum": 1800320.0,
+      "first": 1796744.0,
+      "last": 1800320.0
+    },
+    "jvm_memory_used_bytes{area=\"nonheap\",id=\"Metaspace\"}": {
+      "samples": 29,
+      "median": 12976136.0,
+      "minimum": 12761456.0,
+      "maximum": 13088320.0,
+      "first": 12761456.0,
+      "last": 13088320.0
+    },
+    "jvm_threads_live_threads": {
+      "samples": 29,
+      "median": 32.0,
+      "minimum": 32.0,
+      "maximum": 33.0,
+      "first": 32.0,
+      "last": 32.0
+    }
+  },
+  "derived_simultaneous_pool_sums": {
+    "code_cache_committed_bytes": {
+      "samples": 29,
+      "median": 14942208.0,
+      "minimum": 14024704.0,
+      "maximum": 15466496.0,
+      "first": 14024704.0,
+      "last": 15466496.0
+    },
+    "code_cache_used_bytes": {
+      "samples": 29,
+      "median": 13564416.0,
+      "minimum": 12496384.0,
+      "maximum": 14664832.0,
+      "first": 13104128.0,
+      "last": 12940544.0
+    },
+    "heap_committed_bytes": {
+      "samples": 29,
+      "median": 40894464.0,
+      "minimum": 40894464.0,
+      "maximum": 42991616.0,
+      "first": 42991616.0,
+      "last": 40894464.0
+    },
+    "heap_used_bytes": {
+      "samples": 29,
+      "median": 28860656.0,
+      "minimum": 22585616.0,
+      "maximum": 34334216.0,
+      "first": 30833432.0,
+      "last": 33075264.0
+    },
+    "nonheap_committed_bytes": {
+      "samples": 29,
+      "median": 30212096.0,
+      "minimum": 29032448.0,
+      "maximum": 30867456.0,
+      "first": 29032448.0,
+      "last": 30867456.0
+    },
+    "nonheap_used_bytes": {
+      "samples": 29,
+      "median": 28193936.0,
+      "minimum": 27350528.0,
+      "maximum": 29503488.0,
+      "first": 27662328.0,
+      "last": 27829184.0
+    }
+  },
+  "proc_status": {
+    "VmRSS": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 202.873046875,
+      "maximum_mib": 204.5078125
+    },
+    "RssAnon": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 171.580078125,
+      "maximum_mib": 173.890625
+    },
+    "RssFile": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 30.7890625,
+      "maximum_mib": 34.546875
+    },
+    "RssShmem": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 0.0,
+      "maximum_mib": 0.0
+    },
+    "VmData": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 284.083984375,
+      "maximum_mib": 291.6640625
+    },
+    "VmStk": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 0.12890625,
+      "maximum_mib": 0.12890625
+    },
+    "VmExe": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 0.00390625,
+      "maximum_mib": 0.00390625
+    },
+    "VmLib": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 23.1328125,
+      "maximum_mib": 23.1328125
+    },
+    "VmPTE": {
+      "samples": 298,
+      "missing": 0,
+      "median_mib": 0.681640625,
+      "maximum_mib": 0.6875
+    }
+  }
+}

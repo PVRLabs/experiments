@@ -1,0 +1,16 @@
+{
+  "removed": [
+    "spring-boot-jdbc-4.1.1.jar",
+    "spring-boot-persistence-4.1.1.jar",
+    "spring-boot-sql-4.1.1.jar",
+    "spring-boot-transaction-4.1.1.jar",
+    "spring-jdbc-7.0.9.jar",
+    "spring-tx-7.0.9.jar"
+  ],
+  "added": [
+    "mybatis-3.5.19.jar"
+  ],
+  "shared_identical": 57,
+  "original_runtime_bytes": 28768931,
+  "mybatis_runtime_bytes": 29537484
+}

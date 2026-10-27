@@ -1,0 +1,164 @@
+{
+  "recorded_load": {
+    "samples": 896,
+    "sampled_elapsed_seconds": 897.634988715,
+    "mem_available_min_mib": 48.19921875,
+    "swap_used_max_mib": 0.0,
+    "processes": {
+      "app": {
+        "samples_present": 896,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 187.65234375,
+        "rss_peak_mib": 193.97265625,
+        "rss_first_mib": 162.71875,
+        "rss_last_mib": 191.65625
+      },
+      "mariadb": {
+        "samples_present": 896,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 67.046875,
+        "rss_peak_mib": 72.73046875,
+        "rss_first_mib": 72.73046875,
+        "rss_last_mib": 65.3828125
+      },
+      "fixture": {
+        "samples_present": 896,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 16.1875,
+        "rss_peak_mib": 18.5,
+        "rss_first_mib": 17.65234375,
+        "rss_last_mib": 15.8359375
+      },
+      "statlite": {
+        "samples_present": 896,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 11.9140625,
+        "rss_peak_mib": 14.87109375,
+        "rss_first_mib": 12.94921875,
+        "rss_last_mib": 14.8671875
+      }
+    },
+    "vmstat_deltas": {
+      "oom_kill": 0,
+      "pswpin": 0,
+      "pswpout": 0,
+      "pgmajfault": 5560
+    },
+    "memory_psi_stall_microseconds": {
+      "some": 628786,
+      "full": 407099
+    }
+  },
+  "first_five_minutes": {
+    "samples": 300,
+    "sampled_elapsed_seconds": 299.979898261,
+    "mem_available_min_mib": 52.55078125,
+    "swap_used_max_mib": 0.0,
+    "processes": {
+      "app": {
+        "samples_present": 300,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 177.8671875,
+        "rss_peak_mib": 190.68359375,
+        "rss_first_mib": 162.71875,
+        "rss_last_mib": 184.6015625
+      },
+      "mariadb": {
+        "samples_present": 300,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 67.98046875,
+        "rss_peak_mib": 72.73046875,
+        "rss_first_mib": 72.73046875,
+        "rss_last_mib": 68.3125
+      },
+      "fixture": {
+        "samples_present": 300,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 16.70703125,
+        "rss_peak_mib": 18.5,
+        "rss_first_mib": 17.65234375,
+        "rss_last_mib": 16.57421875
+      },
+      "statlite": {
+        "samples_present": 300,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 12.5859375,
+        "rss_peak_mib": 14.87109375,
+        "rss_first_mib": 12.94921875,
+        "rss_last_mib": 14.70703125
+      }
+    },
+    "vmstat_deltas": {
+      "oom_kill": 0,
+      "pswpin": 0,
+      "pswpout": 0,
+      "pgmajfault": 1930
+    },
+    "memory_psi_stall_microseconds": {
+      "some": 252891,
+      "full": 153798
+    }
+  },
+  "last_five_minutes": {
+    "samples": 300,
+    "sampled_elapsed_seconds": 299.8096944529999,
+    "mem_available_min_mib": 48.19921875,
+    "swap_used_max_mib": 0.0,
+    "processes": {
+      "app": {
+        "samples_present": 300,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 190.984375,
+        "rss_peak_mib": 193.97265625,
+        "rss_first_mib": 187.75,
+        "rss_last_mib": 191.65625
+      },
+      "mariadb": {
+        "samples_present": 300,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 65.99609375,
+        "rss_peak_mib": 67.3671875,
+        "rss_first_mib": 65.96484375,
+        "rss_last_mib": 65.3828125
+      },
+      "fixture": {
+        "samples_present": 300,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 15.8359375,
+        "rss_peak_mib": 16.2109375,
+        "rss_first_mib": 15.828125,
+        "rss_last_mib": 15.8359375
+      },
+      "statlite": {
+        "samples_present": 300,
+        "samples_missing": 0,
+        "samples_complete": true,
+        "rss_median_mib": 11.109375,
+        "rss_peak_mib": 14.8671875,
+        "rss_first_mib": 11.75,
+        "rss_last_mib": 14.8671875
+      }
+    },
+    "vmstat_deltas": {
+      "oom_kill": 0,
+      "pswpin": 0,
+      "pswpout": 0,
+      "pgmajfault": 1546
+    },
+    "memory_psi_stall_microseconds": {
+      "some": 141570,
+      "full": 96260
+    }
+  }
+}

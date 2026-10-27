@@ -36,6 +36,12 @@ We keep tuning effort comparable across implementations and avoid fine-grained, 
 
 ## Experiments
 
+- [Spring Boot deployment optimizations on JDK 27](spring/boot-jdk27/) · October 2026
+
+  Executable JAR versus extracted Spring AOT plus JDK AOT cache on a 512 MiB,
+  no-swap VM with MariaDB. Includes bounded MyBatis and file-backed H2 follow-ups,
+  a separate monitored run, curated sample-level evidence and reanalysis.
+
 - [Monitoring applications behind Caddy without instrumenting them](statlite/caddy-app-monitoring/report.md) · October 2026
 
   Express and Spring Boot behind one Caddy reverse proxy, with HTTP monitoring

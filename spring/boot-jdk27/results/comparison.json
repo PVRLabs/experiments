@@ -1,0 +1,563 @@
+{
+  "method": "One A then one F; 60/120/300/60-second phases; no StatLite",
+  "runs": {
+    "A": {
+      "variant": "A",
+      "raw_run": "regular-A-001",
+      "boot_id": "4352a20d-47e2-4c26-b89c-4a6cb96df494",
+      "startup_seconds": 11.909773255999998,
+      "phases": {
+        "startup": {
+          "samples": 193,
+          "elapsed_seconds": 10.421956394999999,
+          "mem_available_min_mib": 64.57421875,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 109.90234375,
+              "rss_max_sampled_mib": 187.1796875,
+              "cpu_seconds_sampled": 10.0,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 82.6015625,
+              "rss_max_sampled_mib": 82.6015625,
+              "cpu_seconds_sampled": 0.0,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 22.37890625,
+              "rss_max_sampled_mib": 22.3828125,
+              "cpu_seconds_sampled": 0.0,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 59.109375,
+            "max_sampled": 59.109375
+          }
+        },
+        "idle": {
+          "samples": 58,
+          "elapsed_seconds": 57.28083694199999,
+          "mem_available_min_mib": 44.85546875,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 202.947265625,
+              "rss_max_sampled_mib": 203.37109375,
+              "cpu_seconds_sampled": 0.43,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 65.96875,
+              "rss_max_sampled_mib": 71.08984375,
+              "cpu_seconds_sampled": 0.01,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 15.26171875,
+              "rss_max_sampled_mib": 17.1484375,
+              "cpu_seconds_sampled": 0.01,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 63.47265625,
+            "max_sampled": 69.25390625
+          }
+        },
+        "warmup": {
+          "samples": 119,
+          "elapsed_seconds": 118.35291300799999,
+          "mem_available_min_mib": 40.03125,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 206.0546875,
+              "rss_max_sampled_mib": 208.1640625,
+              "cpu_seconds_sampled": 3.69,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 68.26953125,
+              "rss_max_sampled_mib": 70.58203125,
+              "cpu_seconds_sampled": 0.25,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 16.078125,
+              "rss_max_sampled_mib": 16.859375,
+              "cpu_seconds_sampled": 0.03,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 66.76953125,
+            "max_sampled": 69.57421875
+          }
+        },
+        "workload": {
+          "samples": 298,
+          "elapsed_seconds": 297.923709475,
+          "mem_available_min_mib": 25.58984375,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 211.984375,
+              "rss_max_sampled_mib": 216.93359375,
+              "cpu_seconds_sampled": 6.86,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 65.6328125,
+              "rss_max_sampled_mib": 68.08984375,
+              "cpu_seconds_sampled": 0.73,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 15.78515625,
+              "rss_max_sampled_mib": 17.40625,
+              "cpu_seconds_sampled": 0.05,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 63.125,
+            "max_sampled": 67.2890625
+          }
+        },
+        "recovery": {
+          "samples": 59,
+          "elapsed_seconds": 58.17581386300003,
+          "mem_available_min_mib": 29.41796875,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 216.8359375,
+              "rss_max_sampled_mib": 217.3515625,
+              "cpu_seconds_sampled": 0.2,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 63.12109375,
+              "rss_max_sampled_mib": 67.42578125,
+              "cpu_seconds_sampled": 0.01,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 16.00390625,
+              "rss_max_sampled_mib": 16.32421875,
+              "cpu_seconds_sampled": 0.02,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 60.6875,
+            "max_sampled": 66.56640625
+          }
+        }
+      },
+      "workload": {
+        "offered": 1500,
+        "successful": 1500,
+        "errors": 0,
+        "duration_seconds": 300,
+        "actual_seconds": 300.0025909692049,
+        "offered_rps": 5,
+        "successful_rps": 4.999956817552866,
+        "p50_ms": 3.6123888567090034,
+        "p95_ms": 5.3353626281023026,
+        "max_dispatch_lag_ms": 36.288414150476456,
+        "concurrency_limit": 4,
+        "retries": 0,
+        "routes": {
+          "/api/quotes/latest": {
+            "successful": 750,
+            "p50_ms": 3.4974017180502415,
+            "p95_ms": 5.047530867159367
+          },
+          "/api/quotes/history": {
+            "successful": 750,
+            "p50_ms": 3.7248963490128517,
+            "p95_ms": 5.692911799997091
+          }
+        }
+      },
+      "warmup": {
+        "offered": 600,
+        "successful": 600,
+        "errors": 0,
+        "duration_seconds": 120,
+        "actual_seconds": 120.00513953296468,
+        "offered_rps": 5,
+        "successful_rps": 4.9997858619645505,
+        "p50_ms": 4.979983903467655,
+        "p95_ms": 10.418095625936985,
+        "max_dispatch_lag_ms": 59.69965737313032,
+        "concurrency_limit": 4,
+        "retries": 0,
+        "routes": {
+          "/api/quotes/latest": {
+            "successful": 300,
+            "p50_ms": 4.809185396879911,
+            "p95_ms": 10.04351582378149
+          },
+          "/api/quotes/history": {
+            "successful": 300,
+            "p50_ms": 5.345874931663275,
+            "p95_ms": 11.278777848929167
+          }
+        }
+      },
+      "oom_kill_delta_total": 0,
+      "kernel_oom_kill_seen": false,
+      "mem_available_min_all_samples_mib": 25.58984375,
+      "workload_samples_below_32_mib": 148,
+      "memory_psi_stall_microseconds": {
+        "some": 669096,
+        "full": 361472
+      },
+      "ingestion": {
+        "rows_per_symbol": 10,
+        "batches": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cache_verified": false
+    },
+    "F": {
+      "variant": "F",
+      "raw_run": "optimized-F-001",
+      "boot_id": "83e1e7db-d59b-48a0-aa6f-c29434cc026a",
+      "startup_seconds": 3.7894861949999985,
+      "phases": {
+        "startup": {
+          "samples": 53,
+          "elapsed_seconds": 3.7326882009999984,
+          "mem_available_min_mib": 96.7890625,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 124.31640625,
+              "rss_max_sampled_mib": 168.17578125,
+              "cpu_seconds_sampled": 3.47,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 64.11328125,
+              "rss_max_sampled_mib": 82.76953125,
+              "cpu_seconds_sampled": 0.02,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 22.3125,
+              "rss_max_sampled_mib": 22.34765625,
+              "cpu_seconds_sampled": 0.0,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 59.8671875,
+            "max_sampled": 69.83203125
+          }
+        },
+        "idle": {
+          "samples": 58,
+          "elapsed_seconds": 57.25879430500001,
+          "mem_available_min_mib": 84.4609375,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 178.7265625,
+              "rss_max_sampled_mib": 178.96484375,
+              "cpu_seconds_sampled": 0.41,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 72.59375,
+              "rss_max_sampled_mib": 72.7890625,
+              "cpu_seconds_sampled": 0.01,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 21.125,
+              "rss_max_sampled_mib": 21.41796875,
+              "cpu_seconds_sampled": 0.0,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 70.23046875,
+            "max_sampled": 70.3125
+          }
+        },
+        "warmup": {
+          "samples": 119,
+          "elapsed_seconds": 118.36750161900001,
+          "mem_available_min_mib": 70.03515625,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 182.5,
+              "rss_max_sampled_mib": 187.65234375,
+              "cpu_seconds_sampled": 3.53,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 73.046875,
+              "rss_max_sampled_mib": 73.0703125,
+              "cpu_seconds_sampled": 0.24,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 21.046875,
+              "rss_max_sampled_mib": 21.125,
+              "cpu_seconds_sampled": 0.02,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 71.12890625,
+            "max_sampled": 71.1640625
+          }
+        },
+        "workload": {
+          "samples": 298,
+          "elapsed_seconds": 297.97312293100003,
+          "mem_available_min_mib": 65.99609375,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 186.88671875,
+              "rss_max_sampled_mib": 189.25,
+              "cpu_seconds_sampled": 6.28,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 70.55078125,
+              "rss_max_sampled_mib": 72.73046875,
+              "cpu_seconds_sampled": 0.64,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 19.09375,
+              "rss_max_sampled_mib": 20.59765625,
+              "cpu_seconds_sampled": 0.05,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 67.1015625,
+            "max_sampled": 71.03515625
+          }
+        },
+        "recovery": {
+          "samples": 59,
+          "elapsed_seconds": 58.181139005000034,
+          "mem_available_min_mib": 64.17578125,
+          "swap_used_max_mib": 0.0,
+          "pswpin_delta": 0,
+          "pswpout_delta": 0,
+          "oom_kill_delta": 0,
+          "processes": {
+            "app": {
+              "rss_median_mib": 189.1015625,
+              "rss_max_sampled_mib": 189.17578125,
+              "cpu_seconds_sampled": 0.27,
+              "cpu_samples_complete": true
+            },
+            "mariadb": {
+              "rss_median_mib": 67.8125,
+              "rss_max_sampled_mib": 67.8125,
+              "cpu_seconds_sampled": 0.01,
+              "cpu_samples_complete": true
+            },
+            "fixture": {
+              "rss_median_mib": 18.50390625,
+              "rss_max_sampled_mib": 18.50390625,
+              "cpu_seconds_sampled": 0.02,
+              "cpu_samples_complete": true
+            }
+          },
+          "mariadb_cgroup_mib": {
+            "median": 64.75,
+            "max_sampled": 64.75
+          }
+        }
+      },
+      "workload": {
+        "offered": 1500,
+        "successful": 1500,
+        "errors": 0,
+        "duration_seconds": 300,
+        "actual_seconds": 300.0026640598662,
+        "offered_rps": 5,
+        "successful_rps": 4.9999555993965155,
+        "p50_ms": 3.553783055394888,
+        "p95_ms": 5.536165088415146,
+        "max_dispatch_lag_ms": 71.43037486821413,
+        "concurrency_limit": 4,
+        "retries": 0,
+        "routes": {
+          "/api/quotes/latest": {
+            "successful": 750,
+            "p50_ms": 3.4385910257697105,
+            "p95_ms": 5.4299430921673775
+          },
+          "/api/quotes/history": {
+            "successful": 750,
+            "p50_ms": 3.6600762978196144,
+            "p95_ms": 5.711345933377743
+          }
+        }
+      },
+      "warmup": {
+        "offered": 600,
+        "successful": 600,
+        "errors": 0,
+        "duration_seconds": 120,
+        "actual_seconds": 120.00381006486714,
+        "offered_rps": 5,
+        "successful_rps": 4.999841252337527,
+        "p50_ms": 5.167142022401094,
+        "p95_ms": 9.133805986493826,
+        "max_dispatch_lag_ms": 8.72944900766015,
+        "concurrency_limit": 4,
+        "retries": 0,
+        "routes": {
+          "/api/quotes/latest": {
+            "successful": 300,
+            "p50_ms": 5.026987753808498,
+            "p95_ms": 8.939029648900032
+          },
+          "/api/quotes/history": {
+            "successful": 300,
+            "p50_ms": 5.27198426425457,
+            "p95_ms": 9.257564321160316
+          }
+        }
+      },
+      "oom_kill_delta_total": 0,
+      "kernel_oom_kill_seen": false,
+      "mem_available_min_all_samples_mib": 64.17578125,
+      "workload_samples_below_32_mib": 0,
+      "memory_psi_stall_microseconds": {
+        "some": 169782,
+        "full": 96529
+      },
+      "ingestion": {
+        "rows_per_symbol": 10,
+        "batches": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ]
+        ]
+      },
+      "cache_verified": true
+    }
+  }
+}

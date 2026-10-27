@@ -1,0 +1,26 @@
+{
+  "offered": 300,
+  "successful": 300,
+  "errors": 0,
+  "duration_seconds": 60,
+  "actual_seconds": 60.00326000666246,
+  "offered_rps": 5,
+  "successful_rps": 4.999728347537943,
+  "p50_ms": 4.314652178436518,
+  "p95_ms": 7.074752356857061,
+  "max_dispatch_lag_ms": 40.58530414476991,
+  "concurrency_limit": 4,
+  "retries": 0,
+  "routes": {
+    "/api/quotes/latest": {
+      "successful": 150,
+      "p50_ms": 4.144988022744656,
+      "p95_ms": 6.516959052532911
+    },
+    "/api/quotes/history": {
+      "successful": 150,
+      "p50_ms": 4.505401011556387,
+      "p95_ms": 7.440304849296808
+    }
+  }
+}

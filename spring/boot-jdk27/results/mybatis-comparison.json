@@ -1,0 +1,193 @@
+{
+  "window": "steady workload samples before transition-to-workload + 60 seconds; first 300 requests",
+  "jdbc": {
+    "raw_run": "optimized-F-001",
+    "startup_seconds": 3.7894861949999985,
+    "idle": {
+      "samples": 58,
+      "elapsed_seconds": 57.25879430500001,
+      "mem_available_min_mib": 84.4609375,
+      "swap_used_max_mib": 0.0,
+      "pswpin_delta": 0,
+      "pswpout_delta": 0,
+      "oom_kill_delta": 0,
+      "processes": {
+        "app": {
+          "rss_median_mib": 178.7265625,
+          "rss_max_sampled_mib": 178.96484375,
+          "cpu_seconds_sampled": 0.41,
+          "cpu_samples_complete": true
+        },
+        "mariadb": {
+          "rss_median_mib": 72.59375,
+          "rss_max_sampled_mib": 72.7890625,
+          "cpu_seconds_sampled": 0.01,
+          "cpu_samples_complete": true
+        },
+        "fixture": {
+          "rss_median_mib": 21.125,
+          "rss_max_sampled_mib": 21.41796875,
+          "cpu_seconds_sampled": 0.0,
+          "cpu_samples_complete": true
+        }
+      },
+      "mariadb_cgroup_mib": {
+        "median": 70.23046875,
+        "max_sampled": 70.3125
+      }
+    },
+    "recovery": {
+      "samples": 59,
+      "elapsed_seconds": 58.181139005000034,
+      "mem_available_min_mib": 64.17578125,
+      "swap_used_max_mib": 0.0,
+      "pswpin_delta": 0,
+      "pswpout_delta": 0,
+      "oom_kill_delta": 0,
+      "processes": {
+        "app": {
+          "rss_median_mib": 189.1015625,
+          "rss_max_sampled_mib": 189.17578125,
+          "cpu_seconds_sampled": 0.27,
+          "cpu_samples_complete": true
+        },
+        "mariadb": {
+          "rss_median_mib": 67.8125,
+          "rss_max_sampled_mib": 67.8125,
+          "cpu_seconds_sampled": 0.01,
+          "cpu_samples_complete": true
+        },
+        "fixture": {
+          "rss_median_mib": 18.50390625,
+          "rss_max_sampled_mib": 18.50390625,
+          "cpu_seconds_sampled": 0.02,
+          "cpu_samples_complete": true
+        }
+      },
+      "mariadb_cgroup_mib": {
+        "median": 64.75,
+        "max_sampled": 64.75
+      }
+    },
+    "first_minute_workload": {
+      "samples": 59,
+      "processes": {
+        "app": {
+          "rss_median_mib": 187.22265625,
+          "rss_peak_mib": 187.73828125
+        },
+        "mariadb": {
+          "rss_median_mib": 72.73046875,
+          "rss_peak_mib": 72.73046875
+        },
+        "fixture": {
+          "rss_median_mib": 20.59765625,
+          "rss_peak_mib": 20.59765625
+        }
+      },
+      "mem_available_min_mib": 70.47265625,
+      "successful": 300,
+      "errors": 0,
+      "p50_ms": 4.0281969122588634,
+      "p95_ms": 6.061228923499584
+    },
+    "oom_kills": 0,
+    "swap_used_max_mib": 0.0,
+    "boot_id": "83e1e7db-d59b-48a0-aa6f-c29434cc026a"
+  },
+  "mybatis": {
+    "raw_run": "mybatis-memory-001",
+    "startup_seconds": 3.782124576000001,
+    "idle": {
+      "samples": 59,
+      "elapsed_seconds": 58.23683453500001,
+      "mem_available_min_mib": 80.328125,
+      "swap_used_max_mib": 0.0,
+      "pswpin_delta": 0,
+      "pswpout_delta": 0,
+      "oom_kill_delta": 0,
+      "processes": {
+        "app": {
+          "rss_median_mib": 181.6640625,
+          "rss_max_sampled_mib": 181.80859375,
+          "cpu_seconds_sampled": 0.38,
+          "cpu_samples_complete": true
+        },
+        "mariadb": {
+          "rss_median_mib": 72.97265625,
+          "rss_max_sampled_mib": 72.98046875,
+          "cpu_seconds_sampled": 0.01,
+          "cpu_samples_complete": true
+        },
+        "fixture": {
+          "rss_median_mib": 19.5,
+          "rss_max_sampled_mib": 19.5,
+          "cpu_seconds_sampled": 0.01,
+          "cpu_samples_complete": true
+        }
+      },
+      "mariadb_cgroup_mib": {
+        "median": 70.83984375,
+        "max_sampled": 70.921875
+      }
+    },
+    "recovery": {
+      "samples": 58,
+      "elapsed_seconds": 57.15096566400001,
+      "mem_available_min_mib": 69.703125,
+      "swap_used_max_mib": 0.0,
+      "pswpin_delta": 0,
+      "pswpout_delta": 0,
+      "oom_kill_delta": 0,
+      "processes": {
+        "app": {
+          "rss_median_mib": 186.125,
+          "rss_max_sampled_mib": 186.26171875,
+          "cpu_seconds_sampled": 0.23,
+          "cpu_samples_complete": true
+        },
+        "mariadb": {
+          "rss_median_mib": 72.79296875,
+          "rss_max_sampled_mib": 72.79296875,
+          "cpu_seconds_sampled": 0.01,
+          "cpu_samples_complete": true
+        },
+        "fixture": {
+          "rss_median_mib": 18.671875,
+          "rss_max_sampled_mib": 18.671875,
+          "cpu_seconds_sampled": 0.01,
+          "cpu_samples_complete": true
+        }
+      },
+      "mariadb_cgroup_mib": {
+        "median": 70.9921875,
+        "max_sampled": 70.9921875
+      }
+    },
+    "first_minute_workload": {
+      "samples": 59,
+      "processes": {
+        "app": {
+          "rss_median_mib": 185.9765625,
+          "rss_peak_mib": 187.2109375
+        },
+        "mariadb": {
+          "rss_median_mib": 72.86328125,
+          "rss_peak_mib": 73.28515625
+        },
+        "fixture": {
+          "rss_median_mib": 18.7578125,
+          "rss_peak_mib": 18.91015625
+        }
+      },
+      "mem_available_min_mib": 69.75,
+      "successful": 300,
+      "errors": 0,
+      "p50_ms": 4.314652178436518,
+      "p95_ms": 7.074752356857061
+    },
+    "oom_kills": 0,
+    "swap_used_max_mib": 0.0,
+    "boot_id": "4e0f6af7-8838-4a6c-8f13-8ac7b1d5f355"
+  }
+}
