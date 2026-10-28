@@ -1,0 +1,21 @@
+{
+  "startup_seconds": 0.1832242659999963,
+  "startup_epoch": 1793214486.5718617,
+  "clock_ticks": 100,
+  "heap_argument": "-Xmx80m",
+  "final_memory_psi_us": {
+    "some": 110649,
+    "full": 62823
+  },
+  "final_oom_kill": 0,
+  "kernel_oom_kill_seen": false,
+  "graceful_shutdown": true,
+  "phase_seconds": [
+    60,
+    120,
+    300,
+    60
+  ],
+  "measured_run_status": "completed",
+  "metric_scrape_count": 51
+}

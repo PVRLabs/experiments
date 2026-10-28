@@ -1,0 +1,30 @@
+{
+  "historical": "optimized-F-001",
+  "native": "oracle-native-001",
+  "database_settings_match": true,
+  "settings": {
+    "version": "10.11.14-MariaDB-0ubuntu0.24.04.1",
+    "innodb_buffer_pool_size": "67108864",
+    "key_buffer_size": "8388608",
+    "aria_pagecache_buffer_size": "16777216",
+    "innodb_flush_log_at_trx_commit": "1",
+    "sync_binlog": "0",
+    "log_bin": "OFF",
+    "max_connections": "151",
+    "time_zone": "+00:00",
+    "performance_schema": "OFF"
+  },
+  "kernel": "6.8.0-147-generic",
+  "libc": "2.39-0ubuntu8.9",
+  "python": "3.12.3-0ubuntu2.1",
+  "allocation": {
+    "memory_mib": 512,
+    "cpus": 1,
+    "swap": false
+  },
+  "artifact": "oracle-native-001",
+  "runtime_tools": "oracle-runtime-001",
+  "runtime_environment_capture": "oracle-measure-env-002",
+  "limitations": "Historical F uses kernel 6.8.0-134 and libc 2.39-0ubuntu8.7; native uses kernel 6.8.0-147 and libc 2.39-0ubuntu8.9. Separate dates/boots and Oracle Native Image Serial versus HotSpot 27 G1; no attribution to compiler alone.",
+  "compiler": "Oracle GraalVM 25.0.4+7.1 (25.0.4+7-LTS-jvmci-b01), explicitly authorized override"
+}

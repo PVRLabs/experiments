@@ -1,0 +1,15 @@
+symbol	COUNT(*)
+AAPL	10
+GOOG	10
+NVDA	10
+cycle	sample_index	market_time
+0	0	09:30
+0	1	09:31
+0	2	09:32
+0	3	09:33
+0	4	09:34
+0	5	09:35
+0	6	09:36
+0	7	09:37
+0	8	09:38
+0	9	09:39

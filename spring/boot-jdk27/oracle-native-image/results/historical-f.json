@@ -1,0 +1,163 @@
+{
+  "source_url": "https://github.com/PVRLabs/experiments/blob/main/spring/boot-jdk27/results/comparison.json",
+  "raw_run": "optimized-F-001",
+  "startup_seconds": 3.7894861949999985,
+  "phases": {
+    "idle": {
+      "samples": 58,
+      "elapsed_seconds": 57.25879430500001,
+      "mem_available_min_mib": 84.4609375,
+      "swap_used_max_mib": 0.0,
+      "pswpin_delta": 0,
+      "pswpout_delta": 0,
+      "oom_kill_delta": 0,
+      "processes": {
+        "app": {
+          "rss_median_mib": 178.7265625,
+          "rss_max_sampled_mib": 178.96484375,
+          "cpu_seconds_sampled": 0.41,
+          "cpu_samples_complete": true
+        },
+        "mariadb": {
+          "rss_median_mib": 72.59375,
+          "rss_max_sampled_mib": 72.7890625,
+          "cpu_seconds_sampled": 0.01,
+          "cpu_samples_complete": true
+        },
+        "fixture": {
+          "rss_median_mib": 21.125,
+          "rss_max_sampled_mib": 21.41796875,
+          "cpu_seconds_sampled": 0.0,
+          "cpu_samples_complete": true
+        }
+      },
+      "mariadb_cgroup_mib": {
+        "median": 70.23046875,
+        "max_sampled": 70.3125
+      }
+    },
+    "workload": {
+      "samples": 298,
+      "elapsed_seconds": 297.97312293100003,
+      "mem_available_min_mib": 65.99609375,
+      "swap_used_max_mib": 0.0,
+      "pswpin_delta": 0,
+      "pswpout_delta": 0,
+      "oom_kill_delta": 0,
+      "processes": {
+        "app": {
+          "rss_median_mib": 186.88671875,
+          "rss_max_sampled_mib": 189.25,
+          "cpu_seconds_sampled": 6.28,
+          "cpu_samples_complete": true
+        },
+        "mariadb": {
+          "rss_median_mib": 70.55078125,
+          "rss_max_sampled_mib": 72.73046875,
+          "cpu_seconds_sampled": 0.64,
+          "cpu_samples_complete": true
+        },
+        "fixture": {
+          "rss_median_mib": 19.09375,
+          "rss_max_sampled_mib": 20.59765625,
+          "cpu_seconds_sampled": 0.05,
+          "cpu_samples_complete": true
+        }
+      },
+      "mariadb_cgroup_mib": {
+        "median": 67.1015625,
+        "max_sampled": 71.03515625
+      }
+    },
+    "recovery": {
+      "samples": 59,
+      "elapsed_seconds": 58.181139005000034,
+      "mem_available_min_mib": 64.17578125,
+      "swap_used_max_mib": 0.0,
+      "pswpin_delta": 0,
+      "pswpout_delta": 0,
+      "oom_kill_delta": 0,
+      "processes": {
+        "app": {
+          "rss_median_mib": 189.1015625,
+          "rss_max_sampled_mib": 189.17578125,
+          "cpu_seconds_sampled": 0.27,
+          "cpu_samples_complete": true
+        },
+        "mariadb": {
+          "rss_median_mib": 67.8125,
+          "rss_max_sampled_mib": 67.8125,
+          "cpu_seconds_sampled": 0.01,
+          "cpu_samples_complete": true
+        },
+        "fixture": {
+          "rss_median_mib": 18.50390625,
+          "rss_max_sampled_mib": 18.50390625,
+          "cpu_seconds_sampled": 0.02,
+          "cpu_samples_complete": true
+        }
+      },
+      "mariadb_cgroup_mib": {
+        "median": 64.75,
+        "max_sampled": 64.75
+      }
+    }
+  },
+  "workload": {
+    "offered": 1500,
+    "successful": 1500,
+    "errors": 0,
+    "duration_seconds": 300,
+    "actual_seconds": 300.0026640598662,
+    "offered_rps": 5,
+    "successful_rps": 4.9999555993965155,
+    "p50_ms": 3.553783055394888,
+    "p95_ms": 5.536165088415146,
+    "max_dispatch_lag_ms": 71.43037486821413,
+    "concurrency_limit": 4,
+    "retries": 0,
+    "routes": {
+      "/api/quotes/latest": {
+        "successful": 750,
+        "p50_ms": 3.4385910257697105,
+        "p95_ms": 5.4299430921673775
+      },
+      "/api/quotes/history": {
+        "successful": 750,
+        "p50_ms": 3.6600762978196144,
+        "p95_ms": 5.711345933377743
+      }
+    }
+  },
+  "warmup": {
+    "offered": 600,
+    "successful": 600,
+    "errors": 0,
+    "duration_seconds": 120,
+    "actual_seconds": 120.00381006486714,
+    "offered_rps": 5,
+    "successful_rps": 4.999841252337527,
+    "p50_ms": 5.167142022401094,
+    "p95_ms": 9.133805986493826,
+    "max_dispatch_lag_ms": 8.72944900766015,
+    "concurrency_limit": 4,
+    "retries": 0,
+    "routes": {
+      "/api/quotes/latest": {
+        "successful": 300,
+        "p50_ms": 5.026987753808498,
+        "p95_ms": 8.939029648900032
+      },
+      "/api/quotes/history": {
+        "successful": 300,
+        "p50_ms": 5.27198426425457,
+        "p95_ms": 9.257564321160316
+      }
+    }
+  },
+  "mem_available_min_all_samples_mib": 64.17578125,
+  "memory_psi_stall_microseconds": {
+    "some": 169782,
+    "full": 96529
+  }
+}

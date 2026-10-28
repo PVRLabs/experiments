@@ -1,0 +1,33 @@
+{
+  "distribution": "Oracle GraalVM 25.0.4+7.1",
+  "java_build": "25.0.4+7-LTS-jvmci-b01",
+  "native_runtime_build": "25.0.4+7-LTS",
+  "builder": {
+    "vm": "boot27-builder",
+    "memory_mib": 6144,
+    "cpus": 2,
+    "swap": false
+  },
+  "command": "mvn -B -ntp -Djava.version=25 -DskipTests -Pnative clean native:compile",
+  "optimization_level": 2,
+  "target": "x86-64-v3",
+  "pgo": "built-in ML-inferred; no supplied training profile",
+  "collector": "Serial",
+  "wall_seconds": 707.74,
+  "os_peak_rss_kib": 5192172,
+  "compiler_reported_peak_rss_decimal_gb": 5.32,
+  "compiler_elapsed_seconds": 681,
+  "payload_files": {
+    "libjvm.so": 9240,
+    "market-replay-spring": 112527624,
+    "libmanagement_ext.so": 33000,
+    "libawt.so": 924120,
+    "libawt_headless.so": 42648,
+    "libawt_xawt.so": 520424,
+    "libjava.so": 9240
+  },
+  "payload_bytes": 114066296,
+  "exit_code": 0,
+  "limitations": "One build, populated Maven cache, six-GiB/two-vCPU VM; not comparable to previous macOS or four-vCPU builder timing as a controlled toolchain effect.",
+  "installation_provenance": "Reused retained Oracle GraalVM installation from the Javalin builder workspace; exact java/native-image outputs captured in private build environment. No fresh download or original download receipt captured in this follow-up."
+}

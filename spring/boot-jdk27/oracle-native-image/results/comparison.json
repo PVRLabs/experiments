@@ -1,0 +1,826 @@
+{
+  "method": "One native run; historical F read without modification; 60/120/300/60 seconds; no StatLite",
+  "checks_passed": true,
+  "native": {
+    "variant": "native",
+    "raw_run": "oracle-native-001",
+    "startup_seconds": 0.1832242659999963,
+    "phases": {
+      "before-launch": {
+        "samples": 1,
+        "elapsed_seconds": 0.0,
+        "mem_available_min_mib": 241.0859375,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "mariadb": {
+            "rss_median_mib": 83.26171875,
+            "rss_max_sampled_mib": 83.26171875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 60.44140625,
+          "max_sampled": 60.44140625
+        }
+      },
+      "startup": {
+        "samples": 4,
+        "elapsed_seconds": 0.1564189860000056,
+        "mem_available_min_mib": 209.81640625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 86.6640625,
+            "rss_max_sampled_mib": 101.83203125,
+            "cpu_seconds_sampled": 0.13,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 83.26171875,
+            "rss_max_sampled_mib": 83.26171875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 60.44140625,
+          "max_sampled": 60.44140625
+        }
+      },
+      "transition-to-preparation-idle": {
+        "samples": 1,
+        "elapsed_seconds": 0.0,
+        "mem_available_min_mib": 203.82421875,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 106.33984375,
+            "rss_max_sampled_mib": 106.33984375,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 74.02734375,
+            "rss_max_sampled_mib": 74.02734375,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 62.8359375,
+          "max_sampled": 62.8359375
+        }
+      },
+      "transition-to-idle": {
+        "samples": 1,
+        "elapsed_seconds": 0.0,
+        "mem_available_min_mib": 203.0078125,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 106.33984375,
+            "rss_max_sampled_mib": 106.33984375,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 74.02734375,
+            "rss_max_sampled_mib": 74.02734375,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 62.828125,
+          "max_sampled": 62.828125
+        }
+      },
+      "idle": {
+        "samples": 59,
+        "elapsed_seconds": 58.11796794200001,
+        "mem_available_min_mib": 202.9375,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 106.796875,
+            "rss_max_sampled_mib": 109.5625,
+            "cpu_seconds_sampled": 0.06,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 74.10546875,
+            "rss_max_sampled_mib": 74.11328125,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.01,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 62.9453125,
+          "max_sampled": 63.02734375
+        }
+      },
+      "transition-to-warmup": {
+        "samples": 1,
+        "elapsed_seconds": 0.0,
+        "mem_available_min_mib": 207.015625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 109.5859375,
+            "rss_max_sampled_mib": 109.5859375,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 74.1171875,
+            "rss_max_sampled_mib": 74.1171875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 63.03125,
+          "max_sampled": 63.03125
+        }
+      },
+      "warmup": {
+        "samples": 118,
+        "elapsed_seconds": 117.219156051,
+        "mem_available_min_mib": 199.05859375,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 106.859375,
+            "rss_max_sampled_mib": 109.609375,
+            "cpu_seconds_sampled": 0.61,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 74.14453125,
+            "rss_max_sampled_mib": 74.1484375,
+            "cpu_seconds_sampled": 0.28,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.03,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 63.05859375,
+          "max_sampled": 63.0625
+        }
+      },
+      "transition-to-workload": {
+        "samples": 1,
+        "elapsed_seconds": 0.0,
+        "mem_available_min_mib": 204.90625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 106.86328125,
+            "rss_max_sampled_mib": 106.86328125,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 71.625,
+            "rss_max_sampled_mib": 71.625,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 62.90625,
+          "max_sampled": 62.90625
+        }
+      },
+      "workload": {
+        "samples": 299,
+        "elapsed_seconds": 298.62557305599995,
+        "mem_available_min_mib": 204.90625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 107.02734375,
+            "rss_max_sampled_mib": 107.5546875,
+            "cpu_seconds_sampled": 1.67,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 71.6328125,
+            "rss_max_sampled_mib": 71.6328125,
+            "cpu_seconds_sampled": 0.73,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.05,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 62.9140625,
+          "max_sampled": 62.94140625
+        }
+      },
+      "transition-to-recovery": {
+        "samples": 1,
+        "elapsed_seconds": 0.0,
+        "mem_available_min_mib": 204.33203125,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 107.5546875,
+            "rss_max_sampled_mib": 107.5546875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 71.6328125,
+            "rss_max_sampled_mib": 71.6328125,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 62.9140625,
+          "max_sampled": 62.9140625
+        }
+      },
+      "recovery": {
+        "samples": 59,
+        "elapsed_seconds": 58.12293103000002,
+        "mem_available_min_mib": 204.06640625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 107.5546875,
+            "rss_max_sampled_mib": 107.5546875,
+            "cpu_seconds_sampled": 0.06,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 71.6328125,
+            "rss_max_sampled_mib": 71.6328125,
+            "cpu_seconds_sampled": 0.01,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.44921875,
+            "rss_max_sampled_mib": 22.44921875,
+            "cpu_seconds_sampled": 0.01,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 62.9140625,
+          "max_sampled": 62.9140625
+        }
+      }
+    },
+    "warmup": {
+      "offered": 600,
+      "successful": 600,
+      "errors": 0,
+      "duration_seconds": 120,
+      "actual_seconds": 120.00447663618252,
+      "offered_rps": 5,
+      "successful_rps": 4.999813480450563,
+      "p50_ms": 3.1557632610201836,
+      "p95_ms": 4.555336199700832,
+      "max_dispatch_lag_ms": 8.196867071092129,
+      "concurrency_limit": 4,
+      "retries": 0,
+      "routes": {
+        "/api/quotes/latest": {
+          "successful": 300,
+          "p50_ms": 3.1279660761356354,
+          "p95_ms": 4.543615970760584
+        },
+        "/api/quotes/history": {
+          "successful": 300,
+          "p50_ms": 3.1720330007374287,
+          "p95_ms": 4.672703333199024
+        }
+      }
+    },
+    "workload": {
+      "offered": 1500,
+      "successful": 1500,
+      "errors": 0,
+      "duration_seconds": 300,
+      "actual_seconds": 300.0040666637942,
+      "offered_rps": 5,
+      "successful_rps": 4.999932223188848,
+      "p50_ms": 3.463681321591139,
+      "p95_ms": 4.842493683099747,
+      "max_dispatch_lag_ms": 43.474423699080944,
+      "concurrency_limit": 4,
+      "retries": 0,
+      "routes": {
+        "/api/quotes/latest": {
+          "successful": 750,
+          "p50_ms": 3.280265722423792,
+          "p95_ms": 4.635252058506012
+        },
+        "/api/quotes/history": {
+          "successful": 750,
+          "p50_ms": 3.596303053200245,
+          "p95_ms": 5.123321898281574
+        }
+      }
+    },
+    "heap_argument": "-Xmx80m",
+    "collector": "Serial (compiled default)",
+    "oom_kill_delta_total": 0,
+    "kernel_oom_kill_seen": false,
+    "mem_available_min_all_samples_mib": 199.05859375,
+    "workload_samples_below_32_mib": 0,
+    "memory_psi_stall_microseconds": {
+      "some": 44477,
+      "full": 28708
+    },
+    "ingestion": {
+      "rows_per_symbol": 10,
+      "batches": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ]
+      ]
+    },
+    "metrics_scrapes": 51,
+    "metric_families": [
+      "application_ready_time_seconds",
+      "application_started_time_seconds",
+      "disk_free_bytes",
+      "disk_total_bytes",
+      "executor_active_threads",
+      "executor_completed_tasks_total",
+      "executor_pool_core_threads",
+      "executor_pool_max_threads",
+      "executor_pool_size_threads",
+      "executor_queue_remaining_tasks",
+      "executor_queued_tasks",
+      "hikaricp_connections",
+      "hikaricp_connections_acquire_seconds",
+      "hikaricp_connections_acquire_seconds_max",
+      "hikaricp_connections_active",
+      "hikaricp_connections_creation_seconds",
+      "hikaricp_connections_creation_seconds_max",
+      "hikaricp_connections_idle",
+      "hikaricp_connections_max",
+      "hikaricp_connections_min",
+      "hikaricp_connections_pending",
+      "hikaricp_connections_timeout_total",
+      "hikaricp_connections_usage_seconds",
+      "hikaricp_connections_usage_seconds_max",
+      "http_server_requests_active_seconds",
+      "http_server_requests_active_seconds_max",
+      "http_server_requests_seconds",
+      "http_server_requests_seconds_max",
+      "jdbc_connections_max",
+      "jdbc_connections_min",
+      "jvm_classes_loaded_classes",
+      "jvm_classes_loaded_count_classes_total",
+      "jvm_classes_unloaded_classes_total",
+      "jvm_gc_overhead",
+      "jvm_info",
+      "jvm_memory_committed_bytes",
+      "jvm_memory_max_bytes",
+      "jvm_memory_used_bytes",
+      "jvm_threads_daemon_threads",
+      "jvm_threads_live_threads",
+      "jvm_threads_peak_threads",
+      "jvm_threads_started_threads_total",
+      "jvm_threads_states_threads",
+      "logback_events_total",
+      "process_cpu_time_ns_total",
+      "process_cpu_usage",
+      "process_files_max_files",
+      "process_files_open_files",
+      "process_start_time_seconds",
+      "process_uptime_seconds",
+      "system_cpu_count",
+      "system_cpu_usage",
+      "system_load_average_1m",
+      "tomcat_sessions_active_current_sessions",
+      "tomcat_sessions_active_max_sessions",
+      "tomcat_sessions_alive_max_seconds",
+      "tomcat_sessions_created_sessions_total",
+      "tomcat_sessions_expired_sessions_total",
+      "tomcat_sessions_rejected_sessions_total"
+    ],
+    "workload_sample_gap_max_seconds": 1.0150015359999998,
+    "toolchain": "Oracle GraalVM 25.0.4+7.1 (Java build 25.0.4+7-LTS-jvmci-b01)"
+  },
+  "historical_F": {
+    "variant": "F",
+    "raw_run": "optimized-F-001",
+    "boot_id": "83e1e7db-d59b-48a0-aa6f-c29434cc026a",
+    "startup_seconds": 3.7894861949999985,
+    "phases": {
+      "startup": {
+        "samples": 53,
+        "elapsed_seconds": 3.7326882009999984,
+        "mem_available_min_mib": 96.7890625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 124.31640625,
+            "rss_max_sampled_mib": 168.17578125,
+            "cpu_seconds_sampled": 3.47,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 64.11328125,
+            "rss_max_sampled_mib": 82.76953125,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.3125,
+            "rss_max_sampled_mib": 22.34765625,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 59.8671875,
+          "max_sampled": 69.83203125
+        }
+      },
+      "idle": {
+        "samples": 58,
+        "elapsed_seconds": 57.25879430500001,
+        "mem_available_min_mib": 84.4609375,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 178.7265625,
+            "rss_max_sampled_mib": 178.96484375,
+            "cpu_seconds_sampled": 0.41,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 72.59375,
+            "rss_max_sampled_mib": 72.7890625,
+            "cpu_seconds_sampled": 0.01,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 21.125,
+            "rss_max_sampled_mib": 21.41796875,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 70.23046875,
+          "max_sampled": 70.3125
+        }
+      },
+      "warmup": {
+        "samples": 119,
+        "elapsed_seconds": 118.36750161900001,
+        "mem_available_min_mib": 70.03515625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 182.5,
+            "rss_max_sampled_mib": 187.65234375,
+            "cpu_seconds_sampled": 3.53,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 73.046875,
+            "rss_max_sampled_mib": 73.0703125,
+            "cpu_seconds_sampled": 0.24,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 21.046875,
+            "rss_max_sampled_mib": 21.125,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 71.12890625,
+          "max_sampled": 71.1640625
+        }
+      },
+      "workload": {
+        "samples": 298,
+        "elapsed_seconds": 297.97312293100003,
+        "mem_available_min_mib": 65.99609375,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 186.88671875,
+            "rss_max_sampled_mib": 189.25,
+            "cpu_seconds_sampled": 6.28,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 70.55078125,
+            "rss_max_sampled_mib": 72.73046875,
+            "cpu_seconds_sampled": 0.64,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 19.09375,
+            "rss_max_sampled_mib": 20.59765625,
+            "cpu_seconds_sampled": 0.05,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 67.1015625,
+          "max_sampled": 71.03515625
+        }
+      },
+      "recovery": {
+        "samples": 59,
+        "elapsed_seconds": 58.181139005000034,
+        "mem_available_min_mib": 64.17578125,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 189.1015625,
+            "rss_max_sampled_mib": 189.17578125,
+            "cpu_seconds_sampled": 0.27,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 67.8125,
+            "rss_max_sampled_mib": 67.8125,
+            "cpu_seconds_sampled": 0.01,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 18.50390625,
+            "rss_max_sampled_mib": 18.50390625,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 64.75,
+          "max_sampled": 64.75
+        }
+      }
+    },
+    "workload": {
+      "offered": 1500,
+      "successful": 1500,
+      "errors": 0,
+      "duration_seconds": 300,
+      "actual_seconds": 300.0026640598662,
+      "offered_rps": 5,
+      "successful_rps": 4.9999555993965155,
+      "p50_ms": 3.553783055394888,
+      "p95_ms": 5.536165088415146,
+      "max_dispatch_lag_ms": 71.43037486821413,
+      "concurrency_limit": 4,
+      "retries": 0,
+      "routes": {
+        "/api/quotes/latest": {
+          "successful": 750,
+          "p50_ms": 3.4385910257697105,
+          "p95_ms": 5.4299430921673775
+        },
+        "/api/quotes/history": {
+          "successful": 750,
+          "p50_ms": 3.6600762978196144,
+          "p95_ms": 5.711345933377743
+        }
+      }
+    },
+    "warmup": {
+      "offered": 600,
+      "successful": 600,
+      "errors": 0,
+      "duration_seconds": 120,
+      "actual_seconds": 120.00381006486714,
+      "offered_rps": 5,
+      "successful_rps": 4.999841252337527,
+      "p50_ms": 5.167142022401094,
+      "p95_ms": 9.133805986493826,
+      "max_dispatch_lag_ms": 8.72944900766015,
+      "concurrency_limit": 4,
+      "retries": 0,
+      "routes": {
+        "/api/quotes/latest": {
+          "successful": 300,
+          "p50_ms": 5.026987753808498,
+          "p95_ms": 8.939029648900032
+        },
+        "/api/quotes/history": {
+          "successful": 300,
+          "p50_ms": 5.27198426425457,
+          "p95_ms": 9.257564321160316
+        }
+      }
+    },
+    "oom_kill_delta_total": 0,
+    "kernel_oom_kill_seen": false,
+    "mem_available_min_all_samples_mib": 64.17578125,
+    "workload_samples_below_32_mib": 0,
+    "memory_psi_stall_microseconds": {
+      "some": 169782,
+      "full": 96529
+    },
+    "ingestion": {
+      "rows_per_symbol": 10,
+      "batches": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ]
+      ]
+    },
+    "cache_verified": true
+  },
+  "limitations": [
+    "Single runs on different dates and VM instances; ordinary host variation remains.",
+    "Native Oracle GraalVM 25.0.4+7.1 Serial versus HotSpot JDK 27 G1; independent 80 MiB heap guards do not imply equivalent RSS.",
+    "Five rps is a fixed workload, not a capacity test; no long-term safety claim.",
+    "Startup readiness polling approximately 50 ms; process RSS sampled, not an exact peak.",
+    "Missing native diagnostics are not zero; heap option policy is not an observed per-pool maximum.",
+    "Native kernel 6.8.0-147/libc 2.39-0ubuntu8.9 versus historical F kernel 6.8.0-134/libc 2.39-0ubuntu8.7; OS patch drift is not isolated."
+  ]
+}

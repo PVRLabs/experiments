@@ -5,6 +5,36 @@ extracted layout, Spring AOT and a trained JDK AOT cache, inside a 512 MiB,
 1 vCPU, no-swap Ubuntu VM with local MariaDB. Separate follow-ups examine manual
 MyBatis integration, file-backed H2, and monitoring with StatLite.
 
+## Three deployment stages
+
+The Oracle follow-up retains the application, MariaDB settings and five-rps
+protocol, while changing the deployment toolchain. HotSpot A and F use **JDK 27**;
+Oracle GraalVM Native Image uses **JDK 25**, not JDK 27.
+
+| Observation | Standard HotSpot A, JDK 27 | Optimized HotSpot F, JDK 27 | Oracle Native Image, JDK 25 |
+| --- | ---: | ---: | ---: |
+| HTTP and persistence readiness | 11.91 s | 3.789 s | 0.183 s |
+| Workload median app RSS | 212.0 MiB | 186.9 MiB | 107.0 MiB |
+| Workload minimum host MemAvailable | 25.6 MiB | 66.0 MiB | 204.9 MiB |
+| HTTP p50 / p95 | 3.61 / 5.34 ms | 3.55 / 5.54 ms | 3.46 / 4.84 ms |
+| Successful workload requests / errors | 1,500 / 0 | 1,500 / 0 | 1,500 / 0 |
+
+Native median app RSS was 42.7% lower than optimized F in these observations.
+Its default build took 707.74 seconds on a separate 6 GiB/two-vCPU builder,
+with 5,192,172 KiB OS peak RSS. Runtime heaps have independent `-Xmx80m`
+guards; HotSpot G1 and compiled native Serial GC have different memory layouts.
+F ran October 23 and native October 28 on separate VMs/boots, with kernel/libc
+patch drift. These single runs do not isolate compiler effects, estimate variance,
+or establish capacity or long-term safety. Host headroom is measured separately
+from process RSS; small latency differences at five rps do not establish a ranking.
+
+See the [Oracle methodology and limitations](oracle-native-image/README.md),
+[detailed comparison](oracle-native-image/results/comparison.json),
+[build provenance](oracle-native-image/results/build.json) and
+[reproduction guide](oracle-native-image/reproduction-guide.md).
+Recheck native evidence independently with `python3 oracle-native-image/analyze.py`.
+The existing HotSpot results, methods and follow-up evidence below are retained.
+
 ## Results
 
 | Observation | Ordinary MariaDB A | Optimized MariaDB F | Optimized file-backed H2 F |

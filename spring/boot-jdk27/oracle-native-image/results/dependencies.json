@@ -1,0 +1,7 @@
+{
+  "tomcat-embed-core": "11.0.24",
+  "HikariCP": "7.0.2",
+  "spring-boot": "4.1.1",
+  "mariadb-java-client": "3.5.10",
+  "spring-core": "7.0.9"
+}

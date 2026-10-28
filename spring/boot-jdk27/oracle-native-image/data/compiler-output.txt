@@ -1,0 +1,8 @@
+ Java version: 25.0.4+7-LTS, vendor version: Oracle GraalVM 25.0.4+7.1
+ Graal compiler: optimization level: 2, target machine: x86-64-v3, PGO: ML-inferred
+ Garbage collector: Serial GC (max heap size: 80% of RAM)
+ - 4.69GB of memory (75.6% of system memory, less than 8GB of memory available)
+ - 2 thread(s) (100.0% of 2 available processor(s), determined at start)
+                      74.5s (10.9% of total time) in 2336 GCs | Peak RSS: 5.32GB | CPU load: 1.76
+Finished generating 'market-replay-spring' in 11m 21s.
+[INFO] BUILD SUCCESS
