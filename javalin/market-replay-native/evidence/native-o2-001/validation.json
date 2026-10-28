@@ -1,0 +1,63 @@
+{
+  "oom_kill_delta_total": 0,
+  "kernel_oom_kill_seen": false,
+  "ingestion": {
+    "rows_per_symbol": 10,
+    "batches": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ]
+    ]
+  },
+  "cache_verified": false,
+  "collector": "Serial",
+  "collector_provenance": "inferred from native flag; not independently verified by analyzer",
+  "metrics_overhead": {
+    "scrapes": 52,
+    "total_bytes": 18638,
+    "total_seconds": 0.05009488399988271,
+    "median_ms": 0.8994704999736314,
+    "max_ms": 1.5046260000417533
+  },
+  "kernel_observations": [
+    "Oct 28 17:29:05 lima-boot27-512 kernel: clocksource: timekeeping watchdog on CPU0: hpet wd-wd read-back delay of 253663ns",
+    "Oct 28 17:29:05 lima-boot27-512 kernel: clocksource: wd-tsc-wd read-back delay of 210990ns, clock-skew test skipped!"
+  ]
+}

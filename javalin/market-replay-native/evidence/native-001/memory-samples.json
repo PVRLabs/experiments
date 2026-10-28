@@ -1,0 +1,5441 @@
+[
+  {
+    "phase": "before-launch",
+    "monotonic": 30.678679219,
+    "rss_mib": {
+      "mariadb": 82.68359375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 230.86328125
+  },
+  {
+    "phase": "startup",
+    "monotonic": 30.680793232,
+    "rss_mib": {
+      "app": 0.23828125,
+      "mariadb": 82.68359375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 230.7109375
+  },
+  {
+    "phase": "startup",
+    "monotonic": 30.732653714,
+    "rss_mib": {
+      "app": 35.80078125,
+      "mariadb": 82.68359375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 222.890625
+  },
+  {
+    "phase": "startup",
+    "monotonic": 30.784708521,
+    "rss_mib": {
+      "app": 44.32421875,
+      "mariadb": 82.73046875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 220.42578125
+  },
+  {
+    "phase": "transition-to-preparation-idle",
+    "monotonic": 30.791993543,
+    "rss_mib": {
+      "app": 46.25,
+      "mariadb": 82.7421875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.87890625
+  },
+  {
+    "phase": "transition-to-idle",
+    "monotonic": 31.793468716,
+    "rss_mib": {
+      "app": 46.38671875,
+      "mariadb": 82.74609375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.8046875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 32.794969807,
+    "rss_mib": {
+      "app": 46.38671875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.8046875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 33.796320916,
+    "rss_mib": {
+      "app": 46.38671875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.77734375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 34.797637855,
+    "rss_mib": {
+      "app": 46.38671875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.77734375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 35.79933703,
+    "rss_mib": {
+      "app": 46.44921875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.77734375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 36.800739624,
+    "rss_mib": {
+      "app": 46.44921875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.80859375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 37.802955671,
+    "rss_mib": {
+      "app": 46.44921875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.80859375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 38.806508846,
+    "rss_mib": {
+      "app": 46.453125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.80859375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 39.808471416,
+    "rss_mib": {
+      "app": 46.453125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.83203125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 40.811251293,
+    "rss_mib": {
+      "app": 46.453125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.84375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 41.815008984,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.85546875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 42.816842269,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.85546875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 43.818842126,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.7265625
+  },
+  {
+    "phase": "idle",
+    "monotonic": 44.821427295,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.75
+  },
+  {
+    "phase": "idle",
+    "monotonic": 45.848608603,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.75
+  },
+  {
+    "phase": "idle",
+    "monotonic": 46.85071196,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.75
+  },
+  {
+    "phase": "idle",
+    "monotonic": 47.852983658,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.75
+  },
+  {
+    "phase": "idle",
+    "monotonic": 48.854882708,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.75
+  },
+  {
+    "phase": "idle",
+    "monotonic": 49.856573147,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.8046875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 50.858389236,
+    "rss_mib": {
+      "app": 46.5859375,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.8046875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 51.861768568,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.58984375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 52.863935105,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.61328125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 53.86666049,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.6328125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 54.868926597,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.6328125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 55.870472415,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.6328125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 56.872444064,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.6328125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 57.874382477,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.6328125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 58.876139633,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.6875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 59.87797986,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.4453125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 60.880037138,
+    "rss_mib": {
+      "app": 46.65625,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.45703125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 61.882967701,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.48046875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 62.885274204,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.48046875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 63.886771509,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.48046875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 64.888807912,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.5234375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 65.890592562,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.5234375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 66.892032127,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.5234375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 67.894080258,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.55859375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 68.89598084,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.55859375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 69.897926025,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.55859375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 70.900495988,
+    "rss_mib": {
+      "app": 46.6953125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.55859375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 71.903841814,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.6015625
+  },
+  {
+    "phase": "idle",
+    "monotonic": 72.905810473,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.12890625
+  },
+  {
+    "phase": "idle",
+    "monotonic": 73.907119742,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.12890625
+  },
+  {
+    "phase": "idle",
+    "monotonic": 74.908848821,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 219.12890625
+  },
+  {
+    "phase": "idle",
+    "monotonic": 75.910450888,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.40234375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 76.91188606,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.40234375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 77.913342833,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.40234375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 78.914803056,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.40234375
+  },
+  {
+    "phase": "idle",
+    "monotonic": 79.916341028,
+    "rss_mib": {
+      "app": 46.73828125,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.44140625
+  },
+  {
+    "phase": "idle",
+    "monotonic": 80.917741454,
+    "rss_mib": {
+      "app": 46.7421875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.44140625
+  },
+  {
+    "phase": "idle",
+    "monotonic": 81.92088231,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.4296875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 82.922582746,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.4296875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 83.924430272,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.4296875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 84.926003532,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.4296875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 85.92807391,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.4296875
+  },
+  {
+    "phase": "idle",
+    "monotonic": 86.93025072,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.48828125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 87.931814215,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.48828125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 88.933416636,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.7578125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.48828125
+  },
+  {
+    "phase": "idle",
+    "monotonic": 89.935360694,
+    "rss_mib": {
+      "app": 46.796875,
+      "mariadb": 82.765625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.625
+  },
+  {
+    "phase": "idle",
+    "monotonic": 90.937469454,
+    "rss_mib": {
+      "app": 46.87890625,
+      "mariadb": 82.76953125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.64453125
+  },
+  {
+    "phase": "transition-to-warmup",
+    "monotonic": 91.940741919,
+    "rss_mib": {
+      "app": 47.78515625,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 218.18359375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 92.942456033,
+    "rss_mib": {
+      "app": 48.10546875,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 217.95703125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 93.944023073,
+    "rss_mib": {
+      "app": 48.390625,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 217.60546875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 94.945727478,
+    "rss_mib": {
+      "app": 48.67578125,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 217.375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 95.948306542,
+    "rss_mib": {
+      "app": 49.03515625,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 216.90234375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 96.949859719,
+    "rss_mib": {
+      "app": 49.33203125,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 216.671875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 97.95131758,
+    "rss_mib": {
+      "app": 49.61328125,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 216.3203125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 98.952679143,
+    "rss_mib": {
+      "app": 49.91796875,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 215.78125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 99.9542441,
+    "rss_mib": {
+      "app": 50.203125,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 215.48046875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 100.955756178,
+    "rss_mib": {
+      "app": 50.5,
+      "mariadb": 82.77734375,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 216.73046875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 101.958441495,
+    "rss_mib": {
+      "app": 50.84375,
+      "mariadb": 82.78125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.48046875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 102.959847188,
+    "rss_mib": {
+      "app": 51.13671875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.4921875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 103.961525234,
+    "rss_mib": {
+      "app": 51.4296875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.50390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 104.963110351,
+    "rss_mib": {
+      "app": 51.7109375,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.51171875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 105.964609958,
+    "rss_mib": {
+      "app": 52.01953125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.6796875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 106.966256355,
+    "rss_mib": {
+      "app": 52.3046875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.6875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 107.967642211,
+    "rss_mib": {
+      "app": 52.6015625,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.69921875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 108.969157246,
+    "rss_mib": {
+      "app": 52.89453125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.46875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 109.970502019,
+    "rss_mib": {
+      "app": 53.1796875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 213.1171875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 110.971848641,
+    "rss_mib": {
+      "app": 53.4765625,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 212.8828125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 111.974954747,
+    "rss_mib": {
+      "app": 53.8203125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 212.53125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 112.977718667,
+    "rss_mib": {
+      "app": 54.11328125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 212.1796875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 113.979922779,
+    "rss_mib": {
+      "app": 54.3984375,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 211.828125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 114.981815346,
+    "rss_mib": {
+      "app": 54.69921875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 210.66015625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 115.983515612,
+    "rss_mib": {
+      "app": 54.98828125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 210.578125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 116.98533688,
+    "rss_mib": {
+      "app": 55.28125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 210.58984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 117.986698723,
+    "rss_mib": {
+      "app": 55.58203125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 210.48046875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 118.988767908,
+    "rss_mib": {
+      "app": 55.87109375,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 210.1015625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 119.990463082,
+    "rss_mib": {
+      "app": 56.16015625,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 210.74609375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 120.991939949,
+    "rss_mib": {
+      "app": 56.44921875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 210.515625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 121.994668041,
+    "rss_mib": {
+      "app": 56.796875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 210.04296875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 122.996538637,
+    "rss_mib": {
+      "app": 57.08203125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 209.93359375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 123.997998821,
+    "rss_mib": {
+      "app": 58.6953125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.96484375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 124.999979804,
+    "rss_mib": {
+      "app": 58.6953125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.06640625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 126.001372918,
+    "rss_mib": {
+      "app": 58.6953125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.72265625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 127.003292174,
+    "rss_mib": {
+      "app": 58.6953125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.48046875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 128.005111592,
+    "rss_mib": {
+      "app": 58.6953125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 129.006732982,
+    "rss_mib": {
+      "app": 58.6953125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5546875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 130.0088129,
+    "rss_mib": {
+      "app": 58.69921875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5546875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 131.010933641,
+    "rss_mib": {
+      "app": 58.69921875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5546875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 132.014077725,
+    "rss_mib": {
+      "app": 58.69921875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5546875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 133.01569674,
+    "rss_mib": {
+      "app": 58.69921875,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5546875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 134.016833026,
+    "rss_mib": {
+      "app": 58.703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.609375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 135.018561201,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.609375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 136.020552597,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.609375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 137.022075199,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.48828125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 138.024176444,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.48828125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 139.025788371,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 140.027350362,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 141.029404473,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 142.032913867,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 143.034899282,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 144.036261031,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.59765625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 145.038119244,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.59765625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 146.039705175,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.59765625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 147.041097525,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.62109375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 148.042532689,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.40625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 149.043985849,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.40625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 150.046266599,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.796875,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.40625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 151.047889088,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.8125,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.46875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 152.050515624,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.46875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 153.051720429,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.46875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 154.05316408,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.46875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 155.054858588,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.515625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 156.056335959,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.39453125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 157.057668323,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.39453125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 158.058781061,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.39453125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 159.0602766,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.39453125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 160.061552199,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44921875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 161.062993786,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44921875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 162.06626205,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44921875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 163.067622628,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44921875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 164.069051562,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44921875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 165.070596947,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.50390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 166.072034397,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.50390625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 167.073791253,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.3828125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 168.075342354,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.3828125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 169.076663428,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.3828125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 170.078203913,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.3828125
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 171.079826927,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44140625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 172.083443111,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44140625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 173.085516752,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44140625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 174.086830078,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44140625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 175.088278692,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.44140625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 176.089785938,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 177.092152096,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.5
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 178.094197083,
+    "rss_mib": {
+      "app": 58.70703125,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.37890625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 179.096776665,
+    "rss_mib": {
+      "app": 58.7109375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.37890625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 180.098664402,
+    "rss_mib": {
+      "app": 58.84375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.3046875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 181.100925582,
+    "rss_mib": {
+      "app": 59.13671875,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 208.07421875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 182.105665115,
+    "rss_mib": {
+      "app": 59.48046875,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.73046875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 183.107829245,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.37890625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 184.109875922,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.37890625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 185.112374945,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.37890625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 186.114590392,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.41015625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 187.1163934,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.41015625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 188.117866159,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.41015625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 189.119861339,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.41015625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 190.1215099,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.41015625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 191.123353666,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.46875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 192.126171461,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.46875
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 193.127751796,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.34765625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 194.129223441,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.34765625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 195.131216947,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.34765625
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 196.132869363,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.40234375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 197.134776379,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.40234375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 198.136136025,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.40234375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 199.137510505,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.40234375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 200.138775419,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.40234375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 201.140066253,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.40234375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 202.142317908,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.4609375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 203.143848088,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.33984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 204.145292692,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.33984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 205.146612651,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.33984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 206.147964513,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.33984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 207.150298978,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.3984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 208.151900151,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.3984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 209.154035928,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.3984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 210.155442827,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.81640625,
+      "fixture": 22.33984375
+    },
+    "mem_available_mib": 207.3984375
+  },
+  {
+    "phase": "warmup",
+    "monotonic": 211.156762613,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.45703125
+  },
+  {
+    "phase": "transition-to-workload",
+    "monotonic": 212.158989931,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.33203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 213.1605621,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.33203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 214.162027541,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.33203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 215.163422249,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.33203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 216.165082255,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.33203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 217.166576445,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.33203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 218.167883116,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.390625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 219.16932741,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.390625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 220.170726545,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.390625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 221.172497756,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.4296875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 222.174992894,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.4296875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 223.176445734,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.4296875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 224.177852418,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.4296875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 225.179590144,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.4296875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 226.181395918,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.48828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 227.182970536,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.48828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 228.184673398,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.48828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 229.186209808,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.48828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 230.187895796,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.48828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 231.189576915,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.48828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 232.191957554,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.5546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 233.193364806,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.5546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 234.195341679,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.5546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 235.19768681,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.5546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 236.199371638,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.5546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 237.201584718,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.5546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 238.204358569,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.61328125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 239.206756661,
+    "rss_mib": {
+      "app": 59.80859375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.61328125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 240.209011376,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 241.210692593,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 242.214550335,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 243.216050242,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 244.217490522,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 245.218801964,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 246.220290907,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 247.221537757,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 248.222760991,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.73046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 249.22392999,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.73046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 250.225518714,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.73046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 251.226857039,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.73046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 252.229237158,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.73046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 253.23120145,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 254.233491112,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 255.235280767,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 256.236571583,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 257.23782807,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 258.239982752,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 259.241506635,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 260.24292085,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 261.24430761,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 262.246794302,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 263.248525591,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.90234375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 264.250550711,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.90234375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 265.252066102,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.90234375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 266.253769221,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.90234375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 267.255314098,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.90234375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 268.25661223,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.90234375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 269.258769816,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.9609375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 270.26062108,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.9609375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 271.261851332,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.98828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 272.2638309,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.01171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 273.265368376,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.01171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 274.266823217,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.01171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 275.267975002,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.01171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 276.269195675,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.01171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 277.270558604,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.01171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 278.271762619,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.0703125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 279.273311823,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.0703125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 280.274666506,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.0703125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 281.276025336,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.0703125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 282.278486993,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 283.280725566,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 284.282780319,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 285.284388785,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 286.28655915,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 287.2890202,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 288.291363203,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.18359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 289.293002221,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.18359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 290.29484599,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.18359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 291.296692589,
+    "rss_mib": {
+      "app": 58.3125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.18359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 292.30068829,
+    "rss_mib": {
+      "app": 58.41015625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.234375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 293.302512222,
+    "rss_mib": {
+      "app": 58.7109375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.24609375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 294.304603217,
+    "rss_mib": {
+      "app": 59.0078125,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.2578125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 295.306260478,
+    "rss_mib": {
+      "app": 59.33984375,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.26953125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 296.307792277,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.28125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 297.309919702,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.28125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 298.31129454,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.16015625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 299.313085459,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.16015625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 300.315915033,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 301.317419232,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 302.320826594,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 303.322594774,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.25
+  },
+  {
+    "phase": "workload",
+    "monotonic": 304.324405477,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.25
+  },
+  {
+    "phase": "workload",
+    "monotonic": 305.326183791,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.26171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 306.327539013,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.26171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 307.329476185,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.140625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 308.330886646,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.140625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 309.332488527,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.140625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 310.333737678,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.19921875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 311.335280002,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.19921875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 312.33785489,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.19921875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 313.339654853,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.19921875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 314.341110539,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.2265625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 315.342574048,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.25
+  },
+  {
+    "phase": "workload",
+    "monotonic": 316.34394895,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.25
+  },
+  {
+    "phase": "workload",
+    "monotonic": 317.345285113,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.25
+  },
+  {
+    "phase": "workload",
+    "monotonic": 318.346712413,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.12890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 319.348123233,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.1875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 320.349706125,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.1875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 321.350910726,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.1875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 322.35322882,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.1875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 323.354560081,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.1875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 324.35574682,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 202.65234375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 325.357023655,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.97265625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 326.358391115,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 327.360039986,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 328.361531553,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 82.828125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 329.363190059,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.90625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 330.364674434,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.91015625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 331.366624435,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.94140625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 332.369857148,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.94140625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 333.371360215,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.91015625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 334.372613215,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.9375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 335.374552375,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.9375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 336.375961824,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.81640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 337.377212495,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.81640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 338.378718457,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.81640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 339.380211734,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.81640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 340.382010555,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 341.384024254,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 342.386945647,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 343.38856293,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 344.39100651,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 345.392710784,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.93359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 346.394724363,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.9375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 347.396966836,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.81640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 348.39881062,
+    "rss_mib": {
+      "app": 59.40625,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.81640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 349.400501324,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.84375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 350.402050859,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 351.404283242,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 352.410706404,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 353.412888343,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8984375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 354.414702027,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.796875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 355.416227472,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.796875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 356.418051106,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 357.420384696,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 358.42206557,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 359.424026982,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 360.426413052,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.86328125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 361.428018005,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.86328125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 362.430992559,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.86328125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 363.432895576,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.86328125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 364.434691606,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 365.436112028,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 366.437634201,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.82421875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 367.439931119,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.82421875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 368.44173714,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.82421875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 369.443295029,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.82421875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 370.444770919,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.82421875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 371.446546892,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.82421875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 372.449152085,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 373.450799955,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 374.452687279,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 375.455409321,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.76171875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 376.45740549,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 377.460118926,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 378.461645962,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 379.463094366,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 380.464772123,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 381.466176495,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 382.468539219,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.87109375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 383.469891517,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.87109375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 384.471344462,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.87109375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 385.4736411,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.87109375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 386.47528258,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.75
+  },
+  {
+    "phase": "workload",
+    "monotonic": 387.476896167,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.80859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 388.478571611,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.80859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 389.479929089,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.80859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 390.481819462,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.80859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 391.484015299,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.86328125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 392.48673717,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.86328125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 393.488154103,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 394.489785827,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 395.491064871,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 396.49338754,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.78125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 397.49551528,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.796875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 398.497638631,
+    "rss_mib": {
+      "app": 59.453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.796875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 399.499603245,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 400.501855975,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 401.504257314,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 402.507677046,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 403.510049765,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83203125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 404.512994351,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 405.514744933,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 406.517124529,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 407.519359895,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 408.521090744,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 409.522769221,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 410.524186238,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 411.526141224,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 412.529222609,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 413.531020632,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 414.532518322,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 415.533939634,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 416.53545067,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 417.536855037,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.78515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 418.538483236,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.78515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 419.539883783,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.78515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 420.541323283,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.78515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 421.542785704,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.78515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 422.545720264,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.84375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 423.547252135,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 424.548847343,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 425.550465544,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 426.552155458,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8515625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 427.554288721,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.73046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 428.555901443,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 429.558114565,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 430.560466504,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 431.56236942,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.7890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 432.5650199,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.81640625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 433.566738905,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83984375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 434.568740737,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83984375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 435.570909374,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83984375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 436.572760198,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.83984375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 437.574714401,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8984375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 438.576721035,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.77734375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 439.579485169,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.77734375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 440.581063659,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.77734375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 441.582798386,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.77734375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 442.585488306,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 443.587357158,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 444.589917693,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 445.592277716,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 446.594396212,
+    "rss_mib": {
+      "app": 59.46484375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 203.8359375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 447.596758143,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 207.140625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 448.598550373,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.92578125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 449.600338593,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.92578125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 450.601787913,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.92578125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 451.603872186,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 452.60767753,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 453.609481656,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 454.611894454,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 455.614100052,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 456.615928085,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.90625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 457.617498764,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 458.619438454,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 459.621072533,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 460.622672344,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 461.624448317,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 462.627055954,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 463.629112375,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 464.630908902,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 465.632812087,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 466.634580037,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 467.636023373,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 468.638499789,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.796875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 469.639856763,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 470.641154399,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 471.642846774,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 472.645112786,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.80078125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 473.646560579,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.85546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 474.648151132,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.85546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 475.649649884,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.85546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 476.651609035,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.85546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 477.652818912,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.85546875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 478.654010118,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.9140625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 479.65542045,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.79296875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 480.65673586,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.79296875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 481.658597401,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.79296875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 482.663009159,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.67578125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 483.664340956,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.73046875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 484.665450795,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.75
+  },
+  {
+    "phase": "workload",
+    "monotonic": 485.666716057,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.75
+  },
+  {
+    "phase": "workload",
+    "monotonic": 486.667986264,
+    "rss_mib": {
+      "app": 56.4453125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.75
+  },
+  {
+    "phase": "workload",
+    "monotonic": 487.669298026,
+    "rss_mib": {
+      "app": 56.51953125,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.65625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 488.670895836,
+    "rss_mib": {
+      "app": 56.84375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.30859375
+  },
+  {
+    "phase": "workload",
+    "monotonic": 489.672373239,
+    "rss_mib": {
+      "app": 57.21875,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.82421875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 490.673716185,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 491.675019649,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 492.677084674,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.84765625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 493.679134076,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.87890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 494.680372318,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.87890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 495.681693293,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.87890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 496.683015898,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.87890625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 497.68431612,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.8828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 498.68569515,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.8828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 499.687335317,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.94140625
+  },
+  {
+    "phase": "workload",
+    "monotonic": 500.689554146,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.94921875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 501.69109713,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.94921875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 502.694229164,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.94921875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 503.695712934,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.94921875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 504.697513092,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.828125
+  },
+  {
+    "phase": "workload",
+    "monotonic": 505.699630043,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.88671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 506.701632493,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.88671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 507.703251821,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.88671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 508.705219821,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.88671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 509.707245976,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.88671875
+  },
+  {
+    "phase": "workload",
+    "monotonic": 510.709682715,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.953125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.94921875
+  },
+  {
+    "phase": "transition-to-recovery",
+    "monotonic": 511.711957995,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.30859375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 512.714037619,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.19921875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 513.715803928,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.19921875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 514.717884973,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.21875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 515.720590087,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.21875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 516.722246928,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.21875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 517.724054502,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.21875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 518.725762262,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.21875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 519.730109,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.27734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 520.731725492,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.27734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 521.733123722,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.27734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 522.736347649,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 206.27734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 523.737814887,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.55078125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 524.739373286,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.5546875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 525.741505629,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.61328125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 526.742721918,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.61328125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 527.745040469,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.61328125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 528.747255244,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.61328125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 529.748925972,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.61328125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 530.750466099,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.671875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 531.752037842,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.671875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 532.754937475,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.671875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 533.756480173,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.671875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 534.75828789,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.671875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 535.759934999,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73046875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 536.761234894,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73046875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 537.762646582,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 538.764165904,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 539.765942511,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 540.767420691,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 541.76885821,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.79296875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 542.771701349,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.79296875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 543.772990598,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.671875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 544.774511946,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.671875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 545.775940423,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 546.777620499,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 547.77976457,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 548.781366028,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 549.782781097,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 550.784412342,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73828125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 551.785971786,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.796875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 552.788790053,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.796875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 553.790771123,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.796875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 554.793095635,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.67578125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 555.794784166,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.67578125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 556.796343052,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73828125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 557.797784031,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73828125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 558.799547159,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73828125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 559.80156289,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73828125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 560.80342196,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73828125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 561.805082249,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.73828125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 562.808503281,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.796875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 563.810529137,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.796875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 564.812303851,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.80078125
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 565.813904161,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.6796875
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 566.815949073,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 567.818464758,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 568.82066426,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 569.82246508,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.95703125,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.734375
+  },
+  {
+    "phase": "recovery",
+    "monotonic": 570.824777689,
+    "rss_mib": {
+      "app": 57.24609375,
+      "mariadb": 83.9765625,
+      "fixture": 22.34375
+    },
+    "mem_available_mib": 205.68359375
+  }
+]

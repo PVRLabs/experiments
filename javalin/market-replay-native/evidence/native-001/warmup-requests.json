@@ -1,0 +1,4802 @@
+[
+  {
+    "index": 0,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.87018995732069,
+    "lag_ms": 4.700920078903437
+  },
+  {
+    "index": 1,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.625132143497467,
+    "lag_ms": 4.408727865666151
+  },
+  {
+    "index": 2,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.771758008748293,
+    "lag_ms": 4.7998009249567986
+  },
+  {
+    "index": 3,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8411815874278545,
+    "lag_ms": 4.734556190669537
+  },
+  {
+    "index": 4,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.770927269011736,
+    "lag_ms": 5.048918072134256
+  },
+  {
+    "index": 5,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.829981967806816,
+    "lag_ms": 4.36350516974926
+  },
+  {
+    "index": 6,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.637736663222313,
+    "lag_ms": 4.015882033854723
+  },
+  {
+    "index": 7,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.99472501501441,
+    "lag_ms": 3.9853560738265514
+  },
+  {
+    "index": 8,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7493550442159176,
+    "lag_ms": 4.557623993605375
+  },
+  {
+    "index": 9,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.9073722437024117,
+    "lag_ms": 3.960851114243269
+  },
+  {
+    "index": 10,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9965341091156006,
+    "lag_ms": 4.466630984097719
+  },
+  {
+    "index": 11,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.794806845486164,
+    "lag_ms": 4.1764420457184315
+  },
+  {
+    "index": 12,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.83400684222579,
+    "lag_ms": 3.966274205595255
+  },
+  {
+    "index": 13,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7690697461366653,
+    "lag_ms": 4.771131090819836
+  },
+  {
+    "index": 14,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.011070191860199,
+    "lag_ms": 4.419144243001938
+  },
+  {
+    "index": 15,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7371190264821053,
+    "lag_ms": 3.976765088737011
+  },
+  {
+    "index": 16,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7638128958642483,
+    "lag_ms": 4.714490845799446
+  },
+  {
+    "index": 17,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.978645730763674,
+    "lag_ms": 4.74591227248311
+  },
+  {
+    "index": 18,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.8433759473264217,
+    "lag_ms": 3.910657949745655
+  },
+  {
+    "index": 19,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0568670481443405,
+    "lag_ms": 4.656341392546892
+  },
+  {
+    "index": 20,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4091942943632603,
+    "lag_ms": 4.943552892655134
+  },
+  {
+    "index": 21,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.724461257457733,
+    "lag_ms": 3.7024966441094875
+  },
+  {
+    "index": 22,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3223827593028545,
+    "lag_ms": 3.7894793786108494
+  },
+  {
+    "index": 23,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.77922535315156,
+    "lag_ms": 3.8038897328078747
+  },
+  {
+    "index": 24,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1765131279826164,
+    "lag_ms": 4.427903331816196
+  },
+  {
+    "index": 25,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7404227294027805,
+    "lag_ms": 4.8613762483000755
+  },
+  {
+    "index": 26,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.011169075965881,
+    "lag_ms": 3.8978499360382557
+  },
+  {
+    "index": 27,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8738449327647686,
+    "lag_ms": 4.075848031789064
+  },
+  {
+    "index": 28,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9970286414027214,
+    "lag_ms": 4.618158098310232
+  },
+  {
+    "index": 29,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7067183293402195,
+    "lag_ms": 3.960288129746914
+  },
+  {
+    "index": 30,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8540147468447685,
+    "lag_ms": 4.741736222058535
+  },
+  {
+    "index": 31,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.105876035988331,
+    "lag_ms": 4.6056038700044155
+  },
+  {
+    "index": 32,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1076278537511826,
+    "lag_ms": 4.701807163655758
+  },
+  {
+    "index": 33,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0280407518148422,
+    "lag_ms": 4.664136096835136
+  },
+  {
+    "index": 34,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7757780626416206,
+    "lag_ms": 4.743937402963638
+  },
+  {
+    "index": 35,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9139197431504726,
+    "lag_ms": 4.646186251193285
+  },
+  {
+    "index": 36,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6491093449294567,
+    "lag_ms": 4.74314671009779
+  },
+  {
+    "index": 37,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7322350069880486,
+    "lag_ms": 4.650687333196402
+  },
+  {
+    "index": 38,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.635673947632313,
+    "lag_ms": 3.762330859899521
+  },
+  {
+    "index": 39,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.015710972249508,
+    "lag_ms": 4.306407179683447
+  },
+  {
+    "index": 40,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8138463385403156,
+    "lag_ms": 3.8670478388667107
+  },
+  {
+    "index": 41,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1649330630898476,
+    "lag_ms": 4.754799883812666
+  },
+  {
+    "index": 42,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.881969790905714,
+    "lag_ms": 3.7698172964155674
+  },
+  {
+    "index": 43,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1788568012416363,
+    "lag_ms": 3.836260177195072
+  },
+  {
+    "index": 44,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2120579853653908,
+    "lag_ms": 4.7623771242797375
+  },
+  {
+    "index": 45,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.738479059189558,
+    "lag_ms": 5.101828835904598
+  },
+  {
+    "index": 46,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5452391020953655,
+    "lag_ms": 3.882751800119877
+  },
+  {
+    "index": 47,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.436357878148556,
+    "lag_ms": 4.194626118987799
+  },
+  {
+    "index": 48,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6414040476083755,
+    "lag_ms": 3.8847248069941998
+  },
+  {
+    "index": 49,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5455049946904182,
+    "lag_ms": 4.019445274025202
+  },
+  {
+    "index": 50,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9995860531926155,
+    "lag_ms": 4.44397097453475
+  },
+  {
+    "index": 51,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.370588179677725,
+    "lag_ms": 4.8284088261425495
+  },
+  {
+    "index": 52,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.201983869075775,
+    "lag_ms": 4.267664160579443
+  },
+  {
+    "index": 53,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3902120776474476,
+    "lag_ms": 4.138811957091093
+  },
+  {
+    "index": 54,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.663480117917061,
+    "lag_ms": 4.749044310301542
+  },
+  {
+    "index": 55,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.588831052184105,
+    "lag_ms": 4.163531120866537
+  },
+  {
+    "index": 56,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4436279200017452,
+    "lag_ms": 4.7578588128089905
+  },
+  {
+    "index": 57,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6818420737981796,
+    "lag_ms": 3.78413125872612
+  },
+  {
+    "index": 58,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2426766119897366,
+    "lag_ms": 4.028627183288336
+  },
+  {
+    "index": 59,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8217360377311707,
+    "lag_ms": 4.982275422662497
+  },
+  {
+    "index": 60,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0117500573396683,
+    "lag_ms": 4.764195065945387
+  },
+  {
+    "index": 61,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.645131830126047,
+    "lag_ms": 4.112225957214832
+  },
+  {
+    "index": 62,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3984797298908234,
+    "lag_ms": 4.416654352098703
+  },
+  {
+    "index": 63,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.828202210366726,
+    "lag_ms": 4.527582786977291
+  },
+  {
+    "index": 64,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.44298779964447,
+    "lag_ms": 4.787748213857412
+  },
+  {
+    "index": 65,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7394299395382404,
+    "lag_ms": 4.745929967612028
+  },
+  {
+    "index": 66,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.133015241473913,
+    "lag_ms": 4.003749694675207
+  },
+  {
+    "index": 67,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9590539634227753,
+    "lag_ms": 4.2883120477199554
+  },
+  {
+    "index": 68,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6549450121819973,
+    "lag_ms": 3.816097043454647
+  },
+  {
+    "index": 69,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.066897090524435,
+    "lag_ms": 4.824856296181679
+  },
+  {
+    "index": 70,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3302757181227207,
+    "lag_ms": 4.239030182361603
+  },
+  {
+    "index": 71,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7897958643734455,
+    "lag_ms": 4.2029269970953465
+  },
+  {
+    "index": 72,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7814388051629066,
+    "lag_ms": 3.8824062794446945
+  },
+  {
+    "index": 73,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3162138424813747,
+    "lag_ms": 4.854931961745024
+  },
+  {
+    "index": 74,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7419370599091053,
+    "lag_ms": 4.745500162243843
+  },
+  {
+    "index": 75,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3234278671443462,
+    "lag_ms": 5.013070069253445
+  },
+  {
+    "index": 76,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7390290051698685,
+    "lag_ms": 3.9339829236268997
+  },
+  {
+    "index": 77,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9473649337887764,
+    "lag_ms": 4.685323219746351
+  },
+  {
+    "index": 78,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.081261646002531,
+    "lag_ms": 4.3866741470992565
+  },
+  {
+    "index": 79,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.678386867046356,
+    "lag_ms": 4.598342347890139
+  },
+  {
+    "index": 80,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8066709637641907,
+    "lag_ms": 3.7889359518885612
+  },
+  {
+    "index": 81,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3248051293194294,
+    "lag_ms": 4.7051976434886456
+  },
+  {
+    "index": 82,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0247531831264496,
+    "lag_ms": 4.744186997413635
+  },
+  {
+    "index": 83,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7538018077611923,
+    "lag_ms": 4.768331069499254
+  },
+  {
+    "index": 84,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.037362825125456,
+    "lag_ms": 4.340545274317265
+  },
+  {
+    "index": 85,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9764161445200443,
+    "lag_ms": 4.954962059855461
+  },
+  {
+    "index": 86,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0516372062265873,
+    "lag_ms": 5.129147786647081
+  },
+  {
+    "index": 87,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.018766175955534,
+    "lag_ms": 3.977864980697632
+  },
+  {
+    "index": 88,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.123125061392784,
+    "lag_ms": 4.877000115811825
+  },
+  {
+    "index": 89,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.17631708458066,
+    "lag_ms": 2.186882309615612
+  },
+  {
+    "index": 90,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.793847117573023,
+    "lag_ms": 3.7570269778370857
+  },
+  {
+    "index": 91,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.315483219921589,
+    "lag_ms": 3.9449958130717278
+  },
+  {
+    "index": 92,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1361449509859085,
+    "lag_ms": 4.7959620133042336
+  },
+  {
+    "index": 93,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.023862838745117,
+    "lag_ms": 4.552579019218683
+  },
+  {
+    "index": 94,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.703382331877947,
+    "lag_ms": 4.401876125484705
+  },
+  {
+    "index": 95,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.46578611060977,
+    "lag_ms": 4.57756407558918
+  },
+  {
+    "index": 96,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.591601736843586,
+    "lag_ms": 4.042807966470718
+  },
+  {
+    "index": 97,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2143346033990383,
+    "lag_ms": 4.108769353479147
+  },
+  {
+    "index": 98,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9027010314166546,
+    "lag_ms": 5.051253829151392
+  },
+  {
+    "index": 99,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.795265056192875,
+    "lag_ms": 3.927348181605339
+  },
+  {
+    "index": 100,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7521161139011383,
+    "lag_ms": 4.811794962733984
+  },
+  {
+    "index": 101,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.597050741314888,
+    "lag_ms": 4.076262935996056
+  },
+  {
+    "index": 102,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.1540718153119087,
+    "lag_ms": 4.981687292456627
+  },
+  {
+    "index": 103,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9319790191948414,
+    "lag_ms": 3.9291870780289173
+  },
+  {
+    "index": 104,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.69938912242651,
+    "lag_ms": 4.374158103018999
+  },
+  {
+    "index": 105,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2118032686412334,
+    "lag_ms": 4.28003491833806
+  },
+  {
+    "index": 106,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4680192582309246,
+    "lag_ms": 4.415442701429129
+  },
+  {
+    "index": 107,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.421473316848278,
+    "lag_ms": 4.786964040249586
+  },
+  {
+    "index": 108,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7149738743901253,
+    "lag_ms": 4.031241871416569
+  },
+  {
+    "index": 109,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.775914967060089,
+    "lag_ms": 4.711265210062265
+  },
+  {
+    "index": 110,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.523472998291254,
+    "lag_ms": 4.772434942424297
+  },
+  {
+    "index": 111,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8119641356170177,
+    "lag_ms": 4.492481704801321
+  },
+  {
+    "index": 112,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.070332109928131,
+    "lag_ms": 4.748143255710602
+  },
+  {
+    "index": 113,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.629168029874563,
+    "lag_ms": 4.463472869247198
+  },
+  {
+    "index": 114,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7552898973226547,
+    "lag_ms": 4.173945169895887
+  },
+  {
+    "index": 115,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6349352449178696,
+    "lag_ms": 3.8133859634399414
+  },
+  {
+    "index": 116,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.27274389564991,
+    "lag_ms": 4.3463497422635555
+  },
+  {
+    "index": 117,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7530351653695107,
+    "lag_ms": 4.77259699255228
+  },
+  {
+    "index": 118,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.457325045019388,
+    "lag_ms": 5.091349128633738
+  },
+  {
+    "index": 119,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.513342071324587,
+    "lag_ms": 4.178494215011597
+  },
+  {
+    "index": 120,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.44180578738451,
+    "lag_ms": 4.671778064221144
+  },
+  {
+    "index": 121,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.0087709203362465,
+    "lag_ms": 4.254417959600687
+  },
+  {
+    "index": 122,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.166358917951584,
+    "lag_ms": 4.60713729262352
+  },
+  {
+    "index": 123,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3671329729259014,
+    "lag_ms": 4.137537907809019
+  },
+  {
+    "index": 124,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3668428659439087,
+    "lag_ms": 4.7017172910273075
+  },
+  {
+    "index": 125,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.007682040333748,
+    "lag_ms": 4.897865001112223
+  },
+  {
+    "index": 126,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3133750073611736,
+    "lag_ms": 4.885980859398842
+  },
+  {
+    "index": 127,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.307980950921774,
+    "lag_ms": 4.8203603364527225
+  },
+  {
+    "index": 128,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.249670844525099,
+    "lag_ms": 4.145631100982428
+  },
+  {
+    "index": 129,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.613772638142109,
+    "lag_ms": 4.305352456867695
+  },
+  {
+    "index": 130,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.474067732691765,
+    "lag_ms": 4.8377071507275105
+  },
+  {
+    "index": 131,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0441503040492535,
+    "lag_ms": 3.922546748071909
+  },
+  {
+    "index": 132,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8335079550743103,
+    "lag_ms": 4.336600191891193
+  },
+  {
+    "index": 133,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6644740030169487,
+    "lag_ms": 4.795612767338753
+  },
+  {
+    "index": 134,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4403610043227673,
+    "lag_ms": 4.434236325323582
+  },
+  {
+    "index": 135,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.71148094907403,
+    "lag_ms": 4.7512780874967575
+  },
+  {
+    "index": 136,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4973703548312187,
+    "lag_ms": 4.742943681776524
+  },
+  {
+    "index": 137,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.549736924469471,
+    "lag_ms": 4.752462264150381
+  },
+  {
+    "index": 138,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.762099727988243,
+    "lag_ms": 4.698425065726042
+  },
+  {
+    "index": 139,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.288847230374813,
+    "lag_ms": 4.2580910958349705
+  },
+  {
+    "index": 140,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.68662690743804,
+    "lag_ms": 4.485141951590776
+  },
+  {
+    "index": 141,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.766984049230814,
+    "lag_ms": 4.242870025336742
+  },
+  {
+    "index": 142,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6702402867376804,
+    "lag_ms": 4.021530970931053
+  },
+  {
+    "index": 143,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.758343867957592,
+    "lag_ms": 4.809102974832058
+  },
+  {
+    "index": 144,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6781796477735043,
+    "lag_ms": 3.9056334644556046
+  },
+  {
+    "index": 145,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8296089731156826,
+    "lag_ms": 4.966243170201778
+  },
+  {
+    "index": 146,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5982499830424786,
+    "lag_ms": 4.525468684732914
+  },
+  {
+    "index": 147,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.797124907374382,
+    "lag_ms": 4.434721078723669
+  },
+  {
+    "index": 148,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6654182001948357,
+    "lag_ms": 4.759011790156364
+  },
+  {
+    "index": 149,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.310674801468849,
+    "lag_ms": 4.468198399990797
+  },
+  {
+    "index": 150,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.714708913117647,
+    "lag_ms": 4.226255230605602
+  },
+  {
+    "index": 151,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.838726621121168,
+    "lag_ms": 4.108800087124109
+  },
+  {
+    "index": 152,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0415928922593594,
+    "lag_ms": 4.803870338946581
+  },
+  {
+    "index": 153,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6065059937536716,
+    "lag_ms": 4.243788775056601
+  },
+  {
+    "index": 154,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3516821675002575,
+    "lag_ms": 4.0818932466208935
+  },
+  {
+    "index": 155,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.083573654294014,
+    "lag_ms": 4.789192229509354
+  },
+  {
+    "index": 156,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.823607064783573,
+    "lag_ms": 4.335192032158375
+  },
+  {
+    "index": 157,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6019620709121227,
+    "lag_ms": 4.744668025523424
+  },
+  {
+    "index": 158,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5690197944641113,
+    "lag_ms": 4.485588986426592
+  },
+  {
+    "index": 159,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.94557586312294,
+    "lag_ms": 4.975855350494385
+  },
+  {
+    "index": 160,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.671891823410988,
+    "lag_ms": 4.165316000580788
+  },
+  {
+    "index": 161,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.484770957380533,
+    "lag_ms": 4.766100086271763
+  },
+  {
+    "index": 162,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2749189995229244,
+    "lag_ms": 4.562861286103725
+  },
+  {
+    "index": 163,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 16.658635810017586,
+    "lag_ms": 4.004890099167824
+  },
+  {
+    "index": 164,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.532346174120903,
+    "lag_ms": 4.77816816419363
+  },
+  {
+    "index": 165,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6692640967667103,
+    "lag_ms": 4.784571006894112
+  },
+  {
+    "index": 166,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.42782523855567,
+    "lag_ms": 4.094076808542013
+  },
+  {
+    "index": 167,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.360534854233265,
+    "lag_ms": 3.9403033442795277
+  },
+  {
+    "index": 168,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5283461436629295,
+    "lag_ms": 4.773220978677273
+  },
+  {
+    "index": 169,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.359139129519463,
+    "lag_ms": 4.976558033376932
+  },
+  {
+    "index": 170,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8042481280863285,
+    "lag_ms": 4.806621931493282
+  },
+  {
+    "index": 171,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.695254050195217,
+    "lag_ms": 4.919220693409443
+  },
+  {
+    "index": 172,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3484743908047676,
+    "lag_ms": 4.600774962455034
+  },
+  {
+    "index": 173,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.564979251474142,
+    "lag_ms": 4.446676932275295
+  },
+  {
+    "index": 174,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.35174223780632,
+    "lag_ms": 4.783323034644127
+  },
+  {
+    "index": 175,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3352662101387978,
+    "lag_ms": 4.640229977667332
+  },
+  {
+    "index": 176,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.2927499376237392,
+    "lag_ms": 4.88898204639554
+  },
+  {
+    "index": 177,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6021553203463554,
+    "lag_ms": 4.263570997864008
+  },
+  {
+    "index": 178,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1265029683709145,
+    "lag_ms": 4.496423993259668
+  },
+  {
+    "index": 179,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.26375600323081,
+    "lag_ms": 4.429197404533625
+  },
+  {
+    "index": 180,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2931030727922916,
+    "lag_ms": 4.789684899151325
+  },
+  {
+    "index": 181,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9149879701435566,
+    "lag_ms": 4.1721477173268795
+  },
+  {
+    "index": 182,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7699782513082027,
+    "lag_ms": 4.797718022018671
+  },
+  {
+    "index": 183,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.643306903541088,
+    "lag_ms": 4.365810193121433
+  },
+  {
+    "index": 184,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3403679952025414,
+    "lag_ms": 4.184142220765352
+  },
+  {
+    "index": 185,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6358850300312042,
+    "lag_ms": 4.248533863574266
+  },
+  {
+    "index": 186,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7808728627860546,
+    "lag_ms": 4.203492775559425
+  },
+  {
+    "index": 187,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7193521857261658,
+    "lag_ms": 9.008103050291538
+  },
+  {
+    "index": 188,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8483537025749683,
+    "lag_ms": 4.043084103614092
+  },
+  {
+    "index": 189,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.653317991644144,
+    "lag_ms": 4.788222257047892
+  },
+  {
+    "index": 190,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.164644818753004,
+    "lag_ms": 5.003745201975107
+  },
+  {
+    "index": 191,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.780152950435877,
+    "lag_ms": 4.6637519262731075
+  },
+  {
+    "index": 192,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.878453116863966,
+    "lag_ms": 4.531526006758213
+  },
+  {
+    "index": 193,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.62616078928113,
+    "lag_ms": 5.042586009949446
+  },
+  {
+    "index": 194,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7069663628935814,
+    "lag_ms": 4.327523056417704
+  },
+  {
+    "index": 195,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7786060236394405,
+    "lag_ms": 4.98441094532609
+  },
+  {
+    "index": 196,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.888808958232403,
+    "lag_ms": 4.459429997950792
+  },
+  {
+    "index": 197,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6664207689464092,
+    "lag_ms": 4.36975434422493
+  },
+  {
+    "index": 198,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.9052204228937626,
+    "lag_ms": 4.154653754085302
+  },
+  {
+    "index": 199,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.143132198601961,
+    "lag_ms": 4.74161421880126
+  },
+  {
+    "index": 200,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6019755750894547,
+    "lag_ms": 4.47841826826334
+  },
+  {
+    "index": 201,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0774767510592937,
+    "lag_ms": 4.2908270843327045
+  },
+  {
+    "index": 202,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4310406297445297,
+    "lag_ms": 4.771127365529537
+  },
+  {
+    "index": 203,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1322482973337173,
+    "lag_ms": 4.538519773632288
+  },
+  {
+    "index": 204,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.65801015868783,
+    "lag_ms": 5.075918044894934
+  },
+  {
+    "index": 205,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0855569057166576,
+    "lag_ms": 4.81437798589468
+  },
+  {
+    "index": 206,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7252882719039917,
+    "lag_ms": 4.282104782760143
+  },
+  {
+    "index": 207,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.917901147156954,
+    "lag_ms": 4.834397230297327
+  },
+  {
+    "index": 208,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7372101321816444,
+    "lag_ms": 4.674783907830715
+  },
+  {
+    "index": 209,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8167148120701313,
+    "lag_ms": 4.220639355480671
+  },
+  {
+    "index": 210,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7533841095864773,
+    "lag_ms": 4.788632970303297
+  },
+  {
+    "index": 211,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9048239812254906,
+    "lag_ms": 4.52205166220665
+  },
+  {
+    "index": 212,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6264116168022156,
+    "lag_ms": 4.794188309460878
+  },
+  {
+    "index": 213,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7575180865824223,
+    "lag_ms": 4.806295037269592
+  },
+  {
+    "index": 214,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.698249649256468,
+    "lag_ms": 4.530496429651976
+  },
+  {
+    "index": 215,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5854210145771503,
+    "lag_ms": 0.9201010689139366
+  },
+  {
+    "index": 216,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.637727651745081,
+    "lag_ms": 4.7973510809242725
+  },
+  {
+    "index": 217,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.433908171951771,
+    "lag_ms": 5.0516449846327305
+  },
+  {
+    "index": 218,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0216630548238754,
+    "lag_ms": 4.605842754244804
+  },
+  {
+    "index": 219,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8166091069579124,
+    "lag_ms": 4.9640280194580555
+  },
+  {
+    "index": 220,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.695828676223755,
+    "lag_ms": 4.802251234650612
+  },
+  {
+    "index": 221,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9804199002683163,
+    "lag_ms": 4.8112329095602036
+  },
+  {
+    "index": 222,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.514363896101713,
+    "lag_ms": 4.858705215156078
+  },
+  {
+    "index": 223,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3784648403525352,
+    "lag_ms": 4.113172180950642
+  },
+  {
+    "index": 224,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7060192078351974,
+    "lag_ms": 3.819073084741831
+  },
+  {
+    "index": 225,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6782934330403805,
+    "lag_ms": 4.624114837497473
+  },
+  {
+    "index": 226,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.694989088922739,
+    "lag_ms": 4.658195655792952
+  },
+  {
+    "index": 227,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3600907772779465,
+    "lag_ms": 4.901650361716747
+  },
+  {
+    "index": 228,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6623359881341457,
+    "lag_ms": 4.539458081126213
+  },
+  {
+    "index": 229,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6768669486045837,
+    "lag_ms": 4.669458139687777
+  },
+  {
+    "index": 230,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.417691983282566,
+    "lag_ms": 3.835594281554222
+  },
+  {
+    "index": 231,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5754540003836155,
+    "lag_ms": 4.921404644846916
+  },
+  {
+    "index": 232,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.992402296513319,
+    "lag_ms": 4.560023080557585
+  },
+  {
+    "index": 233,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8609689325094223,
+    "lag_ms": 4.3090288527309895
+  },
+  {
+    "index": 234,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.11992596834898,
+    "lag_ms": 4.581507295370102
+  },
+  {
+    "index": 235,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.749839961528778,
+    "lag_ms": 4.898217972368002
+  },
+  {
+    "index": 236,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5990987196564674,
+    "lag_ms": 4.77826502174139
+  },
+  {
+    "index": 237,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2669021748006344,
+    "lag_ms": 4.717076197266579
+  },
+  {
+    "index": 238,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0158567242324352,
+    "lag_ms": 3.879196010529995
+  },
+  {
+    "index": 239,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.804493997246027,
+    "lag_ms": 4.810728132724762
+  },
+  {
+    "index": 240,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1128348782658577,
+    "lag_ms": 4.231709986925125
+  },
+  {
+    "index": 241,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8502000495791435,
+    "lag_ms": 4.946943838149309
+  },
+  {
+    "index": 242,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2094931229948997,
+    "lag_ms": 3.8668611086905003
+  },
+  {
+    "index": 243,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.810256090015173,
+    "lag_ms": 4.916199017316103
+  },
+  {
+    "index": 244,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9866360127925873,
+    "lag_ms": 4.357697442173958
+  },
+  {
+    "index": 245,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9901759698987007,
+    "lag_ms": 4.121583886444569
+  },
+  {
+    "index": 246,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6586907915771008,
+    "lag_ms": 4.509788937866688
+  },
+  {
+    "index": 247,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.922091167420149,
+    "lag_ms": 4.3785059824585915
+  },
+  {
+    "index": 248,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4775778874754906,
+    "lag_ms": 5.123216193169355
+  },
+  {
+    "index": 249,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.670939080417156,
+    "lag_ms": 3.9070872589945793
+  },
+  {
+    "index": 250,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6790453121066093,
+    "lag_ms": 4.631850868463516
+  },
+  {
+    "index": 251,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6511861942708492,
+    "lag_ms": 5.073562730103731
+  },
+  {
+    "index": 252,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9184380546212196,
+    "lag_ms": 5.1194229163229465
+  },
+  {
+    "index": 253,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5494559668004513,
+    "lag_ms": 4.339809995144606
+  },
+  {
+    "index": 254,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3932689800858498,
+    "lag_ms": 3.912852145731449
+  },
+  {
+    "index": 255,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1958669424057007,
+    "lag_ms": 3.9362111128866673
+  },
+  {
+    "index": 256,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.90294224396348,
+    "lag_ms": 4.408017732203007
+  },
+  {
+    "index": 257,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5407221876084805,
+    "lag_ms": 4.047431983053684
+  },
+  {
+    "index": 258,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9851170256733894,
+    "lag_ms": 4.936233162879944
+  },
+  {
+    "index": 259,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.419017255306244,
+    "lag_ms": 3.994386177510023
+  },
+  {
+    "index": 260,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5941040366888046,
+    "lag_ms": 4.946411121636629
+  },
+  {
+    "index": 261,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.140469081699848,
+    "lag_ms": 4.877668805420399
+  },
+  {
+    "index": 262,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.701454795897007,
+    "lag_ms": 4.881995264440775
+  },
+  {
+    "index": 263,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.430338878184557,
+    "lag_ms": 4.8438310623168945
+  },
+  {
+    "index": 264,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.160926979035139,
+    "lag_ms": 4.265706054866314
+  },
+  {
+    "index": 265,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6892279274761677,
+    "lag_ms": 3.9263712242245674
+  },
+  {
+    "index": 266,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7223648503422737,
+    "lag_ms": 4.468034021556377
+  },
+  {
+    "index": 267,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.287426196038723,
+    "lag_ms": 4.9273781478405
+  },
+  {
+    "index": 268,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.551595214754343,
+    "lag_ms": 3.939156886190176
+  },
+  {
+    "index": 269,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7815396897494793,
+    "lag_ms": 4.730262327939272
+  },
+  {
+    "index": 270,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.58781311661005,
+    "lag_ms": 4.409037996083498
+  },
+  {
+    "index": 271,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9948242008686066,
+    "lag_ms": 4.691586829721928
+  },
+  {
+    "index": 272,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1199180521070957,
+    "lag_ms": 4.882389213889837
+  },
+  {
+    "index": 273,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.167334944009781,
+    "lag_ms": 4.998635035008192
+  },
+  {
+    "index": 274,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7878042310476303,
+    "lag_ms": 4.00884123519063
+  },
+  {
+    "index": 275,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5160118713974953,
+    "lag_ms": 4.59080096334219
+  },
+  {
+    "index": 276,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9501919634640217,
+    "lag_ms": 4.835778847336769
+  },
+  {
+    "index": 277,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6717898435890675,
+    "lag_ms": 4.009743221104145
+  },
+  {
+    "index": 278,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.368006855249405,
+    "lag_ms": 5.044951103627682
+  },
+  {
+    "index": 279,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.2525396198034286,
+    "lag_ms": 4.83571644872427
+  },
+  {
+    "index": 280,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3381502144038677,
+    "lag_ms": 4.2716278694570065
+  },
+  {
+    "index": 281,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.953088842332363,
+    "lag_ms": 4.651026800274849
+  },
+  {
+    "index": 282,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.512750845402479,
+    "lag_ms": 4.072063136845827
+  },
+  {
+    "index": 283,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3743431083858013,
+    "lag_ms": 4.875308834016323
+  },
+  {
+    "index": 284,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.638943027704954,
+    "lag_ms": 4.772574175149202
+  },
+  {
+    "index": 285,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.757069818675518,
+    "lag_ms": 4.080435261130333
+  },
+  {
+    "index": 286,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5879181921482086,
+    "lag_ms": 4.883311688899994
+  },
+  {
+    "index": 287,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1047877855598927,
+    "lag_ms": 1.6731522046029568
+  },
+  {
+    "index": 288,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2214149832725525,
+    "lag_ms": 4.736964125186205
+  },
+  {
+    "index": 289,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.713948953896761,
+    "lag_ms": 4.002429079264402
+  },
+  {
+    "index": 290,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4316408671438694,
+    "lag_ms": 4.569963086396456
+  },
+  {
+    "index": 291,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.976802807301283,
+    "lag_ms": 4.182144999504089
+  },
+  {
+    "index": 292,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.934410236775875,
+    "lag_ms": 4.0365769527852535
+  },
+  {
+    "index": 293,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5221742689609528,
+    "lag_ms": 4.750325810164213
+  },
+  {
+    "index": 294,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.799972590059042,
+    "lag_ms": 4.973528441041708
+  },
+  {
+    "index": 295,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4080208279192448,
+    "lag_ms": 3.7106331437826157
+  },
+  {
+    "index": 296,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7300002984702587,
+    "lag_ms": 4.774294793605804
+  },
+  {
+    "index": 297,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8270487673580647,
+    "lag_ms": 4.987343214452267
+  },
+  {
+    "index": 298,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.2938776314258575,
+    "lag_ms": 4.438774194568396
+  },
+  {
+    "index": 299,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.121956881135702,
+    "lag_ms": 0.6161332130432129
+  },
+  {
+    "index": 300,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3623299784958363,
+    "lag_ms": 4.59253927692771
+  },
+  {
+    "index": 301,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.549522090703249,
+    "lag_ms": 0.5398406647145748
+  },
+  {
+    "index": 302,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7432763017714024,
+    "lag_ms": 4.095674026757479
+  },
+  {
+    "index": 303,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.719608135521412,
+    "lag_ms": 4.619162995368242
+  },
+  {
+    "index": 304,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.552448771893978,
+    "lag_ms": 4.949221387505531
+  },
+  {
+    "index": 305,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2318131998181343,
+    "lag_ms": 4.127155989408493
+  },
+  {
+    "index": 306,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.295461181551218,
+    "lag_ms": 4.830687772482634
+  },
+  {
+    "index": 307,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7280799113214016,
+    "lag_ms": 4.865079186856747
+  },
+  {
+    "index": 308,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.863003872334957,
+    "lag_ms": 4.091539885848761
+  },
+  {
+    "index": 309,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.566331997513771,
+    "lag_ms": 5.018535070121288
+  },
+  {
+    "index": 310,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3218216374516487,
+    "lag_ms": 4.873751197010279
+  },
+  {
+    "index": 311,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 6.355755031108856,
+    "lag_ms": 4.827433731406927
+  },
+  {
+    "index": 312,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.371527884155512,
+    "lag_ms": 4.891129210591316
+  },
+  {
+    "index": 313,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.650138922035694,
+    "lag_ms": 4.162222146987915
+  },
+  {
+    "index": 314,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.1950406953692436,
+    "lag_ms": 3.922483418136835
+  },
+  {
+    "index": 315,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.944901119917631,
+    "lag_ms": 4.723376128822565
+  },
+  {
+    "index": 316,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.858548890799284,
+    "lag_ms": 4.6082958579063416
+  },
+  {
+    "index": 317,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.538140095770359,
+    "lag_ms": 4.226879216730595
+  },
+  {
+    "index": 318,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6965271681547165,
+    "lag_ms": 4.6783629804849625
+  },
+  {
+    "index": 319,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8777471743524075,
+    "lag_ms": 4.240714013576508
+  },
+  {
+    "index": 320,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8994898311793804,
+    "lag_ms": 4.698843229562044
+  },
+  {
+    "index": 321,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4998029693961143,
+    "lag_ms": 4.225430078804493
+  },
+  {
+    "index": 322,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.592036198824644,
+    "lag_ms": 4.924957174807787
+  },
+  {
+    "index": 323,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6674489490687847,
+    "lag_ms": 4.672673996537924
+  },
+  {
+    "index": 324,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.352743875235319,
+    "lag_ms": 3.8490882143378258
+  },
+  {
+    "index": 325,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.107081331312656,
+    "lag_ms": 4.431495908647776
+  },
+  {
+    "index": 326,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.838407177478075,
+    "lag_ms": 4.275955725461245
+  },
+  {
+    "index": 327,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.703294951468706,
+    "lag_ms": 3.952556289732456
+  },
+  {
+    "index": 328,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.887337002903223,
+    "lag_ms": 4.2809690348804
+  },
+  {
+    "index": 329,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4606119841337204,
+    "lag_ms": 4.838553257286549
+  },
+  {
+    "index": 330,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.247546963393688,
+    "lag_ms": 5.096895154565573
+  },
+  {
+    "index": 331,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.029109910130501,
+    "lag_ms": 5.111569073051214
+  },
+  {
+    "index": 332,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.084160853177309,
+    "lag_ms": 4.956473130732775
+  },
+  {
+    "index": 333,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7881059795618057,
+    "lag_ms": 4.361012950539589
+  },
+  {
+    "index": 334,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9785041697323322,
+    "lag_ms": 4.745095036923885
+  },
+  {
+    "index": 335,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6230192743241787,
+    "lag_ms": 4.67284582555294
+  },
+  {
+    "index": 336,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6909406296908855,
+    "lag_ms": 4.325997084379196
+  },
+  {
+    "index": 337,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.362928818911314,
+    "lag_ms": 5.072981119155884
+  },
+  {
+    "index": 338,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6417152732610703,
+    "lag_ms": 4.432894755154848
+  },
+  {
+    "index": 339,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.687667030841112,
+    "lag_ms": 4.8220413736999035
+  },
+  {
+    "index": 340,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.675027120858431,
+    "lag_ms": 5.074414890259504
+  },
+  {
+    "index": 341,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5373657010495663,
+    "lag_ms": 4.611541051417589
+  },
+  {
+    "index": 342,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.018100280314684,
+    "lag_ms": 5.032639019191265
+  },
+  {
+    "index": 343,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8824377804994583,
+    "lag_ms": 4.958616103976965
+  },
+  {
+    "index": 344,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.527544904500246,
+    "lag_ms": 4.4665951281785965
+  },
+  {
+    "index": 345,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.955890726298094,
+    "lag_ms": 4.3828352354466915
+  },
+  {
+    "index": 346,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6540453545749187,
+    "lag_ms": 4.4061667285859585
+  },
+  {
+    "index": 347,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4466548822820187,
+    "lag_ms": 4.927017260342836
+  },
+  {
+    "index": 348,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8598960489034653,
+    "lag_ms": 4.992710892111063
+  },
+  {
+    "index": 349,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.880943939089775,
+    "lag_ms": 4.13915142416954
+  },
+  {
+    "index": 350,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.579180222004652,
+    "lag_ms": 4.385760985314846
+  },
+  {
+    "index": 351,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6080041900277138,
+    "lag_ms": 5.025419872254133
+  },
+  {
+    "index": 352,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.43694381788373,
+    "lag_ms": 3.8913143798708916
+  },
+  {
+    "index": 353,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.910972271114588,
+    "lag_ms": 4.477028734982014
+  },
+  {
+    "index": 354,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.18762194365263,
+    "lag_ms": 4.489454440772533
+  },
+  {
+    "index": 355,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5972211733460426,
+    "lag_ms": 4.93290089070797
+  },
+  {
+    "index": 356,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.927874844521284,
+    "lag_ms": 4.686982836574316
+  },
+  {
+    "index": 357,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6779728941619396,
+    "lag_ms": 4.877747036516666
+  },
+  {
+    "index": 358,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.661227248609066,
+    "lag_ms": 4.446434788405895
+  },
+  {
+    "index": 359,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.073414020240307,
+    "lag_ms": 3.9886971935629845
+  },
+  {
+    "index": 360,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9778331518173218,
+    "lag_ms": 4.683237057179213
+  },
+  {
+    "index": 361,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0116201378405094,
+    "lag_ms": 4.907101858407259
+  },
+  {
+    "index": 362,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.921087831258774,
+    "lag_ms": 4.554258193820715
+  },
+  {
+    "index": 363,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8104898519814014,
+    "lag_ms": 4.416734911501408
+  },
+  {
+    "index": 364,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.436800092458725,
+    "lag_ms": 4.5097991824150085
+  },
+  {
+    "index": 365,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.749498166143894,
+    "lag_ms": 4.511964973062277
+  },
+  {
+    "index": 366,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9541230760514736,
+    "lag_ms": 4.764834884554148
+  },
+  {
+    "index": 367,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.032214008271694,
+    "lag_ms": 3.9906823076307774
+  },
+  {
+    "index": 368,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.971935085952282,
+    "lag_ms": 4.4955480843782425
+  },
+  {
+    "index": 369,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.276523970067501,
+    "lag_ms": 4.495034459978342
+  },
+  {
+    "index": 370,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.784229815006256,
+    "lag_ms": 4.535197280347347
+  },
+  {
+    "index": 371,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6681881174445152,
+    "lag_ms": 4.990496672689915
+  },
+  {
+    "index": 372,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.64380918815732,
+    "lag_ms": 3.912488929927349
+  },
+  {
+    "index": 373,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8145196847617626,
+    "lag_ms": 4.457463044673204
+  },
+  {
+    "index": 374,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.230045083910227,
+    "lag_ms": 4.579855129122734
+  },
+  {
+    "index": 375,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9446743428707123,
+    "lag_ms": 4.510480910539627
+  },
+  {
+    "index": 376,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.793483901768923,
+    "lag_ms": 4.511428065598011
+  },
+  {
+    "index": 377,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.750257659703493,
+    "lag_ms": 4.763954319059849
+  },
+  {
+    "index": 378,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.430527936667204,
+    "lag_ms": 4.491359926760197
+  },
+  {
+    "index": 379,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9093832708895206,
+    "lag_ms": 4.009493160992861
+  },
+  {
+    "index": 380,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6773889549076557,
+    "lag_ms": 4.633060190826654
+  },
+  {
+    "index": 381,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.670049201697111,
+    "lag_ms": 4.438732750713825
+  },
+  {
+    "index": 382,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.304648980498314,
+    "lag_ms": 4.997527226805687
+  },
+  {
+    "index": 383,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.289647866040468,
+    "lag_ms": 4.639375954866409
+  },
+  {
+    "index": 384,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9594791121780872,
+    "lag_ms": 4.972205031663179
+  },
+  {
+    "index": 385,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9379278421401978,
+    "lag_ms": 4.801743198186159
+  },
+  {
+    "index": 386,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.690096851438284,
+    "lag_ms": 4.574343096464872
+  },
+  {
+    "index": 387,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.355234231799841,
+    "lag_ms": 4.8230900429189205
+  },
+  {
+    "index": 388,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8319298289716244,
+    "lag_ms": 4.545851144939661
+  },
+  {
+    "index": 389,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.9918418042361736,
+    "lag_ms": 4.29220125079155
+  },
+  {
+    "index": 390,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4216269850730896,
+    "lag_ms": 4.6469662338495255
+  },
+  {
+    "index": 391,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.862183842808008,
+    "lag_ms": 4.41214581951499
+  },
+  {
+    "index": 392,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0108289793133736,
+    "lag_ms": 4.5686643570661545
+  },
+  {
+    "index": 393,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.8032731972634792,
+    "lag_ms": 4.533312749117613
+  },
+  {
+    "index": 394,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3004297874867916,
+    "lag_ms": 4.098871257156134
+  },
+  {
+    "index": 395,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5112518817186356,
+    "lag_ms": 4.8889522440731525
+  },
+  {
+    "index": 396,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0419710092246532,
+    "lag_ms": 4.677614662796259
+  },
+  {
+    "index": 397,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6959655806422234,
+    "lag_ms": 5.010130349546671
+  },
+  {
+    "index": 398,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6736102774739265,
+    "lag_ms": 4.719548858702183
+  },
+  {
+    "index": 399,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.438608091324568,
+    "lag_ms": 4.606121219694614
+  },
+  {
+    "index": 400,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.209852147847414,
+    "lag_ms": 3.894501831382513
+  },
+  {
+    "index": 401,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.306817263364792,
+    "lag_ms": 4.668736830353737
+  },
+  {
+    "index": 402,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6811910793185234,
+    "lag_ms": 4.58480091765523
+  },
+  {
+    "index": 403,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.995482809841633,
+    "lag_ms": 4.070939961820841
+  },
+  {
+    "index": 404,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9103890992701054,
+    "lag_ms": 4.750849213451147
+  },
+  {
+    "index": 405,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6030289009213448,
+    "lag_ms": 4.020561929792166
+  },
+  {
+    "index": 406,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.965673338621855,
+    "lag_ms": 4.646566696465015
+  },
+  {
+    "index": 407,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4202197566628456,
+    "lag_ms": 5.126848351210356
+  },
+  {
+    "index": 408,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.717467024922371,
+    "lag_ms": 4.608269780874252
+  },
+  {
+    "index": 409,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0083581805229187,
+    "lag_ms": 4.629515111446381
+  },
+  {
+    "index": 410,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.968408167362213,
+    "lag_ms": 4.97116893529892
+  },
+  {
+    "index": 411,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.865348942577839,
+    "lag_ms": 4.6102250926196575
+  },
+  {
+    "index": 412,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5271298363804817,
+    "lag_ms": 4.613811150193214
+  },
+  {
+    "index": 413,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1003588810563087,
+    "lag_ms": 4.652815870940685
+  },
+  {
+    "index": 414,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.224287949502468,
+    "lag_ms": 4.581627435982227
+  },
+  {
+    "index": 415,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.323328983038664,
+    "lag_ms": 4.986186977475882
+  },
+  {
+    "index": 416,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1739561818540096,
+    "lag_ms": 4.657338839024305
+  },
+  {
+    "index": 417,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7229348197579384,
+    "lag_ms": 4.635568242520094
+  },
+  {
+    "index": 418,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.2842921316623688,
+    "lag_ms": 5.034717731177807
+  },
+  {
+    "index": 419,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2234536483883858,
+    "lag_ms": 4.571917466819286
+  },
+  {
+    "index": 420,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0499249696731567,
+    "lag_ms": 5.046871956437826
+  },
+  {
+    "index": 421,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.398163080215454,
+    "lag_ms": 0.8321339264512062
+  },
+  {
+    "index": 422,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8779860585927963,
+    "lag_ms": 4.196998197585344
+  },
+  {
+    "index": 423,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.179676994681358,
+    "lag_ms": 4.718780983239412
+  },
+  {
+    "index": 424,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0194339342415333,
+    "lag_ms": 4.430648405104876
+  },
+  {
+    "index": 425,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8242929838597775,
+    "lag_ms": 4.411577247083187
+  },
+  {
+    "index": 426,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3858067579567432,
+    "lag_ms": 4.5883310958743095
+  },
+  {
+    "index": 427,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.733806148171425,
+    "lag_ms": 4.93743596598506
+  },
+  {
+    "index": 428,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0366340652108192,
+    "lag_ms": 0.17699692398309708
+  },
+  {
+    "index": 429,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7980622835457325,
+    "lag_ms": 4.97276009991765
+  },
+  {
+    "index": 430,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.736699301749468,
+    "lag_ms": 0.1594708301126957
+  },
+  {
+    "index": 431,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.898074686527252,
+    "lag_ms": 4.215579014271498
+  },
+  {
+    "index": 432,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.00011970102787,
+    "lag_ms": 4.679314326494932
+  },
+  {
+    "index": 433,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.947901841253042,
+    "lag_ms": 4.638249985873699
+  },
+  {
+    "index": 434,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.633647993206978,
+    "lag_ms": 4.3837083503603935
+  },
+  {
+    "index": 435,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9853377491235733,
+    "lag_ms": 4.673335235565901
+  },
+  {
+    "index": 436,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.920235972851515,
+    "lag_ms": 4.220909904688597
+  },
+  {
+    "index": 437,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.1900231949985027,
+    "lag_ms": 4.907113965600729
+  },
+  {
+    "index": 438,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.733179997652769,
+    "lag_ms": 4.706755746155977
+  },
+  {
+    "index": 439,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9373602010309696,
+    "lag_ms": 4.676226060837507
+  },
+  {
+    "index": 440,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.2345627658069134,
+    "lag_ms": 3.9056590758264065
+  },
+  {
+    "index": 441,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.07907210662961,
+    "lag_ms": 3.978898748755455
+  },
+  {
+    "index": 442,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.572690136730671,
+    "lag_ms": 4.679113160818815
+  },
+  {
+    "index": 443,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.760743886232376,
+    "lag_ms": 4.706983920186758
+  },
+  {
+    "index": 444,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.078250844031572,
+    "lag_ms": 4.884444177150726
+  },
+  {
+    "index": 445,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.498710062354803,
+    "lag_ms": 4.984063096344471
+  },
+  {
+    "index": 446,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.548147924244404,
+    "lag_ms": 4.7930399887263775
+  },
+  {
+    "index": 447,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.225238226354122,
+    "lag_ms": 4.471688065677881
+  },
+  {
+    "index": 448,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.518098033964634,
+    "lag_ms": 4.7943368554115295
+  },
+  {
+    "index": 449,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4572890251874924,
+    "lag_ms": 4.263077396899462
+  },
+  {
+    "index": 450,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3889091573655605,
+    "lag_ms": 4.818621091544628
+  },
+  {
+    "index": 451,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.189092967659235,
+    "lag_ms": 4.787716083228588
+  },
+  {
+    "index": 452,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.514338120818138,
+    "lag_ms": 4.2972322553396225
+  },
+  {
+    "index": 453,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4599723294377327,
+    "lag_ms": 4.788532853126526
+  },
+  {
+    "index": 454,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.257356885820627,
+    "lag_ms": 4.864806309342384
+  },
+  {
+    "index": 455,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.398210112005472,
+    "lag_ms": 4.229824990034103
+  },
+  {
+    "index": 456,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3306549303233624,
+    "lag_ms": 4.843581933528185
+  },
+  {
+    "index": 457,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0047730542719364,
+    "lag_ms": 3.8923202082514763
+  },
+  {
+    "index": 458,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7928977981209755,
+    "lag_ms": 4.765394143760204
+  },
+  {
+    "index": 459,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.349686972796917,
+    "lag_ms": 4.81621315702796
+  },
+  {
+    "index": 460,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.671288326382637,
+    "lag_ms": 4.278786946088076
+  },
+  {
+    "index": 461,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.7622731178998947,
+    "lag_ms": 4.89632785320282
+  },
+  {
+    "index": 462,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.634478732943535,
+    "lag_ms": 5.025673191994429
+  },
+  {
+    "index": 463,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1650420278310776,
+    "lag_ms": 4.807867109775543
+  },
+  {
+    "index": 464,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.033786080777645,
+    "lag_ms": 4.771619103848934
+  },
+  {
+    "index": 465,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9752240516245365,
+    "lag_ms": 3.991982899606228
+  },
+  {
+    "index": 466,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.712219186127186,
+    "lag_ms": 4.877499770373106
+  },
+  {
+    "index": 467,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.862666267901659,
+    "lag_ms": 4.784232936799526
+  },
+  {
+    "index": 468,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9270858503878117,
+    "lag_ms": 4.793275147676468
+  },
+  {
+    "index": 469,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.6217551678419113,
+    "lag_ms": 4.9666170962154865
+  },
+  {
+    "index": 470,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.110244870185852,
+    "lag_ms": 1.4720270410180092
+  },
+  {
+    "index": 471,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3719961754977703,
+    "lag_ms": 4.874955862760544
+  },
+  {
+    "index": 472,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.422137349843979,
+    "lag_ms": 4.957946948707104
+  },
+  {
+    "index": 473,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4059698916971684,
+    "lag_ms": 4.880886059254408
+  },
+  {
+    "index": 474,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0517950654029846,
+    "lag_ms": 4.918866325169802
+  },
+  {
+    "index": 475,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9330486431717873,
+    "lag_ms": 4.908277187496424
+  },
+  {
+    "index": 476,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6730536483228207,
+    "lag_ms": 4.897756036370993
+  },
+  {
+    "index": 477,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.224447999149561,
+    "lag_ms": 4.1998219676315784
+  },
+  {
+    "index": 478,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.960003912448883,
+    "lag_ms": 4.928389098495245
+  },
+  {
+    "index": 479,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.692095935344696,
+    "lag_ms": 4.3639312498271465
+  },
+  {
+    "index": 480,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.594524063169956,
+    "lag_ms": 4.90832282230258
+  },
+  {
+    "index": 481,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9366789385676384,
+    "lag_ms": 4.907845985144377
+  },
+  {
+    "index": 482,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.801616210490465,
+    "lag_ms": 4.042277112603188
+  },
+  {
+    "index": 483,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.995975013822317,
+    "lag_ms": 5.026686005294323
+  },
+  {
+    "index": 484,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4361619725823402,
+    "lag_ms": 4.964829422533512
+  },
+  {
+    "index": 485,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.47646202519536,
+    "lag_ms": 4.980970174074173
+  },
+  {
+    "index": 486,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8205779381096363,
+    "lag_ms": 4.943368025124073
+  },
+  {
+    "index": 487,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4484903551638126,
+    "lag_ms": 4.994031973183155
+  },
+  {
+    "index": 488,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5853225961327553,
+    "lag_ms": 4.918380174785852
+  },
+  {
+    "index": 489,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3853682689368725,
+    "lag_ms": 4.928545095026493
+  },
+  {
+    "index": 490,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6753400452435017,
+    "lag_ms": 4.902808926999569
+  },
+  {
+    "index": 491,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6749656535685062,
+    "lag_ms": 4.907622002065182
+  },
+  {
+    "index": 492,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3874460496008396,
+    "lag_ms": 4.955901298671961
+  },
+  {
+    "index": 493,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6966207660734653,
+    "lag_ms": 5.057191010564566
+  },
+  {
+    "index": 494,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1517269089818,
+    "lag_ms": 4.933872260153294
+  },
+  {
+    "index": 495,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1048860400915146,
+    "lag_ms": 5.039616022258997
+  },
+  {
+    "index": 496,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3568938486278057,
+    "lag_ms": 4.968598950654268
+  },
+  {
+    "index": 497,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3839428797364235,
+    "lag_ms": 4.544947296380997
+  },
+  {
+    "index": 498,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.780635841190815,
+    "lag_ms": 5.056499037891626
+  },
+  {
+    "index": 499,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1871520914137363,
+    "lag_ms": 5.039389245212078
+  },
+  {
+    "index": 500,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6616528630256653,
+    "lag_ms": 4.936479032039642
+  },
+  {
+    "index": 501,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.4964756816625595,
+    "lag_ms": 4.972347989678383
+  },
+  {
+    "index": 502,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.565020091831684,
+    "lag_ms": 5.044342949986458
+  },
+  {
+    "index": 503,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7834628708660603,
+    "lag_ms": 5.020833108574152
+  },
+  {
+    "index": 504,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0223573558032513,
+    "lag_ms": 5.0133890472352505
+  },
+  {
+    "index": 505,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5224081948399544,
+    "lag_ms": 4.94398083537817
+  },
+  {
+    "index": 506,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.8374271243810654,
+    "lag_ms": 4.997439682483673
+  },
+  {
+    "index": 507,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2425946556031704,
+    "lag_ms": 5.057112313807011
+  },
+  {
+    "index": 508,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7083642780780792,
+    "lag_ms": 5.088504869490862
+  },
+  {
+    "index": 509,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.479006700217724,
+    "lag_ms": 4.048280417919159
+  },
+  {
+    "index": 510,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.710874192416668,
+    "lag_ms": 4.696013871580362
+  },
+  {
+    "index": 511,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8686746954917908,
+    "lag_ms": 5.037717055529356
+  },
+  {
+    "index": 512,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6579289697110653,
+    "lag_ms": 3.9262413047254086
+  },
+  {
+    "index": 513,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.467075828462839,
+    "lag_ms": 5.034156143665314
+  },
+  {
+    "index": 514,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.05674085393548,
+    "lag_ms": 5.085068289190531
+  },
+  {
+    "index": 515,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.85677395388484,
+    "lag_ms": 5.063094198703766
+  },
+  {
+    "index": 516,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.79628811404109,
+    "lag_ms": 5.033467896282673
+  },
+  {
+    "index": 517,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2852450385689735,
+    "lag_ms": 5.072287283837795
+  },
+  {
+    "index": 518,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.477440681308508,
+    "lag_ms": 5.018873140215874
+  },
+  {
+    "index": 519,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0876179225742817,
+    "lag_ms": 4.203940276056528
+  },
+  {
+    "index": 520,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.2228301279246807,
+    "lag_ms": 5.15343900769949
+  },
+  {
+    "index": 521,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.695920877158642,
+    "lag_ms": 5.0577339716255665
+  },
+  {
+    "index": 522,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8540268540382385,
+    "lag_ms": 4.61438437923789
+  },
+  {
+    "index": 523,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.431989647448063,
+    "lag_ms": 5.093058105558157
+  },
+  {
+    "index": 524,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.030397929251194,
+    "lag_ms": 5.043396260589361
+  },
+  {
+    "index": 525,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1221448443830013,
+    "lag_ms": 0.5187932401895523
+  },
+  {
+    "index": 526,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.277230843901634,
+    "lag_ms": 5.046118050813675
+  },
+  {
+    "index": 527,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4413179382681847,
+    "lag_ms": 4.873596131801605
+  },
+  {
+    "index": 528,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1869797967374325,
+    "lag_ms": 5.153391044586897
+  },
+  {
+    "index": 529,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9619201086461544,
+    "lag_ms": 1.217563170939684
+  },
+  {
+    "index": 530,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9103411361575127,
+    "lag_ms": 4.546367097645998
+  },
+  {
+    "index": 531,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4082606434822083,
+    "lag_ms": 5.1666670478880405
+  },
+  {
+    "index": 532,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.705428283661604,
+    "lag_ms": 5.0549679435789585
+  },
+  {
+    "index": 533,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7305050753057003,
+    "lag_ms": 5.106770899146795
+  },
+  {
+    "index": 534,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5147052258253098,
+    "lag_ms": 5.186140071600676
+  },
+  {
+    "index": 535,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.9566890336573124,
+    "lag_ms": 4.901689011603594
+  },
+  {
+    "index": 536,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1647467985749245,
+    "lag_ms": 5.166877061128616
+  },
+  {
+    "index": 537,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.826605923473835,
+    "lag_ms": 5.091342143714428
+  },
+  {
+    "index": 538,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6373262517154217,
+    "lag_ms": 5.052589811384678
+  },
+  {
+    "index": 539,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.4601306542754173,
+    "lag_ms": 5.141228437423706
+  },
+  {
+    "index": 540,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.608057577162981,
+    "lag_ms": 5.076396279036999
+  },
+  {
+    "index": 541,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.180874977260828,
+    "lag_ms": 5.142403766512871
+  },
+  {
+    "index": 542,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3083283342421055,
+    "lag_ms": 5.214293021708727
+  },
+  {
+    "index": 543,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.785473596304655,
+    "lag_ms": 4.609241150319576
+  },
+  {
+    "index": 544,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5217412039637566,
+    "lag_ms": 5.1023950800299644
+  },
+  {
+    "index": 545,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.103372175246477,
+    "lag_ms": 3.9913300424814224
+  },
+  {
+    "index": 546,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0869212932884693,
+    "lag_ms": 3.9535006508231163
+  },
+  {
+    "index": 547,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0207261443138123,
+    "lag_ms": 4.730849992483854
+  },
+  {
+    "index": 548,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.07533610612154,
+    "lag_ms": 4.198593087494373
+  },
+  {
+    "index": 549,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4684746749699116,
+    "lag_ms": 4.002207424491644
+  },
+  {
+    "index": 550,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.719080075621605,
+    "lag_ms": 3.91914090141654
+  },
+  {
+    "index": 551,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7624890208244324,
+    "lag_ms": 4.186400678008795
+  },
+  {
+    "index": 552,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6200260035693645,
+    "lag_ms": 4.181134048849344
+  },
+  {
+    "index": 553,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5581830888986588,
+    "lag_ms": 4.6245018020272255
+  },
+  {
+    "index": 554,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.622209955006838,
+    "lag_ms": 3.92902921885252
+  },
+  {
+    "index": 555,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4026473984122276,
+    "lag_ms": 4.4588688760995865
+  },
+  {
+    "index": 556,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.367142751812935,
+    "lag_ms": 0.22580893710255623
+  },
+  {
+    "index": 557,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9940269887447357,
+    "lag_ms": 4.767000209540129
+  },
+  {
+    "index": 558,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.1346939504146576,
+    "lag_ms": 4.009454976767302
+  },
+  {
+    "index": 559,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.001461736857891,
+    "lag_ms": 4.706558305770159
+  },
+  {
+    "index": 560,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.567838877439499,
+    "lag_ms": 4.281922243535519
+  },
+  {
+    "index": 561,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4107727222144604,
+    "lag_ms": 0.35251304507255554
+  },
+  {
+    "index": 562,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8441259637475014,
+    "lag_ms": 4.2352452874183655
+  },
+  {
+    "index": 563,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.59609567001462,
+    "lag_ms": 4.103944171220064
+  },
+  {
+    "index": 564,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.9823770746588707,
+    "lag_ms": 3.9638830348849297
+  },
+  {
+    "index": 565,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.272079862654209,
+    "lag_ms": 2.889720257371664
+  },
+  {
+    "index": 566,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4033612571656704,
+    "lag_ms": 4.813425708562136
+  },
+  {
+    "index": 567,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5585490986704826,
+    "lag_ms": 3.204698208719492
+  },
+  {
+    "index": 568,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 4.544857889413834,
+    "lag_ms": 4.68137301504612
+  },
+  {
+    "index": 569,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.310499083250761,
+    "lag_ms": 4.227955359965563
+  },
+  {
+    "index": 570,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.665364183485508,
+    "lag_ms": 4.897290840744972
+  },
+  {
+    "index": 571,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7992846444249153,
+    "lag_ms": 4.377433098852634
+  },
+  {
+    "index": 572,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4823169223964214,
+    "lag_ms": 4.6763792634010315
+  },
+  {
+    "index": 573,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.3312970772385597,
+    "lag_ms": 4.549182951450348
+  },
+  {
+    "index": 574,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.2743851877748966,
+    "lag_ms": 4.666225053369999
+  },
+  {
+    "index": 575,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.872833050787449,
+    "lag_ms": 4.277210216969252
+  },
+  {
+    "index": 576,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6440187357366085,
+    "lag_ms": 4.7408719547092915
+  },
+  {
+    "index": 577,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4508750066161156,
+    "lag_ms": 4.736109171062708
+  },
+  {
+    "index": 578,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.601682674139738,
+    "lag_ms": 4.531871061772108
+  },
+  {
+    "index": 579,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0774646438658237,
+    "lag_ms": 4.804873373359442
+  },
+  {
+    "index": 580,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.2759167477488518,
+    "lag_ms": 4.812618251889944
+  },
+  {
+    "index": 581,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.5550356842577457,
+    "lag_ms": 4.837824031710625
+  },
+  {
+    "index": 582,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.4352301843464375,
+    "lag_ms": 4.208492115139961
+  },
+  {
+    "index": 583,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.403315156698227,
+    "lag_ms": 4.70761489123106
+  },
+  {
+    "index": 584,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.805055119097233,
+    "lag_ms": 4.25065727904439
+  },
+  {
+    "index": 585,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8753308579325676,
+    "lag_ms": 4.129038192331791
+  },
+  {
+    "index": 586,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8956946916878223,
+    "lag_ms": 4.676179960370064
+  },
+  {
+    "index": 587,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5011259131133556,
+    "lag_ms": 4.783150274306536
+  },
+  {
+    "index": 588,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3038783110678196,
+    "lag_ms": 4.684305749833584
+  },
+  {
+    "index": 589,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.37925723195076,
+    "lag_ms": 4.009818192571402
+  },
+  {
+    "index": 590,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5268453173339367,
+    "lag_ms": 4.00189682841301
+  },
+  {
+    "index": 591,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.8817839920520782,
+    "lag_ms": 4.0166969411075115
+  },
+  {
+    "index": 592,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.3453449830412865,
+    "lag_ms": 4.400627221912146
+  },
+  {
+    "index": 593,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.285958267748356,
+    "lag_ms": 4.186602775007486
+  },
+  {
+    "index": 594,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.7269339188933372,
+    "lag_ms": 0.95750717446208
+  },
+  {
+    "index": 595,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.5385646149516106,
+    "lag_ms": 4.630096256732941
+  },
+  {
+    "index": 596,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.0863070860505104,
+    "lag_ms": 4.789508879184723
+  },
+  {
+    "index": 597,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.6142201386392117,
+    "lag_ms": 4.842984955757856
+  },
+  {
+    "index": 598,
+    "path": "/api/quotes/latest",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 3.132845740765333,
+    "lag_ms": 4.39372006803751
+  },
+  {
+    "index": 599,
+    "path": "/api/quotes/history",
+    "status": 200,
+    "ok": true,
+    "latency_ms": 2.771280240267515,
+    "lag_ms": 5.052720196545124
+  }
+]

@@ -1,0 +1,267 @@
+{
+  "baseline_source": "https://github.com/PVRLabs/experiments/blob/main/spring/boot-jdk27/results/comparison.json",
+  "baseline_json_pointer": "/runs/F",
+  "javalin": {
+    "source_run": "javalin-002",
+    "boot_id": "80e1a72d-18d9-4408-9b83-74d3d2c36e6e",
+    "startup_seconds": 2.724421872999997,
+    "phases": {
+      "idle": {
+        "samples": 59,
+        "elapsed_seconds": 58.143958623,
+        "mem_available_min_mib": 111.921875,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 145.00390625,
+            "rss_max_sampled_mib": 145.9765625,
+            "cpu_seconds_sampled": 0.3,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 73.15234375,
+            "rss_max_sampled_mib": 73.171875,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.30078125,
+            "rss_max_sampled_mib": 22.30078125,
+            "cpu_seconds_sampled": 0.01,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 70.68359375,
+          "max_sampled": 70.828125
+        }
+      },
+      "warmup": {
+        "samples": 118,
+        "elapsed_seconds": 117.257199802,
+        "mem_available_min_mib": 105.08203125,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 147.6171875,
+            "rss_max_sampled_mib": 149.0703125,
+            "cpu_seconds_sampled": 3.61,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 73.39453125,
+            "rss_max_sampled_mib": 73.421875,
+            "cpu_seconds_sampled": 0.27,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.28515625,
+            "rss_max_sampled_mib": 22.30078125,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 71.09375,
+          "max_sampled": 71.11328125
+        }
+      },
+      "workload": {
+        "samples": 299,
+        "elapsed_seconds": 298.707646073,
+        "mem_available_min_mib": 93.16015625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 159.08203125,
+            "rss_max_sampled_mib": 160.1015625,
+            "cpu_seconds_sampled": 5.85,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 73.27734375,
+            "rss_max_sampled_mib": 73.421875,
+            "cpu_seconds_sampled": 0.72,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 21.41796875,
+            "rss_max_sampled_mib": 22.00390625,
+            "cpu_seconds_sampled": 0.06,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 71.18359375,
+          "max_sampled": 71.21484375
+        }
+      },
+      "recovery": {
+        "samples": 59,
+        "elapsed_seconds": 58.11577303900003,
+        "mem_available_min_mib": 93.2890625,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 160.1015625,
+            "rss_max_sampled_mib": 160.16015625,
+            "cpu_seconds_sampled": 0.11,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 73.296875,
+            "rss_max_sampled_mib": 73.296875,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 21.41796875,
+            "rss_max_sampled_mib": 21.41796875,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 71.21875,
+          "max_sampled": 71.21875
+        }
+      }
+    },
+    "warmup": {
+      "offered": 600,
+      "successful": 600,
+      "errors": 0,
+      "duration_seconds": 120,
+      "actual_seconds": 120.0032825069502,
+      "offered_rps": 5,
+      "successful_rps": 4.999863232618241,
+      "p50_ms": 5.314039997756481,
+      "p95_ms": 8.95156292244792,
+      "max_dispatch_lag_ms": 21.783129777759314,
+      "concurrency_limit": 4,
+      "retries": 0,
+      "routes": {
+        "/api/quotes/latest": {
+          "successful": 300,
+          "p50_ms": 5.271479021757841,
+          "p95_ms": 8.566792123019695
+        },
+        "/api/quotes/history": {
+          "successful": 300,
+          "p50_ms": 5.399044137448072,
+          "p95_ms": 9.319300763309002
+        }
+      }
+    },
+    "workload": {
+      "offered": 1500,
+      "successful": 1500,
+      "errors": 0,
+      "duration_seconds": 300,
+      "actual_seconds": 300.0045011867769,
+      "offered_rps": 5,
+      "successful_rps": 4.999924981345962,
+      "p50_ms": 3.9835385978221893,
+      "p95_ms": 5.591071210801601,
+      "max_dispatch_lag_ms": 52.124186884611845,
+      "concurrency_limit": 4,
+      "retries": 0,
+      "routes": {
+        "/api/quotes/latest": {
+          "successful": 750,
+          "p50_ms": 3.851151093840599,
+          "p95_ms": 5.469027906656265
+        },
+        "/api/quotes/history": {
+          "successful": 750,
+          "p50_ms": 4.102085717022419,
+          "p95_ms": 5.676868837326765
+        }
+      }
+    },
+    "oom_kill_delta_total": 0,
+    "kernel_oom_kill_seen": false,
+    "mem_available_min_all_samples_mib": 93.16015625,
+    "workload_samples_below_32_mib": 0,
+    "memory_psi_stall_microseconds": {
+      "some": 127496,
+      "full": 72924
+    },
+    "ingestion": {
+      "rows_per_symbol": 10,
+      "batches": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ]
+      ]
+    },
+    "cache_verified": true,
+    "collector": "G1",
+    "metrics_overhead": {
+      "scrapes": 51,
+      "total_bytes": 18300,
+      "total_seconds": 0.1447633599999989,
+      "median_ms": 1.8638820000091982,
+      "max_ms": 18.11093899999605
+    },
+    "kernel_observations": [
+      "Oct 28 02:09:34 lima-boot27-512 kernel: clocksource: timekeeping watchdog on CPU0: hpet wd-wd read-back delay of 875460ns",
+      "Oct 28 02:09:34 lima-boot27-512 kernel: clocksource: wd-tsc-wd read-back delay of 153301ns, clock-skew test skipped!"
+    ]
+  },
+  "differences": {
+    "startup_seconds": -1.0650643220000013,
+    "startup_reduction_percent": 28.105771262745073,
+    "workload_app_rss_mib": -27.8046875,
+    "workload_app_rss_reduction_percent": 14.877829567543843
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "Ob": {
+    "optimization": "-Ob",
+    "compiler_reported_duration": "3m 39s",
+    "compiler_reported_peak_rss_gb": 2.7,
+    "executable_bytes": 45222152,
+    "companion_library_bytes": 33000,
+    "builder_vcpus": 2,
+    "builder_ram_gib": 6,
+    "swap": false,
+    "compiler_heap": "-J-Xmx4g",
+    "flags": [
+      "--no-fallback",
+      "-H:IncludeResources=static/.*"
+    ],
+    "selected": true
+  },
+  "O2": {
+    "optimization": "-O2",
+    "compiler_reported_duration": "6m 18s",
+    "compiler_reported_peak_rss_gb": 4.34,
+    "executable_bytes": 56953096,
+    "companion_library_bytes": 33000,
+    "builder_vcpus": 2,
+    "builder_ram_gib": 6,
+    "swap": false,
+    "compiler_heap": "-J-Xmx4g",
+    "flags": [
+      "--no-fallback",
+      "-H:IncludeResources=static/.*"
+    ],
+    "selected": false
+  }
+}

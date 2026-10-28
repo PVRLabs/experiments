@@ -1,0 +1,266 @@
+{
+  "baseline_source": "https://github.com/PVRLabs/experiments/blob/main/spring/boot-jdk27/results/comparison.json",
+  "baseline_json_pointer": "/runs/F",
+  "javalin": {
+    "source_run": "native-001",
+    "boot_id": "55f0d6d7-5b2d-4d73-afcc-60161eb8c089",
+    "startup_seconds": 0.11227622499999868,
+    "phases": {
+      "idle": {
+        "samples": 59,
+        "elapsed_seconds": 58.142499646999994,
+        "mem_available_min_mib": 218.40234375,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 46.6953125,
+            "rss_max_sampled_mib": 46.87890625,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 82.7578125,
+            "rss_max_sampled_mib": 82.76953125,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.33984375,
+            "rss_max_sampled_mib": 22.33984375,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 59.203125,
+          "max_sampled": 59.28515625
+        }
+      },
+      "warmup": {
+        "samples": 119,
+        "elapsed_seconds": 118.21430658000001,
+        "mem_available_min_mib": 207.33984375,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 58.70703125,
+            "rss_max_sampled_mib": 59.80859375,
+            "cpu_seconds_sampled": 0.63,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 82.81640625,
+            "rss_max_sampled_mib": 82.828125,
+            "cpu_seconds_sampled": 0.26,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.33984375,
+            "rss_max_sampled_mib": 22.34375,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 59.33203125,
+          "max_sampled": 59.37109375
+        }
+      },
+      "workload": {
+        "samples": 298,
+        "elapsed_seconds": 297.549120615,
+        "mem_available_min_mib": 202.65234375,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 59.40625,
+            "rss_max_sampled_mib": 59.80859375,
+            "cpu_seconds_sampled": 1.59,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 83.953125,
+            "rss_max_sampled_mib": 83.953125,
+            "cpu_seconds_sampled": 0.66,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.34375,
+            "rss_max_sampled_mib": 22.34375,
+            "cpu_seconds_sampled": 0.11,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 59.3359375,
+          "max_sampled": 59.37109375
+        }
+      },
+      "recovery": {
+        "samples": 59,
+        "elapsed_seconds": 58.11074007000002,
+        "mem_available_min_mib": 205.55078125,
+        "swap_used_max_mib": 0.0,
+        "pswpin_delta": 0,
+        "pswpout_delta": 0,
+        "oom_kill_delta": 0,
+        "processes": {
+          "app": {
+            "rss_median_mib": 57.24609375,
+            "rss_max_sampled_mib": 57.24609375,
+            "cpu_seconds_sampled": 0.02,
+            "cpu_samples_complete": true
+          },
+          "mariadb": {
+            "rss_median_mib": 83.95703125,
+            "rss_max_sampled_mib": 83.9765625,
+            "cpu_seconds_sampled": 0.01,
+            "cpu_samples_complete": true
+          },
+          "fixture": {
+            "rss_median_mib": 22.34375,
+            "rss_max_sampled_mib": 22.34375,
+            "cpu_seconds_sampled": 0.0,
+            "cpu_samples_complete": true
+          }
+        },
+        "mariadb_cgroup_mib": {
+          "median": 59.33984375,
+          "max_sampled": 59.36328125
+        }
+      }
+    },
+    "warmup": {
+      "offered": 600,
+      "successful": 600,
+      "errors": 0,
+      "duration_seconds": 120,
+      "actual_seconds": 120.0050440132618,
+      "offered_rps": 5,
+      "successful_rps": 4.999789841614439,
+      "p50_ms": 2.9027010314166546,
+      "p95_ms": 3.9052204228937626,
+      "max_dispatch_lag_ms": 9.008103050291538,
+      "concurrency_limit": 4,
+      "retries": 0,
+      "routes": {
+        "/api/quotes/latest": {
+          "successful": 300,
+          "p50_ms": 2.8540268540382385,
+          "p95_ms": 3.7533841095864773
+        },
+        "/api/quotes/history": {
+          "successful": 300,
+          "p50_ms": 2.9446743428707123,
+          "p95_ms": 3.995975013822317
+        }
+      }
+    },
+    "workload": {
+      "offered": 1500,
+      "successful": 1500,
+      "errors": 0,
+      "duration_seconds": 300,
+      "actual_seconds": 300.00362853426486,
+      "offered_rps": 5,
+      "successful_rps": 4.999939525160369,
+      "p50_ms": 2.8827222995460033,
+      "p95_ms": 4.032227210700512,
+      "max_dispatch_lag_ms": 49.8933270573616,
+      "concurrency_limit": 4,
+      "retries": 0,
+      "routes": {
+        "/api/quotes/latest": {
+          "successful": 750,
+          "p50_ms": 2.7329144068062305,
+          "p95_ms": 3.8269967772066593
+        },
+        "/api/quotes/history": {
+          "successful": 750,
+          "p50_ms": 2.9804869554936886,
+          "p95_ms": 4.196141846477985
+        }
+      }
+    },
+    "oom_kill_delta_total": 0,
+    "kernel_oom_kill_seen": false,
+    "mem_available_min_all_samples_mib": 202.65234375,
+    "workload_samples_below_32_mib": 0,
+    "memory_psi_stall_microseconds": {
+      "some": 14793,
+      "full": 12959
+    },
+    "ingestion": {
+      "rows_per_symbol": 10,
+      "batches": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ]
+      ]
+    },
+    "cache_verified": false,
+    "collector": "Serial",
+    "metrics_overhead": {
+      "scrapes": 52,
+      "total_bytes": 18639,
+      "total_seconds": 0.058755363000180694,
+      "median_ms": 1.0130125000245016,
+      "max_ms": 3.812917000004745
+    },
+    "kernel_observations": [
+      "-- No entries --"
+    ]
+  },
+  "differences": {
+    "startup_seconds": -3.67720997,
+    "startup_reduction_percent": 97.0371649552876,
+    "workload_app_rss_mib": -127.48046875,
+    "workload_app_rss_reduction_percent": 68.21269569215977
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "oom_kill_delta_total": 0,
+  "kernel_oom_kill_seen": false,
+  "ingestion": {
+    "rows_per_symbol": 10,
+    "batches": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ]
+    ]
+  },
+  "cache_verified": false,
+  "collector": "Serial",
+  "metrics_overhead": {
+    "scrapes": 52,
+    "total_bytes": 18639,
+    "total_seconds": 0.058755363000180694,
+    "median_ms": 1.0130125000245016,
+    "max_ms": 3.812917000004745
+  },
+  "kernel_observations": [
+    "-- No entries --"
+  ]
+}

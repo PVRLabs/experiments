@@ -1,0 +1,1 @@
+PASS javalin: polling, payloads, assets, health/metrics, failure/recovery, database restart persistence

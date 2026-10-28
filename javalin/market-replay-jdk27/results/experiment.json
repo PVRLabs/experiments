@@ -1,0 +1,90 @@
+{
+  "environment": {
+    "os": "Ubuntu 24.04",
+    "architecture": "x86_64",
+    "ram_mib": 512,
+    "vcpus": 1,
+    "swap": false,
+    "deployment": "local VM; app, MariaDB and deterministic Python fixture share budget",
+    "mariadb_caches_mib": {
+      "innodb_buffer_pool": 64,
+      "key_buffer": 8,
+      "aria_pagecache": 16
+    },
+    "database_timezone": "+00:00"
+  },
+  "application": {
+    "javalin": "7.2.4",
+    "server": "Jetty",
+    "jackson": "2.21.5",
+    "hikari": "7.0.2",
+    "pool_min_max": [
+      1,
+      4
+    ],
+    "jdbi_core": "3.55.0",
+    "repository_abstraction": "java-repository-poc 0.1.0-SNAPSHOT",
+    "mariadb_jdbc": "3.5.10",
+    "logging": "SLF4J Simple 2.0.20",
+    "poll_seconds": 60,
+    "rows_per_transaction": 3
+  },
+  "method": {
+    "phases_seconds": {
+      "idle": 60,
+      "warmup": 120,
+      "workload": 300,
+      "recovery": 60
+    },
+    "offered_rps": 5,
+    "max_in_flight": 4,
+    "retries": 0,
+    "routes": [
+      "/api/quotes/latest",
+      "/api/quotes/history"
+    ],
+    "route_selection": "alternating",
+    "startup": "launch to health UP and three persisted quotes",
+    "startup_poll_seconds": 0.05,
+    "resource_sampling_seconds": 1,
+    "metrics_scrape_seconds": 10,
+    "transition_samples": "excluded",
+    "percentiles": "nearest rank over successful host-observed requests through SSH forwarding",
+    "design": "single accepted measurement per configuration, separate VM boots; no capacity test"
+  },
+  "baseline": {
+    "url": "https://github.com/PVRLabs/experiments/blob/main/spring/boot-jdk27/results/comparison.json",
+    "run": "optimized-F-001",
+    "json_pointer": "/runs/F",
+    "github_verified": "2026-10-28",
+    "github_blob": "5d9a8ded85bfcfc225b48a03a067c0eac817a4e3"
+  },
+  "limitations": [
+    "Complete deployment comparisons, not universal framework rankings or isolated framework effects.",
+    "Single measurements on separate VM boots/dates; variability unestablished.",
+    "No throughput-capacity or saturation test.",
+    "Startup polling about 50 ms; displayed decimal precision is not timing accuracy.",
+    "Kernel timekeeping watchdog warnings in HotSpot Javalin and native O2; effects unknown, not proof of clock drift.",
+    "Metrics differ: Javalin JSON versus Spring Prometheus; no StatLite process.",
+    "Sampled RSS peaks may miss spikes; application RSS is not whole-host memory.",
+    "GraalVM 25 Serial and HotSpot 27 G1 differ beyond compilation mode."
+  ],
+  "provenance": {
+    "archive": "experiments-private:javalin/market-replay-jdk27",
+    "authoritative_curated_files": [
+      "results/curated/comparison.json"
+    ],
+    "accepted_runs": [
+      "javalin-002"
+    ],
+    "curation": "Numeric values preserved; baseline detail replaced by public reference. Evidence is explicitly projected, not full raw capture."
+  },
+  "runtime": {
+    "hotspot": "27+35-2325",
+    "hotspot_gc": "G1",
+    "max_heap": "80 MiB",
+    "native": "Oracle GraalVM 25.0.4+7.1",
+    "native_gc": "Serial",
+    "native_target": "x86-64-v3"
+  }
+}

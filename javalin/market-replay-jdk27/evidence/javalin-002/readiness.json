@@ -1,0 +1,33 @@
+{
+  "seconds": 2.724421872999997,
+  "epoch": 1793152936.3525865,
+  "latest": [
+    {
+      "id": 1,
+      "fetchedAt": "2026-10-28T02:02:15.795874Z",
+      "cycle": 0,
+      "sampleIndex": 0,
+      "marketTime": "09:30",
+      "symbol": "AAPL",
+      "price": 331.61
+    },
+    {
+      "id": 2,
+      "fetchedAt": "2026-10-28T02:02:15.795874Z",
+      "cycle": 0,
+      "sampleIndex": 0,
+      "marketTime": "09:30",
+      "symbol": "GOOG",
+      "price": 341.91
+    },
+    {
+      "id": 3,
+      "fetchedAt": "2026-10-28T02:02:15.795874Z",
+      "cycle": 0,
+      "sampleIndex": 0,
+      "marketTime": "09:30",
+      "symbol": "NVDA",
+      "price": 229.32
+    }
+  ]
+}
