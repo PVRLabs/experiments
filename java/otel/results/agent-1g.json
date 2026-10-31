@@ -1,0 +1,9 @@
+{
+  "mode": "agent",
+  "startup_s": 22.503911697,
+  "idle_rss_kib": 291944,
+  "end_rss_kib": 293304,
+  "mean_ms": 8.47738414666594,
+  "p95_ms": 15.607383000002528,
+  "requests": 150
+}
