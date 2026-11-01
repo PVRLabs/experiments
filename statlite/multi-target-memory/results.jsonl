@@ -1,0 +1,3 @@
+{"targets": 1, "baseline_kib": 2816, "median_kib": 14860, "peak_kib": 15516, "samples": 121, "polls": [["ok", 5]], "successful_targets": 1, "metric_samples": 30}
+{"targets": 6, "baseline_kib": 2360, "median_kib": 16880, "peak_kib": 17920, "samples": 121, "polls": [["ok", 30]], "successful_targets": 6, "metric_samples": 180}
+{"targets": 12, "baseline_kib": 2440, "median_kib": 17976, "peak_kib": 18624, "samples": 121, "polls": [["ok", 60]], "successful_targets": 12, "metric_samples": 360}
