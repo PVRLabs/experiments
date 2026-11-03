@@ -24,6 +24,8 @@ Its evidence is reused in place, not exported again. The independent
 [Native Image experiment](../market-replay-native/README.md) compares both native
 optimization settings with these two deployments.
 
+The [persistence source example](persistence-example/README.md) includes the experiment-era repository core, measured quote repository and focused transaction tests.
+
 ## Stack, environment and method
 
 Ubuntu 24.04 x86_64, 512 MiB RAM, one vCPU, no swap. Application, MariaDB and a
