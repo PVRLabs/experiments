@@ -1,0 +1,32 @@
+{
+  "idle": {
+    "samples": 20,
+    "peak_rss_kib": 88252,
+    "mean_rss_kib": 88214.8,
+    "min_available_kib": 289644
+  },
+  "warmup": {
+    "samples": 30,
+    "peak_rss_kib": 102012,
+    "mean_rss_kib": 98224.0,
+    "min_available_kib": 277676
+  },
+  "light": {
+    "samples": 30,
+    "peak_rss_kib": 104128,
+    "mean_rss_kib": 102942.4,
+    "min_available_kib": 277492
+  },
+  "moderate": {
+    "samples": 60,
+    "peak_rss_kib": 132040,
+    "mean_rss_kib": 113514.33333333333,
+    "min_available_kib": 247752
+  },
+  "recovery": {
+    "samples": 20,
+    "peak_rss_kib": 123400,
+    "mean_rss_kib": 123400.0,
+    "min_available_kib": 258296
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "offered": 1800,
+  "successful": 1800,
+  "errors": 0,
+  "duration_seconds": 60,
+  "actual_seconds": 60.026516531004745,
+  "offered_rps": 30,
+  "successful_rps": 29.986747591296066,
+  "concurrency_limit": 8,
+  "retries": 0,
+  "timeout_seconds": 2,
+  "connection_reuse": true,
+  "unsent": 0,
+  "timeouts": 0,
+  "p50_ms": 2.927506997366436,
+  "p95_ms": 6.23083500249777,
+  "p99_ms": 8.836230001179501,
+  "routes": {
+    "/greetings": {
+      "successful": 1800,
+      "p50_ms": 2.927506997366436,
+      "p95_ms": 6.23083500249777,
+      "p99_ms": 8.836230001179501
+    }
+  },
+  "max_dispatch_lag_ms": 4.229119331284892
+}

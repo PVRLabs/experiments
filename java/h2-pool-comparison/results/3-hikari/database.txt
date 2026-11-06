@@ -1,0 +1,3 @@
+ROWS | WRITES | USES
+420  | 420    | 420
+(1 row, 26 ms)
