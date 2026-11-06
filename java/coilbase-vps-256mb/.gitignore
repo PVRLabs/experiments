@@ -4,3 +4,6 @@ prepared-bundles/
 results/**/*.sqlite*
 results/**/*.mv.db
 results/**/*.trace.db
+
+# GC summaries are intentional measurement evidence.
+!results/**/guest/gc.log
