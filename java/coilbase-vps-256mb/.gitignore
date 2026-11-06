@@ -1,0 +1,6 @@
+**/target/
+__pycache__/
+prepared-bundles/
+results/**/*.sqlite*
+results/**/*.mv.db
+results/**/*.trace.db

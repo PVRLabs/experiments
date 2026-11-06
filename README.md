@@ -36,6 +36,13 @@ We keep tuning effort comparable across implementations and avoid fine-grained, 
 
 ## Experiments
 
+- [Spring JDBC and CoilBase/Jex on 256 MiB Alpine](java/coilbase-vps-256mb/) · November 2026
+
+  Spring Boot 4.1.1 with Spring JDBC versus CoilBase preview 3 with Jex/Jdbi,
+  using equivalent quote APIs, file-backed H2 and StatLite. Includes measured
+  source, OS/HTTP/GC evidence, reanalysis and reproduction commands, with
+  memory-settling and paging observations.
+
 - [Spring Boot deployment optimizations on JDK 27](spring/boot-jdk27/) · October 2026
 
   Executable JAR versus extracted Spring AOT plus JDK AOT cache on a 512 MiB,
