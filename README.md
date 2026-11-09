@@ -36,6 +36,14 @@ We keep tuning effort comparable across implementations and avoid fine-grained, 
 
 ## Experiments
 
+- [Five Java stacks on a 512 MiB VM](java/coilbase-framework-comparison/) · November 2026
+
+  Spring JDBC, Javalin, Jex and two Micronaut implementations compared using
+  a synthetic database-backed fixture on HotSpot and Native Image. Includes
+  both accepted per-stack run summaries and a verification script.
+
+  **[Read the full article →](https://pvrlabs.xyz/articles/five-java-stacks-512mb-vps.html)**
+
 - [Spring JDBC and CoilBase/Jex on 256 MiB Alpine](java/coilbase-vps-256mb/) · November 2026
 
   Spring Boot 4.1.1 with Spring JDBC versus CoilBase preview 3 with Jex/Jdbi,
