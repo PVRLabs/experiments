@@ -2,7 +2,7 @@
 
 Two accepted HotSpot runs and two matched Native Image runs per stack: Spring JDBC, Javalin + CoilBase, Jex + CoilBase, Micronaut Data, and Micronaut + CoilBase.
 
-This is a synthetic quote/status/audit fixture, not Market Replay Portfolio. The maintainer develops CoilBase. These observations describe complete stacks under light traffic, not framework capacity or universal rankings.
+This is a synthetic quote/status/audit fixture, not Market Replay Portfolio. The maintainer develops [CoilBase](https://github.com/PVRLabs/coilbase). These observations describe complete stacks under light traffic, not framework capacity or universal rankings.
 
 ## Results
 
