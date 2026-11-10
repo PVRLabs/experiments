@@ -1,6 +1,6 @@
 # PostgreSQL 18 on a Small VPS: Two Low-Memory Tuning Strategies
 
-Can PostgreSQL serve a small application efficiently on a memory-constrained VPS? We compared two configurations with PostgreSQL 18.6 defaults. The successful comparison ran on a 512 MiB VM, not 256 MiB; an earlier 256 MiB preparation attempt ran out of memory. No application was deployed alongside PostgreSQL.
+Can PostgreSQL serve a small application efficiently on a memory-constrained VPS? We compared two configurations with PostgreSQL 18.6 defaults. The original comparison ran on a 512 MiB VM; a later 256 MiB follow-up tested the two tuned configurations. No application was deployed alongside PostgreSQL.
 
 ## Configurations
 
@@ -23,6 +23,18 @@ The local Ubuntu VM had one vCPU, 512 MiB allocated (approximately 456 MiB usabl
 Peak is the highest sample across idle, warm-up and measurement. B peaked at 81,655 KiB during warm-up; its measured peak was 81,630 KiB. PSS apportions shared pages among processes, while summed RSS counts shared pages repeatedly; PSS is therefore more useful for this PostgreSQL process footprint. Neither is the full VPS memory cost: OS services and filesystem cache also consume memory. No driver errors or swap activity were observed.
 
 Theory A is the preferred configuration for this workload: it used less process memory and showed higher throughput and lower p95 values in this run. This does not establish that A is universally faster. The sort spilled under both query-memory settings during preparation.
+
+## 256 MiB follow-up
+
+An earlier 256 MiB default-configuration smoke test ran out of memory and lost a PostgreSQL backend. The follow-up tested only A and B; defaults were not rerun. On the same VM resized to 256 MiB (about 204 MiB usable), both tuned configurations completed one short database-only workload without observed OOM, client errors or swap activity. Automatic updates were disabled. The same 222 MB fixture and four active connections were used, with 20 seconds warm-up and 50 seconds measured per variant, A then B.
+
+| Metric | Theory A | Theory B |
+|---|---:|---:|
+| Peak sampled PSS, all phases | 46.2 MiB | 70.2 MiB |
+| Minimum sampled MemAvailable | 53.6 MiB | 26.2 MiB |
+| Throughput, queries/s | 769 | 604 |
+
+These are single short runs with a warm cache and fixed order, not evidence of production stability or room for a colocated application. The [256 MiB samples, settings and summaries](results/256-mib/) include all recorded query latencies and one-second memory samples. To repeat A and B individually on a prepared disposable guest, use `sudo scripts/run-variant.sh a /tmp/pg-256-a measured` and then `sudo scripts/run-variant.sh b /tmp/pg-256-b measured`. Output paths must be new; this reuses the driver, analyzer and variant configuration described below.
 
 ## Apply Theory A
 
@@ -53,7 +65,7 @@ Five slots include the reserved superuser slot, leaving at most four ordinary cl
 
 ## Limitations
 
-One short run per configuration, fixed order and a warm cache limit comparisons. The workload was read-only and does not evaluate sustained writes or autovacuum. Background guest services could have interfered. The failed 256 MiB preparation is not a successful 256 MiB result. Other applications may need more connections or query memory; test with their own workload and full host budget.
+One short run per configuration, fixed order and a warm cache limit comparisons. The workload was read-only and does not evaluate sustained writes or autovacuum. Background guest services could have interfered. The 256 MiB default smoke failed, while the later tuned-only follow-up completed. Other applications may need more connections or query memory; test with their own workload and full host budget.
 
 ## Reproduction and evidence
 

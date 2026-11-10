@@ -1,0 +1,11 @@
+idle: samples=5 pss_median_kib=31536 pss_peak_kib=31536
+measured: samples=49 pss_median_kib=39256 pss_peak_kib=47302
+point: count=28931 p50_ms=0.8153300000230956 p95_ms=3.5782349999919916
+range: count=7628 p50_ms=0.2492630000006102 p95_ms=2.389167999979236
+aggregate: count=1868 p50_ms=76.70014299998229 p95_ms=114.47595399999955
+configured_measured_seconds=50.0
+completed=38427
+errors=[]
+total_throughput_per_second=768.540
+swap: first/last free_kib, pswpin, pswpout: [('0', '0', '0'), ('0', '0', '0')]
+latency_swap_status=no swap activity observed
