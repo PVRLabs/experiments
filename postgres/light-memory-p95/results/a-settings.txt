@@ -1,0 +1,16 @@
+              name               | setting | unit 
+---------------------------------+---------+------
+ autovacuum                      | on      | 
+ fsync                           | on      | 
+ io_method                       | worker  | 
+ jit                             | off     | 
+ maintenance_work_mem            | 16384   | kB
+ max_connections                 | 5       | 
+ max_parallel_workers            | 0       | 
+ max_parallel_workers_per_gather | 0       | 
+ shared_buffers                  | 2048    | 8kB
+ superuser_reserved_connections  | 1       | 
+ wal_level                       | replica | 
+ work_mem                        | 1024    | kB
+(12 rows)
+

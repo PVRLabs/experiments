@@ -36,6 +36,11 @@ We keep tuning effort comparable across implementations and avoid fine-grained, 
 
 ## Experiments
 
+- [PostgreSQL 18 low-memory strategies on a 512 MiB VM](postgres/light-memory-p95/) · November 2026
+
+  Two practical configurations compared with defaults using four concurrent clients; includes samples and reproduction scripts.
+
+
 - [Five Java stacks on a 512 MiB VM](java/coilbase-framework-comparison/) · November 2026
 
   Spring JDBC, Javalin, Jex and two Micronaut implementations compared using
