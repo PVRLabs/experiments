@@ -1,6 +1,6 @@
 # Jdbi and Hibernate persistence comparison
 
-This experiment compares Jdbi with direct Hibernate using Stargazer, a small repository-monitoring demo application, in the same CoilBase, Jex and JTE infrastructure. A Spring Boot, Spring Data JPA and Hibernate application provides a whole-stack reference. It asks how the complete applications behave on a small Linux VM; it does not measure the isolated memory cost of a library.
+This experiment compares Jdbi with direct Hibernate using Stargazer, a small repository-monitoring demo application, in the same [CoilBase](https://github.com/PVRLabs/coilbase), [Jex](https://github.com/avaje/avaje-jex) and [JTE](https://github.com/casid/jte) infrastructure. A Spring Boot, Spring Data JPA and Hibernate application provides a whole-stack reference. It asks how the complete applications behave on a small Linux VM; it does not measure the isolated memory cost of a library.
 
 The author also develops CoilBase. The Hibernate application retains transitive Jdbi libraries through CoilBase, but its packaged lifecycle checks confirm that no Jdbi repository context is initialized. See [its disclosure](coilbase-hibernate/README.md).
 
