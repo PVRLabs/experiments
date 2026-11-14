@@ -1,0 +1,51 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "current_forks": 19,
+      "current_stars": 142,
+      "current_watchers": 7,
+      "last_polled_at": "2026-11-14T19:14:48.397420Z",
+      "last_pushed_at": "2026-09-01T00:00:00Z",
+      "repo_name": "PVRLabs/statlite"
+    },
+    {
+      "id": 2,
+      "current_forks": 11,
+      "current_stars": 87,
+      "current_watchers": 5,
+      "last_polled_at": "2026-11-14T19:14:48.683186Z",
+      "last_pushed_at": "2026-09-02T00:00:00Z",
+      "repo_name": "PVRLabs/aibadger"
+    },
+    {
+      "id": 3,
+      "current_forks": 8,
+      "current_stars": 63,
+      "current_watchers": 3,
+      "last_polled_at": "2026-11-14T19:14:48.698874Z",
+      "last_pushed_at": "2026-09-03T00:00:00Z",
+      "repo_name": "scriptella/scriptella-etl"
+    }
+  ],
+  "star_history": [
+    {
+      "id": 1,
+      "recorded_at": "2026-11-14T19:14:48.397420Z",
+      "star_count": 142,
+      "project_id": 1
+    },
+    {
+      "id": 2,
+      "recorded_at": "2026-11-14T19:14:48.683186Z",
+      "star_count": 87,
+      "project_id": 2
+    },
+    {
+      "id": 3,
+      "recorded_at": "2026-11-14T19:14:48.698874Z",
+      "star_count": 63,
+      "project_id": 3
+    }
+  ]
+}

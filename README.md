@@ -36,6 +36,10 @@ We keep tuning effort comparable across implementations and avoid fine-grained, 
 
 ## Experiments
 
+- [Jdbi and Hibernate persistence comparison on a 512 MiB VM](java/jdbi-hibernate-comparison/) · November 2026
+
+  Two persistence implementations share lightweight application infrastructure; a Spring Boot application provides a reference. Includes accepted per-run data, a rejected OOM attempt, sources and verification scripts.
+
 - [PostgreSQL 18 low-memory strategies on a 512 MiB VM](postgres/light-memory-p95/) · November 2026
 
   Two practical configurations compared with defaults using four concurrent clients; includes samples and reproduction scripts.

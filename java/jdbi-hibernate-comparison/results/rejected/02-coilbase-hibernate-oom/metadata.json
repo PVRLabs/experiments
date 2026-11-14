@@ -1,0 +1,205 @@
+{
+  "completed": false,
+  "variant": "coilbase-hibernate",
+  "mode": "extended",
+  "started_at": 1794686990.7932763,
+  "source": "912c7bdf8ef6009d2dba3679d3ddafa34646e5bb",
+  "artifact_bytes": 29080308,
+  "readiness_seconds": 2.2603261270000985,
+  "refresh_windows": [
+    [
+      1794686993.3013155,
+      1794686993.8543742
+    ],
+    [
+      1794687173.9528406,
+      1794687174.0240397
+    ],
+    [
+      1794687183.9558167,
+      1794687184.0139673
+    ],
+    [
+      1794687193.9612086,
+      1794687194.0208735
+    ],
+    [
+      1794687203.9663126,
+      1794687204.023376
+    ],
+    [
+      1794687213.9748645,
+      1794687213.9752233
+    ],
+    [
+      1794687223.975571,
+      1794687223.9759862
+    ],
+    [
+      1794687233.9810736,
+      1794687233.9814296
+    ],
+    [
+      1794687243.9858294,
+      1794687243.9862099
+    ],
+    [
+      1794687253.9905071,
+      1794687253.990905
+    ],
+    [
+      1794687263.9955604,
+      1794687263.996049
+    ],
+    [
+      1794687274.0003357,
+      1794687274.0008414
+    ],
+    [
+      1794687284.0052724,
+      1794687284.0056272
+    ],
+    [
+      1794687294.010277,
+      1794687294.01073
+    ],
+    [
+      1794687304.024542,
+      1794687304.02497
+    ],
+    [
+      1794687314.019497,
+      1794687314.0198984
+    ],
+    [
+      1794687324.0246263,
+      1794687324.02505
+    ],
+    [
+      1794687334.029744,
+      1794687334.0301144
+    ],
+    [
+      1794687344.0354443,
+      1794687344.0358624
+    ],
+    [
+      1794687354.0408542,
+      1794687354.0412037
+    ],
+    [
+      1794687364.0461564,
+      1794687364.046765
+    ],
+    [
+      1794687374.050508,
+      1794687374.0509775
+    ],
+    [
+      1794687384.0555446,
+      1794687384.0559807
+    ],
+    [
+      1794687394.0702639,
+      1794687394.0707214
+    ],
+    [
+      1794687404.0658598,
+      1794687404.0662363
+    ],
+    [
+      1794687414.071309,
+      1794687414.0717528
+    ],
+    [
+      1794687424.0775926,
+      1794687424.0780246
+    ],
+    [
+      1794687434.0818193,
+      1794687434.082194
+    ],
+    [
+      1794687444.0872467,
+      1794687444.0876284
+    ],
+    [
+      1794687454.0925474,
+      1794687454.0929716
+    ],
+    [
+      1794687464.0983803,
+      1794687464.0988147
+    ]
+  ],
+  "expected_generations": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "persistence_verification": {
+    "passed": false,
+    "failures": [
+      "Unexpected history count",
+      "PVRLabs/statlite: wrong current_stars",
+      "PVRLabs/statlite: missing or duplicate history generations",
+      "PVRLabs/statlite: final poll timestamp outside latest refresh",
+      "PVRLabs/aibadger: wrong current_stars",
+      "PVRLabs/aibadger: missing or duplicate history generations",
+      "PVRLabs/aibadger: final poll timestamp outside latest refresh",
+      "scriptella/scriptella-etl: wrong current_stars",
+      "scriptella/scriptella-etl: missing or duplicate history generations",
+      "scriptella/scriptella-etl: final poll timestamp outside latest refresh"
+    ]
+  },
+  "acceptance": {
+    "accepted": false,
+    "reasons": [
+      "Unexpected history count",
+      "PVRLabs/statlite: wrong current_stars",
+      "PVRLabs/statlite: missing or duplicate history generations",
+      "PVRLabs/statlite: final poll timestamp outside latest refresh",
+      "PVRLabs/aibadger: wrong current_stars",
+      "PVRLabs/aibadger: missing or duplicate history generations",
+      "PVRLabs/aibadger: final poll timestamp outside latest refresh",
+      "scriptella/scriptella-etl: wrong current_stars",
+      "scriptella/scriptella-etl: missing or duplicate history generations",
+      "scriptella/scriptella-etl: final poll timestamp outside latest refresh",
+      "Incomplete workload",
+      "HTTP errors",
+      "Guest OOM kill counter increased",
+      "Missing SQL statistics"
+    ]
+  },
+  "oom_kill_before": 0,
+  "oom_kill_after": 1,
+  "observation": "Guest kernel OOM killer killed the application Java process at 2026-11-14 20:13:31 UTC; the firmware refresh timer started at 20:13:27 UTC. Timing does not establish causation."
+}

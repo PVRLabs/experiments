@@ -1,0 +1,591 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "repo_name": "PVRLabs/statlite",
+      "current_stars": 172,
+      "current_forks": 19,
+      "current_watchers": 7,
+      "last_pushed_at": "2026-09-01T00:00:00Z",
+      "last_polled_at": "2026-11-14T19:41:13.066602Z"
+    },
+    {
+      "id": 2,
+      "repo_name": "PVRLabs/aibadger",
+      "current_stars": 117,
+      "current_forks": 11,
+      "current_watchers": 5,
+      "last_pushed_at": "2026-09-02T00:00:00Z",
+      "last_polled_at": "2026-11-14T19:41:13.078089Z"
+    },
+    {
+      "id": 3,
+      "repo_name": "scriptella/scriptella-etl",
+      "current_stars": 93,
+      "current_forks": 8,
+      "current_watchers": 3,
+      "last_pushed_at": "2026-09-03T00:00:00Z",
+      "last_polled_at": "2026-11-14T19:41:13.087501Z"
+    }
+  ],
+  "star_history": [
+    {
+      "id": 1,
+      "project_id": 1,
+      "star_count": 142,
+      "recorded_at": "2026-11-14T19:33:22.473344Z"
+    },
+    {
+      "id": 2,
+      "project_id": 2,
+      "star_count": 87,
+      "recorded_at": "2026-11-14T19:33:22.764309Z"
+    },
+    {
+      "id": 3,
+      "project_id": 3,
+      "star_count": 63,
+      "recorded_at": "2026-11-14T19:33:22.774283Z"
+    },
+    {
+      "id": 4,
+      "project_id": 1,
+      "star_count": 143,
+      "recorded_at": "2026-11-14T19:36:22.925339Z"
+    },
+    {
+      "id": 5,
+      "project_id": 2,
+      "star_count": 88,
+      "recorded_at": "2026-11-14T19:36:22.950802Z"
+    },
+    {
+      "id": 6,
+      "project_id": 3,
+      "star_count": 64,
+      "recorded_at": "2026-11-14T19:36:22.967068Z"
+    },
+    {
+      "id": 7,
+      "project_id": 1,
+      "star_count": 144,
+      "recorded_at": "2026-11-14T19:36:32.927251Z"
+    },
+    {
+      "id": 8,
+      "project_id": 2,
+      "star_count": 89,
+      "recorded_at": "2026-11-14T19:36:32.953536Z"
+    },
+    {
+      "id": 9,
+      "project_id": 3,
+      "star_count": 65,
+      "recorded_at": "2026-11-14T19:36:32.968554Z"
+    },
+    {
+      "id": 10,
+      "project_id": 1,
+      "star_count": 145,
+      "recorded_at": "2026-11-14T19:36:42.931461Z"
+    },
+    {
+      "id": 11,
+      "project_id": 2,
+      "star_count": 90,
+      "recorded_at": "2026-11-14T19:36:42.946917Z"
+    },
+    {
+      "id": 12,
+      "project_id": 3,
+      "star_count": 66,
+      "recorded_at": "2026-11-14T19:36:42.962782Z"
+    },
+    {
+      "id": 13,
+      "project_id": 1,
+      "star_count": 146,
+      "recorded_at": "2026-11-14T19:36:52.936404Z"
+    },
+    {
+      "id": 14,
+      "project_id": 2,
+      "star_count": 91,
+      "recorded_at": "2026-11-14T19:36:52.953382Z"
+    },
+    {
+      "id": 15,
+      "project_id": 3,
+      "star_count": 67,
+      "recorded_at": "2026-11-14T19:36:52.968025Z"
+    },
+    {
+      "id": 16,
+      "project_id": 1,
+      "star_count": 147,
+      "recorded_at": "2026-11-14T19:37:02.951505Z"
+    },
+    {
+      "id": 17,
+      "project_id": 2,
+      "star_count": 92,
+      "recorded_at": "2026-11-14T19:37:02.967872Z"
+    },
+    {
+      "id": 18,
+      "project_id": 3,
+      "star_count": 68,
+      "recorded_at": "2026-11-14T19:37:02.984011Z"
+    },
+    {
+      "id": 19,
+      "project_id": 1,
+      "star_count": 148,
+      "recorded_at": "2026-11-14T19:37:12.947292Z"
+    },
+    {
+      "id": 20,
+      "project_id": 2,
+      "star_count": 93,
+      "recorded_at": "2026-11-14T19:37:12.961450Z"
+    },
+    {
+      "id": 21,
+      "project_id": 3,
+      "star_count": 69,
+      "recorded_at": "2026-11-14T19:37:12.974914Z"
+    },
+    {
+      "id": 22,
+      "project_id": 1,
+      "star_count": 149,
+      "recorded_at": "2026-11-14T19:37:22.952624Z"
+    },
+    {
+      "id": 23,
+      "project_id": 2,
+      "star_count": 94,
+      "recorded_at": "2026-11-14T19:37:22.967071Z"
+    },
+    {
+      "id": 24,
+      "project_id": 3,
+      "star_count": 70,
+      "recorded_at": "2026-11-14T19:37:22.983744Z"
+    },
+    {
+      "id": 25,
+      "project_id": 1,
+      "star_count": 150,
+      "recorded_at": "2026-11-14T19:37:32.957824Z"
+    },
+    {
+      "id": 26,
+      "project_id": 2,
+      "star_count": 95,
+      "recorded_at": "2026-11-14T19:37:32.972742Z"
+    },
+    {
+      "id": 27,
+      "project_id": 3,
+      "star_count": 71,
+      "recorded_at": "2026-11-14T19:37:32.986227Z"
+    },
+    {
+      "id": 28,
+      "project_id": 1,
+      "star_count": 151,
+      "recorded_at": "2026-11-14T19:37:42.962947Z"
+    },
+    {
+      "id": 29,
+      "project_id": 2,
+      "star_count": 96,
+      "recorded_at": "2026-11-14T19:37:42.975259Z"
+    },
+    {
+      "id": 30,
+      "project_id": 3,
+      "star_count": 72,
+      "recorded_at": "2026-11-14T19:37:42.993430Z"
+    },
+    {
+      "id": 31,
+      "project_id": 1,
+      "star_count": 152,
+      "recorded_at": "2026-11-14T19:37:52.967927Z"
+    },
+    {
+      "id": 32,
+      "project_id": 2,
+      "star_count": 97,
+      "recorded_at": "2026-11-14T19:37:52.985948Z"
+    },
+    {
+      "id": 33,
+      "project_id": 3,
+      "star_count": 73,
+      "recorded_at": "2026-11-14T19:37:52.999216Z"
+    },
+    {
+      "id": 34,
+      "project_id": 1,
+      "star_count": 153,
+      "recorded_at": "2026-11-14T19:38:02.981975Z"
+    },
+    {
+      "id": 35,
+      "project_id": 2,
+      "star_count": 98,
+      "recorded_at": "2026-11-14T19:38:02.996147Z"
+    },
+    {
+      "id": 36,
+      "project_id": 3,
+      "star_count": 74,
+      "recorded_at": "2026-11-14T19:38:03.011633Z"
+    },
+    {
+      "id": 37,
+      "project_id": 1,
+      "star_count": 154,
+      "recorded_at": "2026-11-14T19:38:12.977642Z"
+    },
+    {
+      "id": 38,
+      "project_id": 2,
+      "star_count": 99,
+      "recorded_at": "2026-11-14T19:38:12.991360Z"
+    },
+    {
+      "id": 39,
+      "project_id": 3,
+      "star_count": 75,
+      "recorded_at": "2026-11-14T19:38:13.006580Z"
+    },
+    {
+      "id": 40,
+      "project_id": 1,
+      "star_count": 155,
+      "recorded_at": "2026-11-14T19:38:22.982936Z"
+    },
+    {
+      "id": 41,
+      "project_id": 2,
+      "star_count": 100,
+      "recorded_at": "2026-11-14T19:38:22.994473Z"
+    },
+    {
+      "id": 42,
+      "project_id": 3,
+      "star_count": 76,
+      "recorded_at": "2026-11-14T19:38:23.009601Z"
+    },
+    {
+      "id": 43,
+      "project_id": 1,
+      "star_count": 156,
+      "recorded_at": "2026-11-14T19:38:32.997011Z"
+    },
+    {
+      "id": 44,
+      "project_id": 2,
+      "star_count": 101,
+      "recorded_at": "2026-11-14T19:38:33.011620Z"
+    },
+    {
+      "id": 45,
+      "project_id": 3,
+      "star_count": 77,
+      "recorded_at": "2026-11-14T19:38:33.020306Z"
+    },
+    {
+      "id": 46,
+      "project_id": 1,
+      "star_count": 157,
+      "recorded_at": "2026-11-14T19:38:42.992822Z"
+    },
+    {
+      "id": 47,
+      "project_id": 2,
+      "star_count": 102,
+      "recorded_at": "2026-11-14T19:38:43.003748Z"
+    },
+    {
+      "id": 48,
+      "project_id": 3,
+      "star_count": 78,
+      "recorded_at": "2026-11-14T19:38:43.016777Z"
+    },
+    {
+      "id": 49,
+      "project_id": 1,
+      "star_count": 158,
+      "recorded_at": "2026-11-14T19:38:52.997614Z"
+    },
+    {
+      "id": 50,
+      "project_id": 2,
+      "star_count": 103,
+      "recorded_at": "2026-11-14T19:38:53.020959Z"
+    },
+    {
+      "id": 51,
+      "project_id": 3,
+      "star_count": 79,
+      "recorded_at": "2026-11-14T19:38:53.036768Z"
+    },
+    {
+      "id": 52,
+      "project_id": 1,
+      "star_count": 159,
+      "recorded_at": "2026-11-14T19:39:03.003150Z"
+    },
+    {
+      "id": 53,
+      "project_id": 2,
+      "star_count": 104,
+      "recorded_at": "2026-11-14T19:39:03.017960Z"
+    },
+    {
+      "id": 54,
+      "project_id": 3,
+      "star_count": 80,
+      "recorded_at": "2026-11-14T19:39:03.029195Z"
+    },
+    {
+      "id": 55,
+      "project_id": 1,
+      "star_count": 160,
+      "recorded_at": "2026-11-14T19:39:13.007459Z"
+    },
+    {
+      "id": 56,
+      "project_id": 2,
+      "star_count": 105,
+      "recorded_at": "2026-11-14T19:39:13.020022Z"
+    },
+    {
+      "id": 57,
+      "project_id": 3,
+      "star_count": 81,
+      "recorded_at": "2026-11-14T19:39:13.032794Z"
+    },
+    {
+      "id": 58,
+      "project_id": 1,
+      "star_count": 161,
+      "recorded_at": "2026-11-14T19:39:23.013176Z"
+    },
+    {
+      "id": 59,
+      "project_id": 2,
+      "star_count": 106,
+      "recorded_at": "2026-11-14T19:39:23.027267Z"
+    },
+    {
+      "id": 60,
+      "project_id": 3,
+      "star_count": 82,
+      "recorded_at": "2026-11-14T19:39:23.036435Z"
+    },
+    {
+      "id": 61,
+      "project_id": 1,
+      "star_count": 162,
+      "recorded_at": "2026-11-14T19:39:33.017191Z"
+    },
+    {
+      "id": 62,
+      "project_id": 2,
+      "star_count": 107,
+      "recorded_at": "2026-11-14T19:39:33.032069Z"
+    },
+    {
+      "id": 63,
+      "project_id": 3,
+      "star_count": 83,
+      "recorded_at": "2026-11-14T19:39:33.042729Z"
+    },
+    {
+      "id": 64,
+      "project_id": 1,
+      "star_count": 163,
+      "recorded_at": "2026-11-14T19:39:43.022176Z"
+    },
+    {
+      "id": 65,
+      "project_id": 2,
+      "star_count": 108,
+      "recorded_at": "2026-11-14T19:39:43.037313Z"
+    },
+    {
+      "id": 66,
+      "project_id": 3,
+      "star_count": 84,
+      "recorded_at": "2026-11-14T19:39:43.049968Z"
+    },
+    {
+      "id": 67,
+      "project_id": 1,
+      "star_count": 164,
+      "recorded_at": "2026-11-14T19:39:53.026624Z"
+    },
+    {
+      "id": 68,
+      "project_id": 2,
+      "star_count": 109,
+      "recorded_at": "2026-11-14T19:39:53.036530Z"
+    },
+    {
+      "id": 69,
+      "project_id": 3,
+      "star_count": 85,
+      "recorded_at": "2026-11-14T19:39:53.045449Z"
+    },
+    {
+      "id": 70,
+      "project_id": 1,
+      "star_count": 165,
+      "recorded_at": "2026-11-14T19:40:03.031282Z"
+    },
+    {
+      "id": 71,
+      "project_id": 2,
+      "star_count": 110,
+      "recorded_at": "2026-11-14T19:40:03.043509Z"
+    },
+    {
+      "id": 72,
+      "project_id": 3,
+      "star_count": 86,
+      "recorded_at": "2026-11-14T19:40:03.057616Z"
+    },
+    {
+      "id": 73,
+      "project_id": 1,
+      "star_count": 166,
+      "recorded_at": "2026-11-14T19:40:13.036600Z"
+    },
+    {
+      "id": 74,
+      "project_id": 2,
+      "star_count": 111,
+      "recorded_at": "2026-11-14T19:40:13.047539Z"
+    },
+    {
+      "id": 75,
+      "project_id": 3,
+      "star_count": 87,
+      "recorded_at": "2026-11-14T19:40:13.060090Z"
+    },
+    {
+      "id": 76,
+      "project_id": 1,
+      "star_count": 167,
+      "recorded_at": "2026-11-14T19:40:23.041436Z"
+    },
+    {
+      "id": 77,
+      "project_id": 2,
+      "star_count": 112,
+      "recorded_at": "2026-11-14T19:40:23.052565Z"
+    },
+    {
+      "id": 78,
+      "project_id": 3,
+      "star_count": 88,
+      "recorded_at": "2026-11-14T19:40:23.067733Z"
+    },
+    {
+      "id": 79,
+      "project_id": 1,
+      "star_count": 168,
+      "recorded_at": "2026-11-14T19:40:33.046365Z"
+    },
+    {
+      "id": 80,
+      "project_id": 2,
+      "star_count": 113,
+      "recorded_at": "2026-11-14T19:40:33.055407Z"
+    },
+    {
+      "id": 81,
+      "project_id": 3,
+      "star_count": 89,
+      "recorded_at": "2026-11-14T19:40:33.068030Z"
+    },
+    {
+      "id": 82,
+      "project_id": 1,
+      "star_count": 169,
+      "recorded_at": "2026-11-14T19:40:43.051595Z"
+    },
+    {
+      "id": 83,
+      "project_id": 2,
+      "star_count": 114,
+      "recorded_at": "2026-11-14T19:40:43.064948Z"
+    },
+    {
+      "id": 84,
+      "project_id": 3,
+      "star_count": 90,
+      "recorded_at": "2026-11-14T19:40:43.074226Z"
+    },
+    {
+      "id": 85,
+      "project_id": 1,
+      "star_count": 170,
+      "recorded_at": "2026-11-14T19:40:53.057065Z"
+    },
+    {
+      "id": 86,
+      "project_id": 2,
+      "star_count": 115,
+      "recorded_at": "2026-11-14T19:40:53.069522Z"
+    },
+    {
+      "id": 87,
+      "project_id": 3,
+      "star_count": 91,
+      "recorded_at": "2026-11-14T19:40:53.084156Z"
+    },
+    {
+      "id": 88,
+      "project_id": 1,
+      "star_count": 171,
+      "recorded_at": "2026-11-14T19:41:03.061513Z"
+    },
+    {
+      "id": 89,
+      "project_id": 2,
+      "star_count": 116,
+      "recorded_at": "2026-11-14T19:41:03.072652Z"
+    },
+    {
+      "id": 90,
+      "project_id": 3,
+      "star_count": 92,
+      "recorded_at": "2026-11-14T19:41:03.087865Z"
+    },
+    {
+      "id": 91,
+      "project_id": 1,
+      "star_count": 172,
+      "recorded_at": "2026-11-14T19:41:13.066602Z"
+    },
+    {
+      "id": 92,
+      "project_id": 2,
+      "star_count": 117,
+      "recorded_at": "2026-11-14T19:41:13.078089Z"
+    },
+    {
+      "id": 93,
+      "project_id": 3,
+      "star_count": 93,
+      "recorded_at": "2026-11-14T19:41:13.087501Z"
+    }
+  ]
+}
