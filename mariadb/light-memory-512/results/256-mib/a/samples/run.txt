@@ -1,0 +1,7 @@
+configured_measured_seconds=50.0
+measured_seconds=16.082
+completed=76
+measured_initiation_window_seconds=16.082
+latency_rule=queries initiated during measured initiation window; in-flight queries drained before final counters
+throughput_rule=completed measured-window queries divided by measured_initiation_window_seconds; drain completions are not extra window time
+errors=["OperationalError(2013, 'Lost connection to MySQL server during query ([Errno 104] Connection reset by peer)')", "OperationalError(2013, 'Lost connection to MySQL server during query')", "OperationalError(2013, 'Lost connection to MySQL server during query ([Errno 104] Connection reset by peer)')", "OperationalError(2013, 'Lost connection to MySQL server during query ([Errno 104] Connection reset by peer)')", 'status_end=OperationalError(2003, "Can\'t connect to MySQL server on \'127.0.0.1\' ([Errno 111] Connection refused)")']

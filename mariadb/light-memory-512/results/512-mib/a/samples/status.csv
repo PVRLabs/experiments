@@ -1,0 +1,3 @@
+label,innodb_buffer_pool_reads,innodb_buffer_pool_read_requests,aria_pagecache_reads,aria_pagecache_read_requests
+measured_start,20601,344512,13,16
+measured_end,65645,1137278,13,16

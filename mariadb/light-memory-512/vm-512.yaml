@@ -1,0 +1,13 @@
+# Pinned Ubuntu image for the 512 MiB follow-up; same base as the 256 MiB run.
+# Intentionally targets the current Intel x86_64 experiment host.
+minimumLimaVersion: 2.2.0
+images:
+  - location: https://cloud-images.ubuntu.com/releases/noble/release-20260705/ubuntu-24.04-server-cloudimg-amd64.img
+    arch: x86_64
+    digest: sha256:ffe6203da54deeb6db5d2a98a83f9ec8e55f149d3f7ba622e1abe5fa966ee3d6
+vmType: vz
+arch: x86_64
+plain: true
+cpus: 1
+memory: 512MiB
+disk: 6GiB

@@ -1,0 +1,7 @@
+configured_measured_seconds=50.0
+measured_seconds=50.983
+completed=29421
+measured_initiation_window_seconds=50.983
+latency_rule=queries initiated during measured initiation window; in-flight queries drained before final counters
+throughput_rule=completed measured-window queries divided by measured_initiation_window_seconds; drain completions are not extra window time
+errors=[]

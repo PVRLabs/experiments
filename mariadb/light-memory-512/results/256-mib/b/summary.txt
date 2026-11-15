@@ -1,0 +1,29 @@
+idle: samples=5 pss_median_kib=58733 pss_peak_kib=58733 rss_peak_kib=61460 mem_available_min_kib=47448
+warmup: samples=20 pss_median_kib=78676.0 pss_peak_kib=80108 rss_peak_kib=80292 mem_available_min_kib=19968
+measured: samples=47 pss_median_kib=79265 pss_peak_kib=83200 rss_peak_kib=83320 mem_available_min_kib=15848
+all: samples=73 pss_peak_kib=83200 rss_peak_kib=83320 mem_available_min_kib=15848
+measured_disk_read_sectors=8042544
+measured_disk_write_sectors=20436720
+swap: first/last free_kib, pswpin, pswpout: [('0', '0', '0'), ('0', '0', '0')]
+latency_swap_status=no swap activity observed
+oom_kill_increased=False
+sample_gap_max_seconds=1.066
+point: count=21962 p50_ms=0.9136320000067144 p95_ms=3.5357339999961823
+range: count=5954 p50_ms=1.848496000000921 p95_ms=5.364084999996521
+aggregate: count=1505 p50_ms=71.03605599999696 p95_ms=106.27943299999743
+configured_measured_seconds=50.0
+measured_seconds=50.983
+completed=29421
+measured_initiation_window_seconds=50.983
+latency_rule=queries initiated during measured initiation window; in-flight queries drained before final counters
+throughput_rule=completed measured-window queries divided by measured_initiation_window_seconds; drain completions are not extra window time
+errors=[]
+measured_window_query_completion_rate_per_second=577.075
+throughput_note=completed queries initiated in measured window divided by initiation-window duration; in-flight queries were drained afterward
+measured_innodb_buffer_pool_reads_delta=37243
+measured_innodb_buffer_pool_read_requests_delta=509170
+measured_aria_pagecache_reads_delta=0
+measured_aria_pagecache_read_requests_delta=0
+measured_samples_per_second=0.922
+memory_evidence=complete
+memory_comparison=usable

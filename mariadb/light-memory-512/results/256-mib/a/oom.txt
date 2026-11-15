@@ -1,0 +1,2 @@
+oom_kill_before=0
+oom_kill_after=1
