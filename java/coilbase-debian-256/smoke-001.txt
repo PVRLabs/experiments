@@ -1,0 +1,90 @@
+===== hotspot coilbase =====
+ready_after_seconds=2
+298 latest.json
+stopped hotspot coilbase
+-- ps --
+    PID   RSS    VSZ COMMAND
+   6961 91432 2127100 java
+-- status --
+VmRSS:	   91432 kB
+VmSwap:	       0 kB
+Threads:	22
+-- free --
+               total        used        free      shared  buff/cache   available
+Mem:             211         127           4           0          86          83
+Swap:            511          20         491
+-- version --
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode, sharing)
+-- latest head --
+[{"sequence":389,"cycle":0,"sampleIndex":389,"marketTime":"15:59","symbol":"AAPL","price":333.0100},{"sequence":389,"cycle":0,"sampleIndex":389,"marketTime":"15:59","symbol":"GOOG","price":340.6800},{
+===== openj9 coilbase =====
+ready_after_seconds=6
+298 latest.json
+stopped openj9 coilbase
+-- ps --
+    PID   RSS    VSZ COMMAND
+   7023 102472 1188388 java
+-- status --
+VmRSS:	  102472 kB
+VmSwap:	       0 kB
+Threads:	33
+-- free --
+               total        used        free      shared  buff/cache   available
+Mem:             211         120           8           0          89          90
+Swap:            511          27         484
+-- version --
+openjdk version "25.0.5.0.3" 2026-10-24 LTS
+IBM Semeru Runtime Open Edition 25.0.5.0 (build 25.0.5.0.3+1-LTS)
+Eclipse OpenJ9 VM 25.0.5.0 (build 25.0.5.0.3+1-openj9-0.63.0, JRE 25 Linux amd64-64-Bit Compressed References 20261024_392 (JIT enabled, AOT enabled)
+OpenJ9   - dcc7ee16aa
+OMR      - c2a3a9ae0
+JCL      - 3edbf43d7f7 based on jdk-25.0.5.0.3+1)
+-- latest head --
+[{"sequence":389,"cycle":0,"sampleIndex":389,"marketTime":"15:59","symbol":"AAPL","price":333.0100},{"sequence":389,"cycle":0,"sampleIndex":389,"marketTime":"15:59","symbol":"GOOG","price":340.6800},{
+===== hotspot spring =====
+ready_after_seconds=9
+298 latest.json
+stopped hotspot spring
+-- ps --
+    PID   RSS    VSZ COMMAND
+   7114 133192 2161600 java
+-- status --
+VmRSS:	  133192 kB
+VmSwap:	   57612 kB
+Threads:	25
+-- free --
+               total        used        free      shared  buff/cache   available
+Mem:             211         171           3           0          43          39
+Swap:            511         117         394
+-- version --
+openjdk version "25.0.5" 2026-10-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.5+8 (build 25.0.5+8-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.5+8 (build 25.0.5+8-LTS, mixed mode, sharing)
+-- latest head --
+[{"sequence":389,"cycle":0,"sampleIndex":389,"marketTime":"15:59","symbol":"AAPL","price":333.0100},{"sequence":389,"cycle":0,"sampleIndex":389,"marketTime":"15:59","symbol":"GOOG","price":340.6800},{
+===== openj9 spring =====
+ready_after_seconds=14
+298 latest.json
+stopped openj9 spring
+-- ps --
+    PID   RSS    VSZ COMMAND
+   7201 127428 1196916 java
+-- status --
+VmRSS:	  127428 kB
+VmSwap:	   14688 kB
+Threads:	37
+-- free --
+               total        used        free      shared  buff/cache   available
+Mem:             211         147           3           0          67          64
+Swap:            511          49         462
+-- version --
+openjdk version "25.0.5.0.3" 2026-10-24 LTS
+IBM Semeru Runtime Open Edition 25.0.5.0 (build 25.0.5.0.3+1-LTS)
+Eclipse OpenJ9 VM 25.0.5.0 (build 25.0.5.0.3+1-openj9-0.63.0, JRE 25 Linux amd64-64-Bit Compressed References 20261024_392 (JIT enabled, AOT enabled)
+OpenJ9   - dcc7ee16aa
+OMR      - c2a3a9ae0
+JCL      - 3edbf43d7f7 based on jdk-25.0.5.0.3+1)
+-- latest head --
+[{"sequence":389,"cycle":0,"sampleIndex":389,"marketTime":"15:59","symbol":"AAPL","price":333.0100},{"sequence":389,"cycle":0,"sampleIndex":389,"marketTime":"15:59","symbol":"GOOG","price":340.6800},{

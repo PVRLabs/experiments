@@ -1,0 +1,104 @@
+##### BEGIN hotspot coilbase cold #####
+RUN hotspot-coilbase-cold ready_s=3 load_ok=206 load_fail=0
+phase,t_s,rss_kib,swap_kib,threads,mem_available_kib
+idle,0,95468,0,22,69716
+idle,5,95608,0,21,68816
+idle,10,97680,0,21,59416
+idle,15,92752,0,21,64604
+idle,20,92768,0,21,64132
+idle,25,92780,0,21,64156
+idle,30,92668,0,20,64136
+idle,35,92668,0,20,64144
+idle,40,92668,0,20,64316
+load,45,92708,0,20,64844
+load,50,93880,0,21,62984
+load,55,94384,0,21,63316
+load,60,94732,0,21,62844
+load,65,95056,0,21,62288
+load,70,95296,0,21,63300
+load,75,95572,0,21,63020
+load,80,95624,0,21,63272
+load,85,95880,0,21,62108
+##### END hotspot coilbase cold #####
+##### BEGIN openj9 coilbase cold #####
+RUN openj9-coilbase-cold ready_s=8 load_ok=202 load_fail=0
+phase,t_s,rss_kib,swap_kib,threads,mem_available_kib
+idle,0,99540,4672,33,91356
+idle,5,104688,4776,32,90216
+idle,10,76748,4728,32,102796
+idle,15,76884,4728,32,102984
+idle,20,77180,4728,32,104728
+idle,25,71472,4728,32,105140
+idle,30,73532,4728,31,105000
+idle,35,72680,4728,31,106568
+idle,40,73100,4728,31,106888
+load,45,69928,4728,31,106396
+load,50,94412,4708,32,91576
+load,55,98296,7424,32,93512
+load,60,96156,7676,32,91896
+load,65,81536,9076,32,102176
+load,70,81476,9064,32,100320
+load,75,83000,9056,32,101188
+load,80,95120,9040,32,96396
+load,85,74556,9036,32,106148
+CACHE 22M	CoilBase cache directory
+##### END openj9 coilbase cold #####
+##### BEGIN openj9 coilbase warm #####
+RUN openj9-coilbase-warm ready_s=3 load_ok=0 load_fail=0
+phase,t_s,rss_kib,swap_kib,threads,mem_available_kib
+idle,0,95960,0,33,90508
+idle,5,74324,0,32,93228
+idle,10,78236,0,32,91600
+idle,15,78516,0,32,91684
+idle,20,73636,0,32,91720
+idle,25,75692,0,32,92764
+idle,30,75272,0,31,92448
+idle,35,75424,0,31,92312
+idle,40,72996,0,31,93572
+CACHE 22M	CoilBase cache directory
+##### END openj9 coilbase warm #####
+##### BEGIN hotspot spring cold #####
+RUN hotspot-spring-cold ready_s=10 load_ok=202 load_fail=0
+phase,t_s,rss_kib,swap_kib,threads,mem_available_kib
+idle,0,141552,48924,25,31256
+idle,5,134256,55200,24,35448
+idle,10,134676,54816,24,30076
+idle,15,129392,59728,24,39820
+idle,20,129532,59720,24,40188
+idle,25,129544,59708,24,39152
+idle,30,129656,59628,24,39204
+idle,35,129660,59624,24,38784
+idle,40,129800,59508,24,38812
+load,45,129828,59488,24,39516
+load,50,120760,70108,24,47832
+load,55,125520,66500,24,43712
+load,60,121896,71376,24,48056
+load,65,121488,72296,24,48532
+load,70,120848,73224,24,48680
+load,75,121584,72936,24,48192
+load,80,119636,74976,24,50164
+load,85,120532,74472,24,48912
+##### END hotspot spring cold #####
+##### BEGIN openj9 spring cold #####
+RUN openj9-spring-cold ready_s=21 load_ok=198 load_fail=0
+phase,t_s,rss_kib,swap_kib,threads,mem_available_kib
+idle,0,128796,12328,36,76928
+idle,5,128852,15560,36,78524
+idle,10,135924,15280,36,76184
+idle,15,85988,15160,36,90632
+idle,20,89856,15160,36,88472
+idle,25,92732,15136,36,88852
+idle,30,88632,15136,36,90576
+idle,35,90632,15136,36,89756
+idle,40,86672,15136,36,89228
+load,45,89504,15072,36,90804
+load,50,121272,21468,36,82088
+load,55,126292,21060,36,77872
+load,60,125864,12492,36,68548
+load,65,127132,14148,36,69520
+load,70,107140,19900,36,80876
+load,75,124796,21952,36,73028
+load,80,126204,20060,36,73376
+load,85,107192,19272,36,84608
+CACHE 43M	Spring cache directory
+##### END openj9 spring cold #####
