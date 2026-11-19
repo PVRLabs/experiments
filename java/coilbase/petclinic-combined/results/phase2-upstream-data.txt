@@ -1,0 +1,4 @@
+302 /owners?lastName=CompositionTrial
+200 /owners/11
+200 /owners/11
+select count(*) from owners where last_name='CompositionTrial' and city='Edited City' => 1

@@ -1,0 +1,61 @@
+[INFO] org.springframework.samples:petclinic-jex:jar:4.0.0-SNAPSHOT
+[INFO] +- net.bytebuddy:byte-buddy:jar:1.18.10:test
+[INFO] +- org.springframework:spring-context:jar:7.0.8:compile
+[INFO] |  +- org.springframework:spring-aop:jar:7.0.8:compile
+[INFO] |  +- org.springframework:spring-beans:jar:7.0.8:compile
+[INFO] |  +- org.springframework:spring-core:jar:7.0.8:compile
+[INFO] |  |  +- commons-logging:commons-logging:jar:1.3.5:compile
+[INFO] |  |  \- org.jspecify:jspecify:jar:1.0.0:compile
+[INFO] |  +- org.springframework:spring-expression:jar:7.0.8:compile
+[INFO] |  \- io.micrometer:micrometer-observation:jar:1.16.6:compile
+[INFO] |     \- io.micrometer:micrometer-commons:jar:1.16.6:compile
+[INFO] +- org.springframework:spring-web:jar:7.0.8:compile
+[INFO] +- com.mysql:mysql-connector-j:jar:9.7.0:compile
+[INFO] +- org.postgresql:postgresql:jar:42.7.11:compile
+[INFO] +- xyz.pvrlabs:coilbase-jex:jar:0.1.0-preview5:compile
+[INFO] |  +- xyz.pvrlabs:coilbase-core:jar:0.1.0-preview5:compile
+[INFO] |  |  \- org.jdbi:jdbi3-core:jar:3.55.0:compile
+[INFO] |  |     \- io.leangen.geantyref:geantyref:jar:2.0.1:compile
+[INFO] |  +- io.avaje:avaje-jex:jar:3.6:compile
+[INFO] |  |  \- io.avaje:avaje-applog:jar:1.2:compile
+[INFO] |  +- io.avaje:avaje-jex-static-content:jar:3.6:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.21.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.21:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.21.5:compile
+[INFO] |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.21.5:compile
+[INFO] +- org.springframework.data:spring-data-commons:jar:4.1.0:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:2.0.18:compile
+[INFO] +- org.springframework:spring-tx:jar:7.0.8:compile
+[INFO] +- org.thymeleaf:thymeleaf-spring6:jar:3.1.5.RELEASE:compile
+[INFO] |  \- org.thymeleaf:thymeleaf:jar:3.1.5.RELEASE:compile
+[INFO] |     +- org.attoparser:attoparser:jar:2.0.7.RELEASE:compile
+[INFO] |     \- org.unbescape:unbescape:jar:1.1.6.RELEASE:compile
+[INFO] +- org.hibernate.validator:hibernate-validator:jar:9.1.0.Final:compile
+[INFO] |  +- jakarta.validation:jakarta.validation-api:jar:3.1.1:compile
+[INFO] |  +- org.jboss.logging:jboss-logging:jar:3.6.1.Final:compile
+[INFO] |  \- com.fasterxml:classmate:jar:1.7.1:compile
+[INFO] +- org.apache.tomcat.embed:tomcat-embed-el:jar:11.0.22:compile
+[INFO] +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.9:compile
+[INFO] |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.9:compile
+[INFO] |     +- org.eclipse.angus:angus-activation:jar:2.0.3:runtime
+[INFO] |     +- org.glassfish.jaxb:txw2:jar:4.0.9:compile
+[INFO] |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:compile
+[INFO] +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.5:compile
+[INFO] |  \- jakarta.activation:jakarta.activation-api:jar:2.1.4:compile
+[INFO] +- com.zaxxer:HikariCP:jar:7.0.2:compile
+[INFO] +- com.h2database:h2:jar:2.4.240:compile
+[INFO] +- org.webjars.npm:bootstrap:jar:5.3.8:compile
+[INFO] +- org.webjars.npm:font-awesome:jar:4.7.0:compile
+[INFO] +- ch.qos.logback:logback-classic:jar:1.5.34:compile
+[INFO] |  \- ch.qos.logback:logback-core:jar:1.5.34:compile
+[INFO] +- org.junit.jupiter:junit-jupiter:jar:6.0.3:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter-api:jar:6.0.3:test
+[INFO] |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO] |  |  +- org.junit.platform:junit-platform-commons:jar:6.0.3:test
+[INFO] |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter-params:jar:6.0.3:test
+[INFO] |  \- org.junit.jupiter:junit-jupiter-engine:jar:6.0.3:test
+[INFO] |     \- org.junit.platform:junit-platform-engine:jar:6.0.3:test
+[INFO] +- org.assertj:assertj-core:jar:3.27.7:test
+[INFO] \- org.springframework:spring-jdbc:jar:7.0.8:test
+[INFO] ------------------------------------------------------------------------

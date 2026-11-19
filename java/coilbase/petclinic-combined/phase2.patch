@@ -1,0 +1,3971 @@
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml
++++ b/pom.xml
+@@ -1,456 +1,77 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+-
+-  <parent>
+-    <groupId>org.springframework.boot</groupId>
+-    <artifactId>spring-boot-starter-parent</artifactId>
+-    <version>4.1.0</version>
+-  </parent>
+-
+   <groupId>org.springframework.samples</groupId>
+-  <artifactId>spring-petclinic</artifactId>
++  <artifactId>petclinic-jex</artifactId>
+   <version>4.0.0-SNAPSHOT</version>
+-
+-  <name>petclinic</name>
+-
+   <properties>
+-    <!-- Generic properties -->
+-    <java.version>17</java.version>
++    <maven.compiler.release>25</maven.compiler.release>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+-    <!-- Important for reproducible builds. Update using e.g. ./mvnw versions:set -DnewVersion=... -->
+-    <project.build.outputTimestamp>2024-11-28T14:37:52Z</project.build.outputTimestamp>
+-
+-    <!-- Web dependencies -->
+-    <webjars-locator.version>1.1.3</webjars-locator.version>
+-    <webjars-bootstrap.version>5.3.8</webjars-bootstrap.version>
+-    <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
+-
+-    <!-- Checkstyle needs to stay on v12 since v13 sets minimal jdk to 21 - https://checkstyle.org/releasenotes.html#Release_13.0.0 -->
+-    <checkstyle.version>12.3.1</checkstyle.version>
+-    <jacoco.version>0.8.15</jacoco.version>
+-    <libsass.version>0.3.4</libsass.version>
+-    <lifecycle-mapping>1.0.0</lifecycle-mapping>
+-    <maven-checkstyle.version>3.6.0</maven-checkstyle.version>
+-    <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
+-    <spring-format.version>0.0.47</spring-format.version>
+   </properties>
+-
+   <repositories>
+     <repository>
+       <id>pvrlabs</id>
+       <url>https://pvrlabs.github.io/maven/</url>
+     </repository>
+   </repositories>
+-
+   <dependencies>
+-    <dependency>
+-      <groupId>org.glassfish.jaxb</groupId>
+-      <artifactId>jaxb-runtime</artifactId>
+-      <scope>runtime</scope>
++    <dependency><groupId>net.bytebuddy</groupId><artifactId>byte-buddy</artifactId><version>1.18.10</version><scope>test</scope></dependency>
++    <dependency><groupId>org.springframework</groupId><artifactId>spring-context</artifactId><version>7.0.8</version></dependency>
++    <dependency><groupId>org.springframework</groupId><artifactId>spring-web</artifactId><version>7.0.8</version></dependency>
++    <dependency><groupId>com.mysql</groupId><artifactId>mysql-connector-j</artifactId><version>9.7.0</version>
++      <exclusions>
++        <exclusion><groupId>com.google.protobuf</groupId><artifactId>protobuf-java</artifactId></exclusion>
++      </exclusions>
+     </dependency>
+-    <dependency>
+-      <groupId>xyz.pvrlabs</groupId>
+-      <artifactId>coilbase-core</artifactId>
+-      <version>0.1.0-preview5</version>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.data</groupId>
+-      <artifactId>spring-data-commons</artifactId>
+-    </dependency>
+-    <!-- Spring and Spring Boot dependencies -->
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-actuator</artifactId>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-cache</artifactId>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-jdbc</artifactId>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-thymeleaf</artifactId>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-validation</artifactId>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-webmvc</artifactId>
+-    </dependency>
+-
+-    <dependency>
+-      <groupId>javax.cache</groupId>
+-      <artifactId>cache-api</artifactId>
+-    </dependency>
+-    <dependency>
+-      <groupId>jakarta.xml.bind</groupId>
+-      <artifactId>jakarta.xml.bind-api</artifactId>
+-    </dependency>
+-
+-    <dependency>
+-      <groupId>com.h2database</groupId>
+-      <artifactId>h2</artifactId>
+-      <scope>runtime</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>com.github.ben-manes.caffeine</groupId>
+-      <artifactId>caffeine</artifactId>
+-      <scope>runtime</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>com.mysql</groupId>
+-      <artifactId>mysql-connector-j</artifactId>
+-      <scope>runtime</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.postgresql</groupId>
+-      <artifactId>postgresql</artifactId>
+-      <scope>runtime</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.webjars</groupId>
+-      <artifactId>webjars-locator-lite</artifactId>
+-      <version>${webjars-locator.version}</version>
+-      <scope>runtime</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.webjars.npm</groupId>
+-      <artifactId>bootstrap</artifactId>
+-      <version>${webjars-bootstrap.version}</version>
+-      <scope>runtime</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.webjars.npm</groupId>
+-      <artifactId>font-awesome</artifactId>
+-      <version>${webjars-font-awesome.version}</version>
+-      <scope>runtime</scope>
+-    </dependency>
+-
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-devtools</artifactId>
+-      <optional>true</optional>
+-    </dependency>
+-
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-restclient</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-restclient-test</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-thymeleaf-test</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-validation-test</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-webmvc-test</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-actuator-test</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-testcontainers</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-docker-compose</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-cache-test</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.testcontainers</groupId>
+-      <artifactId>testcontainers-junit-jupiter</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.testcontainers</groupId>
+-      <artifactId>testcontainers-mysql</artifactId>
+-      <scope>test</scope>
+-    </dependency>
++    <dependency><groupId>org.postgresql</groupId><artifactId>postgresql</artifactId><version>42.7.11</version></dependency>
++    <dependency><groupId>xyz.pvrlabs</groupId><artifactId>coilbase-jex</artifactId><version>0.1.0-preview5</version></dependency>
++    <dependency><groupId>org.springframework.data</groupId><artifactId>spring-data-commons</artifactId><version>4.1.0</version></dependency>
++    <dependency><groupId>org.springframework</groupId><artifactId>spring-tx</artifactId><version>7.0.8</version></dependency>
++    <dependency><groupId>org.thymeleaf</groupId><artifactId>thymeleaf-spring6</artifactId><version>3.1.5.RELEASE</version></dependency>
++    <dependency><groupId>org.hibernate.validator</groupId><artifactId>hibernate-validator</artifactId><version>9.1.0.Final</version></dependency>
++    <dependency><groupId>org.apache.tomcat.embed</groupId><artifactId>tomcat-embed-el</artifactId><version>11.0.22</version></dependency>
++    <dependency><groupId>org.glassfish.jaxb</groupId><artifactId>jaxb-runtime</artifactId><version>4.0.9</version></dependency>
++    <dependency><groupId>jakarta.xml.bind</groupId><artifactId>jakarta.xml.bind-api</artifactId><version>4.0.5</version></dependency>
++    <dependency><groupId>com.zaxxer</groupId><artifactId>HikariCP</artifactId><version>7.0.2</version></dependency>
++    <dependency><groupId>com.h2database</groupId><artifactId>h2</artifactId><version>2.4.240</version></dependency>
++    <dependency><groupId>org.webjars.npm</groupId><artifactId>bootstrap</artifactId><version>5.3.8</version></dependency>
++    <dependency><groupId>org.webjars.npm</groupId><artifactId>font-awesome</artifactId><version>4.7.0</version></dependency>
++    <dependency><groupId>ch.qos.logback</groupId><artifactId>logback-classic</artifactId><version>1.5.34</version></dependency>
++    <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>6.0.3</version><scope>test</scope></dependency>
++    <dependency><groupId>org.assertj</groupId><artifactId>assertj-core</artifactId><version>3.27.7</version><scope>test</scope></dependency>
++    <dependency><groupId>org.springframework</groupId><artifactId>spring-jdbc</artifactId><version>7.0.8</version><scope>test</scope></dependency>
+   </dependencies>
+-
+   <build>
+     <plugins>
++      <plugin><artifactId>maven-surefire-plugin</artifactId><version>3.5.6</version></plugin>
++      <plugin><artifactId>maven-compiler-plugin</artifactId><version>3.15.0</version></plugin>
+       <plugin>
+-        <groupId>org.apache.maven.plugins</groupId>
+-        <artifactId>maven-enforcer-plugin</artifactId>
++        <artifactId>maven-shade-plugin</artifactId>
++        <version>3.6.2</version>
+         <executions>
+           <execution>
+-            <id>enforce-java</id>
+-            <goals>
+-              <goal>enforce</goal>
+-            </goals>
++            <phase>package</phase>
++            <goals><goal>shade</goal></goals>
+             <configuration>
+-              <rules>
+-                <requireJavaVersion>
+-                  <message>This build requires at least Java ${java.version}, update your JVM, and run the build again</message>
+-                  <version>${java.version}</version>
+-                </requireJavaVersion>
+-              </rules>
++              <createDependencyReducedPom>false</createDependencyReducedPom>
++              <filters>
++                <filter>
++                  <artifact>*:*</artifact>
++                  <excludes><exclude>META-INF/*.SF</exclude><exclude>META-INF/*.RSA</exclude><exclude>META-INF/*.DSA</exclude></excludes>
++                </filter>
++              </filters>
++              <transformers>
++                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
++                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
++                  <mainClass>org.springframework.samples.petclinic.PetClinicApplication</mainClass>
++                  <manifestEntries><Multi-Release>true</Multi-Release></manifestEntries>
++                </transformer>
++              </transformers>
+             </configuration>
+           </execution>
+         </executions>
+       </plugin>
+-      <plugin>
+-        <groupId>io.spring.javaformat</groupId>
+-        <artifactId>spring-javaformat-maven-plugin</artifactId>
+-        <version>${spring-format.version}</version>
+-        <executions>
+-          <execution>
+-            <goals>
+-              <goal>validate</goal>
+-            </goals>
+-            <phase>validate</phase>
+-          </execution>
+-        </executions>
+-      </plugin>
+-      <plugin>
+-        <groupId>org.apache.maven.plugins</groupId>
+-        <artifactId>maven-checkstyle-plugin</artifactId>
+-        <version>${maven-checkstyle.version}</version>
+-        <dependencies>
+-          <dependency>
+-            <groupId>com.puppycrawl.tools</groupId>
+-            <artifactId>checkstyle</artifactId>
+-            <version>${checkstyle.version}</version>
+-          </dependency>
+-          <dependency>
+-            <groupId>io.spring.nohttp</groupId>
+-            <artifactId>nohttp-checkstyle</artifactId>
+-            <version>${nohttp-checkstyle.version}</version>
+-          </dependency>
+-        </dependencies>
+-        <executions>
+-          <execution>
+-            <id>nohttp-checkstyle-validation</id>
+-            <goals>
+-              <goal>check</goal>
+-            </goals>
+-            <phase>validate</phase>
+-            <configuration>
+-              <configLocation>src/checkstyle/nohttp-checkstyle.xml</configLocation>
+-              <sourceDirectories>${basedir}</sourceDirectories>
+-              <includes>**/*</includes>
+-              <excludes>**/.git/**/*,**/.idea/**/*,**/target/**/,**/.flattened-pom.xml,**/*.class</excludes>
+-              <propertyExpansion>config_loc=${basedir}/src/checkstyle/</propertyExpansion>
+-            </configuration>
+-          </execution>
+-        </executions>
+-      </plugin>
+-      <plugin>
+-        <groupId>org.graalvm.buildtools</groupId>
+-        <artifactId>native-maven-plugin</artifactId>
+-      </plugin>
+-      <plugin>
+-        <groupId>org.springframework.boot</groupId>
+-        <artifactId>spring-boot-maven-plugin</artifactId>
+-        <executions>
+-          <execution>
+-            <!-- Spring Boot Actuator displays build-related information
+-              if a META-INF/build-info.properties file is present -->
+-            <goals>
+-              <goal>build-info</goal>
+-            </goals>
+-            <configuration>
+-              <additionalProperties>
+-                <encoding.source>${project.build.sourceEncoding}</encoding.source>
+-                <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
+-                <java.source>${java.version}</java.source>
+-                <java.target>${java.version}</java.target>
+-              </additionalProperties>
+-            </configuration>
+-          </execution>
+-        </executions>
+-      </plugin>
+-      <plugin>
+-        <groupId>org.jacoco</groupId>
+-        <artifactId>jacoco-maven-plugin</artifactId>
+-        <version>${jacoco.version}</version>
+-        <executions>
+-          <execution>
+-            <goals>
+-              <goal>prepare-agent</goal>
+-            </goals>
+-          </execution>
+-          <execution>
+-            <id>report</id>
+-            <goals>
+-              <goal>report</goal>
+-            </goals>
+-            <phase>prepare-package</phase>
+-          </execution>
+-        </executions>
+-      </plugin>
+-
+-      <!-- Spring Boot Actuator displays build-related information if a git.properties file is
+-      present at the classpath -->
+-      <plugin>
+-        <groupId>io.github.git-commit-id</groupId>
+-        <artifactId>git-commit-id-maven-plugin</artifactId>
+-        <configuration>
+-          <failOnNoGitDirectory>false</failOnNoGitDirectory>
+-          <failOnUnableToExtractRepoInfo>false</failOnUnableToExtractRepoInfo>
+-        </configuration>
+-      </plugin>
+-      <!-- Spring Boot Actuator displays sbom-related information if a CycloneDX SBOM file is
+-      present at the classpath -->
+-      <plugin>
+-        <?m2e ignore?>
+-        <groupId>org.cyclonedx</groupId>
+-        <artifactId>cyclonedx-maven-plugin</artifactId>
+-      </plugin>
+     </plugins>
+   </build>
+-  <licenses>
+-    <license>
+-      <name>Apache License, Version 2.0</name>
+-      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+-    </license>
+-  </licenses>
+-
+-  <profiles>
+-    <profile>
+-      <id>css</id>
+-      <build>
+-        <plugins>
+-          <plugin>
+-            <groupId>org.apache.maven.plugins</groupId>
+-            <artifactId>maven-dependency-plugin</artifactId>
+-            <executions>
+-              <execution>
+-                <id>unpack</id>
+-                <goals>
+-                  <goal>unpack</goal>
+-                </goals>
+-                <?m2e execute onConfiguration,onIncremental?>
+-                <phase>generate-resources</phase>
+-                <configuration>
+-                  <artifactItems>
+-                    <artifactItem>
+-                      <groupId>org.webjars.npm</groupId>
+-                      <artifactId>bootstrap</artifactId>
+-                      <version>${webjars-bootstrap.version}</version>
+-                    </artifactItem>
+-                  </artifactItems>
+-                  <outputDirectory>${project.build.directory}/webjars</outputDirectory>
+-                </configuration>
+-              </execution>
+-            </executions>
+-          </plugin>
+-          <plugin>
+-            <groupId>com.gitlab.haynes</groupId>
+-            <artifactId>libsass-maven-plugin</artifactId>
+-            <version>${libsass.version}</version>
+-            <configuration>
+-              <inputPath>${basedir}/src/main/scss/</inputPath>
+-              <outputPath>${basedir}/src/main/resources/static/resources/css/</outputPath>
+-              <includePath>${project.build.directory}/webjars/META-INF/resources/webjars/bootstrap/${webjars-bootstrap.version}/scss/</includePath>
+-            </configuration>
+-            <executions>
+-              <execution>
+-                <?m2e execute onConfiguration,onIncremental?>
+-                <goals>
+-                  <goal>compile</goal>
+-                </goals>
+-                <phase>generate-resources</phase>
+-              </execution>
+-            </executions>
+-          </plugin>
+-        </plugins>
+-      </build>
+-    </profile>
+-    <profile>
+-      <id>m2e</id>
+-      <activation>
+-        <property>
+-          <name>m2e.version</name>
+-        </property>
+-      </activation>
+-      <build>
+-        <pluginManagement>
+-          <plugins>
+-            <!-- This plugin's configuration is used to store Eclipse m2e settings
+-              only. It has no influence on the Maven build itself. -->
+-            <plugin>
+-              <groupId>org.eclipse.m2e</groupId>
+-              <artifactId>lifecycle-mapping</artifactId>
+-              <version>${lifecycle-mapping}</version>
+-              <configuration>
+-                <lifecycleMappingMetadata>
+-                  <pluginExecutions>
+-                    <pluginExecution>
+-                      <pluginExecutionFilter>
+-                        <groupId>org.apache.maven.plugins</groupId>
+-                        <artifactId>maven-checkstyle-plugin</artifactId>
+-                        <versionRange>[1,)</versionRange>
+-                        <goals>
+-                          <goal>check</goal>
+-                        </goals>
+-                      </pluginExecutionFilter>
+-                      <action>
+-                        <ignore></ignore>
+-                      </action>
+-                    </pluginExecution>
+-                    <pluginExecution>
+-                      <pluginExecutionFilter>
+-                        <groupId>org.springframework.boot</groupId>
+-                        <artifactId>spring-boot-maven-plugin</artifactId>
+-                        <versionRange>[1,)</versionRange>
+-                        <goals>
+-                          <goal>build-info</goal>
+-                        </goals>
+-                      </pluginExecutionFilter>
+-                      <action>
+-                        <ignore></ignore>
+-                      </action>
+-                    </pluginExecution>
+-                    <pluginExecution>
+-                      <pluginExecutionFilter>
+-                        <groupId>io.spring.javaformat</groupId>
+-                        <artifactId>spring-javaformat-maven-plugin</artifactId>
+-                        <versionRange>[0,)</versionRange>
+-                        <goals>
+-                          <goal>validate</goal>
+-                        </goals>
+-                      </pluginExecutionFilter>
+-                      <action>
+-                        <ignore></ignore>
+-                      </action>
+-                    </pluginExecution>
+-                  </pluginExecutions>
+-                </lifecycleMappingMetadata>
+-              </configuration>
+-            </plugin>
+-          </plugins>
+-        </pluginManagement>
+-      </build>
+-    </profile>
+-  </profiles>
+ </project>
+diff --git a/src/main/java/org/springframework/samples/petclinic/ClinicAssets.java b/src/main/java/org/springframework/samples/petclinic/ClinicAssets.java
+new file mode 100644
+--- /dev/null
++++ b/src/main/java/org/springframework/samples/petclinic/ClinicAssets.java
+@@ -0,0 +1,53 @@
++package org.springframework.samples.petclinic;
++
++import io.avaje.jex.Jex;
++import io.avaje.jex.http.Context;
++
++final class ClinicAssets {
++
++	private ClinicAssets() {
++	}
++
++	static void register(Jex jex) {
++		mount(jex, "/resources/", "static/resources/", "css/petclinic.css",
++				"images/pets.png", "images/favicon.png", "images/spring-logo.svg",
++				"images/spring-logo-dataflow.png", "images/spring-logo-dataflow-mobile.png",
++				"fonts/varela_round-webfont.svg", "fonts/varela_round-webfont.woff",
++				"fonts/varela_round-webfont.eot", "fonts/varela_round-webfont.ttf",
++				"fonts/montserrat-webfont.svg", "fonts/montserrat-webfont.woff",
++				"fonts/montserrat-webfont.eot", "fonts/montserrat-webfont.ttf");
++		mount(jex, "/webjars/bootstrap/", "META-INF/resources/webjars/bootstrap/5.3.8/",
++				"dist/js/bootstrap.bundle.min.js", "dist/js/bootstrap.bundle.min.js.map");
++		mount(jex, "/webjars/font-awesome/", "META-INF/resources/webjars/font-awesome/4.7.0/",
++				"css/font-awesome.min.css", "fonts/fontawesome-webfont.woff2", "fonts/fontawesome-webfont.woff",
++				"fonts/fontawesome-webfont.eot", "fonts/fontawesome-webfont.svg", "fonts/fontawesome-webfont.ttf",
++				"fonts/FontAwesome.otf");
++	}
++
++	private static void mount(Jex jex, String route, String resource, String... files) {
++		for (String file : files) {
++			jex.get(route + file, c -> serve(c, resource + file));
++		}
++	}
++
++	private static void serve(Context c, String resource) throws java.io.IOException {
++		try (var body = ClinicAssets.class.getClassLoader().getResourceAsStream(resource)) {
++			if (body == null) {
++				c.writeEmpty(404);
++				return;
++			}
++			String extension = resource.substring(resource.lastIndexOf('.') + 1);
++			String media = switch (extension) {
++				case "png" -> "image/png";
++				case "svg" -> "image/svg+xml";
++				case "css" -> "text/css";
++				case "js" -> "text/javascript";
++				case "map" -> "application/json";
++				case "eot" -> "application/vnd.ms-fontobject";
++				default -> "font/" + extension;
++			};
++			c.header("Cache-Control", "max-age=43200").contentType(media).write(body);
++		}
++	}
++
++}
+diff --git a/src/main/java/org/springframework/samples/petclinic/ClinicWeb.java b/src/main/java/org/springframework/samples/petclinic/ClinicWeb.java
+new file mode 100644
+--- /dev/null
++++ b/src/main/java/org/springframework/samples/petclinic/ClinicWeb.java
+@@ -0,0 +1,450 @@
++package org.springframework.samples.petclinic;
++
++import java.net.URLDecoder;
++import java.net.URLEncoder;
++import java.io.StringWriter;
++import java.nio.charset.StandardCharsets;
++import java.time.LocalDate;
++import java.time.format.DateTimeParseException;
++import java.util.HashMap;
++import java.util.Locale;
++import java.util.Map;
++import java.util.Objects;
++import java.util.ResourceBundle;
++
++import io.avaje.jex.Jex;
++import io.avaje.jex.http.Context;
++import jakarta.validation.Validation;
++import jakarta.xml.bind.JAXBContext;
++import jakarta.xml.bind.JAXBException;
++import org.springframework.context.support.ResourceBundleMessageSource;
++import org.springframework.dao.DataIntegrityViolationException;
++import org.springframework.http.MediaType;
++import org.springframework.data.domain.Page;
++import org.springframework.data.domain.PageRequest;
++import org.springframework.samples.petclinic.owner.Owner;
++import org.springframework.samples.petclinic.owner.OwnerRepository;
++import org.springframework.samples.petclinic.owner.Pet;
++import org.springframework.samples.petclinic.owner.PetType;
++import org.springframework.samples.petclinic.owner.PetTypeRepository;
++import org.springframework.samples.petclinic.owner.PetValidator;
++import org.springframework.samples.petclinic.owner.Visit;
++import org.springframework.samples.petclinic.vet.VetRepository;
++import org.springframework.samples.petclinic.vet.Vets;
++import org.springframework.validation.BeanPropertyBindingResult;
++import org.thymeleaf.context.IExpressionContext;
++import org.thymeleaf.linkbuilder.StandardLinkBuilder;
++import org.thymeleaf.spring6.SpringTemplateEngine;
++import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
++import pvrlabs.coilbase.RepositoryContext;
++
++final class ClinicWeb implements AutoCloseable {
++
++	private final OwnerRepository owners;
++	private final PetTypeRepository types;
++	private final VetRepository vets;
++	private final JAXBContext xml = vetXml();
++	private final SpringTemplateEngine templates = new SpringTemplateEngine();
++	private final jakarta.validation.ValidatorFactory validation = Validation.buildDefaultValidatorFactory();
++
++	ClinicWeb(RepositoryContext db) {
++		owners = new OwnerRepository(db);
++		types = new PetTypeRepository(db);
++		vets = new VetRepository(db);
++		var resolver = new ClassLoaderTemplateResolver();
++		resolver.setPrefix("templates/");
++		resolver.setSuffix(".html");
++		resolver.setCharacterEncoding("UTF-8");
++		templates.setTemplateResolver(resolver);
++		templates.setLinkBuilder(new StandardLinkBuilder() {
++			@Override
++			protected String computeContextPath(IExpressionContext context, String base, Map<String, Object> params) {
++				return "";
++			}
++		});
++		var messages = new ResourceBundleMessageSource();
++		messages.setBasename("messages/messages");
++		messages.setDefaultEncoding("UTF-8");
++		templates.setTemplateEngineMessageSource(messages);
++	}
++
++	void register(Jex jex) {
++		String owner = "/owners/{ownerId}";
++		String pet = owner + "/pets/{petId}";
++		jex.get("/", c -> render(c, "welcome", Map.of()));
++		jex.get("/owners/find", c -> render(c, "owners/findOwners", Map.of("owner", new Owner())));
++		jex.get("/owners", this::findOwners);
++		jex.get("/owners/new", c -> ownerForm(c, new Owner(), false));
++		jex.post("/owners/new", c -> ownerForm(c, new Owner(), true));
++		jex.get(owner, this::showOwner);
++		jex.get(owner + "/edit", c -> ownerForm(c, owner(c), false));
++		jex.post(owner + "/edit", c -> ownerForm(c, owner(c), true));
++		jex.get(owner + "/pets/new", c -> petForm(c, null, false));
++		jex.post(owner + "/pets/new", c -> petForm(c, null, true));
++		jex.get(pet + "/edit", c -> petForm(c, id(c, "petId"), false));
++		jex.post(pet + "/edit", c -> petForm(c, id(c, "petId"), true));
++		jex.get(pet + "/visits/new", c -> visitForm(c, false));
++		jex.post(pet + "/visits/new", c -> visitForm(c, true));
++		jex.get("/vets.html", this::showVets);
++		jex.get("/vets", this::vetResources);
++		jex.get("/oups", c -> error(c, 500,
++				"Expected: controller used to showcase what happens when an exception is thrown"));
++		jex.error(BadInput.class, (c, ex) -> error(c, 400, ex.getMessage()));
++		jex.error(MissingRecord.class, (c, ex) -> error(c, 500, ex.getMessage()));
++	}
++
++	private void vetResources(Context c) throws JAXBException {
++		String header = c.header("Accept");
++		var accept = header == null ? java.util.List.of(MediaType.ALL) : MediaType.parseMediaTypes(header);
++		double json = quality(accept, MediaType.APPLICATION_JSON);
++		double xmlQuality = quality(accept, MediaType.APPLICATION_XML);
++		if (json <= 0 && xmlQuality <= 0) {
++			c.writeEmpty(406);
++			return;
++		}
++		var result = new Vets();
++		result.getVetList().addAll(vets.findAll());
++		if (json >= xmlQuality) {
++			c.json(result);
++		}
++		else {
++			var body = new StringWriter();
++			xml.createMarshaller().marshal(result, body);
++			c.contentType("application/xml").write(body.toString());
++		}
++	}
++
++	private static double quality(java.util.List<MediaType> accept, MediaType offered) {
++		return accept.stream()
++			.filter(type -> type.includes(offered))
++			.max(java.util.Comparator.<MediaType>comparingInt(ClinicWeb::specificity)
++				.thenComparingDouble(MediaType::getQualityValue))
++			.map(MediaType::getQualityValue)
++			.orElse(0.0);
++	}
++
++	private static int specificity(MediaType range) {
++		if (range.isWildcardType()) {
++			return 0;
++		}
++		if (range.isWildcardSubtype()) {
++			return 1;
++		}
++		return 2;
++	}
++
++	private static JAXBContext vetXml() {
++		try {
++			return JAXBContext.newInstance(Vets.class);
++		}
++		catch (JAXBException ex) {
++			throw new IllegalStateException("Unable to configure vet XML", ex);
++		}
++	}
++
++	// Jex 3.6 percent-decodes form values but leaves '+' intact.
++	private static Map<String, String> decodeForm(String encoded) {
++		var values = new HashMap<String, String>();
++		if (encoded == null || encoded.isEmpty()) {
++			return values;
++		}
++		try {
++			for (String pair : encoded.split("&")) {
++				String[] parts = pair.split("=", 2);
++				String key = URLDecoder.decode(parts[0], StandardCharsets.UTF_8);
++				String value = parts.length == 2 ? URLDecoder.decode(parts[1], StandardCharsets.UTF_8) : "";
++				values.putIfAbsent(key, value);
++			}
++		}
++		catch (IllegalArgumentException ex) {
++			throw new BadInput("Malformed form encoding");
++		}
++		return values;
++	}
++
++	private void findOwners(Context c) {
++		String name = decodeForm(c.uri().getRawQuery()).getOrDefault("lastName", "").strip();
++		int number = pageNumber(c);
++		var result = owners.findByLastNameStartingWith(name, page(number));
++		if (number < 1 || number > Math.max(result.getTotalPages(), 1)) {
++			redirect(c, "/owners?page=1" + (name.isEmpty() ? "" : "&lastName="
++					+ URLEncoder.encode(name, StandardCharsets.UTF_8)));
++		}
++		else if (result.isEmpty()) {
++			var owner = new Owner();
++			owner.setLastName(name);
++			render(c, "owners/findOwners", Map.of("owner", owner, "errors", Map.of("lastName", "not found")));
++		}
++		else if (result.getTotalElements() == 1) {
++			redirect(c, ownerPath(result.getContent().getFirst()));
++		}
++		else {
++			render(c, "owners/ownersList", listing(number, result, "listOwners"));
++		}
++	}
++
++	private void showVets(Context c) {
++		int number = pageNumber(c);
++		var result = vets.findAll(page(number));
++		if (number < 1 || number > Math.max(result.getTotalPages(), 1)) {
++			redirect(c, "/vets.html?page=1");
++		}
++		else {
++			render(c, "vets/vetList", listing(number, result, "listVets"));
++		}
++	}
++
++	private static Map<String, Object> listing(int number, Page<?> page, String name) {
++		return Map.of("currentPage", number, "totalPages", page.getTotalPages(),
++				"totalItems", page.getTotalElements(), name, page.getContent());
++	}
++
++	private static PageRequest page(int number) {
++		return PageRequest.of(Math.max(1, number) - 1, 5);
++	}
++
++	private int pageNumber(Context c) {
++		return number(decodeForm(c.uri().getRawQuery()).getOrDefault("page", "1"));
++	}
++
++	private void showOwner(Context c) {
++		Owner owner = owner(c);
++		var model = new HashMap<String, Object>();
++		model.put("owner", owner);
++		String code = c.cookie("petclinic-flash");
++		if (code != null) {
++			c.removeCookie("petclinic-flash", ownerPath(owner));
++			String message = switch (code) {
++				case "owner-new" -> "New Owner Created";
++				case "owner-edit" -> "Owner Values Updated";
++				case "pet-new" -> "New Pet has been Added";
++				case "pet-edit" -> "Pet details has been edited";
++				case "visit-new" -> "Your visit has been booked";
++				default -> null;
++			};
++			if (message != null) {
++				model.put("message", message);
++			}
++		}
++		render(c, "owners/ownerDetails", model);
++	}
++
++	private static void redirectWithFlash(Context c, Owner owner, String code) {
++		String path = ownerPath(owner);
++		c.cookie(Context.Cookie.of("petclinic-flash", code).path(path)
++				.httpOnly(true).secure("https".equals(c.scheme()))
++				.sameSite(Context.Cookie.SameSite.Lax).maxAge(java.time.Duration.ofMinutes(1)));
++		redirect(c, path);
++	}
++
++	private void ownerForm(Context c, Owner owner, boolean submitted) {
++		var errors = new HashMap<String, String>();
++		if (submitted) {
++			var form = decodeForm(c.body());
++			owner.setFirstName(form.getOrDefault("firstName", text(owner.getFirstName())));
++			owner.setLastName(form.getOrDefault("lastName", text(owner.getLastName())));
++			owner.setAddress(form.getOrDefault("address", text(owner.getAddress())));
++			owner.setCity(form.getOrDefault("city", text(owner.getCity())));
++			owner.setTelephone(form.getOrDefault("telephone", text(owner.getTelephone())));
++			validate(c, owner, errors);
++			if (errors.isEmpty()) {
++				String flash = owner.isNew() ? "owner-new" : "owner-edit";
++				owners.saveDetails(owner);
++				redirectWithFlash(c, owner, flash);
++				return;
++			}
++		}
++		render(c, "owners/createOrUpdateOwnerForm", Map.of("owner", owner, "errors", errors,
++				"values", Map.of("firstName", text(owner.getFirstName()), "lastName", text(owner.getLastName()),
++						"address", text(owner.getAddress()), "city", text(owner.getCity()),
++						"telephone", text(owner.getTelephone()))));
++	}
++
++	private void petForm(Context c, Integer petId, boolean submitted) {
++		Owner owner = owner(c);
++		Pet current = petId == null ? new Pet() : pet(owner, petId);
++		var choices = types.findPetTypes();
++		var errors = new HashMap<String, String>();
++		Pet pet = current;
++		String birthDate = text(pet.getBirthDate());
++		if (submitted) {
++			var form = decodeForm(c.body());
++			pet = new Pet();
++			pet.setId(petId);
++			pet.setName(form.getOrDefault("name", text(current.getName())));
++			birthDate = form.getOrDefault("birthDate", birthDate);
++			pet.setBirthDate(form.containsKey("birthDate") ? parseDate(birthDate, "birthDate", errors) : current.getBirthDate());
++			String type = form.get("type");
++			pet.setType(type == null ? current.getType() : choices.stream()
++				.filter(choice -> choice.getName().equals(type)).findFirst().orElse(null));
++			if (type != null && pet.getType() == null) {
++				errors.put("type", "Select a valid type");
++			}
++			var result = new BeanPropertyBindingResult(pet, "pet");
++			new PetValidator().validate(pet, result);
++			result.getFieldErrors().forEach(field -> errors.putIfAbsent(field.getField(), field.getDefaultMessage()));
++			if (pet.getBirthDate() != null && pet.getBirthDate().isAfter(LocalDate.now())) {
++				errors.put("birthDate", message(c, "typeMismatch.birthDate"));
++			}
++			Pet sameName = owner.getPet(pet.getName());
++			if (sameName != null && !Objects.equals(sameName.getId(), petId)) {
++				errors.put("name", message(c, "duplicate"));
++			}
++			if (errors.isEmpty()) {
++				try {
++					owners.savePet(owner.getId(), pet);
++					redirectWithFlash(c, owner, petId == null ? "pet-new" : "pet-edit");
++					return;
++				}
++				catch (DataIntegrityViolationException ex) {
++					if (ex.getMessage() == null || !ex.getMessage().toLowerCase(Locale.ROOT)
++							.contains("unique_owner_pet_name")) {
++						throw ex;
++					}
++					errors.put("name", message(c, "duplicate"));
++				}
++			}
++		}
++		PetType type = pet.getType();
++		render(c, "pets/createOrUpdatePetForm", Map.of("owner", owner, "pet", pet, "types", choices,
++				"errors", errors, "values", Map.of("name", text(pet.getName()), "birthDate", birthDate,
++						"type", type == null ? "" : type.getName())));
++	}
++
++	private void visitForm(Context c, boolean submitted) {
++		Owner owner = owner(c);
++		Pet pet = pet(owner, id(c, "petId"));
++		var visit = new Visit();
++		var errors = new HashMap<String, String>();
++		String date = visit.getDate().toString();
++		if (submitted) {
++			var form = decodeForm(c.body());
++			date = form.getOrDefault("date", date);
++			visit.setDate(parseDate(date, "date", errors));
++			visit.setDescription(form.getOrDefault("description", ""));
++			validate(c, visit, errors);
++			if (visit.getDate() != null && !visit.getDate().isAfter(LocalDate.now())) {
++				errors.put("date", message(c, "typeMismatch.visitDate"));
++			}
++			if (errors.isEmpty()) {
++				owners.addVisit(owner.getId(), pet.getId(), visit);
++				redirectWithFlash(c, owner, "visit-new");
++				return;
++			}
++		}
++		render(c, "pets/createOrUpdateVisitForm", Map.of("owner", owner, "pet", pet, "visit", visit,
++				"minVisitDate", LocalDate.now().plusDays(1), "errors", errors,
++				"values", Map.of("date", date, "description", text(visit.getDescription()))));
++	}
++
++	private void validate(Context c, Object value, Map<String, String> errors) {
++		validation.getValidator().validate(value).forEach(problem -> {
++			String error = problem.getMessage();
++			if (error.startsWith("{") && error.endsWith("}")) {
++				error = message(c, error.substring(1, error.length() - 1));
++			}
++			errors.put(problem.getPropertyPath().toString(), error);
++		});
++	}
++
++	private Owner owner(Context c) {
++		int id = id(c, "ownerId");
++		return owners.findById(id).orElseThrow(() ->
++				new MissingRecord("Owner not found with id: " + id + ". Please ensure the ID is correct "));
++	}
++
++	private Pet pet(Owner owner, int id) {
++		Pet pet = owner.getPet(id);
++		if (pet == null) {
++			throw new MissingRecord("Pet with id " + id + " not found for owner with id " + owner.getId() + ".");
++		}
++		return pet;
++	}
++
++	private static int id(Context c, String name) {
++		return number(c.pathParam(name));
++	}
++
++	private static int number(String value) {
++		try {
++			return Integer.parseInt(value);
++		}
++		catch (NumberFormatException ex) {
++			throw new BadInput("Expected an integer");
++		}
++	}
++
++	private static LocalDate parseDate(String date, String field, Map<String, String> errors) {
++		if (date.isEmpty()) {
++			return null;
++		}
++		try {
++			return LocalDate.parse(date);
++		}
++		catch (DateTimeParseException ex) {
++			errors.put(field, "Invalid date");
++			return null;
++		}
++	}
++
++	private void render(Context c, String name, Map<String, Object> model) {
++		var variables = new HashMap<String, Object>();
++		variables.put("errors", Map.of());
++		variables.putAll(model);
++		c.html(templates.process(name, new org.thymeleaf.context.Context(locale(c), variables)));
++	}
++
++	private void error(Context c, int status, String message) {
++		c.status(status);
++		render(c, "error", Map.of("status", status, "message", message));
++	}
++
++	private static Locale locale(Context c) {
++		try {
++			String accept = c.header("Accept-Language");
++			if (accept != null) {
++				var ranges = Locale.LanguageRange.parse(accept);
++				Locale match = Locale.lookup(ranges, java.util.List.of(Locale.ENGLISH, Locale.GERMAN,
++						Locale.forLanguageTag("es"), Locale.forLanguageTag("fa"), Locale.forLanguageTag("hi"),
++						Locale.JAPANESE, Locale.KOREAN,
++						Locale.forLanguageTag("pt"), Locale.forLanguageTag("ru"), Locale.forLanguageTag("tr")));
++				if (match != null) {
++					return match;
++				}
++			}
++		}
++		catch (IllegalArgumentException ignored) {
++		}
++		return Locale.ENGLISH;
++	}
++
++	private static String message(Context c, String key) {
++		return ResourceBundle.getBundle("messages.messages", locale(c)).getString(key);
++	}
++
++	private static String ownerPath(Owner owner) {
++		return "/owners/" + owner.getId();
++	}
++
++	private static String text(Object value) {
++		return value == null ? "" : value.toString();
++	}
++
++	private static void redirect(Context c, String path) {
++		c.redirect(path, 302);
++	}
++
++	@Override
++	public void close() {
++		validation.close();
++	}
++
++	private static final class BadInput extends RuntimeException {
++		BadInput(String message) { super(message); }
++	}
++
++	private static final class MissingRecord extends RuntimeException {
++		MissingRecord(String message) { super(message); }
++	}
++
++}
+diff --git a/src/main/java/org/springframework/samples/petclinic/PersistenceConfiguration.java b/src/main/java/org/springframework/samples/petclinic/PersistenceConfiguration.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/PersistenceConfiguration.java
++++ /dev/null
+@@ -1,18 +0,0 @@
+-package org.springframework.samples.petclinic;
+-
+-import javax.sql.DataSource;
+-
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-
+-import pvrlabs.coilbase.RepositoryContext;
+-
+-@Configuration(proxyBeanMethods = false)
+-class PersistenceConfiguration {
+-
+-	@Bean
+-	RepositoryContext repositoryContext(DataSource dataSource) {
+-		return RepositoryContext.create(dataSource);
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java b/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
+--- a/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
++++ b/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
+@@ -1,36 +1,100 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+ package org.springframework.samples.petclinic;
+ 
+-import org.springframework.boot.SpringApplication;
+-import org.springframework.boot.autoconfigure.SpringBootApplication;
+-import org.springframework.context.annotation.ImportRuntimeHints;
++import java.util.Map;
++import javax.sql.DataSource;
+ 
+-/**
+- * PetClinic Spring Boot Application.
+- *
+- * @author Dave Syer
+- */
+-@SpringBootApplication
+-@ImportRuntimeHints(PetClinicRuntimeHints.class)
+-public class PetClinicApplication {
++import com.zaxxer.hikari.HikariConfig;
++import com.zaxxer.hikari.HikariDataSource;
++import io.avaje.jex.Jex;
++import pvrlabs.coilbase.SqlStatement;
++import pvrlabs.coilbase.jex.CoilBaseJexApplication;
++
++public final class PetClinicApplication extends CoilBaseJexApplication {
++
++	private final Map<String, String> options;
++	private final String database;
++
++	PetClinicApplication(Map<String, String> options) {
++		this.options = options;
++		this.database = option("spring.profiles.active", "SPRING_PROFILES_ACTIVE", "h2");
++		if (!java.util.Set.of("h2", "mysql", "postgres").contains(database)) {
++			throw new IllegalArgumentException("Expected h2, mysql or postgres profile");
++		}
++	}
++
++	@Override
++	protected DataSource createPrimaryDataSource() {
++		String prefix = database.toUpperCase(java.util.Locale.ROOT);
++		var config = new HikariConfig();
++		config.setJdbcUrl(databaseUrl());
++		String user = database.equals("h2") ? "sa" : "petclinic";
++		String password = database.equals("h2") ? "" : "petclinic";
++		config.setUsername(option("spring.datasource.username", "SPRING_DATASOURCE_USERNAME",
++				System.getenv().getOrDefault(prefix + "_USER", user)));
++		config.setPassword(option("spring.datasource.password", "SPRING_DATASOURCE_PASSWORD",
++				System.getenv().getOrDefault(prefix + "_PASS", password)));
++		return new HikariDataSource(config);
++	}
++
++	private String databaseUrl() {
++		String prefix = database.toUpperCase(java.util.Locale.ROOT);
++		String defaultUrl = switch (database) {
++			case "mysql" -> "jdbc:mysql://localhost/petclinic";
++			case "postgres" -> "jdbc:postgresql://localhost/petclinic";
++			default -> "jdbc:h2:mem:petclinic;DB_CLOSE_DELAY=-1";
++		};
++		return option("spring.datasource.url", "SPRING_DATASOURCE_URL",
++				System.getenv().getOrDefault(prefix + "_URL", defaultUrl));
++	}
++
++	@Override
++	protected void registerRoutes(Jex jex) {
++		String defaultMode = database.equals("h2") ? "embedded" : "always";
++		String mode = option("spring.sql.init.mode", "SPRING_SQL_INIT_MODE", defaultMode);
++		if ("always".equals(mode) || ("embedded".equals(mode) && databaseUrl().startsWith("jdbc:h2:mem:"))) {
++			db().executeScriptResource("/db/" + database + "/schema.sql");
++			db().executeScriptResource("/db/" + database + "/data.sql");
++		}
++		else if (!"never".equals(mode) && !"embedded".equals(mode)) {
++			throw new IllegalArgumentException("Expected always, embedded or never for spring.sql.init.mode");
++		}
++		checkDatabase();
++		jex.config(config -> config.host(option("server.address", "SERVER_ADDRESS", "0.0.0.0")));
++		ClinicAssets.register(jex);
++		var web = new ClinicWeb(db());
++		jex.lifecycle().onShutdown(web::close);
++		web.register(jex);
++		jex.get("/actuator/health", ctx -> {
++			try {
++				checkDatabase();
++				ctx.json(Map.of("status", "UP"));
++			}
++			catch (RuntimeException ex) {
++				ctx.status(503).json(Map.of("status", "DOWN"));
++			}
++		});
++	}
++
++	private void checkDatabase() {
++		db().query(SqlStatement.of("select 1 from owners where 1=0"), q -> q.mapTo(Integer.class).findOne());
++	}
++
++	private String option(String argument, String environment, String fallback) {
++		return options.getOrDefault(argument, System.getenv().getOrDefault(environment, fallback));
++	}
+ 
+ 	public static void main(String[] args) {
+-		SpringApplication.run(PetClinicApplication.class, args);
++		var options = new java.util.HashMap<String, String>();
++		for (String arg : args) {
++			int separator = arg.indexOf('=');
++			if (!arg.startsWith("--") || separator < 3) {
++				throw new IllegalArgumentException("Expected --property=value");
++			}
++			options.put(arg.substring(2, separator), arg.substring(separator + 1));
++		}
++		var app = new PetClinicApplication(options);
++		app.start(Integer.parseInt(app.option("server.port", "SERVER_PORT",
++				System.getenv().getOrDefault("PORT", "8080"))));
+ 	}
+ 
+ }
+diff --git a/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java b/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java
++++ /dev/null
+@@ -1,38 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic;
+-
+-import org.springframework.aot.hint.RuntimeHints;
+-import org.springframework.aot.hint.RuntimeHintsRegistrar;
+-import org.springframework.samples.petclinic.model.BaseEntity;
+-import org.springframework.samples.petclinic.model.Person;
+-import org.springframework.samples.petclinic.vet.Vet;
+-
+-public class PetClinicRuntimeHints implements RuntimeHintsRegistrar {
+-
+-	@Override
+-	public void registerHints(RuntimeHints hints, ClassLoader classLoader) {
+-		hints.resources().registerPattern("db/*"); // https://github.com/spring-projects/spring-boot/issues/32654
+-		hints.resources().registerPattern("db/*/*"); // nested db/{h2,mysql,postgres}
+-		hints.resources().registerPattern("messages/*");
+-		hints.resources().registerPattern("mysql-default-conf");
+-		hints.reflection().registerType(BaseEntity.class, typeHint -> typeHint.withJavaSerialization(true));
+-		hints.reflection().registerType(Person.class, typeHint -> typeHint.withJavaSerialization(true));
+-		hints.reflection().registerType(Vet.class, typeHint -> typeHint.withJavaSerialization(true));
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java b/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java
++++ /dev/null
+@@ -1,188 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package org.springframework.samples.petclinic.owner;
+-
+-import java.util.List;
+-import java.util.Objects;
+-import java.util.Optional;
+-
+-import org.springframework.data.domain.Page;
+-import org.springframework.data.domain.PageRequest;
+-import org.springframework.data.domain.Pageable;
+-import org.springframework.stereotype.Controller;
+-import org.springframework.ui.Model;
+-import org.springframework.validation.BindingResult;
+-import org.springframework.web.bind.WebDataBinder;
+-import org.springframework.web.bind.annotation.GetMapping;
+-import org.springframework.web.bind.annotation.InitBinder;
+-import org.springframework.web.bind.annotation.ModelAttribute;
+-import org.springframework.web.bind.annotation.PathVariable;
+-import org.springframework.web.bind.annotation.PostMapping;
+-import org.springframework.web.bind.annotation.RequestParam;
+-import org.springframework.web.servlet.ModelAndView;
+-
+-import jakarta.validation.Valid;
+-
+-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+-
+-/**
+- * @author Juergen Hoeller
+- * @author Ken Krebs
+- * @author Arjen Poutsma
+- * @author Michael Isvy
+- * @author Wick Dynex
+- */
+-@Controller
+-class OwnerController {
+-
+-	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
+-
+-	private final OwnerRepository owners;
+-
+-	public OwnerController(OwnerRepository owners) {
+-		this.owners = owners;
+-	}
+-
+-	@InitBinder
+-	public void setAllowedFields(WebDataBinder dataBinder) {
+-		dataBinder.setDisallowedFields("id", "*.id");
+-	}
+-
+-	@ModelAttribute("owner")
+-	public Owner findOwner(@PathVariable(name = "ownerId", required = false) Integer ownerId) {
+-		return ownerId == null ? new Owner()
+-				: this.owners.findById(ownerId)
+-					.orElseThrow(() -> new IllegalArgumentException("Owner not found with id: " + ownerId
+-							+ ". Please ensure the ID is correct " + "and the owner exists in the database."));
+-	}
+-
+-	@GetMapping("/owners/new")
+-	public String initCreationForm() {
+-		return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+-	}
+-
+-	@PostMapping("/owners/new")
+-	public String processCreationForm(@Valid Owner owner, BindingResult result, RedirectAttributes redirectAttributes) {
+-		if (result.hasErrors()) {
+-			redirectAttributes.addFlashAttribute("error", "There was an error in creating the owner.");
+-			return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+-		}
+-
+-		this.owners.saveDetails(owner);
+-		redirectAttributes.addFlashAttribute("message", "New Owner Created");
+-		return "redirect:/owners/" + owner.getId();
+-	}
+-
+-	@GetMapping("/owners/find")
+-	public String initFindForm() {
+-		return "owners/findOwners";
+-	}
+-
+-	@GetMapping("/owners")
+-	public String processFindForm(@RequestParam(defaultValue = "1") int page, Owner owner, BindingResult result,
+-			Model model, RedirectAttributes redirectAttributes) {
+-		// allow parameterless GET request for /owners to return all records
+-		String lastName = owner.getLastName();
+-		if (lastName == null) {
+-			lastName = ""; // empty string signifies broadest possible search
+-		}
+-		else {
+-			lastName = lastName.strip();
+-		}
+-
+-		// find owners by last name
+-		Page<Owner> ownersResults = findPaginatedForOwnersLastName(page, lastName);
+-		if (page < 1 || page > Math.max(ownersResults.getTotalPages(), 1)) {
+-			redirectAttributes.addAttribute("page", 1);
+-			if (!lastName.isEmpty()) {
+-				redirectAttributes.addAttribute("lastName", lastName);
+-			}
+-			return "redirect:/owners";
+-		}
+-
+-		if (ownersResults.isEmpty()) {
+-			// no owners found
+-			result.rejectValue("lastName", "notFound", "not found");
+-			return "owners/findOwners";
+-		}
+-
+-		if (ownersResults.getTotalElements() == 1) {
+-			// 1 owner found
+-			owner = ownersResults.iterator().next();
+-			return "redirect:/owners/" + owner.getId();
+-		}
+-
+-		// multiple owners found
+-		return addPaginationModel(page, model, ownersResults);
+-	}
+-
+-	private String addPaginationModel(int page, Model model, Page<Owner> paginated) {
+-		List<Owner> listOwners = paginated.getContent();
+-		model.addAttribute("currentPage", page);
+-		model.addAttribute("totalPages", paginated.getTotalPages());
+-		model.addAttribute("totalItems", paginated.getTotalElements());
+-		model.addAttribute("listOwners", listOwners);
+-		return "owners/ownersList";
+-	}
+-
+-	private Page<Owner> findPaginatedForOwnersLastName(int page, String lastname) {
+-		int pageSize = 5;
+-		int validatedPage = Math.max(page, 1);
+-		Pageable pageable = PageRequest.of(validatedPage - 1, pageSize);
+-		return owners.findByLastNameStartingWith(lastname, pageable);
+-	}
+-
+-	@GetMapping("/owners/{ownerId}/edit")
+-	public String initUpdateOwnerForm() {
+-		return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+-	}
+-
+-	@PostMapping("/owners/{ownerId}/edit")
+-	public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result, @PathVariable("ownerId") int ownerId,
+-			RedirectAttributes redirectAttributes) {
+-		if (result.hasErrors()) {
+-			redirectAttributes.addFlashAttribute("error", "There was an error in updating the owner.");
+-			return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+-		}
+-
+-		if (!Objects.equals(owner.getId(), ownerId)) {
+-			result.rejectValue("id", "mismatch", "The owner ID in the form does not match the URL.");
+-			redirectAttributes.addFlashAttribute("error", "Owner ID mismatch. Please try again.");
+-			return "redirect:/owners/{ownerId}/edit";
+-		}
+-
+-		owner.setId(ownerId);
+-		this.owners.saveDetails(owner);
+-		redirectAttributes.addFlashAttribute("message", "Owner Values Updated");
+-		return "redirect:/owners/{ownerId}";
+-	}
+-
+-	/**
+-	 * Custom handler for displaying an owner.
+-	 * @param ownerId the ID of the owner to display
+-	 * @return a ModelMap with the model attributes for the view
+-	 */
+-	@GetMapping("/owners/{ownerId}")
+-	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
+-		ModelAndView mav = new ModelAndView("owners/ownerDetails");
+-		Optional<Owner> optionalOwner = this.owners.findById(ownerId);
+-		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
+-				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
+-		mav.addObject(owner);
+-		return mav;
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/PetController.java b/src/main/java/org/springframework/samples/petclinic/owner/PetController.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/owner/PetController.java
++++ /dev/null
+@@ -1,197 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package org.springframework.samples.petclinic.owner;
+-
+-import java.time.LocalDate;
+-import java.util.Collection;
+-import java.util.Objects;
+-import java.util.Optional;
+-
+-import org.springframework.dao.DataIntegrityViolationException;
+-import org.springframework.stereotype.Controller;
+-import org.springframework.ui.ModelMap;
+-import org.springframework.util.Assert;
+-import org.springframework.util.StringUtils;
+-import org.springframework.validation.BindingResult;
+-import org.springframework.web.bind.WebDataBinder;
+-import org.springframework.web.bind.annotation.GetMapping;
+-import org.springframework.web.bind.annotation.InitBinder;
+-import org.springframework.web.bind.annotation.ModelAttribute;
+-import org.springframework.web.bind.annotation.PathVariable;
+-import org.springframework.web.bind.annotation.PostMapping;
+-import org.springframework.web.bind.annotation.RequestMapping;
+-
+-import jakarta.validation.Valid;
+-
+-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+-
+-/**
+- * @author Juergen Hoeller
+- * @author Ken Krebs
+- * @author Arjen Poutsma
+- * @author Wick Dynex
+- */
+-@Controller
+-@RequestMapping("/owners/{ownerId}")
+-class PetController {
+-
+-	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
+-
+-	private final OwnerRepository owners;
+-
+-	private final PetTypeRepository types;
+-
+-	public PetController(OwnerRepository owners, PetTypeRepository types) {
+-		this.owners = owners;
+-		this.types = types;
+-	}
+-
+-	@ModelAttribute("types")
+-	public Collection<PetType> populatePetTypes() {
+-		return this.types.findPetTypes();
+-	}
+-
+-	@ModelAttribute("owner")
+-	public Owner findOwner(@PathVariable("ownerId") int ownerId) {
+-		Optional<Owner> optionalOwner = this.owners.findById(ownerId);
+-		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
+-				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
+-		return owner;
+-	}
+-
+-	@ModelAttribute("pet")
+-	public Pet findPet(@PathVariable("ownerId") int ownerId,
+-			@PathVariable(name = "petId", required = false) Integer petId) {
+-
+-		if (petId == null) {
+-			return new Pet();
+-		}
+-
+-		Optional<Owner> optionalOwner = this.owners.findById(ownerId);
+-		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
+-				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
+-		return owner.getPet(petId);
+-	}
+-
+-	@InitBinder("owner")
+-	public void initOwnerBinder(WebDataBinder dataBinder) {
+-		dataBinder.setDisallowedFields("id", "*.id");
+-	}
+-
+-	@InitBinder("pet")
+-	public void initPetBinder(WebDataBinder dataBinder) {
+-		dataBinder.setValidator(new PetValidator());
+-		dataBinder.setDisallowedFields("id", "*.id");
+-	}
+-
+-	@GetMapping("/pets/new")
+-	public String initCreationForm(Owner owner, ModelMap model) {
+-		Pet pet = new Pet();
+-		owner.addPet(pet);
+-		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
+-	}
+-
+-	@PostMapping("/pets/new")
+-	public String processCreationForm(Owner owner, @Valid Pet pet, BindingResult result,
+-			RedirectAttributes redirectAttributes) {
+-
+-		if (StringUtils.hasText(pet.getName()) && pet.isNew() && owner.getPet(pet.getName(), true) != null) {
+-			result.rejectValue("name", "duplicate", "already exists");
+-		}
+-
+-		LocalDate currentDate = LocalDate.now();
+-		if (pet.getBirthDate() != null && pet.getBirthDate().isAfter(currentDate)) {
+-			result.rejectValue("birthDate", "typeMismatch.birthDate");
+-		}
+-
+-		if (result.hasErrors()) {
+-			return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
+-		}
+-
+-		try {
+-			owner.addPet(pet);
+-			this.owners.savePet(owner.getId(), pet);
+-		}
+-		catch (DataIntegrityViolationException ex) {
+-			if (!isDuplicatePetNameViolation(ex)) {
+-				throw ex;
+-			}
+-			result.rejectValue("name", "duplicate", "already exists");
+-			return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
+-		}
+-		redirectAttributes.addFlashAttribute("message", "New Pet has been Added");
+-		return "redirect:/owners/{ownerId}";
+-	}
+-
+-	@GetMapping("/pets/{petId}/edit")
+-	public String initUpdateForm() {
+-		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
+-	}
+-
+-	@PostMapping("/pets/{petId}/edit")
+-	public String processUpdateForm(Owner owner, @Valid Pet pet, BindingResult result,
+-			RedirectAttributes redirectAttributes) {
+-
+-		String petName = pet.getName();
+-
+-		// checking if the pet name already exists for the owner
+-		if (StringUtils.hasText(petName)) {
+-			Pet existingPet = owner.getPet(petName, false);
+-			if (existingPet != null && !Objects.equals(existingPet.getId(), pet.getId())) {
+-				result.rejectValue("name", "duplicate", "already exists");
+-			}
+-		}
+-
+-		LocalDate currentDate = LocalDate.now();
+-		if (pet.getBirthDate() != null && pet.getBirthDate().isAfter(currentDate)) {
+-			result.rejectValue("birthDate", "typeMismatch.birthDate");
+-		}
+-
+-		if (result.hasErrors()) {
+-			return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
+-		}
+-
+-		try {
+-			updatePetDetails(owner, pet);
+-		}
+-		catch (DataIntegrityViolationException ex) {
+-			if (!isDuplicatePetNameViolation(ex)) {
+-				throw ex;
+-			}
+-			result.rejectValue("name", "duplicate", "already exists");
+-			return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
+-		}
+-		redirectAttributes.addFlashAttribute("message", "Pet details has been edited");
+-		return "redirect:/owners/{ownerId}";
+-	}
+-
+-	/**
+-	 * Updates the pet details if it exists or adds a new pet to the owner.
+-	 * @param owner The owner of the pet
+-	 * @param pet The pet with updated details
+-	 */
+-	private void updatePetDetails(Owner owner, Pet pet) {
+-		Integer id = pet.getId();
+-		Assert.state(id != null, "'pet.getId()' must not be null");
+-		this.owners.savePet(owner.getId(), pet);
+-	}
+-
+-	private boolean isDuplicatePetNameViolation(DataIntegrityViolationException ex) {
+-		String message = ex.getMessage();
+-		return message != null && message.toLowerCase().contains("unique_owner_pet_name");
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java b/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/owner/PetTypeFormatter.java
++++ /dev/null
+@@ -1,62 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package org.springframework.samples.petclinic.owner;
+-
+-import org.springframework.format.Formatter;
+-import org.springframework.stereotype.Component;
+-
+-import java.text.ParseException;
+-import java.util.Collection;
+-import java.util.Locale;
+-import java.util.Objects;
+-
+-/**
+- * Instructs Spring MVC on how to parse and print elements of type 'PetType'. Starting
+- * from Spring 3.0, Formatters have come as an improvement in comparison to legacy
+- * PropertyEditors. See the following links for more details: - The Spring ref doc:
+- * https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html#format
+- *
+- * @author Mark Fisher
+- * @author Juergen Hoeller
+- * @author Michael Isvy
+- */
+-@Component
+-public class PetTypeFormatter implements Formatter<PetType> {
+-
+-	private final PetTypeRepository types;
+-
+-	public PetTypeFormatter(PetTypeRepository types) {
+-		this.types = types;
+-	}
+-
+-	@Override
+-	public String print(PetType petType, Locale locale) {
+-		String name = petType.getName();
+-		return name != null ? name : "<null>";
+-	}
+-
+-	@Override
+-	public PetType parse(String text, Locale locale) throws ParseException {
+-		Collection<PetType> findPetTypes = this.types.findPetTypes();
+-		for (PetType type : findPetTypes) {
+-			if (Objects.equals(type.getName(), text)) {
+-				return type;
+-			}
+-		}
+-		throw new ParseException("type not found: " + text, 0);
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java b/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java
++++ /dev/null
+@@ -1,114 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package org.springframework.samples.petclinic.owner;
+-
+-import java.time.LocalDate;
+-import java.util.Map;
+-import java.util.Optional;
+-
+-import org.springframework.stereotype.Controller;
+-import org.springframework.validation.BindingResult;
+-import org.springframework.web.bind.WebDataBinder;
+-import org.springframework.web.bind.annotation.GetMapping;
+-import org.springframework.web.bind.annotation.InitBinder;
+-import org.springframework.web.bind.annotation.ModelAttribute;
+-import org.springframework.web.bind.annotation.PathVariable;
+-import org.springframework.web.bind.annotation.PostMapping;
+-
+-import jakarta.validation.Valid;
+-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+-
+-/**
+- * @author Juergen Hoeller
+- * @author Ken Krebs
+- * @author Arjen Poutsma
+- * @author Michael Isvy
+- * @author Dave Syer
+- * @author Wick Dynex
+- */
+-@Controller
+-class VisitController {
+-
+-	private final OwnerRepository owners;
+-
+-	public VisitController(OwnerRepository owners) {
+-		this.owners = owners;
+-	}
+-
+-	@InitBinder
+-	public void setAllowedFields(WebDataBinder dataBinder) {
+-		dataBinder.setDisallowedFields("id", "*.id");
+-	}
+-
+-	/**
+-	 * Called before each and every @RequestMapping annotated method. 2 goals: - Make sure
+-	 * we always have fresh data - Since we do not use the session scope, make sure that
+-	 * Pet object always has an id (Even though id is not part of the form fields)
+-	 * @param petId
+-	 * @return Pet
+-	 */
+-	@ModelAttribute("visit")
+-	public Visit loadPetWithVisit(@PathVariable("ownerId") int ownerId, @PathVariable("petId") int petId,
+-			Map<String, Object> model) {
+-		Optional<Owner> optionalOwner = owners.findById(ownerId);
+-		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
+-				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
+-
+-		Pet pet = owner.getPet(petId);
+-		if (pet == null) {
+-			throw new IllegalArgumentException(
+-					"Pet with id " + petId + " not found for owner with id " + ownerId + ".");
+-		}
+-		model.put("pet", pet);
+-		model.put("owner", owner);
+-
+-		Visit visit = new Visit();
+-		pet.addVisit(visit);
+-		return visit;
+-	}
+-
+-	@ModelAttribute("minVisitDate")
+-	public LocalDate minVisitDate() {
+-		return LocalDate.now().plusDays(1);
+-	}
+-
+-	// Spring MVC calls method loadPetWithVisit(...) before initNewVisitForm is
+-	// called
+-	@GetMapping("/owners/{ownerId}/pets/{petId}/visits/new")
+-	public String initNewVisitForm() {
+-		return "pets/createOrUpdateVisitForm";
+-	}
+-
+-	// Spring MVC calls method loadPetWithVisit(...) before processNewVisitForm is
+-	// called
+-	@PostMapping("/owners/{ownerId}/pets/{petId}/visits/new")
+-	public String processNewVisitForm(@ModelAttribute Owner owner, @PathVariable int petId, @Valid Visit visit,
+-			BindingResult result, RedirectAttributes redirectAttributes) {
+-		if (visit.getDate() != null && !visit.getDate().isAfter(LocalDate.now())) {
+-			result.rejectValue("date", "typeMismatch.visitDate");
+-		}
+-
+-		if (result.hasErrors()) {
+-			return "pets/createOrUpdateVisitForm";
+-		}
+-
+-		owner.addVisit(petId, visit);
+-		this.owners.addVisit(owner.getId(), petId, visit);
+-		redirectAttributes.addFlashAttribute("message", "Your visit has been booked");
+-		return "redirect:/owners/{ownerId}";
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java b/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/system/CacheConfiguration.java
++++ /dev/null
+@@ -1,53 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.system;
+-
+-import org.springframework.boot.cache.autoconfigure.JCacheManagerCustomizer;
+-import org.springframework.cache.annotation.EnableCaching;
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-
+-import javax.cache.configuration.MutableConfiguration;
+-
+-/**
+- * Cache configuration intended for caches providing the JCache API. This configuration
+- * creates the used cache for the application and enables statistics that become
+- * accessible via JMX.
+- */
+-@Configuration(proxyBeanMethods = false)
+-@EnableCaching
+-class CacheConfiguration {
+-
+-	@Bean
+-	public JCacheManagerCustomizer petclinicCacheConfigurationCustomizer() {
+-		return cm -> cm.createCache("vets", cacheConfiguration());
+-	}
+-
+-	/**
+-	 * Create a simple configuration that enable statistics via the JCache programmatic
+-	 * configuration API.
+-	 * <p>
+-	 * Within the configuration object that is provided by the JCache API standard, there
+-	 * is only a very limited set of configuration options. The really relevant
+-	 * configuration options (like the size limit) must be set via a configuration
+-	 * mechanism that is provided by the selected JCache implementation.
+-	 */
+-	private javax.cache.configuration.Configuration<Object, Object> cacheConfiguration() {
+-		return new MutableConfiguration<>().setStatisticsEnabled(true);
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/system/CrashController.java b/src/main/java/org/springframework/samples/petclinic/system/CrashController.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/system/CrashController.java
++++ /dev/null
+@@ -1,37 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package org.springframework.samples.petclinic.system;
+-
+-import org.springframework.stereotype.Controller;
+-import org.springframework.web.bind.annotation.GetMapping;
+-
+-/**
+- * Controller used to showcase what happens when an exception is thrown
+- *
+- * @author Michael Isvy
+- * <p/>
+- * Also see how a view that resolves to "error" has been added ("error.html").
+- */
+-@Controller
+-class CrashController {
+-
+-	@GetMapping("/oups")
+-	public String triggerException() {
+-		throw new RuntimeException(
+-				"Expected: controller used to showcase what " + "happens when an exception is thrown");
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/system/WebConfiguration.java b/src/main/java/org/springframework/samples/petclinic/system/WebConfiguration.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/system/WebConfiguration.java
++++ /dev/null
+@@ -1,60 +0,0 @@
+-package org.springframework.samples.petclinic.system;
+-
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-import org.springframework.web.servlet.LocaleResolver;
+-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+-import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+-
+-import java.util.Locale;
+-
+-/**
+- * Configures internationalization (i18n) support for the application.
+- *
+- * <p>
+- * Handles loading language-specific messages, tracking the user's language, and allowing
+- * language changes via the URL parameter (e.g., <code>?lang=de</code>).
+- * </p>
+- *
+- * @author Anuj Ashok Potdar
+- */
+-@Configuration
+-@SuppressWarnings("unused")
+-public class WebConfiguration implements WebMvcConfigurer {
+-
+-	/**
+-	 * Uses session storage to remember the user’s language setting across requests.
+-	 * Defaults to English if nothing is specified.
+-	 * @return session-based {@link LocaleResolver}
+-	 */
+-	@Bean
+-	public LocaleResolver localeResolver() {
+-		SessionLocaleResolver resolver = new SessionLocaleResolver();
+-		resolver.setDefaultLocale(Locale.ENGLISH);
+-		return resolver;
+-	}
+-
+-	/**
+-	 * Allows the app to switch languages using a URL parameter like
+-	 * <code>?lang=es</code>.
+-	 * @return a {@link LocaleChangeInterceptor} that handles the change
+-	 */
+-	@Bean
+-	public LocaleChangeInterceptor localeChangeInterceptor() {
+-		LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
+-		interceptor.setParamName("lang");
+-		return interceptor;
+-	}
+-
+-	/**
+-	 * Registers the locale change interceptor so it can run on each request.
+-	 * @param registry where interceptors are added
+-	 */
+-	@Override
+-	public void addInterceptors(InterceptorRegistry registry) {
+-		registry.addInterceptor(localeChangeInterceptor());
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java b/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/system/WelcomeController.java
++++ /dev/null
+@@ -1,30 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.system;
+-
+-import org.springframework.stereotype.Controller;
+-import org.springframework.web.bind.annotation.GetMapping;
+-
+-@Controller
+-class WelcomeController {
+-
+-	@GetMapping("/")
+-	public String welcome() {
+-		return "welcome";
+-	}
+-
+-}
+diff --git a/src/main/java/org/springframework/samples/petclinic/vet/VetController.java b/src/main/java/org/springframework/samples/petclinic/vet/VetController.java
+deleted file mode 100644
+--- a/src/main/java/org/springframework/samples/petclinic/vet/VetController.java
++++ /dev/null
+@@ -1,81 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-package org.springframework.samples.petclinic.vet;
+-
+-import java.util.List;
+-
+-import org.springframework.data.domain.Page;
+-import org.springframework.data.domain.PageRequest;
+-import org.springframework.data.domain.Pageable;
+-import org.springframework.stereotype.Controller;
+-import org.springframework.ui.Model;
+-import org.springframework.web.bind.annotation.GetMapping;
+-import org.springframework.web.bind.annotation.RequestParam;
+-import org.springframework.web.bind.annotation.ResponseBody;
+-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+-
+-/**
+- * @author Juergen Hoeller
+- * @author Mark Fisher
+- * @author Ken Krebs
+- * @author Arjen Poutsma
+- */
+-@Controller
+-class VetController {
+-
+-	private final VetRepository vetRepository;
+-
+-	public VetController(VetRepository vetRepository) {
+-		this.vetRepository = vetRepository;
+-	}
+-
+-	@GetMapping("/vets.html")
+-	public String showVetList(@RequestParam(defaultValue = "1") int page, Model model,
+-			RedirectAttributes redirectAttributes) {
+-		Page<Vet> paginated = findPaginated(page);
+-		if (page < 1 || page > Math.max(paginated.getTotalPages(), 1)) {
+-			redirectAttributes.addAttribute("page", 1);
+-			return "redirect:/vets.html";
+-		}
+-		return addPaginationModel(page, paginated, model);
+-	}
+-
+-	private String addPaginationModel(int page, Page<Vet> paginated, Model model) {
+-		List<Vet> listVets = paginated.getContent();
+-		model.addAttribute("currentPage", page);
+-		model.addAttribute("totalPages", paginated.getTotalPages());
+-		model.addAttribute("totalItems", paginated.getTotalElements());
+-		model.addAttribute("listVets", listVets);
+-		return "vets/vetList";
+-	}
+-
+-	private Page<Vet> findPaginated(int page) {
+-		int pageSize = 5;
+-		int safePage = Math.max(page, 1);
+-		Pageable pageable = PageRequest.of(safePage - 1, pageSize);
+-		return vetRepository.findAll(pageable);
+-	}
+-
+-	@GetMapping({ "/vets" })
+-	public @ResponseBody Vets showResourcesVetList() {
+-		// Here we are returning an object of type 'Vets' rather than a collection of Vet
+-		// objects so it is simpler for JSon/Object mapping
+-		Vets vets = new Vets();
+-		vets.getVetList().addAll(this.vetRepository.findAll());
+-		return vets;
+-	}
+-
+-}
+diff --git a/src/main/resources/application-mysql.properties b/src/main/resources/application-mysql.properties
+deleted file mode 100644
+--- a/src/main/resources/application-mysql.properties
++++ /dev/null
+@@ -1,7 +0,0 @@
+-# database init, supports mysql too
+-database=mysql
+-spring.datasource.url=${MYSQL_URL:jdbc:mysql://localhost/petclinic}
+-spring.datasource.username=${MYSQL_USER:petclinic}
+-spring.datasource.password=${MYSQL_PASS:petclinic}
+-# SQL is written to be idempotent so this is safe
+-spring.sql.init.mode=always
+diff --git a/src/main/resources/application-postgres.properties b/src/main/resources/application-postgres.properties
+deleted file mode 100644
+--- a/src/main/resources/application-postgres.properties
++++ /dev/null
+@@ -1,7 +0,0 @@
+-# database init, supports postgres too
+-database=postgres
+-spring.datasource.url=${POSTGRES_URL:jdbc:postgresql://localhost/petclinic}
+-spring.datasource.username=${POSTGRES_USER:petclinic}
+-spring.datasource.password=${POSTGRES_PASS:petclinic}
+-# SQL is written to be idempotent so this is safe
+-spring.sql.init.mode=always
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+deleted file mode 100644
+--- a/src/main/resources/application.properties
++++ /dev/null
+@@ -1,23 +0,0 @@
+-# database init, supports mysql too
+-database=h2
+-spring.sql.init.schema-locations=classpath*:db/${database}/schema.sql
+-spring.sql.init.data-locations=classpath*:db/${database}/data.sql
+-
+-# Web
+-spring.thymeleaf.mode=HTML
+-
+-# Internationalization
+-spring.messages.basename=messages/messages
+-
+-# Actuator
+-# Expose all actuator endpoints for monitoring and management purposes
+-# Don't do this in production, only for development and testing
+-management.endpoints.web.exposure.include=*
+-
+-# Logging
+-logging.level.org.springframework=INFO
+-# logging.level.org.springframework.web=DEBUG
+-# logging.level.org.springframework.context.annotation=TRACE
+-
+-# Maximum time static resources should be cached
+-spring.web.resources.cache.cachecontrol.max-age=12h
+diff --git a/src/main/resources/logback.xml b/src/main/resources/logback.xml
+new file mode 100644
+--- /dev/null
++++ b/src/main/resources/logback.xml
+@@ -0,0 +1,10 @@
++<configuration>
++  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
++    <encoder>
++      <pattern>%date %level %logger{36} - %msg%n</pattern>
++    </encoder>
++  </appender>
++  <root level="INFO">
++    <appender-ref ref="CONSOLE"/>
++  </root>
++</configuration>
+diff --git a/src/main/resources/templates/fragments/inputField.html b/src/main/resources/templates/fragments/inputField.html
+--- a/src/main/resources/templates/fragments/inputField.html
++++ b/src/main/resources/templates/fragments/inputField.html
+@@ -5,18 +5,18 @@
+ <body>
+   <form>
+     <th:block th:fragment="input (label, name, type)">
+-      <div th:with="valid=${!#fields.hasErrors(name)}" th:class="${'form-group' + (valid ? '' : ' has-error')}"
++      <div th:with="valid=${!errors.containsKey(name)}" th:class="${'form-group' + (valid ? '' : ' has-error')}"
+         class="form-group">
+         <label th:for="${name}" class="col-sm-2 control-label" th:text="${label}">Label</label>
+         <div class="col-sm-10">
+           <div th:switch="${type}">
+-            <input th:case="'text'" class="form-control" type="text" th:field="*{__${name}__}" />
+-            <input th:case="'date'" class="form-control" type="date" th:field="*{__${name}__}" th:min="${minVisitDate}" />
++            <input th:case="'text'" class="form-control" type="text" th:id="${name}" th:name="${name}" th:value="${values[name]}" />
++            <input th:case="'date'" class="form-control" type="date" th:id="${name}" th:name="${name}" th:value="${values[name]}" th:min="${minVisitDate}" />
+           </div>
+           <span th:if="${valid}" class="fa fa-ok form-control-feedback" aria-hidden="true"></span>
+           <th:block th:if="${!valid}">
+             <span class="fa fa-remove form-control-feedback" aria-hidden="true"></span>
+-            <span class="help-inline" th:errors="*{__${name}__}" th:text="#{error}">Error</span>
++            <span class="help-inline" th:text="${errors[name]}">Error</span>
+           </th:block>
+         </div>
+       </div>
+diff --git a/src/main/resources/templates/fragments/selectField.html b/src/main/resources/templates/fragments/selectField.html
+--- a/src/main/resources/templates/fragments/selectField.html
++++ b/src/main/resources/templates/fragments/selectField.html
+@@ -5,18 +5,18 @@
+ <body>
+   <form>
+     <th:block th:fragment="select (label, name, items)">
+-      <div th:with="valid=${!#fields.hasErrors(name)}" th:class="${'form-group' + (valid ? '' : ' has-error')}"
++      <div th:with="valid=${!errors.containsKey(name)}" th:class="${'form-group' + (valid ? '' : ' has-error')}"
+         class="form-group">
+         <label th:for="${name}" class="col-sm-2 control-label" th:text="${label}">Label</label>
+ 
+         <div class="col-sm-10">
+-          <select th:field="*{__${name}__}">
+-            <option th:each="item : ${items}" th:value="${item}" th:text="${item}">dog</option>
++          <select th:id="${name}" th:name="${name}">
++            <option th:each="item : ${items}" th:value="${item.name}" th:text="${item.name}" th:selected="${item.name == values[name]}">dog</option>
+           </select>
+           <span th:if="${valid}" class="fa fa-ok form-control-feedback" aria-hidden="true"></span>
+           <th:block th:if="${!valid}">
+             <span class="fa fa-remove form-control-feedback" aria-hidden="true"></span>
+-            <span class="help-inline" th:errors="*{__${name}__}" th:text="#{error}">Error</span>
++            <span class="help-inline" th:text="${errors[name]}">Error</span>
+           </th:block>
+         </div>
+       </div>
+diff --git a/src/main/resources/templates/owners/findOwners.html b/src/main/resources/templates/owners/findOwners.html
+--- a/src/main/resources/templates/owners/findOwners.html
++++ b/src/main/resources/templates/owners/findOwners.html
+@@ -6,15 +6,15 @@
+ 
+   <h2 th:text="#{findOwners}">Find Owners</h2>
+ 
+-  <form th:object="${owner}" th:action="@{/owners}" method="get" class="form-horizontal" id="search-owner-form">
++  <form th:object="${owner}" action="/owners" method="get" class="form-horizontal" id="search-owner-form">
+     <div class="form-group">
+       <div class="control-group" id="lastNameGroup">
+         <label class="col-sm-2 control-label" th:text="#{lastName}">Last name </label>
+         <div class="col-sm-10">
+-          <input class="form-control" th:field="*{lastName}" size="30" maxlength="80" />
++          <input class="form-control" id="lastName" name="lastName" th:value="${owner.lastName}" size="30" maxlength="80" />
+           <span class="help-inline">
+-            <div th:if="${#fields.hasAnyErrors()}">
+-              <p th:each="err : ${#fields.allErrors()}" th:text="${err}">Error</p>
++            <div th:if="${!errors.isEmpty()}">
++              <p th:each="err : ${errors.values()}" th:text="${err}">Error</p>
+             </div>
+           </span>
+         </div>
+diff --git a/src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java b/src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java
++++ /dev/null
+@@ -1,74 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic;
+-
+-import static org.assertj.core.api.Assertions.assertThat;
+-
+-import org.junit.jupiter.api.Test;
+-import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.restclient.RestTemplateBuilder;
+-import org.springframework.boot.test.context.SpringBootTest;
+-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+-import org.springframework.boot.test.web.server.LocalServerPort;
+-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+-import org.springframework.http.HttpStatus;
+-import org.springframework.http.RequestEntity;
+-import org.springframework.http.ResponseEntity;
+-import org.springframework.samples.petclinic.vet.VetRepository;
+-import org.springframework.test.context.ActiveProfiles;
+-import org.springframework.test.context.aot.DisabledInAotMode;
+-import org.springframework.web.client.RestTemplate;
+-import org.testcontainers.junit.jupiter.Container;
+-import org.testcontainers.junit.jupiter.Testcontainers;
+-import org.testcontainers.mysql.MySQLContainer;
+-import org.testcontainers.utility.DockerImageName;
+-
+-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+-@ActiveProfiles("mysql")
+-@Testcontainers(disabledWithoutDocker = true)
+-@DisabledInNativeImage
+-@DisabledInAotMode
+-class MySqlIntegrationTests {
+-
+-	@ServiceConnection
+-	@Container
+-	static MySQLContainer container = new MySQLContainer(DockerImageName.parse("mysql:9.7"));
+-
+-	@LocalServerPort
+-	int port;
+-
+-	@Autowired
+-	private VetRepository vets;
+-
+-	@Autowired
+-	private RestTemplateBuilder builder;
+-
+-	@Test
+-	void findAll() {
+-		vets.findAll();
+-		vets.findAll(); // served from cache
+-	}
+-
+-	@Test
+-	void ownerDetails() {
+-		RestTemplate template = builder.baseUri("http://localhost:" + port).build();
+-		ResponseEntity<String> result = template.exchange(RequestEntity.get("/owners/1").build(), String.class);
+-		assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/MysqlTestApplication.java b/src/test/java/org/springframework/samples/petclinic/MysqlTestApplication.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/MysqlTestApplication.java
++++ /dev/null
+@@ -1,47 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic;
+-
+-import org.springframework.boot.SpringApplication;
+-import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-import org.springframework.context.annotation.Profile;
+-import org.testcontainers.mysql.MySQLContainer;
+-import org.testcontainers.utility.DockerImageName;
+-
+-/**
+- * PetClinic Spring Boot Application.
+- *
+- * @author Dave Syer
+- */
+-@Configuration
+-public class MysqlTestApplication {
+-
+-	@ServiceConnection
+-	@Profile("mysql")
+-	@Bean
+-	static MySQLContainer container() {
+-		return new MySQLContainer(DockerImageName.parse("mysql:9.7"));
+-	}
+-
+-	public static void main(String[] args) {
+-		SpringApplication.run(PetClinicApplication.class, "--spring.profiles.active=mysql",
+-				"--spring.docker.compose.enabled=false");
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/PetClinicConcurrencyTests.java b/src/test/java/org/springframework/samples/petclinic/PetClinicConcurrencyTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/PetClinicConcurrencyTests.java
++++ /dev/null
+@@ -1,134 +0,0 @@
+-package org.springframework.samples.petclinic;
+-
+-import static org.assertj.core.api.Assertions.assertThat;
+-
+-import java.util.Optional;
+-import java.util.concurrent.CountDownLatch;
+-import java.util.concurrent.ExecutorService;
+-import java.util.concurrent.Executors;
+-import java.util.concurrent.TimeUnit;
+-import java.util.concurrent.atomic.AtomicInteger;
+-
+-import org.junit.jupiter.api.Test;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.test.context.SpringBootTest;
+-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+-import org.springframework.boot.test.web.server.LocalServerPort;
+-import org.springframework.boot.restclient.RestTemplateBuilder;
+-import org.springframework.http.HttpEntity;
+-import org.springframework.http.HttpHeaders;
+-import org.springframework.http.MediaType;
+-import org.springframework.http.ResponseEntity;
+-import org.springframework.samples.petclinic.owner.Owner;
+-import org.springframework.samples.petclinic.owner.OwnerRepository;
+-import org.springframework.util.LinkedMultiValueMap;
+-import org.springframework.util.MultiValueMap;
+-import org.springframework.web.client.RestTemplate;
+-
+-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+-public class PetClinicConcurrencyTests {
+-
+-	@LocalServerPort
+-	private int port;
+-
+-	@Autowired
+-	private OwnerRepository ownerRepository;
+-
+-	@Autowired
+-	private RestTemplateBuilder restTemplateBuilder;
+-
+-	@Test
+-	public void testDuplicatePetNameRaceConditionIsBlocked() throws Exception {
+-		int ownerId = 1;
+-		Optional<Owner> initialOwnerOpt = ownerRepository.findById(ownerId);
+-		assertThat(initialOwnerOpt).isPresent();
+-		Owner owner = initialOwnerOpt.get();
+-
+-		int initialPetCount = owner.getPets().size();
+-		String duplicatePetName = "ConcurrencyTestPet";
+-
+-		// Ensure duplicate pet name does not exist yet
+-		assertThat(owner.getPet(duplicatePetName)).isNull();
+-
+-		RestTemplate template = restTemplateBuilder.baseUri("http://localhost:" + port).build();
+-
+-		int threadCount = 2;
+-		ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
+-		CountDownLatch readyLatch = new CountDownLatch(threadCount);
+-		CountDownLatch startLatch = new CountDownLatch(1);
+-		CountDownLatch doneLatch = new CountDownLatch(threadCount);
+-
+-		AtomicInteger successCount = new AtomicInteger(0);
+-		AtomicInteger failureCount = new AtomicInteger(0);
+-
+-		for (int i = 0; i < threadCount; i++) {
+-			executorService.submit(() -> {
+-				readyLatch.countDown();
+-				try {
+-					startLatch.await(); // Wait to start simultaneously
+-
+-					HttpHeaders headers = new HttpHeaders();
+-					headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+-
+-					MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+-					map.add("name", duplicatePetName);
+-					map.add("birthDate", "2020-01-01");
+-					map.add("type", "cat");
+-
+-					HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
+-
+-					ResponseEntity<String> response = template.postForEntity("/owners/" + ownerId + "/pets/new",
+-							request, String.class);
+-
+-					String body = response.getBody();
+-					// If the response page contains the duplicate validation error, it
+-					// was blocked
+-					if (response.getStatusCode().is2xxSuccessful()
+-							&& (body == null || !body.contains("is already in use"))) {
+-						successCount.incrementAndGet();
+-					}
+-					else {
+-						failureCount.incrementAndGet();
+-					}
+-				}
+-				catch (Exception e) {
+-					failureCount.incrementAndGet();
+-				}
+-				finally {
+-					doneLatch.countDown();
+-				}
+-			});
+-		}
+-
+-		try {
+-			boolean ready = readyLatch.await(10, TimeUnit.SECONDS);
+-			assertThat(ready).isTrue();
+-			startLatch.countDown();
+-			boolean completed = doneLatch.await(10, TimeUnit.SECONDS);
+-			assertThat(completed).isTrue();
+-		}
+-		finally {
+-			executorService.shutdown();
+-		}
+-
+-		Owner updatedOwner = ownerRepository.findById(ownerId).get();
+-		int newPetCount = updatedOwner.getPets().size();
+-
+-		System.out.println("--- Concurrency Test Assertions ---");
+-		System.out.println("Successful additions: " + successCount.get());
+-		System.out.println("Failed additions: " + failureCount.get());
+-		System.out.println("Original Pet Count: " + initialPetCount);
+-		System.out.println("Final Pet Count: " + newPetCount);
+-
+-		// With the fix, exactly ONE concurrent request must succeed
+-		assertThat(successCount.get()).isEqualTo(1);
+-		assertThat(newPetCount).isEqualTo(initialPetCount + 1);
+-
+-		long countWithDuplicateName = updatedOwner.getPets()
+-			.stream()
+-			.filter(p -> duplicatePetName.equalsIgnoreCase(p.getName()))
+-			.count();
+-		assertThat(countWithDuplicateName).isEqualTo(1);
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java b/src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java
++++ /dev/null
+@@ -1,70 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic;
+-
+-import static org.assertj.core.api.Assertions.assertThat;
+-
+-import org.junit.jupiter.api.Test;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.SpringApplication;
+-import org.springframework.boot.restclient.RestTemplateBuilder;
+-import org.springframework.boot.test.context.SpringBootTest;
+-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+-import org.springframework.boot.test.web.server.LocalServerPort;
+-import org.springframework.http.HttpStatus;
+-import org.springframework.http.RequestEntity;
+-import org.springframework.http.ResponseEntity;
+-import org.springframework.samples.petclinic.vet.VetRepository;
+-import org.springframework.web.client.RestTemplate;
+-
+-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, properties = "logging.level.sql=DEBUG")
+-public class PetClinicIntegrationTests {
+-
+-	@LocalServerPort
+-	int port;
+-
+-	@Autowired
+-	private VetRepository vets;
+-
+-	@Autowired
+-	private RestTemplateBuilder builder;
+-
+-	@Test
+-	void findAll() {
+-		vets.findAll();
+-		vets.findAll(); // served from cache
+-	}
+-
+-	@Test
+-	void ownerDetails() {
+-		RestTemplate template = builder.baseUri("http://localhost:" + port).build();
+-		ResponseEntity<String> result = template.exchange(RequestEntity.get("/owners/1").build(), String.class);
+-		assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+-	}
+-
+-	@Test
+-	void ownerList() {
+-		RestTemplate template = builder.baseUri("http://localhost:" + port).build();
+-		ResponseEntity<String> result = template.exchange(RequestEntity.get("/owners?lastName=").build(), String.class);
+-		assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+-	}
+-
+-	public static void main(String[] args) {
+-		SpringApplication.run(PetClinicApplication.class, "--spring.docker.compose.lifecycle-management=NONE");
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java b/src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java
++++ /dev/null
+@@ -1,150 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic;
+-
+-import static org.assertj.core.api.Assertions.assertThat;
+-import static org.junit.jupiter.api.Assertions.assertNotNull;
+-import static org.junit.jupiter.api.Assumptions.assumeTrue;
+-
+-import java.util.Arrays;
+-import java.util.LinkedList;
+-import java.util.List;
+-
+-import org.apache.commons.logging.Log;
+-import org.apache.commons.logging.LogFactory;
+-import org.junit.jupiter.api.BeforeAll;
+-import org.junit.jupiter.api.Test;
+-import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.builder.SpringApplicationBuilder;
+-import org.springframework.boot.context.event.ApplicationPreparedEvent;
+-import org.springframework.boot.restclient.RestTemplateBuilder;
+-import org.springframework.boot.test.context.SpringBootTest;
+-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+-import org.springframework.boot.test.web.server.LocalServerPort;
+-import org.springframework.context.ApplicationListener;
+-import org.springframework.core.env.ConfigurableEnvironment;
+-import org.springframework.core.env.EnumerablePropertySource;
+-import org.springframework.core.env.PropertySource;
+-import org.springframework.http.HttpStatus;
+-import org.springframework.http.RequestEntity;
+-import org.springframework.http.ResponseEntity;
+-import org.springframework.samples.petclinic.vet.VetRepository;
+-import org.springframework.test.context.ActiveProfiles;
+-import org.springframework.web.client.RestTemplate;
+-import org.testcontainers.DockerClientFactory;
+-
+-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, properties = { "spring.docker.compose.skip.in-tests=false", //
+-		"spring.docker.compose.start.arguments=--force-recreate,--renew-anon-volumes,postgres" })
+-@ActiveProfiles("postgres")
+-@DisabledInNativeImage
+-public class PostgresIntegrationTests {
+-
+-	@LocalServerPort
+-	int port;
+-
+-	@Autowired
+-	private VetRepository vets;
+-
+-	@Autowired
+-	private RestTemplateBuilder builder;
+-
+-	@BeforeAll
+-	static void available() {
+-		assumeTrue(DockerClientFactory.instance().isDockerAvailable(), "Docker not available");
+-	}
+-
+-	public static void main(String[] args) {
+-		new SpringApplicationBuilder(PetClinicApplication.class) //
+-			.profiles("postgres") //
+-			.properties( //
+-					"spring.docker.compose.start.arguments=postgres" //
+-			) //
+-			.listeners(new PropertiesLogger()) //
+-			.run(args);
+-	}
+-
+-	@Test
+-	void findAll() throws Exception {
+-		vets.findAll();
+-		vets.findAll(); // served from cache
+-	}
+-
+-	@Test
+-	void ownerDetails() {
+-		RestTemplate template = builder.baseUri("http://localhost:" + port).build();
+-		ResponseEntity<String> result = template.exchange(RequestEntity.get("/owners/1").build(), String.class);
+-		assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
+-	}
+-
+-	static class PropertiesLogger implements ApplicationListener<ApplicationPreparedEvent> {
+-
+-		private static final Log log = LogFactory.getLog(PropertiesLogger.class);
+-
+-		private ConfigurableEnvironment environment;
+-
+-		private boolean isFirstRun = true;
+-
+-		@Override
+-		public void onApplicationEvent(ApplicationPreparedEvent event) {
+-			if (isFirstRun) {
+-				environment = event.getApplicationContext().getEnvironment();
+-				printProperties();
+-			}
+-			isFirstRun = false;
+-		}
+-
+-		public void printProperties() {
+-			for (EnumerablePropertySource<?> source : findPropertiesPropertySources()) {
+-				log.info("PropertySource: " + source.getName());
+-				String[] names = source.getPropertyNames();
+-				Arrays.sort(names);
+-				for (String name : names) {
+-					String resolved = environment.getProperty(name);
+-
+-					assertNotNull(resolved, "resolved environment property: " + name + " is null.");
+-
+-					Object sourceProperty = source.getProperty(name);
+-
+-					assertNotNull(sourceProperty, "source property was expecting an object but is null.");
+-
+-					assertNotNull(sourceProperty.toString(), "source property toString() returned null.");
+-
+-					String value = sourceProperty.toString();
+-					if (resolved.equals(value)) {
+-						log.info(name + "=" + resolved);
+-					}
+-					else {
+-						log.info(name + "=" + value + " OVERRIDDEN to " + resolved);
+-					}
+-				}
+-			}
+-		}
+-
+-		private List<EnumerablePropertySource<?>> findPropertiesPropertySources() {
+-			List<EnumerablePropertySource<?>> sources = new LinkedList<>();
+-			for (PropertySource<?> source : environment.getPropertySources()) {
+-				if (source instanceof EnumerablePropertySource enumerable) {
+-					sources.add(enumerable);
+-				}
+-			}
+-			return sources;
+-		}
+-
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java b/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java
++++ /dev/null
+@@ -1,318 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.owner;
+-
+-import org.junit.jupiter.api.BeforeEach;
+-import org.junit.jupiter.api.Test;
+-import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+-import org.springframework.data.domain.Page;
+-import org.springframework.data.domain.PageImpl;
+-import org.springframework.data.domain.Pageable;
+-import org.springframework.test.context.aot.DisabledInAotMode;
+-import org.springframework.test.context.bean.override.mockito.MockitoBean;
+-import org.springframework.test.web.servlet.MockMvc;
+-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+-
+-import java.time.LocalDate;
+-import java.util.List;
+-import java.util.Optional;
+-
+-import static org.hamcrest.Matchers.empty;
+-import static org.hamcrest.Matchers.greaterThan;
+-import static org.hamcrest.Matchers.hasItem;
+-import static org.hamcrest.Matchers.hasProperty;
+-import static org.hamcrest.Matchers.hasSize;
+-import static org.hamcrest.Matchers.is;
+-import static org.hamcrest.Matchers.not;
+-import static org.mockito.ArgumentMatchers.any;
+-import static org.mockito.ArgumentMatchers.anyString;
+-import static org.mockito.ArgumentMatchers.eq;
+-import static org.mockito.BDDMockito.given;
+-import static org.mockito.Mockito.times;
+-import static org.mockito.Mockito.verify;
+-import static org.mockito.Mockito.when;
+-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+-
+-/**
+- * Test class for {@link OwnerController}
+- *
+- * @author Colin But
+- * @author Wick Dynex
+- */
+-@WebMvcTest(OwnerController.class)
+-@DisabledInNativeImage
+-@DisabledInAotMode
+-class OwnerControllerTests {
+-
+-	private static final int TEST_OWNER_ID = 1;
+-
+-	@Autowired
+-	private MockMvc mockMvc;
+-
+-	@MockitoBean
+-	private OwnerRepository owners;
+-
+-	private Owner george() {
+-		Owner george = new Owner();
+-		george.setId(TEST_OWNER_ID);
+-		george.setFirstName("George");
+-		george.setLastName("Franklin");
+-		george.setAddress("110 W. Liberty St.");
+-		george.setCity("Madison");
+-		george.setTelephone("6085551023");
+-		Pet max = new Pet();
+-		PetType dog = new PetType();
+-		dog.setName("dog");
+-		max.setType(dog);
+-		max.setName("Max");
+-		max.setBirthDate(LocalDate.now());
+-		george.addPet(max);
+-		max.setId(1);
+-		return george;
+-	}
+-
+-	@BeforeEach
+-	void setup() {
+-
+-		Owner george = george();
+-		given(this.owners.findByLastNameStartingWith(eq("Franklin"), any(Pageable.class)))
+-			.willReturn(new PageImpl<>(List.of(george)));
+-
+-		given(this.owners.findById(TEST_OWNER_ID)).willReturn(Optional.of(george));
+-		Visit visit = new Visit();
+-		visit.setDate(LocalDate.now());
+-		george.getPet("Max").getVisits().add(visit);
+-
+-	}
+-
+-	@Test
+-	void initCreationForm() throws Exception {
+-		mockMvc.perform(get("/owners/new"))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeExists("owner"))
+-			.andExpect(view().name("owners/createOrUpdateOwnerForm"));
+-	}
+-
+-	@Test
+-	void processCreationFormSuccess() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/new").param("firstName", "Joe")
+-				.param("lastName", "Bloggs")
+-				.param("address", "123 Caramel Street")
+-				.param("city", "London")
+-				.param("telephone", "1316761638"))
+-			.andExpect(status().is3xxRedirection());
+-	}
+-
+-	@Test
+-	void processCreationFormHasErrors() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/new").param("firstName", "Joe").param("lastName", "Bloggs").param("city", "London"))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeHasErrors("owner"))
+-			.andExpect(model().attributeHasFieldErrors("owner", "address"))
+-			.andExpect(model().attributeHasFieldErrors("owner", "telephone"))
+-			.andExpect(view().name("owners/createOrUpdateOwnerForm"));
+-	}
+-
+-	@Test
+-	void processCreationFormRejectsCityLongerThanColumn() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/new").param("firstName", "Joe")
+-				.param("lastName", "Bloggs")
+-				.param("address", "123 Caramel Street")
+-				.param("city", "C".repeat(81))
+-				.param("telephone", "1316761638"))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeHasErrors("owner"))
+-			.andExpect(model().attributeHasFieldErrors("owner", "city"))
+-			.andExpect(model().attributeHasFieldErrorCode("owner", "city", "Size"))
+-			.andExpect(view().name("owners/createOrUpdateOwnerForm"));
+-	}
+-
+-	@Test
+-	void processCreationFormRejectsAddressLongerThanColumn() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/new").param("firstName", "Joe")
+-				.param("lastName", "Bloggs")
+-				.param("address", "A".repeat(256))
+-				.param("city", "London")
+-				.param("telephone", "1316761638"))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeHasErrors("owner"))
+-			.andExpect(model().attributeHasFieldErrors("owner", "address"))
+-			.andExpect(model().attributeHasFieldErrorCode("owner", "address", "Size"))
+-			.andExpect(view().name("owners/createOrUpdateOwnerForm"));
+-	}
+-
+-	@Test
+-	void initFindForm() throws Exception {
+-		mockMvc.perform(get("/owners/find"))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeExists("owner"))
+-			.andExpect(view().name("owners/findOwners"));
+-	}
+-
+-	@Test
+-	void processFindFormSuccess() throws Exception {
+-		Page<Owner> tasks = new PageImpl<>(List.of(george(), new Owner()));
+-		when(this.owners.findByLastNameStartingWith(anyString(), any(Pageable.class))).thenReturn(tasks);
+-		mockMvc.perform(get("/owners?page=1")).andExpect(status().isOk()).andExpect(view().name("owners/ownersList"));
+-	}
+-
+-	@Test
+-	void processFindFormRedirectsOutOfBoundsPageToFirstPage() throws Exception {
+-		for (int page : List.of(0, 2)) {
+-			mockMvc.perform(get("/owners").param("page", Integer.toString(page)).param("lastName", "Franklin"))
+-				.andExpect(status().is3xxRedirection())
+-				.andExpect(redirectedUrl("/owners?page=1&lastName=Franklin"));
+-		}
+-	}
+-
+-	@Test
+-	void processFindFormByLastName() throws Exception {
+-		Page<Owner> tasks = new PageImpl<>(List.of(george()));
+-		when(this.owners.findByLastNameStartingWith(eq("Franklin"), any(Pageable.class))).thenReturn(tasks);
+-		mockMvc.perform(get("/owners?page=1").param("lastName", "Franklin"))
+-			.andExpect(status().is3xxRedirection())
+-			.andExpect(view().name("redirect:/owners/" + TEST_OWNER_ID));
+-	}
+-
+-	@Test
+-	void processFindFormIgnoresSurroundingWhitespace() throws Exception {
+-		Page<Owner> tasks = new PageImpl<>(List.of(george()));
+-		when(this.owners.findByLastNameStartingWith(eq("Franklin"), any(Pageable.class))).thenReturn(tasks);
+-
+-		for (String lastName : List.of(" Franklin", "Franklin ", " Franklin ")) {
+-			mockMvc.perform(get("/owners?page=1").param("lastName", lastName))
+-				.andExpect(status().is3xxRedirection())
+-				.andExpect(view().name("redirect:/owners/" + TEST_OWNER_ID));
+-		}
+-
+-		verify(this.owners, times(3)).findByLastNameStartingWith(eq("Franklin"), any(Pageable.class));
+-	}
+-
+-	@Test
+-	void processFindFormWithWhitespaceOnlyLastNameReturnsAllOwners() throws Exception {
+-		Page<Owner> tasks = new PageImpl<>(List.of(george(), new Owner()));
+-		when(this.owners.findByLastNameStartingWith(eq(""), any(Pageable.class))).thenReturn(tasks);
+-
+-		mockMvc.perform(get("/owners?page=1").param("lastName", "   "))
+-			.andExpect(status().isOk())
+-			.andExpect(view().name("owners/ownersList"));
+-
+-		verify(this.owners).findByLastNameStartingWith(eq(""), any(Pageable.class));
+-	}
+-
+-	@Test
+-	void processFindFormNoOwnersFound() throws Exception {
+-		Page<Owner> tasks = new PageImpl<>(List.of());
+-		when(this.owners.findByLastNameStartingWith(eq("Unknown Surname"), any(Pageable.class))).thenReturn(tasks);
+-		mockMvc.perform(get("/owners?page=1").param("lastName", "Unknown Surname"))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeHasFieldErrors("owner", "lastName"))
+-			.andExpect(model().attributeHasFieldErrorCode("owner", "lastName", "notFound"))
+-			.andExpect(view().name("owners/findOwners"));
+-
+-	}
+-
+-	@Test
+-	void initUpdateOwnerForm() throws Exception {
+-		mockMvc.perform(get("/owners/{ownerId}/edit", TEST_OWNER_ID))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeExists("owner"))
+-			.andExpect(model().attribute("owner", hasProperty("lastName", is("Franklin"))))
+-			.andExpect(model().attribute("owner", hasProperty("firstName", is("George"))))
+-			.andExpect(model().attribute("owner", hasProperty("address", is("110 W. Liberty St."))))
+-			.andExpect(model().attribute("owner", hasProperty("city", is("Madison"))))
+-			.andExpect(model().attribute("owner", hasProperty("telephone", is("6085551023"))))
+-			.andExpect(view().name("owners/createOrUpdateOwnerForm"));
+-	}
+-
+-	@Test
+-	void processUpdateOwnerFormSuccess() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/{ownerId}/edit", TEST_OWNER_ID).param("firstName", "Joe")
+-				.param("lastName", "Bloggs")
+-				.param("address", "123 Caramel Street")
+-				.param("city", "London")
+-				.param("telephone", "1616291589"))
+-			.andExpect(status().is3xxRedirection())
+-			.andExpect(view().name("redirect:/owners/{ownerId}"));
+-	}
+-
+-	@Test
+-	void processUpdateOwnerFormUnchangedSuccess() throws Exception {
+-		mockMvc.perform(post("/owners/{ownerId}/edit", TEST_OWNER_ID))
+-			.andExpect(status().is3xxRedirection())
+-			.andExpect(view().name("redirect:/owners/{ownerId}"));
+-	}
+-
+-	@Test
+-	void processUpdateOwnerFormHasErrors() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/{ownerId}/edit", TEST_OWNER_ID).param("firstName", "Joe")
+-				.param("lastName", "Bloggs")
+-				.param("address", "")
+-				.param("telephone", ""))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeHasErrors("owner"))
+-			.andExpect(model().attributeHasFieldErrors("owner", "address"))
+-			.andExpect(model().attributeHasFieldErrors("owner", "telephone"))
+-			.andExpect(view().name("owners/createOrUpdateOwnerForm"));
+-	}
+-
+-	@Test
+-	void showOwner() throws Exception {
+-		mockMvc.perform(get("/owners/{ownerId}", TEST_OWNER_ID))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attribute("owner", hasProperty("lastName", is("Franklin"))))
+-			.andExpect(model().attribute("owner", hasProperty("firstName", is("George"))))
+-			.andExpect(model().attribute("owner", hasProperty("address", is("110 W. Liberty St."))))
+-			.andExpect(model().attribute("owner", hasProperty("city", is("Madison"))))
+-			.andExpect(model().attribute("owner", hasProperty("telephone", is("6085551023"))))
+-			.andExpect(model().attribute("owner", hasProperty("pets", not(empty()))))
+-			.andExpect(model().attribute("owner",
+-					hasProperty("pets", hasItem(hasProperty("visits", hasSize(greaterThan(0)))))))
+-			.andExpect(view().name("owners/ownerDetails"));
+-	}
+-
+-	@Test
+-	void processUpdateOwnerFormWithIdMismatch() throws Exception {
+-		int pathOwnerId = 1;
+-
+-		Owner owner = new Owner();
+-		owner.setId(2);
+-		owner.setFirstName("John");
+-		owner.setLastName("Doe");
+-		owner.setAddress("Center Street");
+-		owner.setCity("New York");
+-		owner.setTelephone("0123456789");
+-
+-		when(owners.findById(pathOwnerId)).thenReturn(Optional.of(owner));
+-
+-		mockMvc.perform(MockMvcRequestBuilders.post("/owners/{ownerId}/edit", pathOwnerId).flashAttr("owner", owner))
+-			.andExpect(status().is3xxRedirection())
+-			.andExpect(redirectedUrl("/owners/" + pathOwnerId + "/edit"))
+-			.andExpect(flash().attributeExists("error"));
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java b/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java
++++ /dev/null
+@@ -1,279 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.owner;
+-
+-import org.junit.jupiter.api.BeforeEach;
+-import org.junit.jupiter.api.Nested;
+-import org.junit.jupiter.api.Test;
+-import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+-import org.springframework.context.annotation.ComponentScan;
+-import org.springframework.context.annotation.FilterType;
+-import org.springframework.test.context.aot.DisabledInAotMode;
+-import org.springframework.test.context.bean.override.mockito.MockitoBean;
+-import org.springframework.test.web.servlet.MockMvc;
+-
+-import java.time.LocalDate;
+-import java.util.List;
+-import java.util.Optional;
+-
+-import org.springframework.dao.DataIntegrityViolationException;
+-
+-import static org.mockito.ArgumentMatchers.any;
+-import static org.mockito.BDDMockito.given;
+-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+-
+-/**
+- * Test class for the {@link PetController}
+- *
+- * @author Colin But
+- * @author Wick Dynex
+- */
+-@WebMvcTest(value = PetController.class,
+-		includeFilters = @ComponentScan.Filter(value = PetTypeFormatter.class, type = FilterType.ASSIGNABLE_TYPE))
+-@DisabledInNativeImage
+-@DisabledInAotMode
+-class PetControllerTests {
+-
+-	private static final int TEST_OWNER_ID = 1;
+-
+-	private static final int TEST_PET_ID = 1;
+-
+-	@Autowired
+-	private MockMvc mockMvc;
+-
+-	@MockitoBean
+-	private OwnerRepository owners;
+-
+-	@MockitoBean
+-	private PetTypeRepository types;
+-
+-	@BeforeEach
+-	void setup() {
+-		PetType cat = new PetType();
+-		cat.setId(3);
+-		cat.setName("hamster");
+-		given(this.types.findPetTypes()).willReturn(List.of(cat));
+-
+-		Owner owner = new Owner();
+-		owner.setId(TEST_OWNER_ID);
+-		Pet pet = new Pet();
+-		Pet dog = new Pet();
+-		owner.addPet(pet);
+-		owner.addPet(dog);
+-		pet.setId(TEST_PET_ID);
+-		dog.setId(TEST_PET_ID + 1);
+-		pet.setName("petty");
+-		dog.setName("doggy");
+-		given(this.owners.findById(TEST_OWNER_ID)).willReturn(Optional.of(owner));
+-	}
+-
+-	@Test
+-	void initCreationForm() throws Exception {
+-		mockMvc.perform(get("/owners/{ownerId}/pets/new", TEST_OWNER_ID))
+-			.andExpect(status().isOk())
+-			.andExpect(view().name("pets/createOrUpdatePetForm"))
+-			.andExpect(model().attributeExists("pet"));
+-	}
+-
+-	@Test
+-	void processCreationFormSuccess() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/{ownerId}/pets/new", TEST_OWNER_ID).param("name", "Betty")
+-				.param("type", "hamster")
+-				.param("birthDate", "2015-02-12"))
+-			.andExpect(status().is3xxRedirection())
+-			.andExpect(view().name("redirect:/owners/{ownerId}"));
+-	}
+-
+-	@Nested
+-	class ProcessCreationFormHasErrors {
+-
+-		@Test
+-		void processCreationFormWithBlankName() throws Exception {
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/new", TEST_OWNER_ID).param("name", "\t \n")
+-					.param("birthDate", "2015-02-12"))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "name"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "name", "required"))
+-				.andExpect(status().isOk())
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-		@Test
+-		void processCreationFormWithDuplicateName() throws Exception {
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/new", TEST_OWNER_ID).param("name", "petty")
+-					.param("birthDate", "2015-02-12"))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "name"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "name", "duplicate"))
+-				.andExpect(status().isOk())
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-		@Test
+-		void processCreationFormWithMissingPetType() throws Exception {
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/new", TEST_OWNER_ID).param("name", "Betty")
+-					.param("birthDate", "2015-02-12"))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "type"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "type", "required"))
+-				.andExpect(status().isOk())
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-		@Test
+-		void processCreationFormWithInvalidBirthDate() throws Exception {
+-			LocalDate currentDate = LocalDate.now();
+-			String futureBirthDate = currentDate.plusMonths(1).toString();
+-
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/new", TEST_OWNER_ID).param("name", "Betty")
+-					.param("birthDate", futureBirthDate))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "birthDate"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "birthDate", "typeMismatch.birthDate"))
+-				.andExpect(status().isOk())
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-		@Test
+-		void processCreationFormWithDataIntegrityViolation() throws Exception {
+-			org.mockito.BDDMockito
+-				.willThrow(new DataIntegrityViolationException("Duplicate key: unique_owner_pet_name"))
+-				.given(owners)
+-				.savePet(org.mockito.ArgumentMatchers.anyInt(), any(Pet.class));
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/new", TEST_OWNER_ID).param("name", "Betty")
+-					.param("type", "hamster")
+-					.param("birthDate", "2015-02-12"))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "name"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "name", "duplicate"))
+-				.andExpect(status().isOk())
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-		@Test
+-		void initUpdateForm() throws Exception {
+-			mockMvc.perform(get("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID))
+-				.andExpect(status().isOk())
+-				.andExpect(model().attributeExists("pet"))
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-	}
+-
+-	@Test
+-	void processUpdateFormSuccess() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID).param("name", "Betty")
+-				.param("type", "hamster")
+-				.param("birthDate", "2015-02-12"))
+-			.andExpect(status().is3xxRedirection())
+-			.andExpect(view().name("redirect:/owners/{ownerId}"));
+-	}
+-
+-	@Test
+-	void processUpdateFormWithSameName() throws Exception {
+-		mockMvc.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID).param("name", "petty") // same
+-																														// name
+-																														// as
+-																														// existing
+-																														// pet
+-			.param("type", "hamster")
+-			.param("birthDate", "2015-02-12"))
+-			.andExpect(status().is3xxRedirection())
+-			.andExpect(view().name("redirect:/owners/{ownerId}"));
+-	}
+-
+-	@Nested
+-	class ProcessUpdateFormHasErrors {
+-
+-		@Test
+-		void processUpdateFormWithDuplicateName() throws Exception {
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID + 1)
+-					.param("name", "petty")
+-					.param("type", "hamster")
+-					.param("birthDate", "2015-02-12"))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "name"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "name", "duplicate"))
+-				.andExpect(status().isOk())
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-		@Test
+-		void processUpdateFormWithInvalidBirthDate() throws Exception {
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID).param("name", " ")
+-					.param("birthDate", "2015/02/12"))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "birthDate"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "birthDate", "typeMismatch"))
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-		@Test
+-		void processUpdateFormWithBlankName() throws Exception {
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID).param("name", "  ")
+-					.param("birthDate", "2015-02-12"))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "name"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "name", "required"))
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-		@Test
+-		void processUpdateFormWithDataIntegrityViolation() throws Exception {
+-			org.mockito.BDDMockito
+-				.willThrow(new DataIntegrityViolationException("Duplicate key: unique_owner_pet_name"))
+-				.given(owners)
+-				.savePet(org.mockito.ArgumentMatchers.anyInt(), any(Pet.class));
+-			mockMvc
+-				.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID).param("name", "Betty")
+-					.param("type", "hamster")
+-					.param("birthDate", "2015-02-12"))
+-				.andExpect(model().attributeHasNoErrors("owner"))
+-				.andExpect(model().attributeHasErrors("pet"))
+-				.andExpect(model().attributeHasFieldErrors("pet", "name"))
+-				.andExpect(model().attributeHasFieldErrorCode("pet", "name", "duplicate"))
+-				.andExpect(status().isOk())
+-				.andExpect(view().name("pets/createOrUpdatePetForm"));
+-		}
+-
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/owner/PetTypeFormatterTests.java b/src/test/java/org/springframework/samples/petclinic/owner/PetTypeFormatterTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/owner/PetTypeFormatterTests.java
++++ /dev/null
+@@ -1,97 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.owner;
+-
+-import static org.assertj.core.api.Assertions.assertThat;
+-import static org.mockito.BDDMockito.given;
+-
+-import java.text.ParseException;
+-import java.util.ArrayList;
+-import java.util.Collection;
+-import java.util.List;
+-import java.util.Locale;
+-
+-import org.junit.jupiter.api.Assertions;
+-import org.junit.jupiter.api.BeforeEach;
+-import org.junit.jupiter.api.Test;
+-import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.junit.jupiter.api.extension.ExtendWith;
+-import org.mockito.Mock;
+-import org.mockito.junit.jupiter.MockitoExtension;
+-
+-/**
+- * Test class for {@link PetTypeFormatter}
+- *
+- * @author Colin But
+- */
+-@ExtendWith(MockitoExtension.class)
+-@DisabledInNativeImage
+-class PetTypeFormatterTests {
+-
+-	@Mock
+-	private PetTypeRepository types;
+-
+-	private PetTypeFormatter petTypeFormatter;
+-
+-	@BeforeEach
+-	void setup() {
+-		this.petTypeFormatter = new PetTypeFormatter(types);
+-	}
+-
+-	@Test
+-	void testPrint() {
+-		PetType petType = new PetType();
+-		petType.setName("Hamster");
+-		String petTypeName = this.petTypeFormatter.print(petType, Locale.ENGLISH);
+-		assertThat(petTypeName).isEqualTo("Hamster");
+-	}
+-
+-	@Test
+-	void shouldParse() throws ParseException {
+-		given(types.findPetTypes()).willReturn(makePetTypes());
+-		PetType petType = petTypeFormatter.parse("Bird", Locale.ENGLISH);
+-		assertThat(petType.getName()).isEqualTo("Bird");
+-	}
+-
+-	@Test
+-	void shouldThrowParseException() {
+-		given(types.findPetTypes()).willReturn(makePetTypes());
+-		Assertions.assertThrows(ParseException.class, () -> {
+-			petTypeFormatter.parse("Fish", Locale.ENGLISH);
+-		});
+-	}
+-
+-	/**
+-	 * Helper method to produce some sample pet types just for test purpose
+-	 * @return {@link Collection} of {@link PetType}
+-	 */
+-	private List<PetType> makePetTypes() {
+-		List<PetType> petTypes = new ArrayList<>();
+-		petTypes.add(new PetType() {
+-			{
+-				setName("Dog");
+-			}
+-		});
+-		petTypes.add(new PetType() {
+-			{
+-				setName("Bird");
+-			}
+-		});
+-		return petTypes;
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java b/src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java
+--- a/src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java
++++ b/src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java
+@@ -20,8 +20,6 @@
+ import org.junit.jupiter.api.Nested;
+ import org.junit.jupiter.api.Test;
+ import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.junit.jupiter.api.extension.ExtendWith;
+-import org.mockito.junit.jupiter.MockitoExtension;
+ import org.springframework.validation.Errors;
+ import org.springframework.validation.MapBindingResult;
+ 
+@@ -36,7 +34,6 @@
+  *
+  * @author Wick Dynex
+  */
+-@ExtendWith(MockitoExtension.class)
+ @DisabledInNativeImage
+ class PetValidatorTests {
+ 
+diff --git a/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java b/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java
++++ /dev/null
+@@ -1,122 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.owner;
+-
+-import static org.mockito.BDDMockito.given;
+-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+-
+-import org.junit.jupiter.api.BeforeEach;
+-import org.junit.jupiter.api.Test;
+-import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+-import org.springframework.test.context.aot.DisabledInAotMode;
+-import org.springframework.test.context.bean.override.mockito.MockitoBean;
+-import org.springframework.test.web.servlet.MockMvc;
+-
+-import java.time.LocalDate;
+-import java.util.Optional;
+-
+-/**
+- * Test class for {@link VisitController}
+- *
+- * @author Colin But
+- * @author Wick Dynex
+- */
+-@WebMvcTest(VisitController.class)
+-@DisabledInNativeImage
+-@DisabledInAotMode
+-class VisitControllerTests {
+-
+-	private static final int TEST_OWNER_ID = 1;
+-
+-	private static final int TEST_PET_ID = 1;
+-
+-	@Autowired
+-	private MockMvc mockMvc;
+-
+-	@MockitoBean
+-	private OwnerRepository owners;
+-
+-	@BeforeEach
+-	void init() {
+-		Owner owner = new Owner();
+-		owner.setId(TEST_OWNER_ID);
+-		Pet pet = new Pet();
+-		owner.addPet(pet);
+-		pet.setId(TEST_PET_ID);
+-		given(this.owners.findById(TEST_OWNER_ID)).willReturn(Optional.of(owner));
+-	}
+-
+-	@Test
+-	void initNewVisitForm() throws Exception {
+-		mockMvc.perform(get("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID))
+-			.andExpect(status().isOk())
+-			.andExpect(view().name("pets/createOrUpdateVisitForm"));
+-	}
+-
+-	@Test
+-	void processNewVisitFormSuccess() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID)
+-				.param("name", "George")
+-				.param("date", LocalDate.now().plusDays(1).toString())
+-				.param("description", "Visit Description"))
+-			.andExpect(status().is3xxRedirection())
+-			.andExpect(view().name("redirect:/owners/{ownerId}"));
+-	}
+-
+-	@Test
+-	void processNewVisitFormHasErrors() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID).param("name",
+-					"George"))
+-			.andExpect(model().attributeHasErrors("visit"))
+-			.andExpect(status().isOk())
+-			.andExpect(view().name("pets/createOrUpdateVisitForm"));
+-	}
+-
+-	@Test
+-	void processNewVisitFormHasErrorsWhenVisitDateIsNotInFuture() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID)
+-				.param("name", "George")
+-				.param("date", LocalDate.now().toString())
+-				.param("description", "Visit Description"))
+-			.andExpect(model().attributeHasFieldErrors("visit", "date"))
+-			.andExpect(model().attributeHasFieldErrorCode("visit", "date", "typeMismatch.visitDate"))
+-			.andExpect(status().isOk())
+-			.andExpect(view().name("pets/createOrUpdateVisitForm"));
+-	}
+-
+-	@Test
+-	void processNewVisitFormHasErrorsWhenDescriptionIsTooLong() throws Exception {
+-		mockMvc
+-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID)
+-				.param("name", "George")
+-				.param("date", LocalDate.now().plusDays(1).toString())
+-				.param("description", "a".repeat(256)))
+-			.andExpect(model().attributeHasFieldErrors("visit", "description"))
+-			.andExpect(status().isOk())
+-			.andExpect(view().name("pets/createOrUpdateVisitForm"));
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java b/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+--- a/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
++++ b/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+@@ -25,9 +25,6 @@
+ import java.util.Optional;
+ 
+ import org.junit.jupiter.api.Test;
+-import org.springframework.boot.test.context.SpringBootTest;
+-import org.springframework.test.annotation.DirtiesContext;
+-import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.data.domain.Page;
+ import org.springframework.data.domain.Pageable;
+ import org.springframework.samples.petclinic.owner.Owner;
+@@ -40,23 +37,43 @@
+ import org.springframework.samples.petclinic.vet.VetRepository;
+ 
+ /** Exercises the SQL repositories against a fresh database for each test. */
+-@SpringBootTest(properties = "spring.datasource.generate-unique-name=true")
+-@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
++
++
+ class ClinicServiceTests {
+ 
+-	@Autowired
+ 	protected OwnerRepository owners;
+ 
+-	@Autowired
+ 	protected PetTypeRepository types;
+ 
+-	@Autowired
+ 	protected VetRepository vets;
+ 
+ 	private final Pageable pageable = Pageable.unpaged();
+ 
+-	@Autowired
+ 	private pvrlabs.coilbase.RepositoryContext db;
++
++	private java.sql.Connection keepAlive;
++
++	@org.junit.jupiter.api.BeforeEach
++	void initialize() throws java.sql.SQLException {
++		var source = new org.h2.jdbcx.JdbcDataSource();
++		source.setURL("jdbc:h2:mem:" + java.util.UUID.randomUUID());
++		source.setUser("sa");
++		keepAlive = source.getConnection();
++		dataSource = source;
++		db = pvrlabs.coilbase.RepositoryContext.create(source);
++		db.executeScriptResource("/db/h2/schema.sql");
++		db.executeScriptResource("/db/h2/data.sql");
++		owners = new OwnerRepository(db);
++		types = new PetTypeRepository(db);
++		vets = new VetRepository(db);
++	}
++
++	@org.junit.jupiter.api.AfterEach
++	void shutdown() throws java.sql.SQLException {
++		if (keepAlive != null) {
++			keepAlive.close();
++		}
++	}
+ 
+ 	@Test
+ 	void rollsBackEarlierWritesAndAcceptsARecoveryWrite() {
+@@ -81,7 +98,6 @@
+ 		assertThat(owners.findById(owner.getId())).isPresent();
+ 	}
+ 
+-	@Autowired
+ 	private javax.sql.DataSource dataSource;
+ 
+ 	@Test
+diff --git a/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java b/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java
++++ /dev/null
+@@ -1,100 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.system;
+-
+-import static org.assertj.core.api.Assertions.assertThat;
+-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
+-
+-import java.util.List;
+-import java.util.Map;
+-
+-import org.junit.jupiter.api.Test;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.beans.factory.annotation.Value;
+-import org.springframework.boot.autoconfigure.SpringBootApplication;
+-import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+-import org.springframework.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
+-import org.springframework.boot.resttestclient.TestRestTemplate;
+-import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
+-import org.springframework.boot.test.context.SpringBootTest;
+-import org.springframework.core.ParameterizedTypeReference;
+-import org.springframework.http.HttpEntity;
+-import org.springframework.http.HttpHeaders;
+-import org.springframework.http.HttpMethod;
+-import org.springframework.http.HttpStatus;
+-import org.springframework.http.MediaType;
+-import org.springframework.http.RequestEntity;
+-import org.springframework.http.ResponseEntity;
+-
+-/**
+- * Integration Test for {@link CrashController}.
+- *
+- * @author Alex Lutz
+- */
+-// NOT Waiting https://github.com/spring-projects/spring-boot/issues/5574
+-@SpringBootTest(webEnvironment = RANDOM_PORT,
+-		properties = { "spring.web.error.include-message=ALWAYS", "management.endpoints.access.default=none" })
+-@AutoConfigureTestRestTemplate
+-class CrashControllerIntegrationTests {
+-
+-	@Value("${local.server.port}")
+-	private int port;
+-
+-	@Autowired
+-	private TestRestTemplate rest;
+-
+-	@Test
+-	void triggerExceptionJson() {
+-		ResponseEntity<Map<String, Object>> resp = rest.exchange(
+-				RequestEntity.get("http://localhost:" + port + "/oups").build(),
+-				new ParameterizedTypeReference<Map<String, Object>>() {
+-				});
+-		assertThat(resp).isNotNull();
+-		assertThat(resp.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);
+-		assertThat(resp.getBody()).containsKey("timestamp");
+-		assertThat(resp.getBody()).containsKey("status");
+-		assertThat(resp.getBody()).containsKey("error");
+-		assertThat(resp.getBody()).containsEntry("message",
+-				"Expected: controller used to showcase what happens when an exception is thrown");
+-		assertThat(resp.getBody()).containsEntry("path", "/oups");
+-	}
+-
+-	@Test
+-	void triggerExceptionHtml() {
+-		HttpHeaders headers = new HttpHeaders();
+-		headers.setAccept(List.of(MediaType.TEXT_HTML));
+-		ResponseEntity<String> resp = rest.exchange("http://localhost:" + port + "/oups", HttpMethod.GET,
+-				new HttpEntity<>(headers), String.class);
+-		assertThat(resp).isNotNull();
+-		assertThat(resp.getStatusCode()).isEqualTo(HttpStatus.INTERNAL_SERVER_ERROR);
+-		assertThat(resp.getBody()).isNotNull();
+-		// html:
+-		assertThat(resp.getBody()).containsSubsequence("<body>", "<h2>", "Something happened...", "</h2>", "<p>",
+-				"Expected:", "controller", "used", "to", "showcase", "what", "happens", "when", "an", "exception", "is",
+-				"thrown", "</p>", "</body>");
+-		// Not the whitelabel error page:
+-		assertThat(resp.getBody()).doesNotContain("Whitelabel Error Page",
+-				"This application has no explicit mapping for");
+-	}
+-
+-	@SpringBootApplication(
+-			exclude = { DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class })
+-	static class TestConfiguration {
+-
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java b/src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java
++++ /dev/null
+@@ -1,41 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.system;
+-
+-import org.junit.jupiter.api.Test;
+-
+-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+-
+-/**
+- * Test class for {@link CrashController}
+- *
+- * @author Colin But
+- * @author Alex Lutz
+- */
+-// Waiting https://github.com/spring-projects/spring-boot/issues/5574 ..good
+-// luck ((plain(st) UNIT test)! :)
+-class CrashControllerTests {
+-
+-	final CrashController testee = new CrashController();
+-
+-	@Test
+-	void triggerException() {
+-		assertThatExceptionOfType(RuntimeException.class).isThrownBy(() -> testee.triggerException())
+-			.withMessageContaining("Expected: controller used to showcase what happens when an exception is thrown");
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/system/WelcomeControllerTests.java b/src/test/java/org/springframework/samples/petclinic/system/WelcomeControllerTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/system/WelcomeControllerTests.java
++++ /dev/null
+@@ -1,43 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.system;
+-
+-import org.junit.jupiter.api.Test;
+-import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+-import org.springframework.test.context.aot.DisabledInAotMode;
+-import org.springframework.test.web.servlet.MockMvc;
+-
+-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+-
+-@WebMvcTest(WelcomeController.class)
+-@DisabledInNativeImage
+-@DisabledInAotMode
+-class WelcomeControllerTests {
+-
+-	@Autowired
+-	private MockMvc mockMvc;
+-
+-	@Test
+-	void welcome() throws Exception {
+-		mockMvc.perform(get("/")).andExpect(status().isOk()).andExpect(view().name("welcome"));
+-	}
+-
+-}
+diff --git a/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java b/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java
+deleted file mode 100644
+--- a/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java
++++ /dev/null
+@@ -1,111 +0,0 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package org.springframework.samples.petclinic.vet;
+-
+-import org.assertj.core.util.Lists;
+-import org.junit.jupiter.api.BeforeEach;
+-import org.junit.jupiter.api.Test;
+-import org.junit.jupiter.api.condition.DisabledInNativeImage;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+-import org.springframework.data.domain.PageImpl;
+-import org.springframework.data.domain.Pageable;
+-import org.springframework.http.MediaType;
+-import org.springframework.test.context.aot.DisabledInAotMode;
+-import org.springframework.test.context.bean.override.mockito.MockitoBean;
+-import org.springframework.test.web.servlet.MockMvc;
+-import org.springframework.test.web.servlet.ResultActions;
+-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+-
+-import java.util.List;
+-
+-import static org.mockito.ArgumentMatchers.any;
+-import static org.mockito.BDDMockito.given;
+-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+-
+-/**
+- * Test class for the {@link VetController}
+- */
+-
+-@WebMvcTest(VetController.class)
+-@DisabledInNativeImage
+-@DisabledInAotMode
+-class VetControllerTests {
+-
+-	@Autowired
+-	private MockMvc mockMvc;
+-
+-	@MockitoBean
+-	private VetRepository vets;
+-
+-	private Vet james() {
+-		Vet james = new Vet();
+-		james.setFirstName("James");
+-		james.setLastName("Carter");
+-		james.setId(1);
+-		return james;
+-	}
+-
+-	private Vet helen() {
+-		Vet helen = new Vet();
+-		helen.setFirstName("Helen");
+-		helen.setLastName("Leary");
+-		helen.setId(2);
+-		Specialty radiology = new Specialty();
+-		radiology.setId(1);
+-		radiology.setName("radiology");
+-		helen.addSpecialty(radiology);
+-		return helen;
+-	}
+-
+-	@BeforeEach
+-	void setup() {
+-		given(this.vets.findAll()).willReturn(Lists.newArrayList(james(), helen()));
+-		given(this.vets.findAll(any(Pageable.class)))
+-			.willReturn(new PageImpl<Vet>(Lists.newArrayList(james(), helen())));
+-
+-	}
+-
+-	@Test
+-	void showVetListHtml() throws Exception {
+-
+-		mockMvc.perform(MockMvcRequestBuilders.get("/vets.html?page=1"))
+-			.andExpect(status().isOk())
+-			.andExpect(model().attributeExists("listVets"))
+-			.andExpect(view().name("vets/vetList"));
+-
+-	}
+-
+-	@Test
+-	void showVetListRedirectsOutOfBoundsPageToFirstPage() throws Exception {
+-		for (int page : List.of(0, 2)) {
+-			mockMvc.perform(get("/vets.html").param("page", Integer.toString(page)))
+-				.andExpect(status().is3xxRedirection())
+-				.andExpect(redirectedUrl("/vets.html?page=1"));
+-		}
+-	}
+-
+-	@Test
+-	void showResourcesVetList() throws Exception {
+-		ResultActions actions = mockMvc.perform(get("/vets").accept(MediaType.APPLICATION_JSON))
+-			.andExpect(status().isOk());
+-		actions.andExpect(content().contentType(MediaType.APPLICATION_JSON))
+-			.andExpect(jsonPath("$.vetList[0].id").value(1));
+-	}
+-
+-}

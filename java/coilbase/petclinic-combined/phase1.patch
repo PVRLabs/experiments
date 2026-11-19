@@ -1,0 +1,1103 @@
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml
++++ b/pom.xml
+@@ -37,7 +37,28 @@
+     <spring-format.version>0.0.47</spring-format.version>
+   </properties>
+ 
++  <repositories>
++    <repository>
++      <id>pvrlabs</id>
++      <url>https://pvrlabs.github.io/maven/</url>
++    </repository>
++  </repositories>
++
+   <dependencies>
++    <dependency>
++      <groupId>org.glassfish.jaxb</groupId>
++      <artifactId>jaxb-runtime</artifactId>
++      <scope>runtime</scope>
++    </dependency>
++    <dependency>
++      <groupId>xyz.pvrlabs</groupId>
++      <artifactId>coilbase-core</artifactId>
++      <version>0.1.0-preview5</version>
++    </dependency>
++    <dependency>
++      <groupId>org.springframework.data</groupId>
++      <artifactId>spring-data-commons</artifactId>
++    </dependency>
+     <!-- Spring and Spring Boot dependencies -->
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+@@ -49,7 +70,7 @@
+     </dependency>
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-data-jpa</artifactId>
++      <artifactId>spring-boot-starter-jdbc</artifactId>
+     </dependency>
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+@@ -118,11 +139,6 @@
+       <optional>true</optional>
+     </dependency>
+ 
+-    <dependency>
+-      <groupId>org.springframework.boot</groupId>
+-      <artifactId>spring-boot-starter-data-jpa-test</artifactId>
+-      <scope>test</scope>
+-    </dependency>
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-restclient</artifactId>
+diff --git a/src/main/java/org/springframework/samples/petclinic/PersistenceConfiguration.java b/src/main/java/org/springframework/samples/petclinic/PersistenceConfiguration.java
+new file mode 100644
+--- /dev/null
++++ b/src/main/java/org/springframework/samples/petclinic/PersistenceConfiguration.java
+@@ -0,0 +1,18 @@
++package org.springframework.samples.petclinic;
++
++import javax.sql.DataSource;
++
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++
++import pvrlabs.coilbase.RepositoryContext;
++
++@Configuration(proxyBeanMethods = false)
++class PersistenceConfiguration {
++
++	@Bean
++	RepositoryContext repositoryContext(DataSource dataSource) {
++		return RepositoryContext.create(dataSource);
++	}
++
++}
+diff --git a/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java b/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java
+--- a/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java
++++ b/src/main/java/org/springframework/samples/petclinic/model/BaseEntity.java
+@@ -17,11 +17,6 @@
+ 
+ import java.io.Serializable;
+ 
+-import jakarta.persistence.GeneratedValue;
+-import jakarta.persistence.GenerationType;
+-import jakarta.persistence.Id;
+-import jakarta.persistence.MappedSuperclass;
+-
+ /**
+  * Simple JavaBean domain object with an id property. Used as a base class for objects
+  * needing this property.
+@@ -29,11 +24,9 @@
+  * @author Ken Krebs
+  * @author Juergen Hoeller
+  */
+-@MappedSuperclass
++
+ public class BaseEntity implements Serializable {
+ 
+-	@Id
+-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+ 	private Integer id;
+ 
+ 	public Integer getId() {
+diff --git a/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java b/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java
+--- a/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java
++++ b/src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java
+@@ -15,8 +15,6 @@
+  */
+ package org.springframework.samples.petclinic.model;
+ 
+-import jakarta.persistence.Column;
+-import jakarta.persistence.MappedSuperclass;
+ import jakarta.validation.constraints.NotBlank;
+ 
+ /**
+@@ -27,10 +25,9 @@
+  * @author Juergen Hoeller
+  * @author Wick Dynex
+  */
+-@MappedSuperclass
++
+ public class NamedEntity extends BaseEntity {
+ 
+-	@Column
+ 	@NotBlank
+ 	private String name;
+ 
+diff --git a/src/main/java/org/springframework/samples/petclinic/model/Person.java b/src/main/java/org/springframework/samples/petclinic/model/Person.java
+--- a/src/main/java/org/springframework/samples/petclinic/model/Person.java
++++ b/src/main/java/org/springframework/samples/petclinic/model/Person.java
+@@ -15,8 +15,6 @@
+  */
+ package org.springframework.samples.petclinic.model;
+ 
+-import jakarta.persistence.Column;
+-import jakarta.persistence.MappedSuperclass;
+ import jakarta.validation.constraints.NotBlank;
+ import jakarta.validation.constraints.Size;
+ 
+@@ -25,15 +23,13 @@
+  *
+  * @author Ken Krebs
+  */
+-@MappedSuperclass
++
+ public class Person extends BaseEntity {
+ 
+-	@Column(length = 30)
+ 	@Size(max = 30)
+ 	@NotBlank
+ 	private String firstName;
+ 
+-	@Column(length = 30)
+ 	@Size(max = 30)
+ 	@NotBlank
+ 	private String lastName;
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/Owner.java b/src/main/java/org/springframework/samples/petclinic/owner/Owner.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/Owner.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/Owner.java
+@@ -23,14 +23,6 @@
+ import org.springframework.samples.petclinic.model.Person;
+ import org.springframework.util.Assert;
+ 
+-import jakarta.persistence.CascadeType;
+-import jakarta.persistence.Column;
+-import jakarta.persistence.Entity;
+-import jakarta.persistence.FetchType;
+-import jakarta.persistence.JoinColumn;
+-import jakarta.persistence.OneToMany;
+-import jakarta.persistence.OrderBy;
+-import jakarta.persistence.Table;
+ import jakarta.validation.constraints.NotBlank;
+ import jakarta.validation.constraints.Pattern;
+ import jakarta.validation.constraints.Size;
+@@ -45,28 +37,21 @@
+  * @author Oliver Drotbohm
+  * @author Wick Dynex
+  */
+-@Entity
+-@Table(name = "owners")
++
+ public class Owner extends Person {
+ 
+-	@Column
+ 	@NotBlank
+ 	@Size(max = 255)
+ 	private String address;
+ 
+-	@Column
+ 	@NotBlank
+ 	@Size(max = 80)
+ 	private String city;
+ 
+-	@Column
+ 	@NotBlank
+ 	@Pattern(regexp = "\\d{10}", message = "{telephone.invalid}")
+ 	private String telephone;
+ 
+-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+-	@JoinColumn(name = "owner_id")
+-	@OrderBy("name")
+ 	private final List<Pet> pets = new ArrayList<>();
+ 
+ 	public String getAddress() {
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java b/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java
+@@ -81,7 +81,7 @@
+ 			return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+ 		}
+ 
+-		this.owners.save(owner);
++		this.owners.saveDetails(owner);
+ 		redirectAttributes.addFlashAttribute("message", "New Owner Created");
+ 		return "redirect:/owners/" + owner.getId();
+ 	}
+@@ -165,7 +165,7 @@
+ 		}
+ 
+ 		owner.setId(ownerId);
+-		this.owners.save(owner);
++		this.owners.saveDetails(owner);
+ 		redirectAttributes.addFlashAttribute("message", "Owner Values Updated");
+ 		return "redirect:/owners/{ownerId}";
+ 	}
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java b/src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/OwnerRepository.java
+@@ -1,62 +1,200 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+ package org.springframework.samples.petclinic.owner;
+ 
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Objects;
+ import java.util.Optional;
+ 
++import org.jdbi.v3.core.Handle;
++import org.jdbi.v3.core.JdbiException;
++import org.jdbi.v3.core.statement.Update;
++import org.springframework.dao.DataIntegrityViolationException;
+ import org.springframework.data.domain.Page;
++import org.springframework.data.domain.PageImpl;
+ import org.springframework.data.domain.Pageable;
+-import org.springframework.data.jpa.repository.JpaRepository;
+-
+-/**
+- * Repository class for <code>Owner</code> domain objects. All method names are compliant
+- * with Spring Data naming conventions so this interface can easily be extended for Spring
+- * Data. See:
+- * https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation
+- *
+- * @author Ken Krebs
+- * @author Juergen Hoeller
+- * @author Sam Brannen
+- * @author Michael Isvy
+- * @author Wick Dynex
+- */
+-public interface OwnerRepository extends JpaRepository<Owner, Integer> {
+-
+-	/**
+-	 * Retrieve {@link Owner}s from the data store by last name, returning all owners
+-	 * whose last name <i>starts</i> with the given name.
+-	 * @param lastName Value to search for
+-	 * @return a Collection of matching {@link Owner}s (or an empty Collection if none
+-	 * found)
+-	 */
+-	Page<Owner> findByLastNameStartingWith(String lastName, Pageable pageable);
+-
+-	/**
+-	 * Retrieve an {@link Owner} from the data store by id.
+-	 * <p>
+-	 * This method returns an {@link Optional} containing the {@link Owner} if found. If
+-	 * no {@link Owner} is found with the provided id, it will return an empty
+-	 * {@link Optional}.
+-	 * </p>
+-	 * @param id the id to search for
+-	 * @return an {@link Optional} containing the {@link Owner} if found, or an empty
+-	 * {@link Optional} if not found.
+-	 * @throws IllegalArgumentException if the id is null (assuming null is not a valid
+-	 * input for id)
+-	 */
+-	Optional<Owner> findById(Integer id);
++import org.springframework.stereotype.Component;
++
++import pvrlabs.coilbase.RepositoryContext;
++import pvrlabs.coilbase.SqlStatement;
++
++@Component
++public class OwnerRepository {
++
++	private static final String OWNER_FIELDS = "id, first_name, last_name, address, city, telephone";
++
++	private final RepositoryContext db;
++
++	public OwnerRepository(RepositoryContext db) {
++		this.db = db;
++	}
++
++	public Optional<Owner> findById(Integer id) {
++		Objects.requireNonNull(id, "Owner ID is required");
++		return db.inTransaction(handle -> handle.createQuery("select " + OWNER_FIELDS + " from owners where id=:id")
++			.bind("id", id)
++			.mapToBean(Owner.class)
++			.findOne()
++			.map(owner -> loadPets(handle, owner)));
++	}
++
++	public Page<Owner> findByLastNameStartingWith(String name, Pageable pageable) {
++		String prefix = name.replace("!", "!!").replace("%", "!%").replace("_", "!_") + "%";
++		return db.inTransaction(handle -> {
++			String predicate = " from owners where last_name like :prefix escape '!'";
++			long total = handle.createQuery("select count(*)" + predicate)
++				.bind("prefix", prefix)
++				.mapTo(Long.class)
++				.one();
++			var query = handle
++				.createQuery("select " + OWNER_FIELDS + predicate + " order by id"
++						+ (pageable.isPaged() ? " limit :limit offset :offset" : ""))
++				.bind("prefix", prefix);
++			if (pageable.isPaged()) {
++				query.bind("limit", pageable.getPageSize()).bind("offset", pageable.getOffset());
++			}
++			return new PageImpl<>(
++					query.mapToBean(Owner.class).list().stream().map(owner -> loadPets(handle, owner)).toList(),
++					pageable, total);
++		});
++	}
++
++	private Owner loadPets(Handle handle, Owner owner) {
++		var pets = handle.createQuery("""
++				select p.id, p.name, p.birth_date, t.id as type_id, t.name as type_name
++				from pets p join types t on t.id=p.type_id
++				where p.owner_id=:ownerId order by p.name, p.id
++				""").bind("ownerId", owner.getId()).map((row, ctx) -> {
++			var pet = new Pet();
++			pet.setId(row.getInt("id"));
++			pet.setName(row.getString("name"));
++			pet.setBirthDate(row.getObject("birth_date", java.time.LocalDate.class));
++			var type = new PetType();
++			type.setId(row.getInt("type_id"));
++			type.setName(row.getString("type_name"));
++			pet.setType(type);
++			return pet;
++		}).list();
++		for (Pet pet : pets) {
++			handle.createQuery(
++					"select id, visit_date as date, description from visits where pet_id=:id order by visit_date, id")
++				.bind("id", pet.getId())
++				.mapToBean(Visit.class)
++				.list()
++				.forEach(pet::addVisit);
++			owner.addPet(pet);
++		}
++		return owner;
++	}
++
++	public Owner save(Owner owner) {
++		var assignments = new ArrayList<Runnable>();
++		write(() -> db.useTransaction(handle -> {
++			int id = writeOwner(handle, owner, assignments);
++			for (Pet pet : owner.getPets()) {
++				int petId = writePet(handle, id, pet, assignments);
++				for (Visit visit : pet.getVisits()) {
++					if (visit.isNew()) {
++						writeVisit(handle, petId, visit, assignments);
++					}
++				}
++			}
++		}));
++		assignments.forEach(Runnable::run);
++		return owner;
++	}
++
++	public Owner saveAndFlush(Owner owner) {
++		return save(owner);
++	}
++
++	public void saveDetails(Owner owner) {
++		var assignments = new ArrayList<Runnable>();
++		write(() -> db.useTransaction(handle -> writeOwner(handle, owner, assignments)));
++		assignments.forEach(Runnable::run);
++	}
++
++	public void savePet(int ownerId, Pet pet) {
++		var assignments = new ArrayList<Runnable>();
++		write(() -> db.useTransaction(handle -> writePet(handle, ownerId, pet, assignments)));
++		assignments.forEach(Runnable::run);
++	}
++
++	public void addVisit(int ownerId, int petId, Visit visit) {
++		int id = db.update(SqlStatement.of("""
++				insert into visits (pet_id, visit_date, description)
++				select id, :date, :description from pets where id=:petId and owner_id=:ownerId
++				"""),
++				update -> update.bind("date", visit.getDate())
++					.bind("description", visit.getDescription())
++					.bind("petId", petId)
++					.bind("ownerId", ownerId)
++					.executeAndReturnGeneratedKeys("id")
++					.mapTo(Integer.class)
++					.findOne()
++					.orElseThrow(() -> new IllegalArgumentException("Pet does not belong to owner")));
++		visit.setId(id);
++	}
++
++	private int writeOwner(Handle handle, Owner owner, List<Runnable> assignments) {
++		if (owner.isNew()) {
++			int id = key(handle.createUpdate("""
++					insert into owners (first_name,last_name,address,city,telephone)
++					values (:firstName,:lastName,:address,:city,:telephone)
++					""").bindBean(owner));
++			assignments.add(() -> owner.setId(id));
++			return id;
++		}
++		requireOne(handle.createUpdate("""
++				update owners set first_name=:firstName,last_name=:lastName,address=:address,
++					city=:city,telephone=:telephone where id=:id
++				""").bindBean(owner));
++		return owner.getId();
++	}
++
++	private int writePet(Handle handle, int ownerId, Pet pet, List<Runnable> assignments) {
++		int typeId = pet.getType() == null ? 0 : pet.getType().getId();
++		if (pet.isNew()) {
++			int id = key(handle.createUpdate("""
++					insert into pets (name,birth_date,type_id,owner_id) values (:name,:birthDate,:typeId,:ownerId)
++					""").bindBean(pet).bind("typeId", typeId).bind("ownerId", ownerId));
++			assignments.add(() -> pet.setId(id));
++			return id;
++		}
++		requireOne(handle.createUpdate("""
++				update pets set name=:name,birth_date=:birthDate,type_id=:typeId where id=:id and owner_id=:ownerId
++				""").bindBean(pet).bind("typeId", typeId).bind("ownerId", ownerId));
++		return pet.getId();
++	}
++
++	private void writeVisit(Handle handle, int petId, Visit visit, List<Runnable> assignments) {
++		int id = key(handle
++			.createUpdate("insert into visits (pet_id,visit_date,description) values (:petId,:date,:description)")
++			.bind("petId", petId)
++			.bindBean(visit));
++		assignments.add(() -> visit.setId(id));
++	}
++
++	private static int key(Update update) {
++		return update.executeAndReturnGeneratedKeys("id").mapTo(Integer.class).one();
++	}
++
++	private static void requireOne(Update update) {
++		if (update.execute() != 1) {
++			throw new IllegalArgumentException("Record does not exist or has a different owner");
++		}
++	}
++
++	private static void write(Runnable action) {
++		try {
++			action.run();
++		}
++		catch (JdbiException ex) {
++			if (ex.getCause() instanceof java.sql.SQLException sql && sql.getSQLState() != null
++					&& sql.getSQLState().startsWith("23")) {
++				throw new DataIntegrityViolationException(sql.getMessage(), ex);
++			}
++			throw ex;
++		}
++	}
+ 
+ }
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/Pet.java b/src/main/java/org/springframework/samples/petclinic/owner/Pet.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/Pet.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/Pet.java
+@@ -23,16 +23,6 @@
+ import org.springframework.format.annotation.DateTimeFormat;
+ import org.springframework.samples.petclinic.model.NamedEntity;
+ 
+-import jakarta.persistence.CascadeType;
+-import jakarta.persistence.Column;
+-import jakarta.persistence.Entity;
+-import jakarta.persistence.FetchType;
+-import jakarta.persistence.JoinColumn;
+-import jakarta.persistence.ManyToOne;
+-import jakarta.persistence.OneToMany;
+-import jakarta.persistence.OrderBy;
+-import jakarta.persistence.Table;
+-
+ /**
+  * Simple business object representing a pet.
+  *
+@@ -41,21 +31,14 @@
+  * @author Sam Brannen
+  * @author Wick Dynex
+  */
+-@Entity
+-@Table(name = "pets")
++
+ public class Pet extends NamedEntity {
+ 
+-	@Column
+ 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+ 	private LocalDate birthDate;
+ 
+-	@ManyToOne
+-	@JoinColumn(name = "type_id")
+ 	private PetType type;
+ 
+-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+-	@JoinColumn(name = "pet_id")
+-	@OrderBy("date ASC")
+ 	private final Set<Visit> visits = new LinkedHashSet<>();
+ 
+ 	public void setBirthDate(LocalDate birthDate) {
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/PetController.java b/src/main/java/org/springframework/samples/petclinic/owner/PetController.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/PetController.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/PetController.java
+@@ -123,7 +123,7 @@
+ 
+ 		try {
+ 			owner.addPet(pet);
+-			this.owners.saveAndFlush(owner);
++			this.owners.savePet(owner.getId(), pet);
+ 		}
+ 		catch (DataIntegrityViolationException ex) {
+ 			if (!isDuplicatePetNameViolation(ex)) {
+@@ -186,17 +186,7 @@
+ 	private void updatePetDetails(Owner owner, Pet pet) {
+ 		Integer id = pet.getId();
+ 		Assert.state(id != null, "'pet.getId()' must not be null");
+-		Pet existingPet = owner.getPet(id);
+-		if (existingPet != null) {
+-			// Update existing pet's properties
+-			existingPet.setName(pet.getName());
+-			existingPet.setBirthDate(pet.getBirthDate());
+-			existingPet.setType(pet.getType());
+-		}
+-		else {
+-			owner.addPet(pet);
+-		}
+-		this.owners.saveAndFlush(owner);
++		this.owners.savePet(owner.getId(), pet);
+ 	}
+ 
+ 	private boolean isDuplicatePetNameViolation(DataIntegrityViolationException ex) {
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/PetType.java b/src/main/java/org/springframework/samples/petclinic/owner/PetType.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/PetType.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/PetType.java
+@@ -17,14 +17,10 @@
+ 
+ import org.springframework.samples.petclinic.model.NamedEntity;
+ 
+-import jakarta.persistence.Entity;
+-import jakarta.persistence.Table;
+-
+ /**
+  * @author Juergen Hoeller Can be Cat, Dog, Hamster...
+  */
+-@Entity
+-@Table(name = "types")
++
+ public class PetType extends NamedEntity {
+ 
+ }
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/PetTypeRepository.java b/src/main/java/org/springframework/samples/petclinic/owner/PetTypeRepository.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/PetTypeRepository.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/PetTypeRepository.java
+@@ -18,22 +18,23 @@
+ 
+ import java.util.List;
+ 
+-import org.springframework.data.jpa.repository.JpaRepository;
+-import org.springframework.data.jpa.repository.Query;
++import org.springframework.stereotype.Component;
+ 
+-/**
+- * Repository class for <code>PetType</code> domain objects.
+- *
+- * @author Patrick Baumgartner
+- */
++import pvrlabs.coilbase.RepositoryContext;
++import pvrlabs.coilbase.SqlStatement;
+ 
+-public interface PetTypeRepository extends JpaRepository<PetType, Integer> {
++@Component
++public class PetTypeRepository {
+ 
+-	/**
+-	 * Retrieve all {@link PetType}s from the data store.
+-	 * @return a Collection of {@link PetType}s.
+-	 */
+-	@Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")
+-	List<PetType> findPetTypes();
++	private final RepositoryContext db;
++
++	public PetTypeRepository(RepositoryContext db) {
++		this.db = db;
++	}
++
++	public List<PetType> findPetTypes() {
++		return db.query(SqlStatement.of("select id, name from types order by name, id"),
++				query -> query.mapToBean(PetType.class).list());
++	}
+ 
+ }
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/Visit.java b/src/main/java/org/springframework/samples/petclinic/owner/Visit.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/Visit.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/Visit.java
+@@ -20,9 +20,6 @@
+ import org.springframework.format.annotation.DateTimeFormat;
+ import org.springframework.samples.petclinic.model.BaseEntity;
+ 
+-import jakarta.persistence.Column;
+-import jakarta.persistence.Entity;
+-import jakarta.persistence.Table;
+ import jakarta.validation.constraints.NotBlank;
+ import jakarta.validation.constraints.Size;
+ 
+@@ -32,11 +29,9 @@
+  * @author Ken Krebs
+  * @author Dave Syer
+  */
+-@Entity
+-@Table(name = "visits")
++
+ public class Visit extends BaseEntity {
+ 
+-	@Column(name = "visit_date")
+ 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+ 	private LocalDate date;
+ 
+diff --git a/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java b/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java
+--- a/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java
++++ b/src/main/java/org/springframework/samples/petclinic/owner/VisitController.java
+@@ -106,7 +106,7 @@
+ 		}
+ 
+ 		owner.addVisit(petId, visit);
+-		this.owners.save(owner);
++		this.owners.addVisit(owner.getId(), petId, visit);
+ 		redirectAttributes.addFlashAttribute("message", "Your visit has been booked");
+ 		return "redirect:/owners/{ownerId}";
+ 	}
+diff --git a/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java b/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java
+--- a/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java
++++ b/src/main/java/org/springframework/samples/petclinic/vet/Specialty.java
+@@ -17,16 +17,12 @@
+ 
+ import org.springframework.samples.petclinic.model.NamedEntity;
+ 
+-import jakarta.persistence.Entity;
+-import jakarta.persistence.Table;
+-
+ /**
+  * Models a {@link Vet Vet's} specialty (for example, dentistry).
+  *
+  * @author Juergen Hoeller
+  */
+-@Entity
+-@Table(name = "specialties")
++
+ public class Specialty extends NamedEntity {
+ 
+ }
+diff --git a/src/main/java/org/springframework/samples/petclinic/vet/Vet.java b/src/main/java/org/springframework/samples/petclinic/vet/Vet.java
+--- a/src/main/java/org/springframework/samples/petclinic/vet/Vet.java
++++ b/src/main/java/org/springframework/samples/petclinic/vet/Vet.java
+@@ -24,12 +24,6 @@
+ import org.springframework.samples.petclinic.model.NamedEntity;
+ import org.springframework.samples.petclinic.model.Person;
+ 
+-import jakarta.persistence.Entity;
+-import jakarta.persistence.FetchType;
+-import jakarta.persistence.JoinColumn;
+-import jakarta.persistence.JoinTable;
+-import jakarta.persistence.ManyToMany;
+-import jakarta.persistence.Table;
+ import jakarta.xml.bind.annotation.XmlElement;
+ 
+ /**
+@@ -40,13 +34,9 @@
+  * @author Sam Brannen
+  * @author Arjen Poutsma
+  */
+-@Entity
+-@Table(name = "vets")
++
+ public class Vet extends Person {
+ 
+-	@ManyToMany(fetch = FetchType.EAGER)
+-	@JoinTable(name = "vet_specialties", joinColumns = @JoinColumn(name = "vet_id"),
+-			inverseJoinColumns = @JoinColumn(name = "specialty_id"))
+ 	private Set<Specialty> specialties;
+ 
+ 	protected Set<Specialty> getSpecialtiesInternal() {
+diff --git a/src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java b/src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java
+--- a/src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java
++++ b/src/main/java/org/springframework/samples/petclinic/vet/VetRepository.java
+@@ -1,58 +1,51 @@
+-/*
+- * Copyright 2012-2025 the original author or authors.
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *      https://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+ package org.springframework.samples.petclinic.vet;
+-
+-import org.springframework.cache.annotation.Cacheable;
+-import org.springframework.dao.DataAccessException;
+-import org.springframework.data.domain.Page;
+-import org.springframework.data.domain.Pageable;
+-import org.springframework.data.repository.Repository;
+-import org.springframework.transaction.annotation.Transactional;
+ 
+ import java.util.Collection;
+ 
+-/**
+- * Repository class for <code>Vet</code> domain objects All method names are compliant
+- * with Spring Data naming conventions so this interface can easily be extended for Spring
+- * Data. See:
+- * https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation
+- *
+- * @author Ken Krebs
+- * @author Juergen Hoeller
+- * @author Sam Brannen
+- * @author Michael Isvy
+- */
+-public interface VetRepository extends Repository<Vet, Integer> {
++import org.jdbi.v3.core.Handle;
++import org.springframework.cache.annotation.Cacheable;
++import org.springframework.data.domain.Page;
++import org.springframework.data.domain.PageImpl;
++import org.springframework.data.domain.Pageable;
++import org.springframework.stereotype.Component;
+ 
+-	/**
+-	 * Retrieve all <code>Vet</code>s from the data store.
+-	 * @return a <code>Collection</code> of <code>Vet</code>s
+-	 */
+-	@Transactional(readOnly = true)
++import pvrlabs.coilbase.RepositoryContext;
++
++@Component
++public class VetRepository {
++
++	private final RepositoryContext db;
++
++	public VetRepository(RepositoryContext db) {
++		this.db = db;
++	}
++
+ 	@Cacheable("vets")
+-	Collection<Vet> findAll() throws DataAccessException;
++	public Collection<Vet> findAll() {
++		return db.inTransaction(handle -> load(handle, Pageable.unpaged()).getContent());
++	}
+ 
+-	/**
+-	 * Retrieve all <code>Vet</code>s from data store in Pages
+-	 * @param pageable
+-	 * @return
+-	 * @throws DataAccessException
+-	 */
+-	@Transactional(readOnly = true)
+ 	@Cacheable("vets")
+-	Page<Vet> findAll(Pageable pageable) throws DataAccessException;
++	public Page<Vet> findAll(Pageable pageable) {
++		return db.inTransaction(handle -> load(handle, pageable));
++	}
++
++	private Page<Vet> load(Handle handle, Pageable pageable) {
++		var query = handle.createQuery("select id, first_name, last_name from vets order by id"
++				+ (pageable.isPaged() ? " limit :limit offset :offset" : ""));
++		if (pageable.isPaged()) {
++			query.bind("limit", pageable.getPageSize()).bind("offset", pageable.getOffset());
++		}
++		var vets = query.mapToBean(Vet.class).list();
++		for (Vet vet : vets) {
++			handle.createQuery("""
++					select s.id, s.name from specialties s
++					join vet_specialties vs on vs.specialty_id=s.id where vs.vet_id=:id
++					""").bind("id", vet.getId()).mapToBean(Specialty.class).list().forEach(vet::addSpecialty);
++		}
++		long total = pageable.isPaged() ? handle.createQuery("select count(*) from vets").mapTo(Long.class).one()
++				: vets.size();
++		return new PageImpl<>(vets, pageable, total);
++	}
+ 
+ }
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties
++++ b/src/main/resources/application.properties
+@@ -5,12 +5,6 @@
+ 
+ # Web
+ spring.thymeleaf.mode=HTML
+-
+-# JPA
+-spring.jpa.hibernate.ddl-auto=none
+-spring.jpa.open-in-view=false
+-spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategySnakeCaseImpl
+-spring.jpa.properties.hibernate.default_batch_fetch_size=16
+ 
+ # Internationalization
+ spring.messages.basename=messages/messages
+diff --git a/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java b/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java
+--- a/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java
++++ b/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java
+@@ -75,6 +75,7 @@
+ 		given(this.types.findPetTypes()).willReturn(List.of(cat));
+ 
+ 		Owner owner = new Owner();
++		owner.setId(TEST_OWNER_ID);
+ 		Pet pet = new Pet();
+ 		Pet dog = new Pet();
+ 		owner.addPet(pet);
+@@ -164,8 +165,10 @@
+ 
+ 		@Test
+ 		void processCreationFormWithDataIntegrityViolation() throws Exception {
+-			given(owners.saveAndFlush(any(Owner.class)))
+-				.willThrow(new DataIntegrityViolationException("Duplicate key: unique_owner_pet_name"));
++			org.mockito.BDDMockito
++				.willThrow(new DataIntegrityViolationException("Duplicate key: unique_owner_pet_name"))
++				.given(owners)
++				.savePet(org.mockito.ArgumentMatchers.anyInt(), any(Pet.class));
+ 			mockMvc
+ 				.perform(post("/owners/{ownerId}/pets/new", TEST_OWNER_ID).param("name", "Betty")
+ 					.param("type", "hamster")
+@@ -255,8 +258,10 @@
+ 
+ 		@Test
+ 		void processUpdateFormWithDataIntegrityViolation() throws Exception {
+-			given(owners.saveAndFlush(any(Owner.class)))
+-				.willThrow(new DataIntegrityViolationException("Duplicate key: unique_owner_pet_name"));
++			org.mockito.BDDMockito
++				.willThrow(new DataIntegrityViolationException("Duplicate key: unique_owner_pet_name"))
++				.given(owners)
++				.savePet(org.mockito.ArgumentMatchers.anyInt(), any(Pet.class));
+ 			mockMvc
+ 				.perform(post("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID).param("name", "Betty")
+ 					.param("type", "hamster")
+diff --git a/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java b/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java
+--- a/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java
++++ b/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java
+@@ -59,6 +59,7 @@
+ 	@BeforeEach
+ 	void init() {
+ 		Owner owner = new Owner();
++		owner.setId(TEST_OWNER_ID);
+ 		Pet pet = new Pet();
+ 		owner.addPet(pet);
+ 		pet.setId(TEST_PET_ID);
+diff --git a/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java b/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+--- a/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
++++ b/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+@@ -25,10 +25,9 @@
+ import java.util.Optional;
+ 
+ import org.junit.jupiter.api.Test;
++import org.springframework.boot.test.context.SpringBootTest;
++import org.springframework.test.annotation.DirtiesContext;
+ import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
+-import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase;
+-import org.springframework.boot.jdbc.test.autoconfigure.AutoConfigureTestDatabase.Replace;
+ import org.springframework.data.domain.Page;
+ import org.springframework.data.domain.Pageable;
+ import org.springframework.samples.petclinic.owner.Owner;
+@@ -39,40 +38,10 @@
+ import org.springframework.samples.petclinic.owner.Visit;
+ import org.springframework.samples.petclinic.vet.Vet;
+ import org.springframework.samples.petclinic.vet.VetRepository;
+-import org.springframework.transaction.annotation.Transactional;
+-
+-/**
+- * Integration test of the Service and the Repository layer.
+- * <p>
+- * ClinicServiceSpringDataJpaTests subclasses benefit from the following services provided
+- * by the Spring TestContext Framework:
+- * </p>
+- * <ul>
+- * <li><strong>Spring IoC container caching</strong> which spares us unnecessary set up
+- * time between test execution.</li>
+- * <li><strong>Dependency Injection</strong> of test fixture instances, meaning that we
+- * don't need to perform application context lookups. See the use of
+- * {@link Autowired @Autowired} on the <code> </code> instance variable, which uses
+- * autowiring <em>by type</em>.
+- * <li><strong>Transaction management</strong>, meaning each test method is executed in
+- * its own transaction, which is automatically rolled back by default. Thus, even if tests
+- * insert or otherwise change database state, there is no need for a teardown or cleanup
+- * script.
+- * <li>An {@link org.springframework.context.ApplicationContext ApplicationContext} is
+- * also inherited and can be used for explicit bean lookup if necessary.</li>
+- * </ul>
+- *
+- * @author Ken Krebs
+- * @author Rod Johnson
+- * @author Juergen Hoeller
+- * @author Sam Brannen
+- * @author Michael Isvy
+- * @author Dave Syer
+- */
+-@DataJpaTest
+-// Ensure that if the mysql profile is active we connect to the real database:
+-@AutoConfigureTestDatabase(replace = Replace.NONE)
+-// @TestPropertySource("/application-postgres.properties")
++
++/** Exercises the SQL repositories against a fresh database for each test. */
++@SpringBootTest(properties = "spring.datasource.generate-unique-name=true")
++@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+ class ClinicServiceTests {
+ 
+ 	@Autowired
+@@ -85,6 +54,48 @@
+ 	protected VetRepository vets;
+ 
+ 	private final Pageable pageable = Pageable.unpaged();
++
++	@Autowired
++	private pvrlabs.coilbase.RepositoryContext db;
++
++	@Test
++	void rollsBackEarlierWritesAndAcceptsARecoveryWrite() {
++		var owner = new Owner();
++		owner.setFirstName("Test");
++		owner.setLastName("TransactionProbe");
++		owner.setAddress("1 Test Street");
++		owner.setCity("Test City");
++		owner.setTelephone("1234567890");
++		var invalidPet = new Pet();
++		invalidPet.setName("Invalid type");
++		owner.addPet(invalidPet);
++
++		org.assertj.core.api.Assertions.assertThatThrownBy(() -> owners.save(owner))
++			.isInstanceOf(org.springframework.dao.DataIntegrityViolationException.class);
++		assertThat(owner.getId()).isNull();
++		assertThat(new org.springframework.jdbc.core.JdbcTemplate(dataSource)
++			.queryForObject("select count(*) from owners where last_name='TransactionProbe'", Integer.class)).isZero();
++
++		owner.getPets().clear();
++		owners.save(owner);
++		assertThat(owners.findById(owner.getId())).isPresent();
++	}
++
++	@Autowired
++	private javax.sql.DataSource dataSource;
++
++	@Test
++	void joinsOuterCoilBaseTransaction() {
++		var first = owners.findById(1).orElseThrow();
++		var original = first.getCity();
++		org.assertj.core.api.Assertions.assertThatThrownBy(() -> db.transactional(() -> {
++			first.setCity("Inside failed transaction");
++			owners.saveDetails(first);
++			assertThat(owners.findById(1).orElseThrow().getCity()).isEqualTo(first.getCity());
++			throw new IllegalStateException("force rollback");
++		})).isInstanceOf(IllegalStateException.class);
++		assertThat(owners.findById(1).orElseThrow().getCity()).isEqualTo(original);
++	}
+ 
+ 	@Test
+ 	void shouldFindOwnersByLastName() {
+@@ -107,7 +118,6 @@
+ 	}
+ 
+ 	@Test
+-	@Transactional
+ 	void shouldInsertOwner() {
+ 		Page<Owner> owners = this.owners.findByLastNameStartingWith("Schultz", pageable);
+ 		int found = (int) owners.getTotalElements();
+@@ -126,7 +136,6 @@
+ 	}
+ 
+ 	@Test
+-	@Transactional
+ 	void shouldUpdateOwner() {
+ 		Optional<Owner> optionalOwner = this.owners.findById(1);
+ 		assertThat(optionalOwner).isPresent();
+@@ -155,7 +164,6 @@
+ 	}
+ 
+ 	@Test
+-	@Transactional
+ 	void shouldInsertPetIntoDatabaseAndGenerateId() {
+ 		Optional<Owner> optionalOwner = this.owners.findById(6);
+ 		assertThat(optionalOwner).isPresent();
+@@ -183,7 +191,6 @@
+ 	}
+ 
+ 	@Test
+-	@Transactional
+ 	void shouldUpdatePetName() {
+ 		Optional<Owner> optionalOwner = this.owners.findById(6);
+ 		assertThat(optionalOwner).isPresent();
+@@ -215,7 +222,6 @@
+ 	}
+ 
+ 	@Test
+-	@Transactional
+ 	void shouldAddNewVisitForPet() {
+ 		Optional<Owner> optionalOwner = this.owners.findById(6);
+ 		assertThat(optionalOwner).isPresent();
+@@ -251,7 +257,6 @@
+ 	}
+ 
+ 	@Test
+-	@Transactional
+ 	void shouldFailToInsertDuplicatePetNameForSameOwner() {
+ 		Optional<Owner> optionalOwner = this.owners.findById(1);
+ 		assertThat(optionalOwner).isPresent();
+@@ -277,7 +282,6 @@
+ 	}
+ 
+ 	@Test
+-	@Transactional
+ 	void shouldAllowSamePetNameForDifferentOwners() {
+ 		Collection<PetType> types = this.types.findPetTypes();
+ 		PetType catType = EntityUtils.getById(types, PetType.class, 1);
+diff --git a/src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java b/src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java
+--- a/src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java
++++ b/src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java
+@@ -16,14 +16,14 @@
+ 
+ package org.springframework.samples.petclinic.service;
+ 
+-import org.springframework.orm.ObjectRetrievalFailureException;
++import java.util.NoSuchElementException;
+ import org.springframework.samples.petclinic.model.BaseEntity;
+ 
+ import java.util.Collection;
+ 
+ /**
+  * Utility methods for handling entities. Separate from the BaseEntity class mainly
+- * because of dependency on the ORM-associated ObjectRetrievalFailureException.
++ * because of dependency on the ORM-associated NoSuchElementException.
+  *
+  * @author Juergen Hoeller
+  * @author Sam Brannen
+@@ -38,16 +38,16 @@
+ 	 * @param entityClass the entity class to look up
+ 	 * @param entityId the entity id to look up
+ 	 * @return the found entity
+-	 * @throws ObjectRetrievalFailureException if the entity was not found
++	 * @throws NoSuchElementException if the entity was not found
+ 	 */
+ 	public static <T extends BaseEntity> T getById(Collection<T> entities, Class<T> entityClass, int entityId)
+-			throws ObjectRetrievalFailureException {
++			throws NoSuchElementException {
+ 		for (T entity : entities) {
+ 			if (entity.getId() != null && entity.getId() == entityId && entityClass.isInstance(entity)) {
+ 				return entity;
+ 			}
+ 		}
+-		throw new ObjectRetrievalFailureException(entityClass, entityId);
++		throw new NoSuchElementException(entityClass.getName() + " " + entityId);
+ 	}
+ 
+ }
+diff --git a/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java b/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java
+--- a/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java
++++ b/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java
+@@ -26,7 +26,6 @@
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.beans.factory.annotation.Value;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+-import org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration;
+ import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
+ import org.springframework.boot.jdbc.autoconfigure.DataSourceTransactionManagerAutoConfiguration;
+ import org.springframework.boot.resttestclient.TestRestTemplate;
+@@ -92,8 +91,8 @@
+ 				"This application has no explicit mapping for");
+ 	}
+ 
+-	@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class,
+-			DataSourceTransactionManagerAutoConfiguration.class, HibernateJpaAutoConfiguration.class })
++	@SpringBootApplication(
++			exclude = { DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class })
+ 	static class TestConfiguration {
+ 
+ 	}

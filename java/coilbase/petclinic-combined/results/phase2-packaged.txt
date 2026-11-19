@@ -1,0 +1,32 @@
+200 /
+200 /owners/find
+200 /owners?page=2
+400 /owners?page=garbage
+200 /resources/css/petclinic.css
+200 /resources/images/pets.png
+200 /webjars/font-awesome/css/font-awesome.min.css
+200 /webjars/bootstrap/dist/js/bootstrap.bundle.min.js
+200 /actuator/health
+200 /vets.html
+200 /vets
+200 /vets
+500 /oups
+200 /owners/new
+302 /owners/new
+200 /owners/11
+302 /owners/11/edit
+200 /owners/11
+200 /owners/11/pets/new
+concurrent duplicate pet posts => one redirect, one field error
+200 /owners/11/pets/14/visits/new
+200 /owners/11/pets/14/visits/new
+302 /owners/11/pets/14/visits/new
+302 /owners/11/pets/14/edit
+200 /owners/11
+select count(*) from owners where last_name='CompositionTrial' and city='Edited City' => 1
+select count(*) from pets where owner_id=11 and name='EditedPet' => 1
+select count(*) from pets where owner_id=11 => 1
+select count(*) from visits where pet_id=14 and description='Trial visit + follow-up' => 1
+select count(*) from visits where pet_id=14 => 1
+200 /owners/11
+200 /owners/11

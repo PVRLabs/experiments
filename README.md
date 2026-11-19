@@ -36,6 +36,10 @@ We keep tuning effort comparable across implementations and avoid fine-grained, 
 
 ## Experiments
 
+- [Sequential CoilBase migration skills on Spring PetClinic](java/coilbase/petclinic-combined/) · November 2026
+
+  Two migration skills run in sequence from pinned upstream source. Includes both patches, packaged H2 checks, and reproduction commands.
+
 - [Jdbi and Hibernate persistence comparison on a 512 MiB VM](java/jdbi-hibernate-comparison/) · November 2026
 
   Two persistence implementations share lightweight application infrastructure; a Spring Boot application provides a reference. Includes accepted per-run data, a rejected OOM attempt, sources and verification scripts.

@@ -1,0 +1,12 @@
+302 /owners/1/edit
+302 /owners/1/edit
+200 /owners/1/edit
+302 /owners/1/pets/1/edit
+302 /owners/1/pets/1/edit
+200 /owners/1/pets/1/edit
+200 /vets
+200 /vets
+200 /vets
+406 /vets
+select count(*) from owners where id=1 and first_name='George' and last_name='Franklin' and address='110 W. Liberty St.' and city='New City' and telephone='6085551023' => 1
+select count(*) from pets where id=1 and owner_id=1 and name='Leo Edited' and birth_date=date '2011-09-07' and type_id=1 => 1
